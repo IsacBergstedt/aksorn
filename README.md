@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Aksorn — อักษร
 
-## Getting Started
+Script-first Thai for serious learners. Aksorn teaches the Thai writing
+system the way it actually works: the 44 consonants by consonant class
+(mid → high → low), then vowels, then tone rules — because consonant class
+is the key that unlocks Thai tones.
 
-First, run the development server:
+## Stack
+
+Next.js 15 (App Router) · TypeScript · Tailwind CSS + shadcn/ui ·
+Framer Motion · Supabase (auth + progress + SRS) · Vercel
+
+## Getting started
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The app runs in **guest mode** out of the box — progress is stored in
+`localStorage`. To enable accounts:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Create a Supabase project and run `supabase/migrations/0001_init.sql`
+   against it (or `supabase db push` with the CLI).
+2. Enable the Email and Google providers under Authentication.
+3. Copy `.env.local.example` to `.env.local` and fill in the project URL and
+   anon key.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Guest progress migrates to the account automatically on first sign-in.
 
-## Learn More
+## Project layout
 
-To learn more about Next.js, take a look at the following resources:
+- `src/content/` — course content: characters, units, lesson JSON
+  (Zod-validated at build time)
+- `src/lib/engine.ts` — turns lesson JSON into runtime exercises and
+  generates distractors
+- `src/lib/srs.ts` — SM-2 spaced repetition
+- `src/lib/progress/` — progress store (localStorage) + Supabase sync
+- `src/components/exercises/` — the exercise engine UI
+- `supabase/migrations/` — database schema
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+See `CLAUDE.md` for the full product vision, roadmap, and conventions.

@@ -1,0 +1,21 @@
+{
+  "id": "mid-03",
+  "unitId": "mid-class",
+  "order": 3,
+  "title": "The rare pair: ฎ ฏ",
+  "xpReward": 20,
+  "teaches": ["do_chada", "to_patak"],
+  "reviews": ["ko_kai", "do_dek", "to_tao", "o_ang"],
+  "exercises": [
+    { "type": "intro", "characterId": "do_chada" },
+    { "type": "glyph_to_sound", "characterId": "do_chada" },
+    { "type": "intro", "characterId": "to_patak" },
+    { "type": "glyph_to_sound", "characterId": "to_patak" },
+    { "type": "sound_to_glyph", "characterId": "do_chada" },
+    { "type": "match_pairs", "characterIds": ["do_chada", "to_patak", "do_dek", "to_tao"] },
+    { "type": "class_sort", "characterIds": ["ko_kai", "do_dek", "to_tao", "kho_khai", "so_suea", "ho_hip"], "classes": ["mid", "high"] },
+    { "type": "sound_to_glyph", "characterId": "to_patak" },
+    { "type": "glyph_to_sound", "characterId": "o_ang" },
+    { "type": "glyph_to_sound", "characterId": "ko_kai" }
+  ]
+}

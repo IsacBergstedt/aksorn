@@ -1,0 +1,22 @@
+{
+  "id": "mid-02",
+  "unitId": "mid-class",
+  "order": 2,
+  "title": "Lips and the basin: บ ป อ",
+  "xpReward": 20,
+  "teaches": ["bo_baimai", "po_pla", "o_ang"],
+  "reviews": ["ko_kai", "cho_chan", "do_dek", "to_tao"],
+  "exercises": [
+    { "type": "intro", "characterId": "bo_baimai" },
+    { "type": "glyph_to_sound", "characterId": "bo_baimai" },
+    { "type": "intro", "characterId": "po_pla" },
+    { "type": "glyph_to_sound", "characterId": "po_pla" },
+    { "type": "sound_to_glyph", "characterId": "bo_baimai" },
+    { "type": "intro", "characterId": "o_ang" },
+    { "type": "glyph_to_sound", "characterId": "o_ang" },
+    { "type": "match_pairs", "characterIds": ["bo_baimai", "po_pla", "o_ang", "ko_kai"] },
+    { "type": "sound_to_glyph", "characterId": "po_pla" },
+    { "type": "glyph_to_sound", "characterId": "do_dek" },
+    { "type": "sound_to_glyph", "characterId": "cho_chan" }
+  ]
+}
