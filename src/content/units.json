@@ -11,31 +11,34 @@
     "title": "High-Class Consonants",
     "description": "Eleven consonants with their own tone pattern, including all the aspirated sounds.",
     "order": 2,
-    "lessonIds": [],
-    "comingSoon": true
+    "lessonIds": ["high-01", "high-02", "high-03"]
   },
   {
     "id": "low-class",
     "title": "Low-Class Consonants",
     "description": "The largest class — twenty-four consonants that pair with the high class.",
     "order": 3,
-    "lessonIds": [],
-    "comingSoon": true
+    "lessonIds": ["low-01", "low-02", "low-03", "low-04", "low-05"]
   },
   {
     "id": "vowels",
     "title": "Vowels",
     "description": "Short and long vowels, and where they attach around a consonant.",
     "order": 4,
-    "lessonIds": [],
-    "comingSoon": true
+    "lessonIds": ["vowel-01", "vowel-02", "vowel-03", "vowel-04"]
   },
   {
     "id": "tone-rules",
     "title": "Tone Rules",
     "description": "Put it together: consonant class + vowel length + tone marks = the five tones.",
     "order": 5,
-    "lessonIds": [],
-    "comingSoon": true
+    "lessonIds": ["tone-01", "tone-02", "tone-03", "tone-04"]
+  },
+  {
+    "id": "mixed-review",
+    "title": "Mixed Review",
+    "description": "Everything together: all forty-four consonants, the vowels, and the full tone system.",
+    "order": 6,
+    "lessonIds": ["mix-01", "mix-02"]
   }
 ]

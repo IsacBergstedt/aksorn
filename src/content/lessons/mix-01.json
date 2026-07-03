@@ -1,0 +1,24 @@
+{
+  "id": "mix-01",
+  "unitId": "mixed-review",
+  "order": 1,
+  "title": "Full script sweep",
+  "xpReward": 30,
+  "pedagogy": "Mixed review (1/2): recognition across all three consonant classes, vowels, and tone marks; class sorting for mid-vs-high and high-vs-low.",
+  "teaches": [],
+  "reviews": ["kho_khai", "cho_chang", "sara_uea", "ko_kai", "to_tao", "bo_baimai", "so_suea", "pho_phueng", "ngo_ngu", "sara_am", "mai_ek", "ho_hip", "sara_ai_maimuan", "mo_ma", "kho_khwai", "tho_thahan", "fo_fan", "tho_thung", "fo_fa", "pho_phan", "tho_than", "sara_o_open_long", "do_chada", "to_patak", "yo_ying", "no_nen", "mai_chattawa"],
+  "exercises": [
+    { "type": "glyph_to_sound", "characterId": "kho_khai" },
+    { "type": "sound_to_glyph", "characterId": "cho_chang" },
+    { "type": "glyph_to_sound", "characterId": "sara_uea" },
+    { "type": "class_sort", "characterIds": ["ko_kai", "to_tao", "bo_baimai", "kho_khai", "so_suea", "pho_phueng"], "classes": ["mid", "high"] },
+    { "type": "match_pairs", "characterIds": ["ngo_ngu", "sara_am", "mai_ek", "ho_hip"] },
+    { "type": "sound_to_glyph", "characterId": "sara_ai_maimuan" },
+    { "type": "glyph_to_sound", "characterId": "mo_ma" },
+    { "type": "class_sort", "characterIds": ["kho_khwai", "tho_thahan", "fo_fan", "kho_khai", "tho_thung", "fo_fa", "so_suea", "pho_phan"], "classes": ["high", "low"] },
+    { "type": "sound_to_glyph", "characterId": "tho_than" },
+    { "type": "glyph_to_sound", "characterId": "sara_o_open_long" },
+    { "type": "match_pairs", "characterIds": ["do_chada", "to_patak", "yo_ying", "no_nen"] },
+    { "type": "glyph_to_sound", "characterId": "mai_chattawa" }
+  ]
+}

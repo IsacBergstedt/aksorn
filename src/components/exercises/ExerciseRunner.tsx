@@ -8,9 +8,11 @@ import { Progress } from "@/components/ui/progress";
 import type { RuntimeExercise } from "@/lib/engine";
 import type { CharResults } from "@/lib/progress/store";
 import { IntroCard } from "./IntroCard";
+import { ConceptCard } from "./ConceptCard";
 import { ChoiceExercise } from "./ChoiceExercise";
 import { MatchPairs } from "./MatchPairs";
 import { ClassSort } from "./ClassSort";
+import { RuleChoice } from "./RuleChoice";
 import type { ExerciseOutcome } from "./types";
 
 type QueuedExercise = RuntimeExercise & { isRetry?: boolean };
@@ -49,7 +51,7 @@ export function ExerciseRunner({
 
       let nextQueue = queue;
       if (
-        current.kind === "choice" &&
+        (current.kind === "choice" || current.kind === "rule_choice") &&
         !current.isRetry &&
         outcomes.some((o) => !o.correct)
       ) {
@@ -99,6 +101,12 @@ export function ExerciseRunner({
         >
           {current.kind === "intro" && (
             <IntroCard character={current.character} onComplete={handleComplete} />
+          )}
+          {current.kind === "concept" && (
+            <ConceptCard exercise={current} onComplete={handleComplete} />
+          )}
+          {current.kind === "rule_choice" && (
+            <RuleChoice exercise={current} onComplete={handleComplete} />
           )}
           {current.kind === "choice" && (
             <ChoiceExercise exercise={current} onComplete={handleComplete} />

@@ -1,0 +1,26 @@
+{
+  "id": "low-04",
+  "unitId": "low-class",
+  "order": 4,
+  "title": "Flow and glide: ร ล ว ญ ณ",
+  "xpReward": 20,
+  "pedagogy": "Low-class consonants (4/5): sonorants ร ล ว, plus ญ (y sound, ends syllables as n) and ณ (Indic spelling of the n sound).",
+  "teaches": ["ro_ruea", "lo_ling", "wo_waen", "yo_ying", "no_nen"],
+  "reviews": ["ngo_ngu", "no_nu", "mo_ma", "yo_yak"],
+  "exercises": [
+    { "type": "intro", "characterId": "ro_ruea" },
+    { "type": "glyph_to_sound", "characterId": "ro_ruea" },
+    { "type": "intro", "characterId": "lo_ling" },
+    { "type": "glyph_to_sound", "characterId": "lo_ling" },
+    { "type": "sound_to_glyph", "characterId": "ro_ruea" },
+    { "type": "intro", "characterId": "wo_waen" },
+    { "type": "glyph_to_sound", "characterId": "wo_waen" },
+    { "type": "intro", "characterId": "yo_ying" },
+    { "type": "glyph_to_sound", "characterId": "yo_ying" },
+    { "type": "intro", "characterId": "no_nen" },
+    { "type": "sound_to_glyph", "characterId": "no_nen" },
+    { "type": "match_pairs", "characterIds": ["ro_ruea", "lo_ling", "wo_waen", "yo_ying"] },
+    { "type": "match_pairs", "characterIds": ["no_nen", "no_nu", "yo_yak", "ngo_ngu"] },
+    { "type": "sound_to_glyph", "characterId": "wo_waen" }
+  ]
+}

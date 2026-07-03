@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Flame, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useSession } from "@/components/AuthProvider";
+import { SectionTabs } from "@/components/SectionTabs";
 import { useProgressStore } from "@/lib/progress/store";
 import { useMounted } from "@/lib/use-mounted";
 import { getSupabase } from "@/lib/supabase/client";
@@ -18,7 +19,7 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-background/90 backdrop-blur">
-      <div className="mx-auto flex h-14 max-w-4xl items-center justify-between px-4">
+      <div className="mx-auto flex h-14 max-w-5xl items-center justify-between px-4">
         <Link href="/" className="flex items-baseline gap-2">
           <span className="font-thai text-2xl font-semibold text-amber-500">
             อักษร
@@ -27,6 +28,8 @@ export function Header() {
             Aksorn
           </span>
         </Link>
+
+        <SectionTabs variant="desktop" />
 
         <div className="flex items-center gap-4">
           {mounted && (

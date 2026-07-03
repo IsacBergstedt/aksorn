@@ -1,0 +1,35 @@
+{
+  "id": "low-05",
+  "unitId": "low-class",
+  "order": 5,
+  "title": "Rare, formal, and done: ฆ ฌ ฑ ฒ ฬ",
+  "xpReward": 30,
+  "pedagogy": "Low-class consonants (5/5): rare Indic-loan letters ฆ (kh), ฌ (ch), ฑ ฒ (th), ฬ (l); unit checkpoint with high-vs-low sorting. Obsolete ฅ is excluded.",
+  "teaches": ["kho_rakhang", "cho_choe", "tho_montho", "tho_phuthao", "lo_chula"],
+  "reviews": ["kho_khwai", "cho_chang", "tho_thahan", "tho_thong", "lo_ling", "ro_ruea"],
+  "exercises": [
+    {
+      "type": "concept",
+      "title": "The rare five",
+      "thaiExample": "ฆ ฌ ฑ ฒ ฬ",
+      "body": [
+        "These five low-class letters are rare — most live in words borrowed from Sanskrit and Pali.",
+        "You still need to recognize them: ฆ (kh), ฌ (ch), ฑ and ฒ (th), ฬ (l). Their everyday siblings do the daily work.",
+        "With these five, you have met all twenty-four low-class consonants — and all forty-four Thai consonants."
+      ]
+    },
+    { "type": "intro", "characterId": "kho_rakhang" },
+    { "type": "glyph_to_sound", "characterId": "kho_rakhang" },
+    { "type": "intro", "characterId": "cho_choe" },
+    { "type": "glyph_to_sound", "characterId": "cho_choe" },
+    { "type": "intro", "characterId": "tho_montho" },
+    { "type": "intro", "characterId": "tho_phuthao" },
+    { "type": "match_pairs", "characterIds": ["tho_montho", "tho_phuthao", "tho_thahan", "tho_thong"] },
+    { "type": "intro", "characterId": "lo_chula" },
+    { "type": "sound_to_glyph", "characterId": "lo_chula" },
+    { "type": "glyph_to_sound", "characterId": "tho_phuthao" },
+    { "type": "sound_to_glyph", "characterId": "tho_montho" },
+    { "type": "class_sort", "characterIds": ["kho_rakhang", "cho_choe", "lo_chula", "kho_khai", "cho_ching", "so_suea", "tho_thung", "ho_hip"], "classes": ["low", "high"] },
+    { "type": "match_pairs", "characterIds": ["kho_rakhang", "cho_choe", "lo_chula", "ro_ruea"] }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "id": "low-03",
+  "unitId": "low-class",
+  "order": 3,
+  "title": "The sonorants: ง น ม ย",
+  "xpReward": 20,
+  "pedagogy": "Low-class consonants (3/5): unpaired sonorants ง น ม ย — nasals and glides with no high-class partner; they double as the finals that make syllables live.",
+  "teaches": ["ngo_ngu", "no_nu", "mo_ma", "yo_yak"],
+  "reviews": ["kho_khwai", "tho_thahan", "pho_phan"],
+  "exercises": [
+    {
+      "type": "concept",
+      "title": "Sonorants — the unpaired lows",
+      "thaiExample": "ง น ม ย",
+      "body": [
+        "The rest of the low class are sonorants: humming, flowing sounds — ng, n, m, y, r, l, w.",
+        "They have no high-class partner; no other consonant duplicates their sound.",
+        "Remember them as a group: a syllable that ENDS in a sonorant counts as live, which will decide its tone."
+      ]
+    },
+    { "type": "intro", "characterId": "ngo_ngu" },
+    { "type": "glyph_to_sound", "characterId": "ngo_ngu" },
+    { "type": "intro", "characterId": "no_nu" },
+    { "type": "glyph_to_sound", "characterId": "no_nu" },
+    { "type": "sound_to_glyph", "characterId": "ngo_ngu" },
+    { "type": "intro", "characterId": "mo_ma" },
+    { "type": "glyph_to_sound", "characterId": "mo_ma" },
+    { "type": "intro", "characterId": "yo_yak" },
+    { "type": "glyph_to_sound", "characterId": "yo_yak" },
+    { "type": "match_pairs", "characterIds": ["ngo_ngu", "no_nu", "mo_ma", "yo_yak"] },
+    { "type": "sound_to_glyph", "characterId": "mo_ma" },
+    { "type": "glyph_to_sound", "characterId": "kho_khwai" }
+  ]
+}

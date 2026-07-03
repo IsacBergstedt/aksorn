@@ -13,6 +13,12 @@ export const classBadgeClasses: Record<ConsonantClass, string> = {
   low: "bg-rose-100 text-rose-800 border-rose-200",
 };
 
+/** Neutral badge styles for the non-consonant character kinds. */
+export const kindBadgeClasses = {
+  vowel: "bg-amber-100 text-amber-800 border-amber-200",
+  tone_mark: "bg-slate-100 text-slate-700 border-slate-200",
+} as const;
+
 export const classButtonClasses: Record<ConsonantClass, string> = {
   mid: "border-indigo-300 hover:border-indigo-500 hover:bg-indigo-50 text-indigo-900",
   high: "border-teal-300 hover:border-teal-500 hover:bg-teal-50 text-teal-900",

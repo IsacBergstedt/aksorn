@@ -4,7 +4,7 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { classButtonClasses, classLabel } from "@/lib/class-colors";
-import type { ConsonantClass, ThaiCharacter } from "@/content/schema";
+import type { ConsonantClass, ThaiConsonant } from "@/content/schema";
 import type { ExerciseOutcome, OnExerciseComplete } from "./types";
 
 export function ClassSort({
@@ -12,7 +12,7 @@ export function ClassSort({
   classes,
   onComplete,
 }: {
-  characters: ThaiCharacter[];
+  characters: ThaiConsonant[];
   classes: [ConsonantClass, ConsonantClass];
   onComplete: OnExerciseComplete;
 }) {

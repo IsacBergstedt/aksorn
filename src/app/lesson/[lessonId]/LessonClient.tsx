@@ -66,6 +66,10 @@ export function LessonClient({ lessonId }: { lessonId: string }) {
   }
 
   return (
-    <ExerciseRunner exercises={exercises} exitHref="/" onFinish={handleFinish} />
+    <ExerciseRunner
+      exercises={exercises}
+      exitHref="/reading"
+      onFinish={handleFinish}
+    />
   );
 }

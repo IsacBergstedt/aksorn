@@ -10,6 +10,7 @@ import "@fontsource/noto-sans-thai-looped/700.css";
 import "./globals.css";
 import { AuthProvider } from "@/components/AuthProvider";
 import { Header } from "@/components/Header";
+import { SectionTabs } from "@/components/SectionTabs";
 
 export const metadata: Metadata = {
   title: "Aksorn — Learn to read Thai",
@@ -30,6 +31,7 @@ export default function RootLayout({
         <AuthProvider>
           <Header />
           {children}
+          <SectionTabs variant="mobile" />
         </AuthProvider>
       </body>
     </html>

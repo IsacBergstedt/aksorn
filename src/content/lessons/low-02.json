@@ -1,0 +1,26 @@
+{
+  "id": "low-02",
+  "unitId": "low-class",
+  "order": 2,
+  "title": "More pairs: พ ฟ ภ ธ ฮ",
+  "xpReward": 20,
+  "pedagogy": "Low-class consonants (2/5): remaining common paired low letters — พ ภ (ph, partner ผ), ฟ (f, partner ฝ), ธ (th, partner ถ), ฮ (h, partner ห).",
+  "teaches": ["pho_phan", "fo_fan", "pho_samphao", "tho_thong", "ho_nokhuk"],
+  "reviews": ["pho_phueng", "fo_fa", "ho_hip", "tho_thahan"],
+  "exercises": [
+    { "type": "intro", "characterId": "pho_phan" },
+    { "type": "glyph_to_sound", "characterId": "pho_phan" },
+    { "type": "intro", "characterId": "fo_fan" },
+    { "type": "glyph_to_sound", "characterId": "fo_fan" },
+    { "type": "sound_to_glyph", "characterId": "pho_phan" },
+    { "type": "intro", "characterId": "pho_samphao" },
+    { "type": "sound_to_glyph", "characterId": "pho_samphao" },
+    { "type": "intro", "characterId": "tho_thong" },
+    { "type": "glyph_to_sound", "characterId": "tho_thong" },
+    { "type": "intro", "characterId": "ho_nokhuk" },
+    { "type": "glyph_to_sound", "characterId": "ho_nokhuk" },
+    { "type": "match_pairs", "characterIds": ["pho_phan", "fo_fan", "pho_samphao", "ho_nokhuk"] },
+    { "type": "sound_to_glyph", "characterId": "tho_thong" },
+    { "type": "class_sort", "characterIds": ["pho_phan", "fo_fan", "ho_nokhuk", "pho_phueng", "fo_fa", "ho_hip"], "classes": ["low", "high"] }
+  ]
+}

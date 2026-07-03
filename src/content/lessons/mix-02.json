@@ -1,0 +1,82 @@
+{
+  "id": "mix-02",
+  "unitId": "mixed-review",
+  "order": 2,
+  "title": "Reading gauntlet",
+  "xpReward": 30,
+  "pedagogy": "Mixed review (2/2): applied reading — tone identification on real words combining class, liveness, and marks, interleaved with recognition of rarer characters.",
+  "teaches": [],
+  "reviews": ["so_ruesi", "sara_oe_long", "mai_tho", "sara_ua", "lo_ling", "cho_ching", "sara_ao", "kho_rakhang", "mai_ek"],
+  "exercises": [
+    {
+      "type": "rule_choice",
+      "prompt": "ขาย",
+      "promptNote": "khai — ข high class; live (sonorant ย); \"to sell\"",
+      "question": "Which tone?",
+      "choices": ["Mid tone", "Low tone", "Falling tone", "High tone", "Rising tone"],
+      "correctIndex": 4,
+      "explanation": "High class + live + no mark = rising tone. ขาย means \"to sell\"."
+    },
+    { "type": "glyph_to_sound", "characterId": "so_ruesi" },
+    {
+      "type": "rule_choice",
+      "prompt": "พ่อ",
+      "promptNote": "pho — พ LOW class + mai ek; \"father\"",
+      "question": "Which tone?",
+      "choices": ["Mid tone", "Low tone", "Falling tone", "High tone", "Rising tone"],
+      "correctIndex": 2,
+      "explanation": "Low class + mai ek = falling tone. พ่อ means \"father\".",
+      "attributeTo": ["mai_ek"]
+    },
+    { "type": "sound_to_glyph", "characterId": "sara_oe_long" },
+    {
+      "type": "rule_choice",
+      "prompt": "ปาก",
+      "promptNote": "pak — ป mid class; dead (stop ก); \"mouth\"",
+      "question": "Which tone?",
+      "choices": ["Mid tone", "Low tone", "Falling tone", "High tone", "Rising tone"],
+      "correctIndex": 1,
+      "explanation": "Mid class + dead = low tone. ปาก means \"mouth\"."
+    },
+    {
+      "type": "rule_choice",
+      "prompt": "เสือ",
+      "promptNote": "suea — ส high class; live; \"tiger\"",
+      "question": "Which tone?",
+      "choices": ["Mid tone", "Low tone", "Falling tone", "High tone", "Rising tone"],
+      "correctIndex": 4,
+      "explanation": "High class + live + no mark = rising tone. เสือ means \"tiger\"."
+    },
+    { "type": "match_pairs", "characterIds": ["mai_tho", "sara_ua", "lo_ling", "cho_ching"] },
+    {
+      "type": "rule_choice",
+      "prompt": "คิด",
+      "promptNote": "khit — ค LOW class; dead (stop ด), short vowel; \"to think\"",
+      "question": "Which tone?",
+      "choices": ["Mid tone", "Low tone", "Falling tone", "High tone", "Rising tone"],
+      "correctIndex": 3,
+      "explanation": "Low class + dead + short vowel = high tone. คิด means \"to think\"."
+    },
+    { "type": "glyph_to_sound", "characterId": "sara_ao" },
+    {
+      "type": "rule_choice",
+      "prompt": "แก้ว",
+      "promptNote": "kaeo — ก mid class + mai tho; \"glass\"",
+      "question": "Which tone?",
+      "choices": ["Mid tone", "Low tone", "Falling tone", "High tone", "Rising tone"],
+      "correctIndex": 2,
+      "explanation": "Mid class + mai tho = falling tone. แก้ว means \"glass\".",
+      "attributeTo": ["mai_tho"]
+    },
+    { "type": "sound_to_glyph", "characterId": "kho_rakhang" },
+    {
+      "type": "rule_choice",
+      "prompt": "มือ",
+      "promptNote": "mue — ม LOW class; live (long ◌ือ); \"hand\"",
+      "question": "Which tone?",
+      "choices": ["Mid tone", "Low tone", "Falling tone", "High tone", "Rising tone"],
+      "correctIndex": 0,
+      "explanation": "Low class + live + no mark = mid tone. มือ means \"hand\"."
+    }
+  ]
+}

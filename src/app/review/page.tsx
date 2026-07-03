@@ -75,7 +75,7 @@ export default function ReviewPage() {
           Your characters are all fresh in memory. Keep going with the next
           lesson, or come back when reviews are due.
         </p>
-        <Button render={<Link href="/" />}>Back to lessons</Button>
+        <Button render={<Link href="/reading" />}>Back to lessons</Button>
       </main>
     );
   }
@@ -93,7 +93,7 @@ export default function ReviewPage() {
   return (
     <ExerciseRunner
       exercises={session.exercises}
-      exitHref="/"
+      exitHref="/reading"
       onFinish={handleFinish}
     />
   );

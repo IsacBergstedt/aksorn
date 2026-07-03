@@ -1,0 +1,45 @@
+{
+  "id": "vowel-01",
+  "unitId": "vowels",
+  "order": 1,
+  "title": "First vowels: a, i, u",
+  "xpReward": 20,
+  "pedagogy": "Vowels (1/4): the three core short/long pairs a (◌ะ/◌า), i (◌ิ/◌ี), u (◌ุ/◌ู). Concepts: vowels attach around the consonant (after/above/below); short vs long length, which later decides live/dead.",
+  "teaches": ["sara_a_short", "sara_a_long", "sara_i_short", "sara_i_long", "sara_u_short", "sara_u_long"],
+  "reviews": [],
+  "exercises": [
+    {
+      "type": "concept",
+      "title": "Vowels wrap around consonants",
+      "thaiExample": "กา กิ กุ",
+      "body": [
+        "Thai vowels never stand alone — each one attaches to a consonant: after it (กา), above it (กิ), below it (กุ), or even before it.",
+        "In this course the dotted circle ◌ shows where the consonant sits: ◌า means \"the vowel า, written after\".",
+        "Always read the consonant first, then the vowel — wherever the vowel is written."
+      ]
+    },
+    {
+      "type": "concept",
+      "title": "Short and long",
+      "thaiExample": "กะ · กา",
+      "body": [
+        "Almost every Thai vowel comes as a short/long pair: กะ (ka, clipped) versus กา (kaa, held).",
+        "Length changes meaning — and soon it will help decide a syllable's tone: short-vowel syllables are \"dead\", long open ones are \"live\".",
+        "Listen for duration, not a different vowel sound."
+      ]
+    },
+    { "type": "intro", "characterId": "sara_a_short" },
+    { "type": "intro", "characterId": "sara_a_long" },
+    { "type": "glyph_to_sound", "characterId": "sara_a_long" },
+    { "type": "glyph_to_sound", "characterId": "sara_a_short" },
+    { "type": "intro", "characterId": "sara_i_short" },
+    { "type": "intro", "characterId": "sara_i_long" },
+    { "type": "glyph_to_sound", "characterId": "sara_i_long" },
+    { "type": "sound_to_glyph", "characterId": "sara_i_short" },
+    { "type": "intro", "characterId": "sara_u_short" },
+    { "type": "intro", "characterId": "sara_u_long" },
+    { "type": "glyph_to_sound", "characterId": "sara_u_short" },
+    { "type": "match_pairs", "characterIds": ["sara_a_long", "sara_i_long", "sara_u_long"] },
+    { "type": "sound_to_glyph", "characterId": "sara_u_long" }
+  ]
+}

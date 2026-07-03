@@ -1,0 +1,121 @@
+{
+  "id": "tone-01",
+  "unitId": "tone-rules",
+  "order": 1,
+  "title": "Live or dead?",
+  "xpReward": 20,
+  "pedagogy": "Tone rules (1/4): live vs dead syllables. Live = long open vowel or sonorant final (n, m, ng, y, w), plus the special vowels ไ◌ ใ◌ เ◌า ◌ำ; dead = short vowel or stop final (p, t, k). Prerequisite classification for every tone rule.",
+  "teaches": [],
+  "reviews": [],
+  "exercises": [
+    {
+      "type": "concept",
+      "title": "Syllables are live or dead",
+      "thaiExample": "กา · กะ",
+      "body": [
+        "Before tones, Thai asks one question of every syllable: does it ring on, or stop short?",
+        "LIVE syllables end open on a long vowel (กา) or in a humming sonorant final — n, m, ng, y, w (กิน, ลาน).",
+        "DEAD syllables end abruptly: a short vowel (กะ) or a stop final p, t, k (นก, จาก)."
+      ]
+    },
+    {
+      "type": "concept",
+      "title": "Why it matters",
+      "body": [
+        "Live and dead syllables take different tones — even when no tone mark is written.",
+        "The full table comes in the next lesson. First, make the live/dead call itself a reflex.",
+        "Rule of thumb: long-or-sonorant = live; short-or-stop = dead. And remember the four special vowels ไ◌ ใ◌ เ◌า ◌ำ — written short, but they count as live."
+      ]
+    },
+    {
+      "type": "rule_choice",
+      "prompt": "กา",
+      "promptNote": "ka — long า, no final consonant",
+      "question": "Live or dead?",
+      "choices": ["Live", "Dead"],
+      "correctIndex": 0,
+      "explanation": "กา ends open on the long vowel า, so it rings on — live."
+    },
+    {
+      "type": "rule_choice",
+      "prompt": "กะ",
+      "promptNote": "ka — short ะ",
+      "question": "Live or dead?",
+      "choices": ["Live", "Dead"],
+      "correctIndex": 1,
+      "explanation": "The short vowel ะ cuts the syllable off — dead."
+    },
+    {
+      "type": "rule_choice",
+      "prompt": "กิน",
+      "promptNote": "kin — \"to eat\"",
+      "question": "Live or dead?",
+      "choices": ["Live", "Dead"],
+      "correctIndex": 0,
+      "explanation": "กิน ends in the sonorant น (n), so it is live even though ◌ิ is short."
+    },
+    {
+      "type": "rule_choice",
+      "prompt": "นก",
+      "promptNote": "nok — \"bird\"",
+      "question": "Live or dead?",
+      "choices": ["Live", "Dead"],
+      "correctIndex": 1,
+      "explanation": "นก (read with an unwritten short o) ends in the stop ก (k) — dead. Stop finals p, t, k always kill the ring."
+    },
+    {
+      "type": "rule_choice",
+      "prompt": "มา",
+      "promptNote": "ma — \"to come\"",
+      "question": "Live or dead?",
+      "choices": ["Live", "Dead"],
+      "correctIndex": 0,
+      "explanation": "Long า with an open end — live."
+    },
+    {
+      "type": "rule_choice",
+      "prompt": "จาก",
+      "promptNote": "chak — \"from\"",
+      "question": "Live or dead?",
+      "choices": ["Live", "Dead"],
+      "correctIndex": 1,
+      "explanation": "Despite the long า, the stop final ก makes จาก dead."
+    },
+    {
+      "type": "rule_choice",
+      "prompt": "นำ",
+      "promptNote": "nam — \"to lead\"",
+      "question": "Live or dead?",
+      "choices": ["Live", "Dead"],
+      "correctIndex": 0,
+      "explanation": "◌ำ ends in an m sound — one of the four written-short vowels that count as live."
+    },
+    {
+      "type": "rule_choice",
+      "prompt": "ไป",
+      "promptNote": "pai — \"to go\"",
+      "question": "Live or dead?",
+      "choices": ["Live", "Dead"],
+      "correctIndex": 0,
+      "explanation": "ไ◌ counts as live — it ends in a y-glide."
+    },
+    {
+      "type": "rule_choice",
+      "prompt": "จะ",
+      "promptNote": "cha — \"will\"",
+      "question": "Live or dead?",
+      "choices": ["Live", "Dead"],
+      "correctIndex": 1,
+      "explanation": "Short ะ with no final — dead."
+    },
+    {
+      "type": "rule_choice",
+      "prompt": "บิน",
+      "promptNote": "bin — \"to fly\"",
+      "question": "Live or dead?",
+      "choices": ["Live", "Dead"],
+      "correctIndex": 0,
+      "explanation": "The sonorant final น keeps it ringing — live."
+    }
+  ]
+}

@@ -4,12 +4,15 @@ export const consonantClassSchema = z.enum(["mid", "high", "low"]);
 export type ConsonantClass = z.infer<typeof consonantClassSchema>;
 
 /**
- * A single Thai character (Phase 1: consonants only).
- * `id` is a stable snake_case slug from the acrophonic name — never rename
- * once shipped, SRS rows key on it.
+ * Character IDs are stable snake_case slugs — never rename once shipped,
+ * SRS rows key on them.
  */
-export const characterSchema = z.object({
-  id: z.string().regex(/^[a-z][a-z_]*$/),
+const characterId = z.string().regex(/^[a-z][a-z_]*$/);
+
+/** A Thai consonant. `kind` is stamped on at load in src/content/index.ts. */
+export const consonantSchema = z.object({
+  kind: z.literal("consonant"),
+  id: characterId,
   glyph: z.string().min(1),
   nameThai: z.string().min(1),
   nameRtgs: z.string().min(1),
@@ -23,14 +26,54 @@ export const characterSchema = z.object({
   /** ฃ and ฅ — kept for completeness, excluded from lessons and distractors. */
   obsolete: z.boolean().optional(),
 });
-export type ThaiCharacter = z.infer<typeof characterSchema>;
+export type ThaiConsonant = z.infer<typeof consonantSchema>;
 
-const characterId = z.string().regex(/^[a-z][a-z_]*$/);
+/**
+ * A Thai vowel. Glyphs use ◌ (U+25CC) as the consonant placeholder so the
+ * written position is visible (e.g. เ◌ีย). `sound` is RTGS, which does not
+ * mark length — `length` disambiguates (surfaced as "a (short)" in answers).
+ */
+export const vowelSchema = z.object({
+  kind: z.literal("vowel"),
+  id: characterId,
+  glyph: z.string().min(1),
+  nameThai: z.string().min(1),
+  nameRtgs: z.string().min(1),
+  sound: z.string().min(1),
+  length: z.enum(["short", "long"]),
+  /** Where the vowel is written relative to its consonant. */
+  position: z.enum(["after", "before", "above", "below", "around"]),
+  audioKey: z.string().min(1),
+  note: z.string().optional(),
+});
+export type ThaiVowel = z.infer<typeof vowelSchema>;
+
+/**
+ * A tone mark. Quizzed by name, never by a fixed sound — the tone a mark
+ * produces depends on the consonant class it sits on.
+ */
+export const toneMarkSchema = z.object({
+  kind: z.literal("tone_mark"),
+  id: characterId,
+  glyph: z.string().min(1),
+  nameThai: z.string().min(1),
+  nameRtgs: z.string().min(1),
+  audioKey: z.string().min(1),
+  note: z.string().optional(),
+});
+export type ThaiToneMark = z.infer<typeof toneMarkSchema>;
+
+export const characterSchema = z.discriminatedUnion("kind", [
+  consonantSchema,
+  vowelSchema,
+  toneMarkSchema,
+]);
+export type ThaiCharacter = z.infer<typeof characterSchema>;
 
 export const exerciseSchema = z.discriminatedUnion("type", [
   // Unscored teaching card shown before a character is first tested.
   z.object({ type: z.literal("intro"), characterId }),
-  // Multiple choice: show glyph, pick the romanized sound.
+  // Multiple choice: show glyph, pick the romanized sound (or mark name).
   z.object({ type: z.literal("glyph_to_sound"), characterId }),
   // Reverse: show name + sound, pick the glyph.
   z.object({ type: z.literal("sound_to_glyph"), characterId }),
@@ -39,11 +82,33 @@ export const exerciseSchema = z.discriminatedUnion("type", [
     type: z.literal("match_pairs"),
     characterIds: z.array(characterId).min(3).max(6),
   }),
-  // Assign each character to one of two consonant classes.
+  // Assign each character to one of two consonant classes (consonants only,
+  // enforced at load in src/content/index.ts).
   z.object({
     type: z.literal("class_sort"),
     characterIds: z.array(characterId).min(4).max(8),
     classes: z.tuple([consonantClassSchema, consonantClassSchema]),
+  }),
+  // Unscored concept screen: teaches a rule exercises alone can't convey
+  // (consonant classes, syllable liveness, tone logic).
+  z.object({
+    type: z.literal("concept"),
+    title: z.string().min(1),
+    body: z.array(z.string().min(1)).min(1).max(4),
+    thaiExample: z.string().optional(),
+  }),
+  // Static multiple choice over a Thai syllable/word: live-or-dead calls,
+  // tone identification. `correctIndex` bounds-checked at load.
+  z.object({
+    type: z.literal("rule_choice"),
+    prompt: z.string().min(1),
+    promptNote: z.string().optional(),
+    question: z.string().min(1),
+    choices: z.array(z.string().min(1)).min(2).max(5),
+    correctIndex: z.number().int().nonnegative(),
+    explanation: z.string().min(1),
+    /** Characters whose SRS cards this answer should count toward. */
+    attributeTo: z.array(characterId).optional(),
   }),
 ]);
 export type Exercise = z.infer<typeof exerciseSchema>;
@@ -58,7 +123,12 @@ export const lessonSchema = z.object({
   teaches: z.array(characterId),
   /** Previously taught characters this lesson reinforces. */
   reviews: z.array(characterId),
-  exercises: z.array(exerciseSchema).min(8).max(12),
+  /**
+   * Human-verifiable citation of what the lesson teaches — the consonant
+   * class and/or tone rule covered, for content review.
+   */
+  pedagogy: z.string().min(1),
+  exercises: z.array(exerciseSchema).min(8).max(16),
 });
 export type Lesson = z.infer<typeof lessonSchema>;
 

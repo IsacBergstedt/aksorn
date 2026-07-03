@@ -1,0 +1,23 @@
+{
+  "id": "high-03",
+  "unitId": "high-class",
+  "order": 3,
+  "title": "Checkpoint: the high ten",
+  "xpReward": 30,
+  "pedagogy": "Checkpoint: all ten living high-class consonants (ข ฉ ฐ ถ ผ ฝ ศ ษ ส ห); mid-vs-high sorting. Obsolete ฃ is excluded.",
+  "teaches": [],
+  "reviews": ["kho_khai", "cho_ching", "tho_than", "tho_thung", "pho_phueng", "fo_fa", "so_sala", "so_ruesi", "so_suea", "ho_hip"],
+  "exercises": [
+    { "type": "glyph_to_sound", "characterId": "kho_khai" },
+    { "type": "sound_to_glyph", "characterId": "cho_ching" },
+    { "type": "glyph_to_sound", "characterId": "tho_than" },
+    { "type": "sound_to_glyph", "characterId": "tho_thung" },
+    { "type": "match_pairs", "characterIds": ["kho_khai", "fo_fa", "so_suea", "ho_hip"] },
+    { "type": "glyph_to_sound", "characterId": "pho_phueng" },
+    { "type": "sound_to_glyph", "characterId": "so_sala" },
+    { "type": "class_sort", "characterIds": ["kho_khai", "tho_thung", "pho_phueng", "so_suea", "ko_kai", "do_dek", "bo_baimai", "o_ang"], "classes": ["mid", "high"] },
+    { "type": "match_pairs", "characterIds": ["cho_ching", "tho_than", "pho_phueng", "so_ruesi"] },
+    { "type": "glyph_to_sound", "characterId": "ho_hip" },
+    { "type": "sound_to_glyph", "characterId": "fo_fa" }
+  ]
+}

@@ -6,10 +6,17 @@ import { Volume2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { useCharacterAudio } from "@/lib/audio";
-import type { RuntimeExercise } from "@/lib/engine";
+import { answerLabel, type RuntimeExercise } from "@/lib/engine";
+import type { ThaiCharacter } from "@/content/schema";
 import type { OnExerciseComplete } from "./types";
 
 type ChoiceRuntime = Extract<RuntimeExercise, { kind: "choice" }>;
+
+const glyphPromptByKind: Record<ThaiCharacter["kind"], string> = {
+  consonant: "What sound does this consonant make?",
+  vowel: "What sound does this vowel make?",
+  tone_mark: "What is this tone mark called?",
+};
 
 export function ChoiceExercise({
   exercise,
@@ -41,7 +48,7 @@ export function ChoiceExercise({
       {direction === "glyph_to_sound" ? (
         <div className="flex flex-col items-center gap-4">
           <h2 className="text-lg font-semibold text-muted-foreground">
-            What sound does this consonant make?
+            {glyphPromptByKind[target.kind]}
           </h2>
           <button
             type="button"
@@ -60,9 +67,12 @@ export function ChoiceExercise({
           </h2>
           <p className="text-3xl font-bold">
             {target.nameRtgs}
-            <span className="ml-2 text-xl font-normal text-muted-foreground">
-              ({target.initialSound})
-            </span>
+            {/* Tone marks are named by their label — no point repeating it. */}
+            {target.kind !== "tone_mark" && (
+              <span className="ml-2 text-xl font-normal text-muted-foreground">
+                ({answerLabel(target)})
+              </span>
+            )}
           </p>
         </div>
       )}
@@ -86,7 +96,9 @@ export function ChoiceExercise({
               )}
             >
               {direction === "glyph_to_sound" ? (
-                <span className="text-2xl font-semibold">{option.initialSound}</span>
+                <span className="text-2xl font-semibold">
+                  {answerLabel(option)}
+                </span>
               ) : (
                 <span className="font-thai text-5xl leading-none">{option.glyph}</span>
               )}
@@ -117,8 +129,14 @@ export function ChoiceExercise({
                   {direction === "glyph_to_sound" ? (
                     <>
                       <span className="font-thai">{target.glyph}</span> is{" "}
-                      <strong>{target.nameRtgs}</strong> — it sounds like{" "}
-                      <strong>{target.initialSound}</strong>.
+                      <strong>{target.nameRtgs}</strong>
+                      {target.kind !== "tone_mark" && (
+                        <>
+                          {" "}
+                          — it sounds like <strong>{answerLabel(target)}</strong>
+                        </>
+                      )}
+                      .
                     </>
                   ) : (
                     <>

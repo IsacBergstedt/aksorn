@@ -1,15 +1,26 @@
 import { characters, getCharacter } from "@/content";
-import type { ConsonantClass, Lesson, ThaiCharacter } from "@/content/schema";
+import type {
+  ConsonantClass,
+  Lesson,
+  ThaiCharacter,
+  ThaiConsonant,
+} from "@/content/schema";
 
 /**
  * Runtime exercise shapes consumed by the exercise components.
  * Lesson JSON stays compact; distractors are generated here from the
- * character pool (lesson characters first, then same class, then anywhere).
- * Randomness means this must run client-side (after mount) to avoid
- * hydration mismatches.
+ * character pool (lesson characters first, then same class/kind, then
+ * anywhere). Randomness means this must run client-side (after mount) to
+ * avoid hydration mismatches.
  */
 export type RuntimeExercise =
   | { kind: "intro"; character: ThaiCharacter }
+  | {
+      kind: "concept";
+      title: string;
+      body: string[];
+      thaiExample?: string;
+    }
   | {
       kind: "choice";
       direction: "glyph_to_sound" | "sound_to_glyph";
@@ -19,9 +30,40 @@ export type RuntimeExercise =
   | { kind: "match_pairs"; characters: ThaiCharacter[] }
   | {
       kind: "class_sort";
-      characters: ThaiCharacter[];
+      characters: ThaiConsonant[];
       classes: [ConsonantClass, ConsonantClass];
+    }
+  | {
+      kind: "rule_choice";
+      prompt: string;
+      promptNote?: string;
+      question: string;
+      choices: string[];
+      correctIndex: number;
+      explanation: string;
+      attributeTo?: string[];
     };
+
+/**
+ * What a choice answer displays for a character. Consonants answer with
+ * their sound; vowels with sound + length (RTGS collapses length, so the
+ * label disambiguates); tone marks with their name (their tone effect
+ * depends on consonant class, so they have no fixed sound).
+ */
+export function answerLabel(c: ThaiCharacter): string {
+  switch (c.kind) {
+    case "consonant":
+      return c.initialSound;
+    case "vowel":
+      return `${c.sound}, ${c.length}`;
+    case "tone_mark":
+      return c.nameRtgs;
+  }
+}
+
+function isObsolete(c: ThaiCharacter): boolean {
+  return c.kind === "consonant" && c.obsolete === true;
+}
 
 function shuffle<T>(input: readonly T[]): T[] {
   const arr = [...input];
@@ -39,26 +81,34 @@ function pickDistractors(
   lessonPool: ThaiCharacter[],
   direction: "glyph_to_sound" | "sound_to_glyph",
 ): ThaiCharacter[] {
-  // Preference tiers: lesson characters → same class → everything else.
+  // Preference tiers: lesson characters of the same kind → same class (or
+  // same kind for vowels/tone marks) → same kind anywhere → anything.
+  const sameKind = (c: ThaiCharacter) => c.kind === target.kind;
   const tiers = [
-    lessonPool,
-    characters.filter((c) => c.class === target.class),
+    lessonPool.filter(sameKind),
+    target.kind === "consonant"
+      ? characters.filter(
+          (c) => c.kind === "consonant" && c.class === target.class,
+        )
+      : characters.filter(sameKind),
+    characters.filter(sameKind),
     characters,
   ];
 
   const picked: ThaiCharacter[] = [];
   const usedIds = new Set([target.id]);
-  const usedSounds = new Set([target.initialSound]);
+  const usedLabels = new Set([answerLabel(target)]);
 
   for (const tier of tiers) {
     for (const c of shuffle(tier)) {
       if (picked.length >= OPTION_COUNT - 1) break;
-      if (usedIds.has(c.id) || c.obsolete) continue;
-      // Answers are sounds, so every option needs a distinct sound.
-      if (direction === "glyph_to_sound" && usedSounds.has(c.initialSound)) continue;
+      if (usedIds.has(c.id) || isObsolete(c)) continue;
+      // Answers are labels, so every option needs a distinct label.
+      if (direction === "glyph_to_sound" && usedLabels.has(answerLabel(c)))
+        continue;
       picked.push(c);
       usedIds.add(c.id);
-      usedSounds.add(c.initialSound);
+      usedLabels.add(answerLabel(c));
     }
   }
   return picked;
@@ -86,6 +136,13 @@ export function buildLessonExercises(lesson: Lesson): RuntimeExercise[] {
     switch (ex.type) {
       case "intro":
         return { kind: "intro", character: getCharacter(ex.characterId) };
+      case "concept":
+        return {
+          kind: "concept",
+          title: ex.title,
+          body: ex.body,
+          thaiExample: ex.thaiExample,
+        };
       case "glyph_to_sound":
       case "sound_to_glyph":
         return buildChoice(ex.type, ex.characterId, lessonPool);
@@ -97,8 +154,28 @@ export function buildLessonExercises(lesson: Lesson): RuntimeExercise[] {
       case "class_sort":
         return {
           kind: "class_sort",
-          characters: shuffle(ex.characterIds.map(getCharacter)),
+          // Consonant-only is enforced at content load in src/content/index.ts.
+          characters: shuffle(
+            ex.characterIds.map((id) => {
+              const c = getCharacter(id);
+              if (c.kind !== "consonant") {
+                throw new Error(`class_sort got non-consonant ${id}`);
+              }
+              return c;
+            }),
+          ),
           classes: ex.classes,
+        };
+      case "rule_choice":
+        return {
+          kind: "rule_choice",
+          prompt: ex.prompt,
+          promptNote: ex.promptNote,
+          question: ex.question,
+          choices: ex.choices,
+          correctIndex: ex.correctIndex,
+          explanation: ex.explanation,
+          attributeTo: ex.attributeTo,
         };
     }
   });
@@ -109,7 +186,7 @@ const REVIEW_MAX_CHARACTERS = 6;
 /** A review session is a dynamically generated lesson over due SRS cards. */
 export function buildReviewExercises(characterIds: string[]): RuntimeExercise[] {
   const chars = characterIds.slice(0, REVIEW_MAX_CHARACTERS).map(getCharacter);
-  const pool = chars.length > 1 ? chars : characters.filter((c) => !c.obsolete);
+  const pool = chars.length > 1 ? chars : characters.filter((c) => !isObsolete(c));
 
   const exercises: RuntimeExercise[] = [
     ...chars.map((c) => buildChoice("glyph_to_sound", c.id, pool)),

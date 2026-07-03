@@ -1,0 +1,35 @@
+{
+  "id": "vowel-03",
+  "unitId": "vowels",
+  "order": 3,
+  "title": "The o family and oe",
+  "xpReward": 20,
+  "pedagogy": "Vowels (3/4): closed o (โ◌ะ/โ◌) vs open o (เ◌าะ/◌อ), and oe (เ◌อะ/เ◌อ). Concept: Thai distinguishes two o qualities; อ as a vowel letter.",
+  "teaches": ["sara_o_short", "sara_o_long", "sara_o_open_short", "sara_o_open_long", "sara_oe_short", "sara_oe_long"],
+  "reviews": ["sara_e_long", "sara_ae_long"],
+  "exercises": [
+    {
+      "type": "concept",
+      "title": "Two kinds of o",
+      "thaiExample": "โก · กอ",
+      "body": [
+        "Thai splits English \"o\" in two: โ◌ is the closed o of \"go\"; ◌อ is the open o of \"law\".",
+        "Both have short forms that look bigger than they sound: โ◌ะ and เ◌าะ.",
+        "Meet อ again: at the start of a word it silently carries a vowel, but written after a consonant it IS the vowel — long open o."
+      ]
+    },
+    { "type": "intro", "characterId": "sara_o_long" },
+    { "type": "glyph_to_sound", "characterId": "sara_o_long" },
+    { "type": "intro", "characterId": "sara_o_short" },
+    { "type": "glyph_to_sound", "characterId": "sara_o_short" },
+    { "type": "intro", "characterId": "sara_o_open_long" },
+    { "type": "glyph_to_sound", "characterId": "sara_o_open_long" },
+    { "type": "intro", "characterId": "sara_o_open_short" },
+    { "type": "sound_to_glyph", "characterId": "sara_o_open_short" },
+    { "type": "intro", "characterId": "sara_oe_long" },
+    { "type": "glyph_to_sound", "characterId": "sara_oe_long" },
+    { "type": "intro", "characterId": "sara_oe_short" },
+    { "type": "glyph_to_sound", "characterId": "sara_oe_short" },
+    { "type": "match_pairs", "characterIds": ["sara_oe_long", "sara_o_long", "sara_ae_long"] }
+  ]
+}

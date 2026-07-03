@@ -1,0 +1,45 @@
+{
+  "id": "high-01",
+  "unitId": "high-class",
+  "order": 1,
+  "title": "Meet the high class: ข ฉ ถ ฐ ผ",
+  "xpReward": 20,
+  "pedagogy": "High-class consonants (1/3): aspirated stops ข ฉ ถ ฐ ผ — breathy counterparts of mid-class ก จ ต ป. Concepts: what consonant classes are for; the high-class sound profile.",
+  "teaches": ["kho_khai", "cho_ching", "tho_thung", "tho_than", "pho_phueng"],
+  "reviews": ["ko_kai", "cho_chan", "to_tao", "po_pla"],
+  "exercises": [
+    {
+      "type": "concept",
+      "title": "Why consonant classes matter",
+      "body": [
+        "Every Thai consonant belongs to one of three classes: mid, high, or low. The class doesn't change how the consonant sounds — it changes the tone of the syllable it starts.",
+        "You already know the nine mid-class letters. This unit adds the eleven high-class ones.",
+        "Learn each letter's class along with its sound. You'll need both when tones arrive in the Tone Rules unit."
+      ]
+    },
+    {
+      "type": "concept",
+      "title": "The high-class sound",
+      "thaiExample": "ข ฉ ถ ผ",
+      "body": [
+        "High-class consonants are aspirated or breathy: kh, ch, th, ph, f, s, h — said with a puff of air.",
+        "Many are the airy siblings of a mid-class letter: ข (kh) puffs up ก (k), ถ (th) puffs up ต (t), ผ (ph) puffs up ป (p).",
+        "If a consonant feels breathy, suspect high class."
+      ]
+    },
+    { "type": "intro", "characterId": "kho_khai" },
+    { "type": "glyph_to_sound", "characterId": "kho_khai" },
+    { "type": "intro", "characterId": "cho_ching" },
+    { "type": "glyph_to_sound", "characterId": "cho_ching" },
+    { "type": "sound_to_glyph", "characterId": "kho_khai" },
+    { "type": "intro", "characterId": "tho_thung" },
+    { "type": "glyph_to_sound", "characterId": "tho_thung" },
+    { "type": "intro", "characterId": "tho_than" },
+    { "type": "sound_to_glyph", "characterId": "tho_than" },
+    { "type": "intro", "characterId": "pho_phueng" },
+    { "type": "glyph_to_sound", "characterId": "pho_phueng" },
+    { "type": "match_pairs", "characterIds": ["kho_khai", "cho_ching", "tho_thung", "pho_phueng"] },
+    { "type": "class_sort", "characterIds": ["kho_khai", "cho_ching", "tho_than", "pho_phueng", "ko_kai", "to_tao"], "classes": ["high", "mid"] },
+    { "type": "sound_to_glyph", "characterId": "pho_phueng" }
+  ]
+}

@@ -1,11 +1,12 @@
-import type { ThaiCharacter } from "./schema";
+import type { ThaiConsonant } from "./schema";
 
 /**
  * All 44 Thai consonants, grouped by class. Letter names, classes, and
  * sounds are public-domain script facts; the English glosses are our own.
- * RTGS romanization throughout.
+ * RTGS romanization throughout. `kind: "consonant"` is stamped on at load
+ * in src/content/index.ts.
  */
-export const rawCharacters: ThaiCharacter[] = [
+export const rawCharacters: Omit<ThaiConsonant, "kind">[] = [
   // ── Mid class (9) ────────────────────────────────────────────────
   {
     id: "ko_kai",

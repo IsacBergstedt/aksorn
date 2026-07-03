@@ -1,0 +1,35 @@
+{
+  "id": "high-02",
+  "unitId": "high-class",
+  "order": 2,
+  "title": "ฝ ห and the three s's",
+  "xpReward": 20,
+  "pedagogy": "High-class consonants (2/3): fricatives ฝ (f) and ห (h), plus the three high-class s letters ส ศ ษ — one sound, three spellings.",
+  "teaches": ["fo_fa", "ho_hip", "so_suea", "so_sala", "so_ruesi"],
+  "reviews": ["kho_khai", "cho_ching", "tho_thung", "pho_phueng"],
+  "exercises": [
+    { "type": "intro", "characterId": "fo_fa" },
+    { "type": "glyph_to_sound", "characterId": "fo_fa" },
+    { "type": "intro", "characterId": "ho_hip" },
+    { "type": "glyph_to_sound", "characterId": "ho_hip" },
+    {
+      "type": "concept",
+      "title": "Three letters, one sound",
+      "thaiExample": "ส ศ ษ",
+      "body": [
+        "Thai has three high-class letters that all say s: ส is the everyday one, ศ appears mostly in Indic loanwords, and ษ is the rare third.",
+        "Reading is easy — they're all just s. Which one a word uses is spelling knowledge you'll absorb word by word.",
+        "All three are high class, so they follow the same tone rules."
+      ]
+    },
+    { "type": "intro", "characterId": "so_suea" },
+    { "type": "glyph_to_sound", "characterId": "so_suea" },
+    { "type": "intro", "characterId": "so_sala" },
+    { "type": "intro", "characterId": "so_ruesi" },
+    { "type": "match_pairs", "characterIds": ["so_suea", "so_sala", "so_ruesi"] },
+    { "type": "glyph_to_sound", "characterId": "so_sala" },
+    { "type": "sound_to_glyph", "characterId": "so_ruesi" },
+    { "type": "match_pairs", "characterIds": ["fo_fa", "ho_hip", "kho_khai", "pho_phueng"] },
+    { "type": "sound_to_glyph", "characterId": "ho_hip" }
+  ]
+}

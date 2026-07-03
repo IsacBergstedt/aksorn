@@ -1,0 +1,37 @@
+{
+  "id": "vowel-04",
+  "unitId": "vowels",
+  "order": 4,
+  "title": "Complex vowels & checkpoint",
+  "xpReward": 30,
+  "pedagogy": "Vowels (4/4): complex vowels ia (เ◌ีย), uea (เ◌ือ), ua (◌ัว), plus ai (ไ◌/ใ◌), ao (เ◌า), am (◌ำ) — the four written-short vowels that count as LIVE for tone rules. Vowel checkpoint.",
+  "teaches": ["sara_ia", "sara_uea", "sara_ua", "sara_ai_maimalai", "sara_ai_maimuan", "sara_ao", "sara_am"],
+  "reviews": ["sara_a_long", "sara_i_long", "sara_u_long", "sara_ue_long"],
+  "exercises": [
+    {
+      "type": "concept",
+      "title": "Vowels built from pieces",
+      "thaiExample": "เ◌ีย เ◌ือ ◌ัว",
+      "body": [
+        "Complex vowels glue several marks around one consonant: เ◌ีย (ia), เ◌ือ (uea), ◌ัว (ua). Read each as a single unit — เกีย is k + ia, not four separate sounds.",
+        "Four more — ไ◌ ใ◌ เ◌า ◌ำ — are spoken short, but for tone purposes they count as LIVE syllables, because they end in a glide or an m.",
+        "That exception matters constantly: ไป, เขา, and น้ำ all behave as live syllables."
+      ]
+    },
+    { "type": "intro", "characterId": "sara_ia" },
+    { "type": "glyph_to_sound", "characterId": "sara_ia" },
+    { "type": "intro", "characterId": "sara_uea" },
+    { "type": "glyph_to_sound", "characterId": "sara_uea" },
+    { "type": "intro", "characterId": "sara_ua" },
+    { "type": "glyph_to_sound", "characterId": "sara_ua" },
+    { "type": "intro", "characterId": "sara_ai_maimalai" },
+    { "type": "glyph_to_sound", "characterId": "sara_ai_maimalai" },
+    { "type": "intro", "characterId": "sara_ai_maimuan" },
+    { "type": "sound_to_glyph", "characterId": "sara_ai_maimuan" },
+    { "type": "intro", "characterId": "sara_ao" },
+    { "type": "glyph_to_sound", "characterId": "sara_ao" },
+    { "type": "intro", "characterId": "sara_am" },
+    { "type": "glyph_to_sound", "characterId": "sara_am" },
+    { "type": "match_pairs", "characterIds": ["sara_ia", "sara_uea", "sara_ua", "sara_ao"] }
+  ]
+}

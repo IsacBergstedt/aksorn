@@ -1,0 +1,71 @@
+{
+  "id": "tone-03",
+  "unitId": "tone-rules",
+  "order": 3,
+  "title": "The four tone marks",
+  "xpReward": 20,
+  "pedagogy": "Tone rules (3/4): tone mark names and shapes — mai ek (◌่), mai tho (◌้), mai tri (◌๊), mai chattawa (◌๋). On MID-class consonants they give low, falling, high, rising respectively.",
+  "teaches": ["mai_ek", "mai_tho", "mai_tri", "mai_chattawa"],
+  "reviews": [],
+  "exercises": [
+    {
+      "type": "concept",
+      "title": "Marks that steer the tone",
+      "thaiExample": "ก่า ก้า ก๊า ก๋า",
+      "body": [
+        "Four small marks sit above the initial consonant and override the default tone.",
+        "On a MID-class consonant they are perfectly regular, in naming order: mai ek ◌่ → low, mai tho ◌้ → falling, mai tri ◌๊ → high, mai chattawa ◌๋ → rising.",
+        "On high- and low-class consonants the same marks land differently — that's the next lesson. First, learn their names and shapes cold."
+      ]
+    },
+    { "type": "intro", "characterId": "mai_ek" },
+    { "type": "intro", "characterId": "mai_tho" },
+    { "type": "glyph_to_sound", "characterId": "mai_ek" },
+    { "type": "intro", "characterId": "mai_tri" },
+    { "type": "intro", "characterId": "mai_chattawa" },
+    { "type": "match_pairs", "characterIds": ["mai_ek", "mai_tho", "mai_tri", "mai_chattawa"] },
+    { "type": "glyph_to_sound", "characterId": "mai_tho" },
+    {
+      "type": "rule_choice",
+      "prompt": "ก่า",
+      "promptNote": "mid class + mai ek",
+      "question": "Which tone?",
+      "choices": ["Mid tone", "Low tone", "Falling tone", "High tone", "Rising tone"],
+      "correctIndex": 1,
+      "explanation": "Mid class + mai ek = low tone.",
+      "attributeTo": ["mai_ek"]
+    },
+    {
+      "type": "rule_choice",
+      "prompt": "ก้า",
+      "promptNote": "mid class + mai tho",
+      "question": "Which tone?",
+      "choices": ["Mid tone", "Low tone", "Falling tone", "High tone", "Rising tone"],
+      "correctIndex": 2,
+      "explanation": "Mid class + mai tho = falling tone.",
+      "attributeTo": ["mai_tho"]
+    },
+    {
+      "type": "rule_choice",
+      "prompt": "ก๊า",
+      "promptNote": "mid class + mai tri",
+      "question": "Which tone?",
+      "choices": ["Mid tone", "Low tone", "Falling tone", "High tone", "Rising tone"],
+      "correctIndex": 3,
+      "explanation": "Mid class + mai tri = high tone.",
+      "attributeTo": ["mai_tri"]
+    },
+    {
+      "type": "rule_choice",
+      "prompt": "ก๋า",
+      "promptNote": "mid class + mai chattawa",
+      "question": "Which tone?",
+      "choices": ["Mid tone", "Low tone", "Falling tone", "High tone", "Rising tone"],
+      "correctIndex": 4,
+      "explanation": "Mid class + mai chattawa = rising tone.",
+      "attributeTo": ["mai_chattawa"]
+    },
+    { "type": "sound_to_glyph", "characterId": "mai_chattawa" },
+    { "type": "glyph_to_sound", "characterId": "mai_tri" }
+  ]
+}

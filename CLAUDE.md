@@ -51,6 +51,28 @@ Must avoid **all Duolingo copyright and trade dress**:
 - **Phase 2 (later)**: tone/listening drills with audio.
 - **Phase 3 (later)**: vocab + sentence course tree, Thai script only.
 
+## Navigation (added 2026-07-03)
+
+Three top-level learning sections, defined once in `src/lib/navigation.ts`
+and rendered by `src/components/SectionTabs.tsx` (desktop: inline header
+links; mobile: fixed bottom tab bar, hidden on `/lesson/*`):
+
+- **Reading Thai** (`/reading`) — LIVE, full Phase-1 curriculum shipped
+  2026-07-04: 6 units / 22 lessons — mid class (4), high class (3),
+  low class (5), vowels (4), tone rules (4), mixed review (2).
+  `/lesson/*` and `/review` belong to this section for active-state
+  purposes. `/` currently redirects here (default landing until Thai
+  Words ships — the redirect in `src/app/page.tsx` is the one line to
+  flip).
+- **Thai Words** (`/words`) — PLACEHOLDER SHELL. Will become the main
+  course: a winding vertical unit path where units unlock sequentially
+  (`src/components/LessonPath.tsx`). Placeholder units live in
+  `src/content/words-units.json`, validated by the existing `unitSchema`.
+  It MUST reuse the existing lesson engine, JSON schema, and
+  `/lesson/[lessonId]` route when real content lands — no separate engine.
+- **Practice Speaking** (`/speaking`) — PLACEHOLDER PAGE only ("Coming
+  soon"). Audio functionality is Phase 2.
+
 ## Phase 1 requirements
 
 1. **Lesson engine**: lessons are JSON definitions rendered by a generic
@@ -90,9 +112,22 @@ architectural decisions.)
 
 ## Data model (approved by user 2026-07-02)
 
-- Content: `characters.ts` (id, glyph, thai name, RTGS, class, initial/final
-  sound, acrophonic meaning, audioKey), `lessons/*.json` (id, unit, title,
-  xp, teaches[], reviews[], exercises[]).
+- Content: characters are a discriminated union on `kind` —
+  `characters.ts` (44 consonants: id, glyph, thai name, RTGS, class,
+  initial/final sound, acrophonic meaning, audioKey), `vowels.ts`
+  (25 vowels: sound, length short/long, written position, ◌ placeholder
+  in glyphs), `tone-marks.ts` (4 marks, quizzed by name — their tone
+  effect depends on class). `lessons/*.json` (id, unit, title, xp,
+  teaches[], reviews[], pedagogy, exercises[]).
+- Exercise types: `intro`, `glyph_to_sound`, `sound_to_glyph`,
+  `match_pairs`, `class_sort` (consonants only), `concept` (unscored
+  teaching screens — every unit opens with 1–2), `rule_choice` (static
+  MC over a Thai syllable for live/dead and tone drills; optional
+  `attributeTo` routes the result to specific SRS cards, otherwise it
+  counts toward accuracy only).
+- Every lesson has a required `pedagogy` field citing the consonant
+  class / tone rule it teaches, so content can be human-verified against
+  the tone tables. Keep it accurate when editing lessons.
 - Supabase: `profiles`, `user_stats` (xp, streaks), `lesson_completions`,
   `srs_cards` (SM-2 fields per character). All tables RLS-scoped to
   `auth.uid()`.
@@ -106,7 +141,17 @@ architectural decisions.)
   them).
 - Thai text always rendered with a dedicated Thai-capable font stack; never
   rely on system fallback for the learning glyphs.
-- Romanization: RTGS everywhere in learner-facing copy.
+- Romanization: **RTGS** everywhere in learner-facing copy (decided
+  2026-07-04). RTGS doesn't mark vowel length or the two o-qualities, so
+  answer labels disambiguate as e.g. "a, short" / "a, long" and
+  "o (open)" — see `answerLabel()` in `src/lib/engine.ts`.
+- Tone-rule ground truth (encode lessons against exactly this):
+  unmarked — mid+live=mid, mid+dead=low, high+live=rising, high+dead=low,
+  low+live=mid, low+dead-short=high, low+dead-long=falling;
+  marked — mid/high + mai ek = low, mid/high + mai tho = falling,
+  LOW + mai ek = falling, LOW + mai tho = high, mai tri = high and
+  mai chattawa = rising (mid class, where they practically occur).
+  ไ◌ ใ◌ เ◌า ◌ำ count as live despite being written short.
 - shadcn/ui components live in `src/components/ui/`; app components in
   `src/components/`; exercise engine in `src/components/exercises/`.
 - Supabase migrations in `supabase/migrations/` — schema changes go through

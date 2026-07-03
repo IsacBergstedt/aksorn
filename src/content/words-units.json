@@ -1,0 +1,34 @@
+[
+  {
+    "id": "words-greetings",
+    "title": "Greetings & Politeness",
+    "description": "Hello, goodbye, thank you — and the polite particles that go with them.",
+    "order": 1,
+    "lessonIds": [],
+    "comingSoon": true
+  },
+  {
+    "id": "words-numbers",
+    "title": "Numbers",
+    "description": "Count from zero to a million and read Thai numerals on price tags.",
+    "order": 2,
+    "lessonIds": [],
+    "comingSoon": true
+  },
+  {
+    "id": "words-food",
+    "title": "Food & Drink",
+    "description": "Order at a street stall: dishes, flavors, and the words on the menu.",
+    "order": 3,
+    "lessonIds": [],
+    "comingSoon": true
+  },
+  {
+    "id": "words-getting-around",
+    "title": "Getting Around",
+    "description": "Places, directions, and transport — read the signs, not just the map.",
+    "order": 4,
+    "lessonIds": [],
+    "comingSoon": true
+  }
+]

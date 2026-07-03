@@ -1,0 +1,121 @@
+{
+  "id": "tone-02",
+  "unitId": "tone-rules",
+  "order": 2,
+  "title": "Tones with no mark",
+  "xpReward": 20,
+  "pedagogy": "Tone rules (2/4): unmarked syllables — mid+live=mid, mid+dead=low, high+live=rising, high+dead=low, low+live=mid, low+dead-short=high, low+dead-long=falling.",
+  "teaches": [],
+  "reviews": [],
+  "exercises": [
+    {
+      "type": "concept",
+      "title": "No mark ≠ no tone",
+      "thaiExample": "กา ขา มา",
+      "body": [
+        "A bare syllable still has a tone. The class of the initial consonant plus live/dead decides which.",
+        "LIVE: mid class → mid tone (กา), high class → rising (ขา), low class → mid (มา).",
+        "DEAD: mid and high class → low tone (กะ). Low class splits: high tone on a short vowel (คะ), falling on a long one (มาก)."
+      ]
+    },
+    {
+      "type": "concept",
+      "title": "Three anchor words",
+      "body": [
+        "กา (mid + live) = mid tone, \"crow\". ขา (high + live) = rising, \"leg\". มา (low + live) = mid, \"to come\".",
+        "Keep those three as tuning forks — every unmarked syllable maps onto one row of the table.",
+        "Now drill until the table is reflex."
+      ]
+    },
+    {
+      "type": "rule_choice",
+      "prompt": "กา",
+      "promptNote": "ka — ก is mid class; live",
+      "question": "Which tone?",
+      "choices": ["Mid tone", "Low tone", "Falling tone", "High tone", "Rising tone"],
+      "correctIndex": 0,
+      "explanation": "Mid class + live = mid tone. กา means \"crow\"."
+    },
+    {
+      "type": "rule_choice",
+      "prompt": "ขา",
+      "promptNote": "kha — ข is high class; live",
+      "question": "Which tone?",
+      "choices": ["Mid tone", "Low tone", "Falling tone", "High tone", "Rising tone"],
+      "correctIndex": 4,
+      "explanation": "High class + live = rising tone. ขา means \"leg\"."
+    },
+    {
+      "type": "rule_choice",
+      "prompt": "มา",
+      "promptNote": "ma — ม is low class; live",
+      "question": "Which tone?",
+      "choices": ["Mid tone", "Low tone", "Falling tone", "High tone", "Rising tone"],
+      "correctIndex": 0,
+      "explanation": "Low class + live = mid tone — unmarked live low behaves like mid."
+    },
+    {
+      "type": "rule_choice",
+      "prompt": "กะ",
+      "promptNote": "ka — mid class; dead (short ะ)",
+      "question": "Which tone?",
+      "choices": ["Mid tone", "Low tone", "Falling tone", "High tone", "Rising tone"],
+      "correctIndex": 1,
+      "explanation": "Mid class + dead = low tone."
+    },
+    {
+      "type": "rule_choice",
+      "prompt": "ขอ",
+      "promptNote": "kho — high class; live (long ◌อ)",
+      "question": "Which tone?",
+      "choices": ["Mid tone", "Low tone", "Falling tone", "High tone", "Rising tone"],
+      "correctIndex": 4,
+      "explanation": "High class + live = rising tone. ขอ means \"to ask for\"."
+    },
+    {
+      "type": "rule_choice",
+      "prompt": "นก",
+      "promptNote": "nok — low class; dead, short vowel",
+      "question": "Which tone?",
+      "choices": ["Mid tone", "Low tone", "Falling tone", "High tone", "Rising tone"],
+      "correctIndex": 3,
+      "explanation": "Low class + dead + short vowel = high tone. นก means \"bird\"."
+    },
+    {
+      "type": "rule_choice",
+      "prompt": "มาก",
+      "promptNote": "mak — low class; dead, long vowel",
+      "question": "Which tone?",
+      "choices": ["Mid tone", "Low tone", "Falling tone", "High tone", "Rising tone"],
+      "correctIndex": 2,
+      "explanation": "Low class + dead + LONG vowel = falling tone. มาก means \"very\"."
+    },
+    {
+      "type": "rule_choice",
+      "prompt": "จาน",
+      "promptNote": "chan — mid class; live (sonorant น)",
+      "question": "Which tone?",
+      "choices": ["Mid tone", "Low tone", "Falling tone", "High tone", "Rising tone"],
+      "correctIndex": 0,
+      "explanation": "Mid class + live = mid tone. จาน means \"plate\"."
+    },
+    {
+      "type": "rule_choice",
+      "prompt": "สี",
+      "promptNote": "si — high class; live (long ◌ี)",
+      "question": "Which tone?",
+      "choices": ["Mid tone", "Low tone", "Falling tone", "High tone", "Rising tone"],
+      "correctIndex": 4,
+      "explanation": "High class + live = rising tone. สี means \"color\"."
+    },
+    {
+      "type": "rule_choice",
+      "prompt": "คะ",
+      "promptNote": "kha — low class; dead, short vowel",
+      "question": "Which tone?",
+      "choices": ["Mid tone", "Low tone", "Falling tone", "High tone", "Rising tone"],
+      "correctIndex": 3,
+      "explanation": "Low class + dead + short = high tone. คะ is the high-tone polite particle."
+    }
+  ]
+}

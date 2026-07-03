@@ -1,0 +1,132 @@
+{
+  "id": "tone-04",
+  "unitId": "tone-rules",
+  "order": 4,
+  "title": "Class × mark: the full system",
+  "xpReward": 30,
+  "pedagogy": "Tone rules (4/4): marks on high and low class — high/mid + mai ek = low; high/mid + mai tho = falling; LOW + mai ek = falling; LOW + mai tho = high. Real-word drills combining class, mark, and liveness. Checkpoint.",
+  "teaches": [],
+  "reviews": ["mai_ek", "mai_tho"],
+  "exercises": [
+    {
+      "type": "concept",
+      "title": "The low-class twist",
+      "thaiExample": "ค่า ค้า",
+      "body": [
+        "On high-class consonants, marks behave like mid: ข่า → low, ข้า → falling.",
+        "On LOW-class consonants everything shifts one step: ค่า (mai ek) = FALLING, ค้า (mai tho) = HIGH.",
+        "That's why a high/low pair covers all five tones between them: คา mid, ข่า low, ค่า falling, ค้า high, ขา rising."
+      ]
+    },
+    {
+      "type": "rule_choice",
+      "prompt": "ป่า",
+      "promptNote": "pa — ป mid class + mai ek; \"forest\"",
+      "question": "Which tone?",
+      "choices": ["Mid tone", "Low tone", "Falling tone", "High tone", "Rising tone"],
+      "correctIndex": 1,
+      "explanation": "Mid class + mai ek = low tone. ป่า means \"forest\".",
+      "attributeTo": ["mai_ek"]
+    },
+    {
+      "type": "rule_choice",
+      "prompt": "ข่า",
+      "promptNote": "kha — ข high class + mai ek; \"galangal\"",
+      "question": "Which tone?",
+      "choices": ["Mid tone", "Low tone", "Falling tone", "High tone", "Rising tone"],
+      "correctIndex": 1,
+      "explanation": "High class + mai ek = low tone, same as mid class.",
+      "attributeTo": ["mai_ek"]
+    },
+    {
+      "type": "rule_choice",
+      "prompt": "ค่า",
+      "promptNote": "kha — ค LOW class + mai ek; \"value\"",
+      "question": "Which tone?",
+      "choices": ["Mid tone", "Low tone", "Falling tone", "High tone", "Rising tone"],
+      "correctIndex": 2,
+      "explanation": "Low class shifts mai ek one step: FALLING tone. Compare ข่า (low tone).",
+      "attributeTo": ["mai_ek"]
+    },
+    {
+      "type": "rule_choice",
+      "prompt": "ข้าว",
+      "promptNote": "khao — ข high class + mai tho; \"rice\"",
+      "question": "Which tone?",
+      "choices": ["Mid tone", "Low tone", "Falling tone", "High tone", "Rising tone"],
+      "correctIndex": 2,
+      "explanation": "High class + mai tho = falling tone. ข้าว means \"rice\".",
+      "attributeTo": ["mai_tho"]
+    },
+    {
+      "type": "rule_choice",
+      "prompt": "ม้า",
+      "promptNote": "ma — ม LOW class + mai tho; \"horse\"",
+      "question": "Which tone?",
+      "choices": ["Mid tone", "Low tone", "Falling tone", "High tone", "Rising tone"],
+      "correctIndex": 3,
+      "explanation": "Low class + mai tho = HIGH tone. ม้า means \"horse\" — compare หมา with a rising tone.",
+      "attributeTo": ["mai_tho"]
+    },
+    {
+      "type": "rule_choice",
+      "prompt": "แม่",
+      "promptNote": "mae — ม LOW class + mai ek; \"mother\"",
+      "question": "Which tone?",
+      "choices": ["Mid tone", "Low tone", "Falling tone", "High tone", "Rising tone"],
+      "correctIndex": 2,
+      "explanation": "Low class + mai ek = falling tone. แม่ means \"mother\".",
+      "attributeTo": ["mai_ek"]
+    },
+    {
+      "type": "rule_choice",
+      "prompt": "น้ำ",
+      "promptNote": "nam — น LOW class + mai tho; \"water\"",
+      "question": "Which tone?",
+      "choices": ["Mid tone", "Low tone", "Falling tone", "High tone", "Rising tone"],
+      "correctIndex": 3,
+      "explanation": "Low class + mai tho = high tone. น้ำ means \"water\".",
+      "attributeTo": ["mai_tho"]
+    },
+    {
+      "type": "rule_choice",
+      "prompt": "เก่า",
+      "promptNote": "kao — ก mid class + mai ek; \"old\"",
+      "question": "Which tone?",
+      "choices": ["Mid tone", "Low tone", "Falling tone", "High tone", "Rising tone"],
+      "correctIndex": 1,
+      "explanation": "Mid class + mai ek = low tone. When a mark is written, the mark decides — liveness no longer matters.",
+      "attributeTo": ["mai_ek"]
+    },
+    {
+      "type": "rule_choice",
+      "prompt": "เสื้อ",
+      "promptNote": "suea — ส high class + mai tho; \"shirt\"",
+      "question": "Which tone?",
+      "choices": ["Mid tone", "Low tone", "Falling tone", "High tone", "Rising tone"],
+      "correctIndex": 2,
+      "explanation": "High class + mai tho = falling tone. เสื้อ (shirt) vs เสือ (tiger, rising).",
+      "attributeTo": ["mai_tho"]
+    },
+    {
+      "type": "rule_choice",
+      "prompt": "ที่",
+      "promptNote": "thi — ท LOW class + mai ek; \"place / at\"",
+      "question": "Which tone?",
+      "choices": ["Mid tone", "Low tone", "Falling tone", "High tone", "Rising tone"],
+      "correctIndex": 2,
+      "explanation": "Low class + mai ek = falling tone.",
+      "attributeTo": ["mai_ek"]
+    },
+    {
+      "type": "rule_choice",
+      "prompt": "ไม้",
+      "promptNote": "mai — ม LOW class + mai tho; \"wood\"",
+      "question": "Which tone?",
+      "choices": ["Mid tone", "Low tone", "Falling tone", "High tone", "Rising tone"],
+      "correctIndex": 3,
+      "explanation": "Low class + mai tho = high tone. ไม้ means \"wood\".",
+      "attributeTo": ["mai_tho"]
+    }
+  ]
+}

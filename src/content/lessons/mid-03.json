@@ -4,6 +4,7 @@
   "order": 3,
   "title": "The rare pair: ฎ ฏ",
   "xpReward": 20,
+  "pedagogy": "Mid-class consonants (3/4): rare Indic-loan pair ฎ ฏ; first mid-vs-high class sorting.",
   "teaches": ["do_chada", "to_patak"],
   "reviews": ["ko_kai", "do_dek", "to_tao", "o_ang"],
   "exercises": [
