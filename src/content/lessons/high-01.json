@@ -31,7 +31,7 @@
     { "type": "glyph_to_sound", "characterId": "kho_khai" },
     { "type": "intro", "characterId": "cho_ching" },
     { "type": "glyph_to_sound", "characterId": "cho_ching" },
-    { "type": "sound_to_glyph", "characterId": "kho_khai" },
+    { "type": "listening", "characterId": "kho_khai" },
     { "type": "intro", "characterId": "tho_thung" },
     { "type": "glyph_to_sound", "characterId": "tho_thung" },
     { "type": "intro", "characterId": "tho_than" },

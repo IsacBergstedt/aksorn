@@ -16,9 +16,11 @@
     { "type": "sound_to_glyph", "characterId": "sara_ai_maimuan" },
     { "type": "glyph_to_sound", "characterId": "mo_ma" },
     { "type": "class_sort", "characterIds": ["kho_khwai", "tho_thahan", "fo_fan", "kho_khai", "tho_thung", "fo_fa", "so_suea", "pho_phan"], "classes": ["high", "low"] },
+    { "type": "listening", "characterId": "kho_khwai" },
     { "type": "sound_to_glyph", "characterId": "tho_than" },
     { "type": "glyph_to_sound", "characterId": "sara_o_open_long" },
     { "type": "match_pairs", "characterIds": ["do_chada", "to_patak", "yo_ying", "no_nen"] },
+    { "type": "listening", "characterId": "sara_uea" },
     { "type": "glyph_to_sound", "characterId": "mai_chattawa" }
   ]
 }

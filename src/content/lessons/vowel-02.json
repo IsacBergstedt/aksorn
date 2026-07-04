@@ -12,6 +12,7 @@
       "type": "concept",
       "title": "Some vowels come first",
       "thaiExample": "เก แก",
+      "exampleAudioKey": "examples/ke_kae",
       "body": [
         "เ and แ are written to the LEFT of their consonant but pronounced AFTER it: เก is k + e — \"ke\", never \"ek\".",
         "Train your eyes to swing back: see เ, hold it, read the consonant, then say the vowel.",
@@ -31,6 +32,7 @@
     { "type": "glyph_to_sound", "characterId": "sara_ue_short" },
     { "type": "intro", "characterId": "sara_ue_long" },
     { "type": "sound_to_glyph", "characterId": "sara_ue_long" },
+    { "type": "listening", "characterId": "sara_ae_long" },
     { "type": "match_pairs", "characterIds": ["sara_e_long", "sara_ae_long", "sara_ue_long"] }
   ]
 }

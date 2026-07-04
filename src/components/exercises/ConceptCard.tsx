@@ -1,8 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Lightbulb } from "lucide-react";
+import { Lightbulb, Volume2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useAudio } from "@/lib/audio";
 import type { RuntimeExercise } from "@/lib/engine";
 import type { OnExerciseComplete } from "./types";
 
@@ -19,7 +20,8 @@ export function ConceptCard({
   exercise: ConceptRuntime;
   onComplete: OnExerciseComplete;
 }) {
-  const { title, body, thaiExample } = exercise;
+  const { title, body, thaiExample, exampleAudioKey } = exercise;
+  const { play } = useAudio(exampleAudioKey, thaiExample);
 
   return (
     <div className="flex flex-col items-center gap-6">
@@ -38,11 +40,22 @@ export function ConceptCard({
           <h2 className="text-xl font-bold">{title}</h2>
         </div>
 
-        {thaiExample && (
-          <p className="mt-6 text-center font-thai text-6xl leading-tight">
-            {thaiExample}
-          </p>
-        )}
+        {thaiExample &&
+          (exampleAudioKey ? (
+            <button
+              type="button"
+              onClick={play}
+              className="group relative mx-auto mt-6 block rounded-2xl px-8 py-2 text-center transition-colors hover:bg-secondary"
+              aria-label="Play the example"
+            >
+              <span className="font-thai text-6xl leading-tight">{thaiExample}</span>
+              <Volume2 className="absolute -right-1 top-0 h-5 w-5 text-muted-foreground group-hover:text-primary" />
+            </button>
+          ) : (
+            <p className="mt-6 text-center font-thai text-6xl leading-tight">
+              {thaiExample}
+            </p>
+          ))}
 
         <div className="mt-5 space-y-3 text-muted-foreground">
           {body.map((paragraph, i) => (

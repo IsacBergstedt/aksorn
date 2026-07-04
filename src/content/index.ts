@@ -124,6 +124,11 @@ for (const lesson of lessons) {
         );
       }
     }
+    if (ex.type === "concept" && ex.exampleAudioKey && !ex.thaiExample) {
+      throw new Error(
+        `Lesson ${lesson.id}: concept "${ex.title}" has exampleAudioKey but no thaiExample`,
+      );
+    }
     if (ex.type === "class_sort") {
       for (const id of ex.characterIds) {
         if (getCharacter(id).kind !== "consonant") {

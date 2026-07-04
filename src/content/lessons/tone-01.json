@@ -12,6 +12,7 @@
       "type": "concept",
       "title": "Syllables are live or dead",
       "thaiExample": "กา · กะ",
+      "exampleAudioKey": "examples/kaa_ka",
       "body": [
         "Before tones, Thai asks one question of every syllable: does it ring on, or stop short?",
         "LIVE syllables end open on a long vowel (กา) or in a humming sonorant final — n, m, ng, y, w (กิน, ลาน).",
@@ -30,6 +31,7 @@
     {
       "type": "rule_choice",
       "prompt": "กา",
+      "audioKey": "syllables/kaa",
       "promptNote": "ka — long า, no final consonant",
       "question": "Live or dead?",
       "choices": ["Live", "Dead"],
@@ -39,6 +41,7 @@
     {
       "type": "rule_choice",
       "prompt": "กะ",
+      "audioKey": "syllables/ka",
       "promptNote": "ka — short ะ",
       "question": "Live or dead?",
       "choices": ["Live", "Dead"],
@@ -48,6 +51,7 @@
     {
       "type": "rule_choice",
       "prompt": "กิน",
+      "audioKey": "syllables/kin",
       "promptNote": "kin — \"to eat\"",
       "question": "Live or dead?",
       "choices": ["Live", "Dead"],
@@ -57,6 +61,7 @@
     {
       "type": "rule_choice",
       "prompt": "นก",
+      "audioKey": "syllables/nok",
       "promptNote": "nok — \"bird\"",
       "question": "Live or dead?",
       "choices": ["Live", "Dead"],
@@ -66,6 +71,7 @@
     {
       "type": "rule_choice",
       "prompt": "มา",
+      "audioKey": "syllables/maa",
       "promptNote": "ma — \"to come\"",
       "question": "Live or dead?",
       "choices": ["Live", "Dead"],
@@ -75,6 +81,7 @@
     {
       "type": "rule_choice",
       "prompt": "จาก",
+      "audioKey": "syllables/chaak",
       "promptNote": "chak — \"from\"",
       "question": "Live or dead?",
       "choices": ["Live", "Dead"],
@@ -84,6 +91,7 @@
     {
       "type": "rule_choice",
       "prompt": "นำ",
+      "audioKey": "syllables/nam",
       "promptNote": "nam — \"to lead\"",
       "question": "Live or dead?",
       "choices": ["Live", "Dead"],
@@ -93,6 +101,7 @@
     {
       "type": "rule_choice",
       "prompt": "ไป",
+      "audioKey": "syllables/pai",
       "promptNote": "pai — \"to go\"",
       "question": "Live or dead?",
       "choices": ["Live", "Dead"],
@@ -102,6 +111,7 @@
     {
       "type": "rule_choice",
       "prompt": "จะ",
+      "audioKey": "syllables/cha",
       "promptNote": "cha — \"will\"",
       "question": "Live or dead?",
       "choices": ["Live", "Dead"],
@@ -111,6 +121,7 @@
     {
       "type": "rule_choice",
       "prompt": "บิน",
+      "audioKey": "syllables/bin",
       "promptNote": "bin — \"to fly\"",
       "question": "Live or dead?",
       "choices": ["Live", "Dead"],

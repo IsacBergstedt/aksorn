@@ -20,6 +20,7 @@
     { "type": "intro", "characterId": "ho_nokhuk" },
     { "type": "glyph_to_sound", "characterId": "ho_nokhuk" },
     { "type": "match_pairs", "characterIds": ["pho_phan", "fo_fan", "pho_samphao", "ho_nokhuk"] },
+    { "type": "listening", "characterId": "pho_phan" },
     { "type": "sound_to_glyph", "characterId": "tho_thong" },
     { "type": "class_sort", "characterIds": ["pho_phan", "fo_fan", "ho_nokhuk", "pho_phueng", "fo_fa", "ho_hip"], "classes": ["low", "high"] }
   ]

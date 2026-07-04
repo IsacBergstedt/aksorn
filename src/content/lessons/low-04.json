@@ -20,6 +20,7 @@
     { "type": "intro", "characterId": "no_nen" },
     { "type": "sound_to_glyph", "characterId": "no_nen" },
     { "type": "match_pairs", "characterIds": ["ro_ruea", "lo_ling", "wo_waen", "yo_ying"] },
+    { "type": "listening", "characterId": "lo_ling" },
     { "type": "match_pairs", "characterIds": ["no_nen", "no_nu", "yo_yak", "ngo_ngu"] },
     { "type": "sound_to_glyph", "characterId": "wo_waen" }
   ]

@@ -13,10 +13,12 @@
     { "type": "glyph_to_sound", "characterId": "tho_than" },
     { "type": "sound_to_glyph", "characterId": "tho_thung" },
     { "type": "match_pairs", "characterIds": ["kho_khai", "fo_fa", "so_suea", "ho_hip"] },
+    { "type": "listening", "characterId": "kho_khai" },
     { "type": "glyph_to_sound", "characterId": "pho_phueng" },
     { "type": "sound_to_glyph", "characterId": "so_sala" },
     { "type": "class_sort", "characterIds": ["kho_khai", "tho_thung", "pho_phueng", "so_suea", "ko_kai", "do_dek", "bo_baimai", "o_ang"], "classes": ["mid", "high"] },
     { "type": "match_pairs", "characterIds": ["cho_ching", "tho_than", "pho_phueng", "so_ruesi"] },
+    { "type": "listening", "characterId": "so_suea" },
     { "type": "glyph_to_sound", "characterId": "ho_hip" },
     { "type": "sound_to_glyph", "characterId": "fo_fa" }
   ]

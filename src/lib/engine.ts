@@ -20,10 +20,16 @@ export type RuntimeExercise =
       title: string;
       body: string[];
       thaiExample?: string;
+      exampleAudioKey?: string;
     }
   | {
       kind: "choice";
       direction: "glyph_to_sound" | "sound_to_glyph";
+      target: ThaiCharacter;
+      options: ThaiCharacter[]; // includes the target, shuffled
+    }
+  | {
+      kind: "listening";
       target: ThaiCharacter;
       options: ThaiCharacter[]; // includes the target, shuffled
     }
@@ -36,6 +42,7 @@ export type RuntimeExercise =
   | {
       kind: "rule_choice";
       prompt: string;
+      audioKey: string;
       promptNote?: string;
       question: string;
       choices: string[];
@@ -129,6 +136,21 @@ function buildChoice(
   };
 }
 
+function buildListening(
+  characterId: string,
+  lessonPool: ThaiCharacter[],
+): RuntimeExercise {
+  const target = getCharacter(characterId);
+  // Options are glyphs, so duplicate answer labels are fine — same rule as
+  // sound_to_glyph.
+  const distractors = pickDistractors(target, lessonPool, "sound_to_glyph");
+  return {
+    kind: "listening",
+    target,
+    options: shuffle([target, ...distractors]),
+  };
+}
+
 export function buildLessonExercises(lesson: Lesson): RuntimeExercise[] {
   const lessonPool = [...lesson.teaches, ...lesson.reviews].map(getCharacter);
 
@@ -142,10 +164,13 @@ export function buildLessonExercises(lesson: Lesson): RuntimeExercise[] {
           title: ex.title,
           body: ex.body,
           thaiExample: ex.thaiExample,
+          exampleAudioKey: ex.exampleAudioKey,
         };
       case "glyph_to_sound":
       case "sound_to_glyph":
         return buildChoice(ex.type, ex.characterId, lessonPool);
+      case "listening":
+        return buildListening(ex.characterId, lessonPool);
       case "match_pairs":
         return {
           kind: "match_pairs",
@@ -170,6 +195,7 @@ export function buildLessonExercises(lesson: Lesson): RuntimeExercise[] {
         return {
           kind: "rule_choice",
           prompt: ex.prompt,
+          audioKey: ex.audioKey,
           promptNote: ex.promptNote,
           question: ex.question,
           choices: ex.choices,
@@ -191,6 +217,9 @@ export function buildReviewExercises(characterIds: string[]): RuntimeExercise[] 
   const exercises: RuntimeExercise[] = [
     ...chars.map((c) => buildChoice("glyph_to_sound", c.id, pool)),
     ...shuffle(chars).map((c) => buildChoice("sound_to_glyph", c.id, pool)),
+    ...shuffle(chars)
+      .slice(0, 3)
+      .map((c) => buildListening(c.id, pool)),
   ];
   if (chars.length >= 4) {
     exercises.push({ kind: "match_pairs", characters: chars.slice(0, 4) });

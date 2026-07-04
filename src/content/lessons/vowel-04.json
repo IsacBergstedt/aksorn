@@ -29,7 +29,7 @@
     { "type": "intro", "characterId": "sara_ai_maimuan" },
     { "type": "sound_to_glyph", "characterId": "sara_ai_maimuan" },
     { "type": "intro", "characterId": "sara_ao" },
-    { "type": "glyph_to_sound", "characterId": "sara_ao" },
+    { "type": "listening", "characterId": "sara_ao" },
     { "type": "intro", "characterId": "sara_am" },
     { "type": "glyph_to_sound", "characterId": "sara_am" },
     { "type": "match_pairs", "characterIds": ["sara_ia", "sara_uea", "sara_ua", "sara_ao"] }

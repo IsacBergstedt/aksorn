@@ -12,6 +12,7 @@
       "type": "concept",
       "title": "Marks that steer the tone",
       "thaiExample": "ก่า ก้า ก๊า ก๋า",
+      "exampleAudioKey": "examples/kaa_four_tones",
       "body": [
         "Four small marks sit above the initial consonant and override the default tone.",
         "On a MID-class consonant they are perfectly regular, in naming order: mai ek ◌่ → low, mai tho ◌้ → falling, mai tri ◌๊ → high, mai chattawa ◌๋ → rising.",
@@ -28,6 +29,7 @@
     {
       "type": "rule_choice",
       "prompt": "ก่า",
+      "audioKey": "syllables/kaa_mai_ek",
       "promptNote": "mid class + mai ek",
       "question": "Which tone?",
       "choices": ["Mid tone", "Low tone", "Falling tone", "High tone", "Rising tone"],
@@ -38,6 +40,7 @@
     {
       "type": "rule_choice",
       "prompt": "ก้า",
+      "audioKey": "syllables/kaa_mai_tho",
       "promptNote": "mid class + mai tho",
       "question": "Which tone?",
       "choices": ["Mid tone", "Low tone", "Falling tone", "High tone", "Rising tone"],
@@ -48,6 +51,7 @@
     {
       "type": "rule_choice",
       "prompt": "ก๊า",
+      "audioKey": "syllables/kaa_mai_tri",
       "promptNote": "mid class + mai tri",
       "question": "Which tone?",
       "choices": ["Mid tone", "Low tone", "Falling tone", "High tone", "Rising tone"],
@@ -58,6 +62,7 @@
     {
       "type": "rule_choice",
       "prompt": "ก๋า",
+      "audioKey": "syllables/kaa_mai_chattawa",
       "promptNote": "mid class + mai chattawa",
       "question": "Which tone?",
       "choices": ["Mid tone", "Low tone", "Falling tone", "High tone", "Rising tone"],

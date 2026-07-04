@@ -18,7 +18,9 @@
     { "type": "intro", "characterId": "to_tao" },
     { "type": "glyph_to_sound", "characterId": "to_tao" },
     { "type": "sound_to_glyph", "characterId": "do_dek" },
+    { "type": "listening", "characterId": "cho_chan" },
     { "type": "match_pairs", "characterIds": ["ko_kai", "cho_chan", "do_dek", "to_tao"] },
+    { "type": "listening", "characterId": "to_tao" },
     { "type": "sound_to_glyph", "characterId": "to_tao" }
   ]
 }

@@ -13,9 +13,11 @@
     { "type": "intro", "characterId": "to_patak" },
     { "type": "glyph_to_sound", "characterId": "to_patak" },
     { "type": "sound_to_glyph", "characterId": "do_chada" },
+    { "type": "listening", "characterId": "do_chada" },
     { "type": "match_pairs", "characterIds": ["do_chada", "to_patak", "do_dek", "to_tao"] },
     { "type": "class_sort", "characterIds": ["ko_kai", "do_dek", "to_tao", "kho_khai", "so_suea", "ho_hip"], "classes": ["mid", "high"] },
     { "type": "sound_to_glyph", "characterId": "to_patak" },
+    { "type": "listening", "characterId": "to_patak" },
     { "type": "glyph_to_sound", "characterId": "o_ang" },
     { "type": "glyph_to_sound", "characterId": "ko_kai" }
   ]

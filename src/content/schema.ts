@@ -9,6 +9,13 @@ export type ConsonantClass = z.infer<typeof consonantClassSchema>;
  */
 const characterId = z.string().regex(/^[a-z][a-z_]*$/);
 
+/**
+ * Storage path fragment for a pre-generated TTS clip, e.g. `syllables/kaa`
+ * or `consonants/ko_kai` — resolved to an mp3 URL by src/lib/audio.ts and
+ * synthesized/uploaded by scripts/generate-audio.ts.
+ */
+const audioKeySchema = z.string().regex(/^[a-z-]+\/[a-z0-9_]+$/);
+
 /** A Thai consonant. `kind` is stamped on at load in src/content/index.ts. */
 export const consonantSchema = z.object({
   kind: z.literal("consonant"),
@@ -77,6 +84,8 @@ export const exerciseSchema = z.discriminatedUnion("type", [
   z.object({ type: z.literal("glyph_to_sound"), characterId }),
   // Reverse: show name + sound, pick the glyph.
   z.object({ type: z.literal("sound_to_glyph"), characterId }),
+  // Audio-only prompt: play the character's sound, pick the glyph.
+  z.object({ type: z.literal("listening"), characterId }),
   // Match glyphs to their names.
   z.object({
     type: z.literal("match_pairs"),
@@ -96,12 +105,21 @@ export const exerciseSchema = z.discriminatedUnion("type", [
     title: z.string().min(1),
     body: z.array(z.string().min(1)).min(1).max(4),
     thaiExample: z.string().optional(),
+    /** TTS clip for thaiExample (skip when the example isn't pronounceable). */
+    exampleAudioKey: audioKeySchema.optional(),
   }),
   // Static multiple choice over a Thai syllable/word: live-or-dead calls,
   // tone identification. `correctIndex` bounds-checked at load.
   z.object({
     type: z.literal("rule_choice"),
     prompt: z.string().min(1),
+    /**
+     * TTS clip of the prompt syllable (`syllables/{rtgs}`). Required — the
+     * tone drills are the audio that matters most. Prompts that repeat
+     * across lessons share a key; generate-audio.ts errors if one key maps
+     * to two different prompt texts.
+     */
+    audioKey: audioKeySchema,
     promptNote: z.string().optional(),
     question: z.string().min(1),
     choices: z.array(z.string().min(1)).min(2).max(5),

@@ -4,6 +4,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { playAudioKey } from "@/lib/audio";
 import type { ThaiCharacter } from "@/content/schema";
 import type { OnExerciseComplete } from "./types";
 
@@ -36,6 +37,8 @@ export function MatchPairs({
   useEffect(() => {
     if (selectedGlyph === null || selectedName === null) return;
     if (selectedGlyph === selectedName) {
+      const match = characters.find((c) => c.id === selectedGlyph);
+      playAudioKey(match?.audioKey, match?.nameThai);
       setMatched((prev) => new Set(prev).add(selectedGlyph));
       setSelectedGlyph(null);
       setSelectedName(null);
@@ -49,7 +52,7 @@ export function MatchPairs({
       }, 650);
       return () => clearTimeout(timer);
     }
-  }, [selectedGlyph, selectedName]);
+  }, [selectedGlyph, selectedName, characters]);
 
   useEffect(() => {
     if (matched.size === characters.length && !completedRef.current) {

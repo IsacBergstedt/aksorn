@@ -37,6 +37,7 @@
     { "type": "intro", "characterId": "tho_thahan" },
     { "type": "glyph_to_sound", "characterId": "tho_thahan" },
     { "type": "match_pairs", "characterIds": ["kho_khwai", "cho_chang", "so_so", "tho_thahan"] },
+    { "type": "listening", "characterId": "so_so" },
     { "type": "class_sort", "characterIds": ["kho_khwai", "cho_chang", "so_so", "kho_khai", "cho_ching", "so_suea"], "classes": ["low", "high"] },
     { "type": "sound_to_glyph", "characterId": "tho_thahan" }
   ]

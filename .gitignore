@@ -24,6 +24,9 @@
 .DS_Store
 *.pem
 
+# local TTS output cache for scripts/generate-audio.ts (re-synthesis skip)
+.audio-cache/
+
 # debug
 npm-debug.log*
 yarn-debug.log*

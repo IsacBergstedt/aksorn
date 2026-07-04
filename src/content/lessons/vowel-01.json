@@ -12,6 +12,7 @@
       "type": "concept",
       "title": "Vowels wrap around consonants",
       "thaiExample": "กา กิ กุ",
+      "exampleAudioKey": "examples/kaa_ki_ku",
       "body": [
         "Thai vowels never stand alone — each one attaches to a consonant: after it (กา), above it (กิ), below it (กุ), or even before it.",
         "In this course the dotted circle ◌ shows where the consonant sits: ◌า means \"the vowel า, written after\".",
@@ -22,6 +23,7 @@
       "type": "concept",
       "title": "Short and long",
       "thaiExample": "กะ · กา",
+      "exampleAudioKey": "examples/ka_kaa",
       "body": [
         "Almost every Thai vowel comes as a short/long pair: กะ (ka, clipped) versus กา (kaa, held).",
         "Length changes meaning — and soon it will help decide a syllable's tone: short-vowel syllables are \"dead\", long open ones are \"live\".",
@@ -40,6 +42,7 @@
     { "type": "intro", "characterId": "sara_u_long" },
     { "type": "glyph_to_sound", "characterId": "sara_u_short" },
     { "type": "match_pairs", "characterIds": ["sara_a_long", "sara_i_long", "sara_u_long"] },
+    { "type": "listening", "characterId": "sara_a_short" },
     { "type": "sound_to_glyph", "characterId": "sara_u_long" }
   ]
 }

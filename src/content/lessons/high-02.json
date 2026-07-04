@@ -30,6 +30,7 @@
     { "type": "glyph_to_sound", "characterId": "so_sala" },
     { "type": "sound_to_glyph", "characterId": "so_ruesi" },
     { "type": "match_pairs", "characterIds": ["fo_fa", "ho_hip", "kho_khai", "pho_phueng"] },
+    { "type": "listening", "characterId": "fo_fa" },
     { "type": "sound_to_glyph", "characterId": "ho_hip" }
   ]
 }

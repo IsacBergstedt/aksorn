@@ -30,6 +30,7 @@
     { "type": "glyph_to_sound", "characterId": "tho_phuthao" },
     { "type": "sound_to_glyph", "characterId": "tho_montho" },
     { "type": "class_sort", "characterIds": ["kho_rakhang", "cho_choe", "lo_chula", "kho_khai", "cho_ching", "so_suea", "tho_thung", "ho_hip"], "classes": ["low", "high"] },
+    { "type": "listening", "characterId": "kho_rakhang" },
     { "type": "match_pairs", "characterIds": ["kho_rakhang", "cho_choe", "lo_chula", "ro_ruea"] }
   ]
 }

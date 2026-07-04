@@ -12,6 +12,7 @@
       "type": "concept",
       "title": "Two kinds of o",
       "thaiExample": "โก · กอ",
+      "exampleAudioKey": "examples/ko_ko_ang",
       "body": [
         "Thai splits English \"o\" in two: โ◌ is the closed o of \"go\"; ◌อ is the open o of \"law\".",
         "Both have short forms that look bigger than they sound: โ◌ะ and เ◌าะ.",
@@ -26,10 +27,12 @@
     { "type": "glyph_to_sound", "characterId": "sara_o_open_long" },
     { "type": "intro", "characterId": "sara_o_open_short" },
     { "type": "sound_to_glyph", "characterId": "sara_o_open_short" },
+    { "type": "listening", "characterId": "sara_o_open_long" },
     { "type": "intro", "characterId": "sara_oe_long" },
     { "type": "glyph_to_sound", "characterId": "sara_oe_long" },
     { "type": "intro", "characterId": "sara_oe_short" },
     { "type": "glyph_to_sound", "characterId": "sara_oe_short" },
+    { "type": "listening", "characterId": "sara_o_long" },
     { "type": "match_pairs", "characterIds": ["sara_oe_long", "sara_o_long", "sara_ae_long"] }
   ]
 }

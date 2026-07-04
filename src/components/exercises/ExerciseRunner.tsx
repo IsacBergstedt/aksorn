@@ -10,6 +10,7 @@ import type { CharResults } from "@/lib/progress/store";
 import { IntroCard } from "./IntroCard";
 import { ConceptCard } from "./ConceptCard";
 import { ChoiceExercise } from "./ChoiceExercise";
+import { ListeningExercise } from "./ListeningExercise";
 import { MatchPairs } from "./MatchPairs";
 import { ClassSort } from "./ClassSort";
 import { RuleChoice } from "./RuleChoice";
@@ -51,7 +52,9 @@ export function ExerciseRunner({
 
       let nextQueue = queue;
       if (
-        (current.kind === "choice" || current.kind === "rule_choice") &&
+        (current.kind === "choice" ||
+          current.kind === "rule_choice" ||
+          current.kind === "listening") &&
         !current.isRetry &&
         outcomes.some((o) => !o.correct)
       ) {
@@ -110,6 +113,9 @@ export function ExerciseRunner({
           )}
           {current.kind === "choice" && (
             <ChoiceExercise exercise={current} onComplete={handleComplete} />
+          )}
+          {current.kind === "listening" && (
+            <ListeningExercise exercise={current} onComplete={handleComplete} />
           )}
           {current.kind === "match_pairs" && (
             <MatchPairs characters={current.characters} onComplete={handleComplete} />

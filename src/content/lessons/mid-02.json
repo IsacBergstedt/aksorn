@@ -16,7 +16,9 @@
     { "type": "intro", "characterId": "o_ang" },
     { "type": "glyph_to_sound", "characterId": "o_ang" },
     { "type": "match_pairs", "characterIds": ["bo_baimai", "po_pla", "o_ang", "ko_kai"] },
+    { "type": "listening", "characterId": "bo_baimai" },
     { "type": "sound_to_glyph", "characterId": "po_pla" },
+    { "type": "listening", "characterId": "o_ang" },
     { "type": "glyph_to_sound", "characterId": "do_dek" },
     { "type": "sound_to_glyph", "characterId": "cho_chan" }
   ]

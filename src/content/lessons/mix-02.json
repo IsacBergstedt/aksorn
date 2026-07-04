@@ -11,6 +11,7 @@
     {
       "type": "rule_choice",
       "prompt": "ขาย",
+      "audioKey": "syllables/khaai",
       "promptNote": "khai — ข high class; live (sonorant ย); \"to sell\"",
       "question": "Which tone?",
       "choices": ["Mid tone", "Low tone", "Falling tone", "High tone", "Rising tone"],
@@ -21,6 +22,7 @@
     {
       "type": "rule_choice",
       "prompt": "พ่อ",
+      "audioKey": "syllables/pho_mai_ek",
       "promptNote": "pho — พ LOW class + mai ek; \"father\"",
       "question": "Which tone?",
       "choices": ["Mid tone", "Low tone", "Falling tone", "High tone", "Rising tone"],
@@ -32,6 +34,7 @@
     {
       "type": "rule_choice",
       "prompt": "ปาก",
+      "audioKey": "syllables/paak",
       "promptNote": "pak — ป mid class; dead (stop ก); \"mouth\"",
       "question": "Which tone?",
       "choices": ["Mid tone", "Low tone", "Falling tone", "High tone", "Rising tone"],
@@ -41,6 +44,7 @@
     {
       "type": "rule_choice",
       "prompt": "เสือ",
+      "audioKey": "syllables/suea",
       "promptNote": "suea — ส high class; live; \"tiger\"",
       "question": "Which tone?",
       "choices": ["Mid tone", "Low tone", "Falling tone", "High tone", "Rising tone"],
@@ -51,6 +55,7 @@
     {
       "type": "rule_choice",
       "prompt": "คิด",
+      "audioKey": "syllables/khit",
       "promptNote": "khit — ค LOW class; dead (stop ด), short vowel; \"to think\"",
       "question": "Which tone?",
       "choices": ["Mid tone", "Low tone", "Falling tone", "High tone", "Rising tone"],
@@ -61,6 +66,7 @@
     {
       "type": "rule_choice",
       "prompt": "แก้ว",
+      "audioKey": "syllables/kaeo_mai_tho",
       "promptNote": "kaeo — ก mid class + mai tho; \"glass\"",
       "question": "Which tone?",
       "choices": ["Mid tone", "Low tone", "Falling tone", "High tone", "Rising tone"],
@@ -72,6 +78,7 @@
     {
       "type": "rule_choice",
       "prompt": "มือ",
+      "audioKey": "syllables/mue",
       "promptNote": "mue — ม LOW class; live (long ◌ือ); \"hand\"",
       "question": "Which tone?",
       "choices": ["Mid tone", "Low tone", "Falling tone", "High tone", "Rising tone"],

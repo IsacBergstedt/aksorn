@@ -13,10 +13,12 @@
     { "type": "glyph_to_sound", "characterId": "do_chada" },
     { "type": "sound_to_glyph", "characterId": "to_patak" },
     { "type": "match_pairs", "characterIds": ["ko_kai", "do_dek", "bo_baimai", "o_ang"] },
+    { "type": "listening", "characterId": "do_dek" },
     { "type": "glyph_to_sound", "characterId": "po_pla" },
     { "type": "sound_to_glyph", "characterId": "bo_baimai" },
     { "type": "class_sort", "characterIds": ["do_dek", "to_tao", "o_ang", "kho_khai", "fo_fa", "tho_thung"], "classes": ["mid", "high"] },
     { "type": "match_pairs", "characterIds": ["cho_chan", "to_tao", "po_pla", "do_chada"] },
+    { "type": "listening", "characterId": "to_tao" },
     { "type": "glyph_to_sound", "characterId": "o_ang" }
   ]
 }

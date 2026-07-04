@@ -70,8 +70,11 @@ links; mobile: fixed bottom tab bar, hidden on `/lesson/*`):
   `src/content/words-units.json`, validated by the existing `unitSchema`.
   It MUST reuse the existing lesson engine, JSON schema, and
   `/lesson/[lessonId]` route when real content lands — no separate engine.
-- **Practice Speaking** (`/speaking`) — PLACEHOLDER PAGE only ("Coming
-  soon"). Audio functionality is Phase 2.
+- **Practice Speaking** (`/speaking`) — MINIMAL V1 (shipped 2026-07-04):
+  self-assessment loop — step through consonants + vowels, play the TTS
+  target, record yourself via MediaRecorder, replay both side by side.
+  No uploads, no scoring (`src/components/speaking/`). Automated
+  tone/pronunciation scoring remains Phase 2.
 
 ## Phase 1 requirements
 
@@ -99,9 +102,18 @@ links; mobile: fixed bottom tab bar, hidden on `/lesson/*`):
 - **Guest mode**: identical progress shapes persisted to `localStorage`
   (namespaced key), upserted to Supabase on signup.
 - **Reviews** are dynamically generated lessons built from due SRS cards.
-- **Audio**: placeholder hook (`useCharacterAudio(character)`) tries static
-  files under `/audio/{audioKey}.mp3`, falls back to Web Speech API, until
-  Phase 2 real audio lands.
+- **Audio (shipped 2026-07-04)**: pre-generated Azure TTS clips (voice
+  `th-TH-PremwadeeNeural`) in the public Supabase Storage bucket `audio`,
+  one mp3 per `audioKey` (`consonants/{id}`, `vowels/{id}`,
+  `tone-marks/{id}`, `syllables/{rtgs}` for rule_choice prompts,
+  `examples/...` for concept thaiExamples). `src/lib/audio.ts` exposes
+  `playAudioKey(key, fallbackText)` / `useAudio` / `useCharacterAudio`;
+  URL is `{SUPABASE_URL}/storage/v1/object/public/audio/{key}.mp3`, with
+  `/public/audio` as the no-env dev fallback and Web Speech as the final
+  fallback when a file is missing or playback is blocked. Exercises
+  auto-play the correct answer's clip at the moment feedback shows (inside
+  the tap gesture — don't move it to an effect, autoplay policy). See
+  "Audio generation" below for the script.
 - **Auth is client-side only in Phase 1**: no server-rendered protected
   routes; all progress reads/writes happen in the browser, so there is no
   Next.js middleware or server Supabase client yet.
@@ -120,17 +132,46 @@ architectural decisions.)
   effect depends on class). `lessons/*.json` (id, unit, title, xp,
   teaches[], reviews[], pedagogy, exercises[]).
 - Exercise types: `intro`, `glyph_to_sound`, `sound_to_glyph`,
+  `listening` (audio-only prompt → pick the glyph; distractors generated
+  like sound_to_glyph, wrong answers re-queued once),
   `match_pairs`, `class_sort` (consonants only), `concept` (unscored
-  teaching screens — every unit opens with 1–2), `rule_choice` (static
-  MC over a Thai syllable for live/dead and tone drills; optional
-  `attributeTo` routes the result to specific SRS cards, otherwise it
-  counts toward accuracy only).
+  teaching screens — every unit opens with 1–2; optional `thaiExample`
+  + `exampleAudioKey` renders a tappable, voiced example), `rule_choice` (static
+  MC over a Thai syllable for live/dead and tone drills; required
+  `audioKey` (`syllables/{rtgs}`) voices the prompt — the same syllable
+  in different lessons must reuse the same key; optional `attributeTo`
+  routes the result to specific SRS cards, otherwise it counts toward
+  accuracy only).
 - Every lesson has a required `pedagogy` field citing the consonant
   class / tone rule it teaches, so content can be human-verified against
   the tone tables. Keep it accurate when editing lessons.
 - Supabase: `profiles`, `user_stats` (xp, streaks), `lesson_completions`,
   `srs_cards` (SM-2 fields per character). All tables RLS-scoped to
-  `auth.uid()`.
+  `auth.uid()`. Plus the Storage bucket `audio` (public read; created
+  idempotently by the generation script, not by a migration — the
+  migrations rule below covers Postgres schema).
+
+## Audio generation
+
+`npm run audio:generate` (or directly `npx tsx scripts/generate-audio.ts`
+— note PowerShell strips npm's `--` separator, so pass flags via the
+direct form on Windows) synthesizes every clip the content references
+and uploads to Supabase Storage:
+
+- Manifest = every character's `audioKey`→`nameThai`, every
+  `rule_choice.audioKey`→`prompt`, every `concept.exampleAudioKey`→
+  `thaiExample` (with the `·` separator stripped). The script fails if
+  one key maps to two different texts — that check is what keeps lesson
+  JSON and audio in sync; run `--dry-run` (no env needed) to see the
+  manifest.
+- Idempotent: mp3s cache in `.audio-cache/` (gitignored); cached files
+  skip TTS, objects already in the bucket skip upload. `--force`
+  regenerates everything (note: Storage CDN caches for 1 year — if the
+  voice ever changes, version the key paths instead of fighting it).
+- Env in `.env.local` (never committed, never `NEXT_PUBLIC_`):
+  `AZURE_SPEECH_KEY` + `AZURE_SPEECH_REGION` (Azure Speech resource) and
+  `SUPABASE_SERVICE_ROLE_KEY` for the upload. Run it after adding any
+  character, rule_choice, or voiced concept example.
 
 ## Conventions
 

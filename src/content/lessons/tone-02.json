@@ -12,6 +12,7 @@
       "type": "concept",
       "title": "No mark ≠ no tone",
       "thaiExample": "กา ขา มา",
+      "exampleAudioKey": "examples/kaa_khaa_maa",
       "body": [
         "A bare syllable still has a tone. The class of the initial consonant plus live/dead decides which.",
         "LIVE: mid class → mid tone (กา), high class → rising (ขา), low class → mid (มา).",
@@ -30,6 +31,7 @@
     {
       "type": "rule_choice",
       "prompt": "กา",
+      "audioKey": "syllables/kaa",
       "promptNote": "ka — ก is mid class; live",
       "question": "Which tone?",
       "choices": ["Mid tone", "Low tone", "Falling tone", "High tone", "Rising tone"],
@@ -39,6 +41,7 @@
     {
       "type": "rule_choice",
       "prompt": "ขา",
+      "audioKey": "syllables/khaa",
       "promptNote": "kha — ข is high class; live",
       "question": "Which tone?",
       "choices": ["Mid tone", "Low tone", "Falling tone", "High tone", "Rising tone"],
@@ -48,6 +51,7 @@
     {
       "type": "rule_choice",
       "prompt": "มา",
+      "audioKey": "syllables/maa",
       "promptNote": "ma — ม is low class; live",
       "question": "Which tone?",
       "choices": ["Mid tone", "Low tone", "Falling tone", "High tone", "Rising tone"],
@@ -57,6 +61,7 @@
     {
       "type": "rule_choice",
       "prompt": "กะ",
+      "audioKey": "syllables/ka",
       "promptNote": "ka — mid class; dead (short ะ)",
       "question": "Which tone?",
       "choices": ["Mid tone", "Low tone", "Falling tone", "High tone", "Rising tone"],
@@ -66,6 +71,7 @@
     {
       "type": "rule_choice",
       "prompt": "ขอ",
+      "audioKey": "syllables/kho",
       "promptNote": "kho — high class; live (long ◌อ)",
       "question": "Which tone?",
       "choices": ["Mid tone", "Low tone", "Falling tone", "High tone", "Rising tone"],
@@ -75,6 +81,7 @@
     {
       "type": "rule_choice",
       "prompt": "นก",
+      "audioKey": "syllables/nok",
       "promptNote": "nok — low class; dead, short vowel",
       "question": "Which tone?",
       "choices": ["Mid tone", "Low tone", "Falling tone", "High tone", "Rising tone"],
@@ -84,6 +91,7 @@
     {
       "type": "rule_choice",
       "prompt": "มาก",
+      "audioKey": "syllables/maak",
       "promptNote": "mak — low class; dead, long vowel",
       "question": "Which tone?",
       "choices": ["Mid tone", "Low tone", "Falling tone", "High tone", "Rising tone"],
@@ -93,6 +101,7 @@
     {
       "type": "rule_choice",
       "prompt": "จาน",
+      "audioKey": "syllables/chaan",
       "promptNote": "chan — mid class; live (sonorant น)",
       "question": "Which tone?",
       "choices": ["Mid tone", "Low tone", "Falling tone", "High tone", "Rising tone"],
@@ -102,6 +111,7 @@
     {
       "type": "rule_choice",
       "prompt": "สี",
+      "audioKey": "syllables/sii",
       "promptNote": "si — high class; live (long ◌ี)",
       "question": "Which tone?",
       "choices": ["Mid tone", "Low tone", "Falling tone", "High tone", "Rising tone"],
@@ -111,6 +121,7 @@
     {
       "type": "rule_choice",
       "prompt": "คะ",
+      "audioKey": "syllables/kha",
       "promptNote": "kha — low class; dead, short vowel",
       "question": "Which tone?",
       "choices": ["Mid tone", "Low tone", "Falling tone", "High tone", "Rising tone"],

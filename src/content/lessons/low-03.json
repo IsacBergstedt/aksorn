@@ -28,6 +28,7 @@
     { "type": "intro", "characterId": "yo_yak" },
     { "type": "glyph_to_sound", "characterId": "yo_yak" },
     { "type": "match_pairs", "characterIds": ["ngo_ngu", "no_nu", "mo_ma", "yo_yak"] },
+    { "type": "listening", "characterId": "ngo_ngu" },
     { "type": "sound_to_glyph", "characterId": "mo_ma" },
     { "type": "glyph_to_sound", "characterId": "kho_khwai" }
   ]

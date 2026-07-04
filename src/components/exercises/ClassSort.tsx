@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { cn } from "@/lib/utils";
+import { playAudioKey } from "@/lib/audio";
 import { classButtonClasses, classLabel } from "@/lib/class-colors";
 import type { ConsonantClass, ThaiConsonant } from "@/content/schema";
 import type { ExerciseOutcome, OnExerciseComplete } from "./types";
@@ -28,6 +29,7 @@ export function ClassSort({
   const choose = (chosen: ConsonantClass) => {
     if (feedback || !current) return;
     const correct = current.class === chosen;
+    if (correct) playAudioKey(current.audioKey, current.nameThai);
     const nextOutcomes = [...outcomes, { characterId: current.id, correct }];
     setOutcomes(nextOutcomes);
     setFeedback({ chosen, correct });

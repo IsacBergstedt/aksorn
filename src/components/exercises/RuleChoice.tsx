@@ -2,8 +2,10 @@
 
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { Volume2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { useAudio } from "@/lib/audio";
 import type { RuntimeExercise } from "@/lib/engine";
 import type { OnExerciseComplete } from "./types";
 
@@ -28,6 +30,14 @@ export function RuleChoice({
     exercise;
   const [selected, setSelected] = useState<number | null>(null);
   const correct = selected === correctIndex;
+  const { play } = useAudio(exercise.audioKey, prompt);
+
+  const select = (i: number) => {
+    if (selected !== null) return;
+    setSelected(i);
+    // Hearing the syllable's actual tone alongside the answer is the drill.
+    play();
+  };
 
   const optionState = (i: number) => {
     if (selected === null) return "idle";
@@ -42,9 +52,15 @@ export function RuleChoice({
         <h2 className="text-lg font-semibold text-muted-foreground">
           {question}
         </h2>
-        <div className="rounded-3xl border-2 border-border bg-card px-12 py-6 shadow-sm">
+        <button
+          type="button"
+          onClick={play}
+          className="group relative rounded-3xl border-2 border-border bg-card px-12 py-6 shadow-sm transition-colors hover:border-primary/40"
+          aria-label="Play the syllable"
+        >
           <span className="font-thai text-7xl leading-snug">{prompt}</span>
-        </div>
+          <Volume2 className="absolute right-3 top-3 h-5 w-5 text-muted-foreground group-hover:text-primary" />
+        </button>
         {promptNote && (
           <p className="text-sm text-muted-foreground">{promptNote}</p>
         )}
@@ -63,7 +79,7 @@ export function RuleChoice({
               key={i}
               type="button"
               whileTap={selected === null ? { scale: 0.96 } : undefined}
-              onClick={() => selected === null && setSelected(i)}
+              onClick={() => select(i)}
               disabled={selected !== null}
               className={cn(
                 "rounded-2xl border-2 bg-card px-4 py-4 text-lg font-semibold shadow-sm transition-colors",
