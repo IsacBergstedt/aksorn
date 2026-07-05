@@ -18,7 +18,7 @@ import path from "node:path";
 import { config as loadEnv } from "dotenv";
 import { createClient, type SupabaseClient } from "@supabase/supabase-js";
 // Importing content runs the Zod schemas + referential checks for free.
-import { characters, lessons } from "../src/content";
+import { characters, lessons, tonePairSets, vocabWords } from "../src/content";
 
 loadEnv({ path: path.join(__dirname, "..", ".env.local") });
 
@@ -48,6 +48,14 @@ function buildManifest(): Map<string, string> {
 
   for (const c of characters) add(c.audioKey, c.nameThai, `character ${c.id}`);
 
+  for (const w of vocabWords) add(w.audioKey, w.thai, `word ${w.id}`);
+
+  for (const set of tonePairSets) {
+    for (const opt of set.options) {
+      add(opt.audioKey, opt.thai, `tone pair set ${set.id}`);
+    }
+  }
+
   for (const lesson of lessons) {
     for (const ex of lesson.exercises) {
       if (ex.type === "rule_choice") {
@@ -60,6 +68,13 @@ function buildManifest(): Map<string, string> {
           ex.thaiExample.replace(/\s*·\s*/g, " "),
           `lesson ${lesson.id}`,
         );
+      }
+      if (ex.type === "register_choice") {
+        for (const choice of ex.choices) {
+          if (choice.audioKey) {
+            add(choice.audioKey, choice.thai, `lesson ${lesson.id}`);
+          }
+        }
       }
     }
   }

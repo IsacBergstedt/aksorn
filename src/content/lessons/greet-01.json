@@ -1,0 +1,67 @@
+{
+  "id": "greet-01",
+  "unitId": "words-greetings",
+  "order": 1,
+  "title": "Hello",
+  "xpReward": 20,
+  "pedagogy": "Vocabulary: สวัสดี (sà-wàt-dii: high+dead→low, ส-led cluster high+dead→low, mid+live→mid) and the polite particles ครับ (low+dead-short→high), ค่ะ (low+mai ek→falling, statements), คะ (low+dead-short→high, questions). Tone contrast ค่ะ/คะ drilled as a minimal pair.",
+  "teaches": ["sawatdi", "khrap", "kha_statement", "kha_question"],
+  "reviews": [],
+  "exercises": [
+    {
+      "type": "concept",
+      "title": "One word opens every door",
+      "thaiExample": "สวัสดี",
+      "exampleAudioKey": "words/sawatdi",
+      "body": [
+        "สวัสดี works for hello AND goodbye, morning and midnight — one greeting for everything.",
+        "It usually comes with a wai: palms together, a small bow. Return one when offered; you don't wai children or staff serving you.",
+        "You can already read this word — and its tones follow the rules you know."
+      ]
+    },
+    { "type": "word_intro", "wordId": "sawatdi" },
+    {
+      "type": "concept",
+      "title": "ครับ and ค่ะ — the politeness switches",
+      "body": [
+        "Thai doesn't say “please” much. Politeness rides on one small particle at the end of the sentence.",
+        "Men end with ครับ (kráp). Women end with ค่ะ (khâ) for statements — and คะ (khá) for questions.",
+        "Same syllable, different tone, different job. Your ear is about to learn the difference."
+      ]
+    },
+    { "type": "word_intro", "wordId": "khrap" },
+    { "type": "word_intro", "wordId": "kha_statement" },
+    { "type": "word_intro", "wordId": "kha_question" },
+    { "type": "tone_pair", "setId": "kha_set" },
+    { "type": "word_choice", "wordId": "sawatdi", "direction": "thai_to_meaning" },
+    { "type": "word_choice", "wordId": "khrap", "direction": "meaning_to_thai" },
+    {
+      "type": "register_choice",
+      "context": "You step into a small pharmacy in Chiang Mai. You're a man, greeting the pharmacist.",
+      "question": "What do you say?",
+      "choices": [
+        { "thai": "สวัสดีครับ", "rtgs": "sawatdi khrap", "audioKey": "phrases/sawatdi_khrap" },
+        { "thai": "สวัสดีค่ะ", "rtgs": "sawatdi kha", "audioKey": "phrases/sawatdi_kha" },
+        { "thai": "สวัสดีคะ", "rtgs": "sawatdi kha", "audioKey": "phrases/sawatdi_kha_question" }
+      ],
+      "correctIndex": 0,
+      "explanation": "The particle follows the speaker: a man says ครับ, whoever he's talking to. ค่ะ and คะ are for female speakers — and คะ only ends questions.",
+      "attributeTo": ["khrap"]
+    },
+    { "type": "word_listening", "wordId": "sawatdi" },
+    { "type": "word_listening", "wordId": "khrap" },
+    {
+      "type": "register_choice",
+      "context": "You're a woman checking in at a guesthouse, greeting the owner.",
+      "question": "What do you say?",
+      "choices": [
+        { "thai": "สวัสดีค่ะ", "rtgs": "sawatdi kha", "audioKey": "phrases/sawatdi_kha" },
+        { "thai": "สวัสดีคะ", "rtgs": "sawatdi kha", "audioKey": "phrases/sawatdi_kha_question" },
+        { "thai": "สวัสดีครับ", "rtgs": "sawatdi khrap", "audioKey": "phrases/sawatdi_khrap" }
+      ],
+      "correctIndex": 0,
+      "explanation": "A greeting is a statement, so a woman ends it with falling-tone ค่ะ. High-tone คะ would make it sound like a question, and ครับ is for male speakers.",
+      "attributeTo": ["kha_statement", "kha_question"]
+    }
+  ]
+}

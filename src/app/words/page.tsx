@@ -1,5 +1,4 @@
-import { LessonPath } from "@/components/LessonPath";
-import { wordsUnits } from "@/content";
+import { WordsPathMap } from "@/components/WordsPathMap";
 
 export default function WordsPage() {
   return (
@@ -7,11 +6,11 @@ export default function WordsPage() {
       <div className="mb-10">
         <h1 className="text-3xl font-bold tracking-tight">Thai Words</h1>
         <p className="mt-2 text-muted-foreground">
-          Build your vocabulary in Thai script, one unit at a time. Each unit
-          unlocks when you complete the one before it.
+          The main course: real Thai for real situations, in Thai script,
+          tone by tone. Each unit unlocks when you complete the one before it.
         </p>
       </div>
-      <LessonPath units={wordsUnits} />
+      <WordsPathMap />
     </main>
   );
 }

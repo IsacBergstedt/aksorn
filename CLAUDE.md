@@ -19,6 +19,14 @@ learners.
   Tokens live in `src/app/globals.css`.
 - Consonant-class accent colors (badges, sort buttons): mid = indigo,
   high = teal, low = rose (`src/lib/class-colors.ts`).
+- **Tone color palette (fixed, app-wide — decided 2026-07-05)**: every
+  place a tone is shown (syllable text, badges, contour strokes) uses
+  `src/lib/tone-colors.ts`: mid = slate, low = sky, falling = violet,
+  high = orange, rising = emerald. Never introduce other tone colors,
+  and don't reuse these five for non-tone meanings in learning UI. The
+  animated pitch-contour glyph is `src/components/ToneContour.tsx`;
+  tone-colored words render via `src/components/ThaiWordText.tsx`
+  (pass `colored={false}` wherever the color would leak an answer).
 - Fonts: Geist (UI), Noto Sans Thai Looped (all learning glyphs, via
   `font-thai` utility).
 
@@ -64,12 +72,20 @@ links; mobile: fixed bottom tab bar, hidden on `/lesson/*`):
   purposes. `/` currently redirects here (default landing until Thai
   Words ships — the redirect in `src/app/page.tsx` is the one line to
   flip).
-- **Thai Words** (`/words`) — PLACEHOLDER SHELL. Will become the main
-  course: a winding vertical unit path where units unlock sequentially
-  (`src/components/LessonPath.tsx`). Placeholder units live in
-  `src/content/words-units.json`, validated by the existing `unitSchema`.
-  It MUST reuse the existing lesson engine, JSON schema, and
-  `/lesson/[lessonId]` route when real content lands — no separate engine.
+- **Thai Words** (`/words`) — LIVE as the main course skeleton (shipped
+  2026-07-05): 10 themed units in `src/content/words-units.json`, rendered
+  by `src/components/WordsPathMap.tsx` as a Duolingo-style winding path of
+  lesson nodes under unit banners (layout concept only — visuals are our
+  own). Unit 1 **Greetings & Politeness** is real content (greet-01..04);
+  units 2–10 (Numbers & Prices, Food & Ordering, Getting Around, Shopping
+  & Bargaining, Time & Days, People & Family, Common Verbs, Feelings &
+  Small Talk, Help & Emergencies) are locked `comingSoon` stubs with
+  `goals` bullets — write their lessons in that order. **Gating**: unit 1
+  unlocks only when every Reading-Thai mid-class lesson is complete
+  (checked against `unitById.get("mid-class")` completions); unit N+1
+  unlocks when unit N's lessons are all complete. Words lessons run on the
+  same engine and `/lesson/[lessonId]` route (exit href picks /words vs
+  /reading by unit) — never a separate engine.
 - **Practice Speaking** (`/speaking`) — MINIMAL V1 (shipped 2026-07-04):
   self-assessment loop — step through consonants + vowels, play the TTS
   target, record yourself via MediaRecorder, replay both side by side.
@@ -106,7 +122,8 @@ links; mobile: fixed bottom tab bar, hidden on `/lesson/*`):
   `th-TH-PremwadeeNeural`) in the public Supabase Storage bucket `audio`,
   one mp3 per `audioKey` (`consonants/{id}`, `vowels/{id}`,
   `tone-marks/{id}`, `syllables/{rtgs}` for rule_choice prompts,
-  `examples/...` for concept thaiExamples). `src/lib/audio.ts` exposes
+  `examples/...` for concept thaiExamples, `words/{id}` for vocab words
+  and tone-pair options, `phrases/{slug}` for register_choice phrases). `src/lib/audio.ts` exposes
   `playAudioKey(key, fallbackText)` / `useAudio` / `useCharacterAudio`;
   URL is `{SUPABASE_URL}/storage/v1/object/public/audio/{key}.mp3`, with
   `/public/audio` as the no-env dev fallback and Web Speech as the final
@@ -131,6 +148,19 @@ architectural decisions.)
   in glyphs), `tone-marks.ts` (4 marks, quizzed by name — their tone
   effect depends on class). `lessons/*.json` (id, unit, title, xp,
   teaches[], reviews[], pedagogy, exercises[]).
+- **Vocab words** (`vocab/*.ts`, one file per Words unit, kind: "word"):
+  thai, RTGS, meaning, optional literal meaning + usageNote, register
+  (neutral/casual/polite/formal), optional particleGender (ครับ/ค่ะ),
+  audioKey `words/{id}`, and `syllables[]` — each syllable carries its
+  written segment (segments must concatenate to the word, checked at
+  load), RTGS, **tone**, the breakdown ids (initialId = class-driving
+  consonant incl. ห-nam/cluster leaders, clusterIds, vowelId, finalId,
+  toneMarkId) and a human-verifiable `toneReason` citing the tone table.
+  Word ids share the SRS id namespace with characters (collisions
+  rejected at load); same never-rename rule.
+- **Tone-pair bank** (`tone-pairs.ts`): minimal-pair sets (same syllable,
+  different tones) with per-option audioKey; referenced by `tone_pair`
+  exercises and sampled by weakness-targeted reviews.
 - Exercise types: `intro`, `glyph_to_sound`, `sound_to_glyph`,
   `listening` (audio-only prompt → pick the glyph; distractors generated
   like sound_to_glyph, wrong answers re-queued once),
@@ -141,7 +171,24 @@ architectural decisions.)
   `audioKey` (`syllables/{rtgs}`) voices the prompt — the same syllable
   in different lessons must reuse the same key; optional `attributeTo`
   routes the result to specific SRS cards, otherwise it counts toward
-  accuracy only).
+  accuracy only). Word-course exercise types (added 2026-07-05):
+  `word_intro` (unscored card: tone-colored syllables, animated contours,
+  register badge, expandable "Why these tones?" breakdown), `word_choice`
+  (thai_to_meaning / meaning_to_thai, distractors from the vocab pool),
+  `word_listening` (listening-first: audio-only prompt, meaning revealed
+  only in feedback), `tone_pair` (references a bank set; the engine picks
+  the target at runtime — options stay uncolored until answered; outcome
+  carries the tone), `register_choice` (social-context prompt, Thai-form
+  choices with optional `phrases/{slug}` audio, `attributeTo` like
+  rule_choice). `match_pairs` accepts word ids too (Thai ↔ meaning).
+- Romanization is a toggle, not a default: word exercises show RTGS only
+  when `useUiSettings.showRomanization` is on (persisted, default off).
+- **Weakness targeting**: `ExerciseOutcome.tone` from tone drills is
+  tallied into `toneStats` (store + `user_stats.tone_stats` jsonb);
+  reviews order due cards weakest-first (`weaknessFirst` in srs.ts) and
+  append pinned-target tone_pair drills for tones with ≥3 attempts and
+  >30% miss rate (`weakTones` in engine.ts). Words get SRS cards through
+  the same store path as characters.
 - Every lesson has a required `pedagogy` field citing the consonant
   class / tone rule it teaches, so content can be human-verified against
   the tone tables. Keep it accurate when editing lessons.
@@ -158,7 +205,9 @@ architectural decisions.)
 direct form on Windows) synthesizes every clip the content references
 and uploads to Supabase Storage:
 
-- Manifest = every character's `audioKey`→`nameThai`, every
+- Manifest = every character's `audioKey`→`nameThai`, every vocab word's
+  `audioKey`→`thai` (`words/{id}`), every tone-pair option, every
+  `register_choice` choice with an `audioKey` (`phrases/{slug}`), every
   `rule_choice.audioKey`→`prompt`, every `concept.exampleAudioKey`→
   `thaiExample` (with the `·` separator stripped). The script fails if
   one key maps to two different texts — that check is what keeps lesson

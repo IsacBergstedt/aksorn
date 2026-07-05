@@ -77,6 +77,87 @@ export const characterSchema = z.discriminatedUnion("kind", [
 ]);
 export type ThaiCharacter = z.infer<typeof characterSchema>;
 
+/** The five Thai tones. Color-coded app-wide — see src/lib/tone-colors.ts. */
+export const toneSchema = z.enum(["mid", "low", "falling", "high", "rising"]);
+export type Tone = z.infer<typeof toneSchema>;
+
+/**
+ * One spoken syllable of a vocab word, with the spelling breakdown that
+ * derives its tone. `thai` is the written segment — the segments of a word
+ * must concatenate to exactly the word's `thai` (checked at load), so the
+ * UI can color syllables by slicing the rendered string.
+ */
+export const syllableSchema = z.object({
+  thai: z.string().min(1),
+  rtgs: z.string().min(1),
+  tone: toneSchema,
+  /**
+   * The consonant whose class drives the tone — for ห-nam and leading
+   * clusters this is the (possibly silent) leader, not the sounded letter.
+   */
+  initialId: characterId,
+  /** Remaining consonants of an initial cluster (e.g. ร of คร). */
+  clusterIds: z.array(characterId).optional(),
+  /** Absent for unwritten inherent vowels and ◌ั (not in the vowel set). */
+  vowelId: characterId.optional(),
+  finalId: characterId.optional(),
+  toneMarkId: characterId.optional(),
+  /**
+   * Human-verifiable tone derivation citing the CLAUDE.md tone table,
+   * e.g. "low class + mai tho → high". Shown in the breakdown view.
+   */
+  toneReason: z.string().min(1),
+  /** Spelling quirks the ids can't express (◌ั, ห-nam, mai taikhu…). */
+  note: z.string().optional(),
+});
+export type Syllable = z.infer<typeof syllableSchema>;
+
+/**
+ * A vocab word or phrase for the Thai Words course. Ids share the SRS
+ * namespace with character ids (collisions rejected at load) and are just
+ * as immutable once shipped.
+ */
+export const vocabWordSchema = z.object({
+  kind: z.literal("word"),
+  id: characterId,
+  thai: z.string().min(1),
+  rtgs: z.string().min(1),
+  meaning: z.string().min(1),
+  /** Literal/etymological meaning, e.g. สวัสดี ← Sanskrit svasti. */
+  literal: z.string().optional(),
+  syllables: z.array(syllableSchema).min(1),
+  register: z.enum(["neutral", "casual", "polite", "formal"]),
+  /** Speaker-gender particles: ครับ = male, ค่ะ/คะ = female. */
+  particleGender: z.enum(["male", "female"]).optional(),
+  /** Register/politeness/culture notes shown on the word card. */
+  usageNote: z.string().optional(),
+  audioKey: audioKeySchema, // words/{id}
+});
+export type VocabWord = z.infer<typeof vocabWordSchema>;
+
+/**
+ * A minimal-pair set: the same syllable in different tones. Lessons and
+ * weakness-targeted reviews reference sets by id; the engine picks which
+ * option to play at runtime, so one set drills differently every session.
+ */
+export const tonePairSetSchema = z.object({
+  id: z.string().min(1),
+  note: z.string().optional(),
+  options: z
+    .array(
+      z.object({
+        thai: z.string().min(1),
+        rtgs: z.string().min(1),
+        tone: toneSchema,
+        meaning: z.string().min(1),
+        audioKey: audioKeySchema,
+      }),
+    )
+    .min(2)
+    .max(4),
+});
+export type TonePairSet = z.infer<typeof tonePairSetSchema>;
+
 export const exerciseSchema = z.discriminatedUnion("type", [
   // Unscored teaching card shown before a character is first tested.
   z.object({ type: z.literal("intro"), characterId }),
@@ -86,9 +167,10 @@ export const exerciseSchema = z.discriminatedUnion("type", [
   z.object({ type: z.literal("sound_to_glyph"), characterId }),
   // Audio-only prompt: play the character's sound, pick the glyph.
   z.object({ type: z.literal("listening"), characterId }),
-  // Match glyphs to their names.
+  // Match glyphs to their names (characters) or Thai to meaning (words).
   z.object({
     type: z.literal("match_pairs"),
+    /** Character and/or vocab word ids (words pair Thai ↔ meaning). */
     characterIds: z.array(characterId).min(3).max(6),
   }),
   // Assign each character to one of two consonant classes (consonants only,
@@ -128,6 +210,45 @@ export const exerciseSchema = z.discriminatedUnion("type", [
     /** Characters whose SRS cards this answer should count toward. */
     attributeTo: z.array(characterId).optional(),
   }),
+  // Unscored teaching card for a vocab word: tone-colored syllables,
+  // contours, meaning, register badge, expandable spelling breakdown.
+  z.object({ type: z.literal("word_intro"), wordId: characterId }),
+  // Multiple choice over a vocab word; distractors generated at runtime
+  // from the vocab pool (lesson words first, then all words).
+  z.object({
+    type: z.literal("word_choice"),
+    wordId: characterId,
+    direction: z.enum(["thai_to_meaning", "meaning_to_thai"]),
+  }),
+  // Listening-first: audio-only prompt → pick the Thai word; meaning is
+  // revealed only in the feedback panel.
+  z.object({ type: z.literal("word_listening"), wordId: characterId }),
+  // Minimal-pair tone drill over a set from src/content/tone-pairs.ts.
+  // The target option is chosen at runtime; the outcome carries its tone
+  // for weakness tracking.
+  z.object({ type: z.literal("tone_pair"), setId: z.string().min(1) }),
+  // Register drill: a social context → pick the appropriate Thai form.
+  z.object({
+    type: z.literal("register_choice"),
+    /** The social situation, e.g. "You bump into someone on the BTS." */
+    context: z.string().min(1),
+    question: z.string().min(1),
+    choices: z
+      .array(
+        z.object({
+          thai: z.string().min(1),
+          rtgs: z.string().min(1),
+          /** phrases/{slug}; the correct choice's clip plays with feedback. */
+          audioKey: audioKeySchema.optional(),
+        }),
+      )
+      .min(2)
+      .max(4),
+    correctIndex: z.number().int().nonnegative(),
+    explanation: z.string().min(1),
+    /** Words whose SRS cards this answer should count toward. */
+    attributeTo: z.array(characterId).optional(),
+  }),
 ]);
 export type Exercise = z.infer<typeof exerciseSchema>;
 
@@ -137,9 +258,9 @@ export const lessonSchema = z.object({
   order: z.number().int().positive(),
   title: z.string(),
   xpReward: z.number().int().positive(),
-  /** Characters introduced in this lesson (get new SRS cards). */
+  /** Characters or vocab words introduced here (get new SRS cards). */
   teaches: z.array(characterId),
-  /** Previously taught characters this lesson reinforces. */
+  /** Previously taught characters/words this lesson reinforces. */
   reviews: z.array(characterId),
   /**
    * Human-verifiable citation of what the lesson teaches — the consonant
@@ -157,5 +278,7 @@ export const unitSchema = z.object({
   order: z.number().int().positive(),
   lessonIds: z.array(z.string()),
   comingSoon: z.boolean().optional(),
+  /** Learning goals, shown as a bullet list on locked stub path nodes. */
+  goals: z.array(z.string().min(1)).optional(),
 });
 export type Unit = z.infer<typeof unitSchema>;

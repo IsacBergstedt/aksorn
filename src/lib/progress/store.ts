@@ -2,7 +2,13 @@
 
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
-import { newCard, qualityFromCounts, reviewCard, type SrsCard } from "@/lib/srs";
+import {
+  newCard,
+  qualityFromCounts,
+  reviewCard,
+  type SrsCard,
+  type ToneStats,
+} from "@/lib/srs";
 
 export interface CharOutcomeCounts {
   correct: number;
@@ -28,6 +34,8 @@ export interface ProgressSnapshot {
   stats: Stats;
   completions: Record<string, LessonCompletion>;
   srsCards: Record<string, SrsCard>;
+  /** Per-tone hit/miss from tone drills — drives review over-sampling. */
+  toneStats: ToneStats;
 }
 
 interface ProgressStore extends ProgressSnapshot {
@@ -38,8 +46,13 @@ interface ProgressStore extends ProgressSnapshot {
     teaches: string[];
     reviews: string[];
     charResults: CharResults;
+    toneResults: ToneStats;
   }): void;
-  completeReview(input: { xpEarned: number; charResults: CharResults }): void;
+  completeReview(input: {
+    xpEarned: number;
+    charResults: CharResults;
+    toneResults: ToneStats;
+  }): void;
   adoptSnapshot(snapshot: ProgressSnapshot): void;
   resetAll(): void;
 }
@@ -70,6 +83,21 @@ function touchStreak(stats: Stats, now: Date = new Date()): Stats {
   };
 }
 
+function mergeToneStats(base: ToneStats, delta: ToneStats): ToneStats {
+  const next: ToneStats = { ...base };
+  for (const [tone, counts] of Object.entries(delta) as [
+    keyof ToneStats,
+    { correct: number; wrong: number },
+  ][]) {
+    const existing = next[tone] ?? { correct: 0, wrong: 0 };
+    next[tone] = {
+      correct: existing.correct + counts.correct,
+      wrong: existing.wrong + counts.wrong,
+    };
+  }
+  return next;
+}
+
 function applySrsResults(
   cards: Record<string, SrsCard>,
   charResults: CharResults,
@@ -94,8 +122,17 @@ export const useProgressStore = create<ProgressStore>()(
       stats: emptyStats,
       completions: {},
       srsCards: {},
+      toneStats: {},
 
-      completeLesson: ({ lessonId, xpEarned, score, teaches, reviews, charResults }) =>
+      completeLesson: ({
+        lessonId,
+        xpEarned,
+        score,
+        teaches,
+        reviews,
+        charResults,
+        toneResults,
+      }) =>
         set((state) => {
           const now = new Date();
           const touched = touchStreak(state.stats, now);
@@ -121,10 +158,11 @@ export const useProgressStore = create<ProgressStore>()(
               new Set([...teaches, ...reviews]),
               now,
             ),
+            toneStats: mergeToneStats(state.toneStats, toneResults),
           };
         }),
 
-      completeReview: ({ xpEarned, charResults }) =>
+      completeReview: ({ xpEarned, charResults, toneResults }) =>
         set((state) => {
           const now = new Date();
           const touched = touchStreak(state.stats, now);
@@ -133,10 +171,11 @@ export const useProgressStore = create<ProgressStore>()(
             srsCards: applySrsResults(
               state.srsCards,
               charResults,
-              // Reviews only ever quiz characters that already have cards.
+              // Reviews only ever quiz items that already have cards.
               new Set(Object.keys(state.srsCards)),
               now,
             ),
+            toneStats: mergeToneStats(state.toneStats, toneResults),
           };
         }),
 
@@ -145,10 +184,16 @@ export const useProgressStore = create<ProgressStore>()(
           stats: snapshot.stats,
           completions: snapshot.completions,
           srsCards: snapshot.srsCards,
+          toneStats: snapshot.toneStats ?? {},
         })),
 
       resetAll: () =>
-        set(() => ({ stats: emptyStats, completions: {}, srsCards: {} })),
+        set(() => ({
+          stats: emptyStats,
+          completions: {},
+          srsCards: {},
+          toneStats: {},
+        })),
     }),
     { name: "aksorn-progress-v1" },
   ),

@@ -1,0 +1,72 @@
+{
+  "id": "greet-04",
+  "unitId": "words-greetings",
+  "order": 4,
+  "title": "Casual or polite?",
+  "xpReward": 20,
+  "pedagogy": "Register: casual หวัดดี (ห-nam high+dead→low, mid+live→mid) vs polite สวัสดี+particle vs formal ลาก่อน (low+live→mid, mid+mai ek→low); คุณ (low+live→mid) as the polite you. Minimal pair เสือ/เสื้อ/เสื่อ covers high-class unmarked/mai tho/mai ek. Reviews unit 1 politeness vocabulary.",
+  "teaches": ["wat_di", "khun", "la_kon"],
+  "reviews": ["sawatdi", "khrap", "kha_statement", "khop_khun"],
+  "exercises": [
+    {
+      "type": "concept",
+      "title": "Reading the room",
+      "body": [
+        "Thai has gears: casual with friends, particle-polite with strangers, formal for weight. Choosing the right gear IS speaking Thai well.",
+        "Rough guide: friends and peers → casual, no particle needed. Anyone serving you, older, or unknown → polite particle. Officials, ceremonies, real farewells → formal.",
+        "When unsure, go one gear more polite. Nobody is offended by extra courtesy."
+      ]
+    },
+    { "type": "word_intro", "wordId": "wat_di" },
+    { "type": "word_intro", "wordId": "khun" },
+    { "type": "word_choice", "wordId": "wat_di", "direction": "thai_to_meaning" },
+    { "type": "word_intro", "wordId": "la_kon" },
+    {
+      "type": "register_choice",
+      "context": "You're messaging a close Thai friend to say hi.",
+      "question": "Which greeting fits?",
+      "choices": [
+        { "thai": "หวัดดี", "rtgs": "watdi", "audioKey": "words/wat_di" },
+        { "thai": "สวัสดีครับ", "rtgs": "sawatdi khrap", "audioKey": "phrases/sawatdi_khrap" },
+        { "thai": "ลาก่อน", "rtgs": "la kon", "audioKey": "words/la_kon" }
+      ],
+      "correctIndex": 0,
+      "explanation": "Friends get หวัดดี — สวัสดีครับ isn't wrong, it just reads stiff in a chat, like opening a text with “Good day, sir.” ลาก่อน is a goodbye, and a heavy one.",
+      "attributeTo": ["wat_di"]
+    },
+    {
+      "type": "register_choice",
+      "context": "First day at a new job in Bangkok. You're a woman, greeting your boss.",
+      "question": "What do you say?",
+      "choices": [
+        { "thai": "สวัสดีค่ะ", "rtgs": "sawatdi kha", "audioKey": "phrases/sawatdi_kha" },
+        { "thai": "หวัดดี", "rtgs": "watdi", "audioKey": "words/wat_di" },
+        { "thai": "หวัดดีค่ะ", "rtgs": "watdi kha", "audioKey": "phrases/wat_di_kha" }
+      ],
+      "correctIndex": 0,
+      "explanation": "Boss + first impression = full polite form: สวัสดีค่ะ. หวัดดี is for peers — and sticking a ค่ะ on it doesn't dress it up enough for this room.",
+      "attributeTo": ["sawatdi", "kha_statement"]
+    },
+    { "type": "tone_pair", "setId": "suea_set" },
+    { "type": "word_choice", "wordId": "khun", "direction": "thai_to_meaning" },
+    { "type": "word_listening", "wordId": "wat_di" },
+    {
+      "type": "register_choice",
+      "context": "You're a man leaving a shop after a chat with the owner — you'll likely be back next week.",
+      "question": "How do you say goodbye?",
+      "choices": [
+        { "thai": "สวัสดีครับ", "rtgs": "sawatdi khrap", "audioKey": "phrases/sawatdi_khrap" },
+        { "thai": "ลาก่อน", "rtgs": "la kon", "audioKey": "words/la_kon" },
+        { "thai": "ขอโทษครับ", "rtgs": "kho thot khrap", "audioKey": "phrases/kho_thot_khrap" }
+      ],
+      "correctIndex": 0,
+      "explanation": "สวัสดี closes an everyday encounter as smoothly as it opens one. ลาก่อน announces a long parting — save it for airports and endings, not the fruit stand.",
+      "attributeTo": ["la_kon", "sawatdi"]
+    },
+    { "type": "word_choice", "wordId": "la_kon", "direction": "thai_to_meaning" },
+    {
+      "type": "match_pairs",
+      "characterIds": ["wat_di", "khun", "la_kon", "sawatdi", "khop_khun"]
+    }
+  ]
+}

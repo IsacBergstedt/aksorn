@@ -102,6 +102,7 @@ async function pullSnapshot(
     },
     completions,
     srsCards,
+    toneStats: statsRes.data.tone_stats ?? {},
   };
 }
 
@@ -117,6 +118,7 @@ async function pushSnapshot(
       current_streak: snapshot.stats.currentStreak,
       longest_streak: snapshot.stats.longestStreak,
       last_active_date: snapshot.stats.lastActiveDate,
+      tone_stats: snapshot.toneStats,
       updated_at: new Date().toISOString(),
     }),
     supabase.from("lesson_completions").upsert(

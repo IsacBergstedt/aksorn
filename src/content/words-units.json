@@ -2,33 +2,140 @@
   {
     "id": "words-greetings",
     "title": "Greetings & Politeness",
-    "description": "Hello, goodbye, thank you — and the polite particles that go with them.",
+    "description": "Hello, thank you, sorry — and the particles and tones that make them polite.",
     "order": 1,
-    "lessonIds": [],
-    "comingSoon": true
+    "lessonIds": ["greet-01", "greet-02", "greet-03", "greet-04"],
+    "goals": [
+      "Greet anyone with สวัสดี — and know when หวัดดี is fine",
+      "Use ครับ / ค่ะ / คะ correctly, by gender and by tone",
+      "Thank, apologize, and wave it all off with ไม่เป็นไร",
+      "Ask and answer how someone is doing — the Thai way"
+    ]
   },
   {
     "id": "words-numbers",
-    "title": "Numbers",
-    "description": "Count from zero to a million and read Thai numerals on price tags.",
+    "title": "Numbers & Prices",
+    "description": "Count to 10,000, read Thai numerals, and survive any price tag.",
     "order": 2,
     "lessonIds": [],
-    "comingSoon": true
+    "comingSoon": true,
+    "goals": [
+      "Count 0–10,000 and hear prices at speed",
+      "Read the Thai numerals ๑ ๒ ๓ on signs and menus",
+      "Ask “how much?” and understand the answer in baht",
+      "Handle 25, 150, 1,990 — real market and 7-Eleven prices"
+    ]
   },
   {
     "id": "words-food",
-    "title": "Food & Drink",
-    "description": "Order at a street stall: dishes, flavors, and the words on the menu.",
+    "title": "Food & Ordering",
+    "description": "Order at a street stall like you have done it a hundred times.",
     "order": 3,
     "lessonIds": [],
-    "comingSoon": true
+    "comingSoon": true,
+    "goals": [
+      "Order street-stall staples by their real names",
+      "Say “not spicy”, “a little spicy”, and mean it",
+      "Ask for the check, a bag, no sugar, extra rice",
+      "Name the flavors: sweet, sour, salty, spicy, อร่อย"
+    ]
   },
   {
     "id": "words-getting-around",
     "title": "Getting Around",
-    "description": "Places, directions, and transport — read the signs, not just the map.",
+    "description": "Taxis, the BTS, and asking where things are — and understanding the answer.",
     "order": 4,
     "lessonIds": [],
-    "comingSoon": true
+    "comingSoon": true,
+    "goals": [
+      "Tell a taxi or motorbike driver where you are going",
+      "Ask “where is…?” and follow left / right / straight",
+      "Name the transport: BTS, songthaew, boat, bus",
+      "Read destination signs in Thai script"
+    ]
+  },
+  {
+    "id": "words-shopping",
+    "title": "Shopping & Bargaining",
+    "description": "How much, too expensive, can you go lower — bargaining with a smile.",
+    "order": 5,
+    "lessonIds": [],
+    "comingSoon": true,
+    "goals": [
+      "Ask prices and counter them politely",
+      "Say “too expensive” and “can you lower it?” with the right softeners",
+      "Sizes, colors, “do you have…?”",
+      "Know when to bargain (market) and when not to (mall)"
+    ]
+  },
+  {
+    "id": "words-time",
+    "title": "Time & Days",
+    "description": "Days of the week, today and tomorrow, and the Thai six-hour clock.",
+    "order": 6,
+    "lessonIds": [],
+    "comingSoon": true,
+    "goals": [
+      "The seven days and their colors",
+      "Today, tomorrow, yesterday, next week",
+      "Tell time the Thai way: โมง, บ่าย, ทุ่ม",
+      "Ask “when?” and make simple plans"
+    ]
+  },
+  {
+    "id": "words-people",
+    "title": "People & Family",
+    "description": "Family words, the พี่/น้อง system, and what to call people politely.",
+    "order": 7,
+    "lessonIds": [],
+    "comingSoon": true,
+    "goals": [
+      "Core family words — and why strangers are also พี่ and น้อง",
+      "Polite pronouns: ผม, ดิฉัน, คุณ, เขา",
+      "Ask and give names: “what's your name?”",
+      "Address a waiter, a vendor, an elder correctly"
+    ]
+  },
+  {
+    "id": "words-verbs",
+    "title": "Common Verbs & Daily Life",
+    "description": "Go, come, eat, sleep, want, like — the verbs that run your day.",
+    "order": 8,
+    "lessonIds": [],
+    "comingSoon": true,
+    "goals": [
+      "The 20 highest-mileage verbs in real sentences",
+      "อยาก (want to) and ชอบ (like) with anything",
+      "กำลัง…อยู่ for “right now”, แล้ว for “already”",
+      "Build subject–verb–object sentences without fear"
+    ]
+  },
+  {
+    "id": "words-feelings",
+    "title": "Feelings & Small Talk",
+    "description": "Hungry, tired, hot — and the small talk that keeps Thailand running.",
+    "order": 9,
+    "lessonIds": [],
+    "comingSoon": true,
+    "goals": [
+      "Say how you feel: hungry, tired, happy, hot",
+      "The สบาย ๆ mindset and how to talk about it",
+      "Weather talk — the universal opener",
+      "Keep a conversation alive with จริงหรอ and แล้วล่ะ"
+    ]
+  },
+  {
+    "id": "words-help",
+    "title": "Help & Emergencies",
+    "description": "The sentences you hope to never need — ready before you need them.",
+    "order": 10,
+    "lessonIds": [],
+    "comingSoon": true,
+    "goals": [
+      "“I don't understand” and “please speak slowly”",
+      "Pharmacy, hospital, police — finding help fast",
+      "“I'm lost”, “I lost my…”, “call …”",
+      "State allergies and medical needs clearly"
+    ]
   }
 ]

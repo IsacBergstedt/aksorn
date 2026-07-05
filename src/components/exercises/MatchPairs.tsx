@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { playAudioKey } from "@/lib/audio";
-import type { ThaiCharacter } from "@/content/schema";
+import type { MatchItem } from "@/lib/engine";
 import type { OnExerciseComplete } from "./types";
 
 function shuffled<T>(input: readonly T[]): T[] {
@@ -17,49 +17,67 @@ function shuffled<T>(input: readonly T[]): T[] {
   return arr;
 }
 
+/** Left-column Thai for an item: glyph for characters, the word for words. */
+function itemThai(item: MatchItem): string {
+  return item.kind === "word" ? item.thai : item.glyph;
+}
+
+/** Right-column label: names for characters, meanings for words. */
+function itemLabel(item: MatchItem): string {
+  return item.kind === "word" ? item.meaning : item.nameRtgs;
+}
+
+function itemSpokenText(item: MatchItem): string {
+  return item.kind === "word" ? item.thai : item.nameThai;
+}
+
+/**
+ * Match Thai to its counterpart: characters pair glyph ↔ name, vocab
+ * words pair Thai ↔ meaning (mixes of both work fine in one grid).
+ */
 export function MatchPairs({
-  characters,
+  items,
   onComplete,
 }: {
-  characters: ThaiCharacter[];
+  items: MatchItem[];
   onComplete: OnExerciseComplete;
 }) {
-  const glyphColumn = useMemo(() => shuffled(characters), [characters]);
-  const nameColumn = useMemo(() => shuffled(characters), [characters]);
+  const thaiColumn = useMemo(() => shuffled(items), [items]);
+  const labelColumn = useMemo(() => shuffled(items), [items]);
 
-  const [selectedGlyph, setSelectedGlyph] = useState<string | null>(null);
-  const [selectedName, setSelectedName] = useState<string | null>(null);
+  const [selectedThai, setSelectedThai] = useState<string | null>(null);
+  const [selectedLabel, setSelectedLabel] = useState<string | null>(null);
   const [matched, setMatched] = useState<Set<string>>(new Set());
   const [missed, setMissed] = useState<Set<string>>(new Set());
   const [flashWrong, setFlashWrong] = useState(false);
   const completedRef = useRef(false);
 
   useEffect(() => {
-    if (selectedGlyph === null || selectedName === null) return;
-    if (selectedGlyph === selectedName) {
-      const match = characters.find((c) => c.id === selectedGlyph);
-      playAudioKey(match?.audioKey, match?.nameThai);
-      setMatched((prev) => new Set(prev).add(selectedGlyph));
-      setSelectedGlyph(null);
-      setSelectedName(null);
+    if (selectedThai === null || selectedLabel === null) return;
+    if (selectedThai === selectedLabel) {
+      const match = items.find((c) => c.id === selectedThai);
+      if (match) playAudioKey(match.audioKey, itemSpokenText(match));
+      setMatched((prev) => new Set(prev).add(selectedThai));
+      setSelectedThai(null);
+      setSelectedLabel(null);
     } else {
       setFlashWrong(true);
-      setMissed((prev) => new Set(prev).add(selectedGlyph));
+      setMissed((prev) => new Set(prev).add(selectedThai));
       const timer = setTimeout(() => {
         setFlashWrong(false);
-        setSelectedGlyph(null);
-        setSelectedName(null);
+        setSelectedThai(null);
+        setSelectedLabel(null);
       }, 650);
       return () => clearTimeout(timer);
     }
-  }, [selectedGlyph, selectedName, characters]);
+  }, [selectedThai, selectedLabel, items]);
 
   useEffect(() => {
-    if (matched.size === characters.length && !completedRef.current) {
+    if (matched.size === items.length && !completedRef.current) {
       completedRef.current = true;
       const timer = setTimeout(() => {
         onComplete(
-          characters.map((c) => ({
+          items.map((c) => ({
             characterId: c.id,
             correct: !missed.has(c.id),
           })),
@@ -67,11 +85,11 @@ export function MatchPairs({
       }, 700);
       return () => clearTimeout(timer);
     }
-  }, [matched, characters, missed, onComplete]);
+  }, [matched, items, missed, onComplete]);
 
-  const tileClass = (id: string, column: "glyph" | "name") => {
+  const tileClass = (id: string, column: "thai" | "label") => {
     const isSelected =
-      column === "glyph" ? selectedGlyph === id : selectedName === id;
+      column === "thai" ? selectedThai === id : selectedLabel === id;
     return cn(
       "relative flex min-h-20 w-full items-center justify-center rounded-2xl border-2 bg-card p-3 shadow-sm transition-colors",
       matched.has(id)
@@ -87,22 +105,29 @@ export function MatchPairs({
   return (
     <div className="flex flex-col gap-6">
       <h2 className="text-center text-lg font-semibold text-muted-foreground">
-        Match each character to its name
+        Match the pairs
       </h2>
       <div className="grid grid-cols-2 gap-3">
         <div className="flex flex-col gap-3">
-          {glyphColumn.map((c) => (
+          {thaiColumn.map((c) => (
             <motion.button
               key={c.id}
               type="button"
               whileTap={{ scale: 0.96 }}
               disabled={matched.has(c.id)}
               onClick={() =>
-                setSelectedGlyph((prev) => (prev === c.id ? null : c.id))
+                setSelectedThai((prev) => (prev === c.id ? null : c.id))
               }
-              className={tileClass(c.id, "glyph")}
+              className={tileClass(c.id, "thai")}
             >
-              <span className="font-thai text-4xl leading-none">{c.glyph}</span>
+              <span
+                className={cn(
+                  "font-thai leading-snug",
+                  c.kind === "word" ? "text-2xl" : "text-4xl leading-none",
+                )}
+              >
+                {itemThai(c)}
+              </span>
               {matched.has(c.id) && (
                 <Check className="absolute right-2 top-2 h-4 w-4 text-emerald-600" />
               )}
@@ -110,18 +135,25 @@ export function MatchPairs({
           ))}
         </div>
         <div className="flex flex-col gap-3">
-          {nameColumn.map((c) => (
+          {labelColumn.map((c) => (
             <motion.button
               key={c.id}
               type="button"
               whileTap={{ scale: 0.96 }}
               disabled={matched.has(c.id)}
               onClick={() =>
-                setSelectedName((prev) => (prev === c.id ? null : c.id))
+                setSelectedLabel((prev) => (prev === c.id ? null : c.id))
               }
-              className={tileClass(c.id, "name")}
+              className={tileClass(c.id, "label")}
             >
-              <span className="text-lg font-semibold">{c.nameRtgs}</span>
+              <span
+                className={cn(
+                  "font-semibold",
+                  c.kind === "word" ? "text-base" : "text-lg",
+                )}
+              >
+                {itemLabel(c)}
+              </span>
               {matched.has(c.id) && (
                 <Check className="absolute right-2 top-2 h-4 w-4 text-emerald-600" />
               )}

@@ -1,7 +1,16 @@
 /**
- * SM-2 style spaced repetition over per-character cards.
- * Shapes mirror the `srs_cards` table (and the guest localStorage copy).
+ * SM-2 style spaced repetition over per-item cards (characters AND vocab
+ * words share the id namespace). Shapes mirror the `srs_cards` table (and
+ * the guest localStorage copy).
  */
+
+import type { Tone } from "@/content/schema";
+
+/**
+ * Per-tone hit/miss tally from tone_pair drills — mirrors
+ * user_stats.tone_stats (jsonb). Feeds weakness-targeted reviews.
+ */
+export type ToneStats = Partial<Record<Tone, { correct: number; wrong: number }>>;
 
 export interface SrsCard {
   characterId: string;
@@ -80,4 +89,14 @@ export function dueCards(
   return Object.values(cards)
     .filter((c) => isDue(c, now))
     .sort((a, b) => new Date(a.dueAt).getTime() - new Date(b.dueAt).getTime());
+}
+
+/**
+ * Weakest cards first: most lapses, then lowest ease. Review sessions use
+ * this so the cap and the listening drills favor what the learner misses.
+ */
+export function weaknessFirst(cards: SrsCard[]): SrsCard[] {
+  return [...cards].sort(
+    (a, b) => b.lapses - a.lapses || a.easeFactor - b.easeFactor,
+  );
 }

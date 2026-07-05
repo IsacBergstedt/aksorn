@@ -1,0 +1,58 @@
+{
+  "id": "greet-02",
+  "unitId": "words-greetings",
+  "order": 2,
+  "title": "Thank you & sorry",
+  "xpReward": 20,
+  "pedagogy": "Vocabulary: ขอบคุณ (high+dead→low, low+live→mid), ขอโทษ (high+live→rising, low+dead-long→falling), ไม่เป็นไร (low+mai ek→falling, mid+live→mid, mid... ไร: low+live(ไ◌)→mid). Minimal pair ไม่/ไม้/ใหม่/ไหม covers mai ek and mai tho on low class vs ห-nam high class.",
+  "teaches": ["khop_khun", "kho_thot", "mai_pen_rai"],
+  "reviews": ["sawatdi", "khrap", "kha_statement"],
+  "exercises": [
+    {
+      "type": "concept",
+      "title": "Thanks, sorry — and letting it go",
+      "thaiExample": "ไม่เป็นไร",
+      "exampleAudioKey": "words/mai_pen_rai",
+      "body": [
+        "Three phrases carry most Thai social grace: thank you, sorry, and “it's nothing”.",
+        "ไม่เป็นไร answers both a thank-you and an apology — and it's a worldview: don't let small things ruffle you.",
+        "Someone bumps you, the food is late, it rains on your plans: ไม่เป็นไร."
+      ]
+    },
+    { "type": "word_intro", "wordId": "khop_khun" },
+    { "type": "word_choice", "wordId": "khop_khun", "direction": "thai_to_meaning" },
+    { "type": "word_intro", "wordId": "kho_thot" },
+    { "type": "word_choice", "wordId": "kho_thot", "direction": "meaning_to_thai" },
+    { "type": "word_intro", "wordId": "mai_pen_rai" },
+    {
+      "type": "concept",
+      "title": "ไม่ is falling — and that matters",
+      "body": [
+        "The ไม่ in ไม่เป็นไร is falling: low-class ม + mai ek.",
+        "Change the tone and you change the word: mái is wood, mài is new, mǎi is silk (or a question).",
+        "Thais famously chain them: ไม้ใหม่ไม่ไหม้ — “new wood doesn't burn”. Time to tell them apart by ear."
+      ]
+    },
+    { "type": "tone_pair", "setId": "mai_set" },
+    { "type": "word_listening", "wordId": "khop_khun" },
+    {
+      "type": "register_choice",
+      "context": "Rush hour on the BTS. The train lurches and you step hard on someone's foot. You're a man.",
+      "question": "What do you say?",
+      "choices": [
+        { "thai": "ขอโทษครับ", "rtgs": "kho thot khrap", "audioKey": "phrases/kho_thot_khrap" },
+        { "thai": "ขอบคุณครับ", "rtgs": "khop khun khrap", "audioKey": "phrases/khop_khun_khrap" },
+        { "thai": "ไม่เป็นไร", "rtgs": "mai pen rai", "audioKey": "words/mai_pen_rai" }
+      ],
+      "correctIndex": 0,
+      "explanation": "You apologize: ขอโทษครับ. ไม่เป็นไร is what the OTHER person says to forgive you — saying it yourself would wave off your own apology.",
+      "attributeTo": ["kho_thot"]
+    },
+    { "type": "word_choice", "wordId": "mai_pen_rai", "direction": "thai_to_meaning" },
+    { "type": "word_listening", "wordId": "kho_thot" },
+    {
+      "type": "match_pairs",
+      "characterIds": ["khop_khun", "kho_thot", "mai_pen_rai", "sawatdi"]
+    }
+  ]
+}

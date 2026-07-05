@@ -6,6 +6,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { X } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
 import type { RuntimeExercise } from "@/lib/engine";
+import type { ToneStats } from "@/lib/srs";
 import type { CharResults } from "@/lib/progress/store";
 import { IntroCard } from "./IntroCard";
 import { ConceptCard } from "./ConceptCard";
@@ -14,14 +15,31 @@ import { ListeningExercise } from "./ListeningExercise";
 import { MatchPairs } from "./MatchPairs";
 import { ClassSort } from "./ClassSort";
 import { RuleChoice } from "./RuleChoice";
+import { WordIntroCard } from "./WordIntroCard";
+import { WordChoice } from "./WordChoice";
+import { WordListening } from "./WordListening";
+import { TonePair } from "./TonePair";
+import { RegisterChoice } from "./RegisterChoice";
 import type { ExerciseOutcome } from "./types";
 
 type QueuedExercise = RuntimeExercise & { isRetry?: boolean };
 
+/** Choice-style exercises answered wrong get re-queued once at the end. */
+const RETRYABLE = new Set<RuntimeExercise["kind"]>([
+  "choice",
+  "rule_choice",
+  "listening",
+  "word_choice",
+  "word_listening",
+  "tone_pair",
+  "register_choice",
+]);
+
 /**
  * Drives a session of exercises: progress bar, transitions, result
- * accumulation. A choice exercise answered wrong is re-queued once at the
- * end of the session.
+ * accumulation (per-item counts for SRS plus per-tone counts for
+ * weakness targeting). A choice exercise answered wrong is re-queued once
+ * at the end of the session.
  */
 export function ExerciseRunner({
   exercises,
@@ -30,31 +48,39 @@ export function ExerciseRunner({
 }: {
   exercises: RuntimeExercise[];
   exitHref: string;
-  onFinish: (results: CharResults, accuracy: number) => void;
+  onFinish: (results: CharResults, accuracy: number, toneResults: ToneStats) => void;
 }) {
   const [queue, setQueue] = useState<QueuedExercise[]>(exercises);
   const [index, setIndex] = useState(0);
   const [results, setResults] = useState<CharResults>({});
+  const [toneResults, setToneResults] = useState<ToneStats>({});
 
   const current = queue[index];
 
   const handleComplete = useCallback(
     (outcomes: ExerciseOutcome[]) => {
       const nextResults = { ...results };
-      for (const { characterId, correct } of outcomes) {
+      const nextToneResults = { ...toneResults };
+      for (const { characterId, correct, tone } of outcomes) {
         const counts = nextResults[characterId] ?? { correct: 0, wrong: 0 };
         nextResults[characterId] = {
           correct: counts.correct + (correct ? 1 : 0),
           wrong: counts.wrong + (correct ? 0 : 1),
         };
+        if (tone) {
+          const t = nextToneResults[tone] ?? { correct: 0, wrong: 0 };
+          nextToneResults[tone] = {
+            correct: t.correct + (correct ? 1 : 0),
+            wrong: t.wrong + (correct ? 0 : 1),
+          };
+        }
       }
       setResults(nextResults);
+      setToneResults(nextToneResults);
 
       let nextQueue = queue;
       if (
-        (current.kind === "choice" ||
-          current.kind === "rule_choice" ||
-          current.kind === "listening") &&
+        RETRYABLE.has(current.kind) &&
         !current.isRetry &&
         outcomes.some((o) => !o.correct)
       ) {
@@ -71,12 +97,16 @@ export function ExerciseRunner({
           { correct: 0, wrong: 0 },
         );
         const answered = totals.correct + totals.wrong;
-        onFinish(nextResults, answered === 0 ? 1 : totals.correct / answered);
+        onFinish(
+          nextResults,
+          answered === 0 ? 1 : totals.correct / answered,
+          nextToneResults,
+        );
       } else {
         setIndex(index + 1);
       }
     },
-    [current, index, queue, results, onFinish],
+    [current, index, queue, results, toneResults, onFinish],
   );
 
   if (!current) return null;
@@ -118,7 +148,7 @@ export function ExerciseRunner({
             <ListeningExercise exercise={current} onComplete={handleComplete} />
           )}
           {current.kind === "match_pairs" && (
-            <MatchPairs characters={current.characters} onComplete={handleComplete} />
+            <MatchPairs items={current.items} onComplete={handleComplete} />
           )}
           {current.kind === "class_sort" && (
             <ClassSort
@@ -126,6 +156,21 @@ export function ExerciseRunner({
               classes={current.classes}
               onComplete={handleComplete}
             />
+          )}
+          {current.kind === "word_intro" && (
+            <WordIntroCard word={current.word} onComplete={handleComplete} />
+          )}
+          {current.kind === "word_choice" && (
+            <WordChoice exercise={current} onComplete={handleComplete} />
+          )}
+          {current.kind === "word_listening" && (
+            <WordListening exercise={current} onComplete={handleComplete} />
+          )}
+          {current.kind === "tone_pair" && (
+            <TonePair exercise={current} onComplete={handleComplete} />
+          )}
+          {current.kind === "register_choice" && (
+            <RegisterChoice exercise={current} onComplete={handleComplete} />
           )}
         </motion.div>
       </AnimatePresence>

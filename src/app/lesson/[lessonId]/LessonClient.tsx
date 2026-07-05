@@ -1,8 +1,9 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
-import { getCharacter, lessonById } from "@/content";
+import { getItem, lessonById, wordsUnitById } from "@/content";
 import { buildLessonExercises, type RuntimeExercise } from "@/lib/engine";
+import type { ToneStats } from "@/lib/srs";
 import { useProgressStore, type CharResults } from "@/lib/progress/store";
 import { ExerciseRunner } from "@/components/exercises/ExerciseRunner";
 import { LessonComplete } from "@/components/LessonComplete";
@@ -13,6 +14,9 @@ export function LessonClient({ lessonId }: { lessonId: string }) {
   const lesson = lessonById.get(lessonId)!; // existence checked by the page
   const completeLesson = useProgressStore((s) => s.completeLesson);
   const streak = useProgressStore((s) => s.stats.currentStreak);
+
+  // Words lessons exit back to the Words path, script lessons to Reading.
+  const exitHref = wordsUnitById.has(lesson.unitId) ? "/words" : "/reading";
 
   // Exercises are randomized (distractors, shuffles), so they're built
   // after mount to keep server and client HTML identical.
@@ -28,7 +32,7 @@ export function LessonClient({ lessonId }: { lessonId: string }) {
   }, [lesson]);
 
   const handleFinish = useCallback(
-    (charResults: CharResults, accuracy: number) => {
+    (charResults: CharResults, accuracy: number, toneResults: ToneStats) => {
       const xpEarned =
         lesson.xpReward + (accuracy === 1 ? PERFECT_BONUS_XP : 0);
       completeLesson({
@@ -38,6 +42,7 @@ export function LessonClient({ lessonId }: { lessonId: string }) {
         teaches: lesson.teaches,
         reviews: lesson.reviews,
         charResults,
+        toneResults,
       });
       setResult({ xpEarned, accuracy });
     },
@@ -56,10 +61,11 @@ export function LessonClient({ lessonId }: { lessonId: string }) {
   }
 
   if (!exercises) {
+    const first = lesson.teaches[0] ? getItem(lesson.teaches[0]) : null;
     return (
       <div className="mx-auto flex min-h-[50vh] w-full max-w-xl items-center justify-center text-muted-foreground">
         <span className="font-thai text-5xl animate-pulse">
-          {lesson.teaches[0] ? getCharacter(lesson.teaches[0]).glyph : "อ"}
+          {first ? (first.kind === "word" ? first.thai : first.glyph) : "อ"}
         </span>
       </div>
     );
@@ -68,7 +74,7 @@ export function LessonClient({ lessonId }: { lessonId: string }) {
   return (
     <ExerciseRunner
       exercises={exercises}
-      exitHref="/reading"
+      exitHref={exitHref}
       onFinish={handleFinish}
     />
   );

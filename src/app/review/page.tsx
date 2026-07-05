@@ -9,7 +9,7 @@ import {
   reviewXp,
   type RuntimeExercise,
 } from "@/lib/engine";
-import { dueCards } from "@/lib/srs";
+import { dueCards, weaknessFirst, type ToneStats } from "@/lib/srs";
 import { useProgressStore, type CharResults } from "@/lib/progress/store";
 import { ExerciseRunner } from "@/components/exercises/ExerciseRunner";
 import { LessonComplete } from "@/components/LessonComplete";
@@ -31,25 +31,28 @@ export default function ReviewPage() {
   // The due list is frozen once on mount so completing exercises doesn't
   // reshuffle the session under the learner.
   useEffect(() => {
-    const due = dueCards(useProgressStore.getState().srsCards);
+    const state = useProgressStore.getState();
+    const due = dueCards(state.srsCards);
     if (due.length === 0) {
       setEmpty(true);
       return;
     }
-    const characterIds = due.map((c) => c.characterId);
+    // Weakest first: the session cap and the listening drills then land on
+    // the items (and tones) this learner actually struggles with.
+    const characterIds = weaknessFirst(due).map((c) => c.characterId);
     setSession({
       characterIds,
-      exercises: buildReviewExercises(characterIds),
+      exercises: buildReviewExercises(characterIds, state.toneStats),
     });
   }, []);
 
   const handleFinish = useCallback(
-    (charResults: CharResults, accuracy: number) => {
+    (charResults: CharResults, accuracy: number, toneResults: ToneStats) => {
       if (!session) return;
       const xpEarned = reviewXp(
         Math.min(session.characterIds.length, Object.keys(charResults).length),
       );
-      completeReview({ xpEarned, charResults });
+      completeReview({ xpEarned, charResults, toneResults });
       setResult({ xpEarned, accuracy });
     },
     [session, completeReview],

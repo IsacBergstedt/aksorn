@@ -1,0 +1,47 @@
+{
+  "id": "greet-03",
+  "unitId": "words-greetings",
+  "order": 3,
+  "title": "How are you?",
+  "xpReward": 20,
+  "pedagogy": "Vocabulary: สบายดี(ไหม) — ส high+dead→low, บาย mid+live→mid, ดี mid+live→mid, ไหม ห-nam high+live→rising; กินข้าวหรือยัง — mid+live→mid, high+mai tho→falling, ห-nam high+live→rising, low+live→mid; แล้วคุณล่ะ — LOW+mai tho→high, low+live→mid, LOW+mai ek→falling. Reinforces ค่ะ/คะ on questions.",
+  "teaches": ["sabai_di", "sabai_di_mai", "kin_khao_rue_yang", "laeo_khun_la"],
+  "reviews": ["kha_question", "khrap"],
+  "exercises": [
+    {
+      "type": "concept",
+      "title": "“Have you eaten yet?”",
+      "thaiExample": "กินข้าวหรือยัง",
+      "exampleAudioKey": "words/kin_khao_rue_yang",
+      "body": [
+        "Textbooks teach สบายดีไหม for “how are you?” — real life often asks กินข้าวหรือยัง: “have you eaten rice yet?”",
+        "It's not about lunch. Food is how Thais say “I care how you're doing.”",
+        "Answer กินแล้ว (“already ate”) or ยัง (“not yet”) — nobody expects a menu."
+      ]
+    },
+    { "type": "word_intro", "wordId": "sabai_di_mai" },
+    { "type": "word_intro", "wordId": "sabai_di" },
+    { "type": "word_choice", "wordId": "sabai_di_mai", "direction": "thai_to_meaning" },
+    { "type": "word_choice", "wordId": "sabai_di", "direction": "meaning_to_thai" },
+    { "type": "word_intro", "wordId": "kin_khao_rue_yang" },
+    { "type": "word_listening", "wordId": "sabai_di" },
+    { "type": "word_choice", "wordId": "kin_khao_rue_yang", "direction": "thai_to_meaning" },
+    { "type": "word_intro", "wordId": "laeo_khun_la" },
+    {
+      "type": "register_choice",
+      "context": "A colleague asks สบายดีไหม. You're doing fine — answer, and keep the conversation going.",
+      "question": "What do you say?",
+      "choices": [
+        { "thai": "สบายดี แล้วคุณล่ะ", "rtgs": "sabai di, laeo khun la", "audioKey": "phrases/sabai_di_laeo_khun_la" },
+        { "thai": "ขอบคุณ", "rtgs": "khop khun", "audioKey": "words/khop_khun" },
+        { "thai": "ขอโทษครับ", "rtgs": "kho thot khrap", "audioKey": "phrases/kho_thot_khrap" }
+      ],
+      "correctIndex": 0,
+      "explanation": "สบายดี answers the question; แล้วคุณล่ะ bounces it back — the polite rhythm of Thai small talk. Thanking or apologizing doesn't answer “how are you?”.",
+      "attributeTo": ["sabai_di", "laeo_khun_la"]
+    },
+    { "type": "word_listening", "wordId": "kin_khao_rue_yang" },
+    { "type": "word_choice", "wordId": "laeo_khun_la", "direction": "thai_to_meaning" },
+    { "type": "tone_pair", "setId": "kha_set" }
+  ]
+}
