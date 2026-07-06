@@ -93,11 +93,21 @@ links; mobile: fixed bottom tab bar, hidden on `/lesson/*`):
   all complete. Phrases lessons run on the same engine and
   `/lesson/[lessonId]` route (exit href picks /phrases vs /reading by
   unit) — never a separate engine.
-- **Practice Speaking** (`/speaking`) — MINIMAL V1 (shipped 2026-07-04):
-  self-assessment loop — step through consonants + vowels, play the TTS
-  target, record yourself via MediaRecorder, replay both side by side.
-  No uploads, no scoring (`src/components/speaking/`). Automated
-  tone/pronunciation scoring remains Phase 2.
+- **Practice Speaking** (`/speaking`) — V2 with scoring (2026-07-07):
+  Letters | Words tabs (consonants + vowels, all Phrases vocab), play
+  the TTS target, record via MediaRecorder, replay both — plus, per
+  recording: Azure Pronunciation Assessment (scripted th-TH against the
+  target text — PronScore ring, accuracy/fluency/completeness, per-word
+  chips; `src/lib/speech-assess.ts`) and a LOCAL pitch trace drawn
+  against the word's expected ToneContours (`src/lib/pitch.ts`,
+  autocorrelation, no deps). **Tones stay unscored** — Azure's prosody
+  score is en-US only, so tone feedback is visual-only until our own
+  classifier is validated. Auth: `/api/speech-token` mints short-lived
+  tokens (the app's FIRST server route, approved 2026-07-07 — audio
+  never touches our server; needs `AZURE_SPEECH_KEY`/`AZURE_SPEECH_REGION`
+  set in Vercel env, not just .env.local). PA bills as standard STT
+  (~$1/audio-hour prorated per second; F0 free tier = 5 h/month). No
+  SRS feed and no stored recordings in this version.
 
 ## Phase 1 requirements
 
@@ -145,7 +155,10 @@ links; mobile: fixed bottom tab bar, hidden on `/lesson/*`):
   "Audio generation" below for the script.
 - **Auth is client-side only in Phase 1**: no server-rendered protected
   routes; all progress reads/writes happen in the browser, so there is no
-  Next.js middleware or server Supabase client yet.
+  Next.js middleware or server Supabase client yet. One deliberate
+  exception (2026-07-07): `/api/speech-token` — a stateless route that
+  exchanges the server-held Azure Speech key for a ~10-min browser
+  token. It touches neither auth nor progress.
 
 See the "Data model" section below for tables and the lesson JSON schema.
 (Ask the user before changing the data model or making other big

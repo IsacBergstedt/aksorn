@@ -8,8 +8,9 @@ export default function SpeakingPage() {
       <div className="mb-6 text-center">
         <h1 className="text-2xl font-bold tracking-tight">Practice Speaking</h1>
         <p className="mt-1 text-muted-foreground">
-          Hear the target, record yourself, and compare by ear — no scoring,
-          just your ear getting sharper.
+          Hear the target, record yourself, and compare — now with a
+          pronunciation score and a trace of your pitch against the target
+          tone.
         </p>
       </div>
       <SpeakingPractice />

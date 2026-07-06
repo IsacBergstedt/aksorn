@@ -14,10 +14,17 @@ type RecorderState =
 
 /**
  * Self-assessment recorder: capture the learner's attempt with
- * MediaRecorder and play it back next to the target. Nothing is uploaded
- * or scored — the comparison loop is the exercise.
+ * MediaRecorder and play it back next to the target. The blob is handed
+ * to `onRecorded` (pronunciation scoring + pitch trace); it is never
+ * uploaded anywhere by this component itself.
  */
-export function Recorder({ onPlayTarget }: { onPlayTarget: () => void }) {
+export function Recorder({
+  onPlayTarget,
+  onRecorded,
+}: {
+  onPlayTarget: () => void;
+  onRecorded?: (blob: Blob) => void;
+}) {
   const [state, setState] = useState<RecorderState>("idle");
   const recorderRef = useRef<MediaRecorder | null>(null);
   const chunksRef = useRef<Blob[]>([]);
@@ -60,6 +67,7 @@ export function Recorder({ onPlayTarget }: { onPlayTarget: () => void }) {
         urlRef.current = URL.createObjectURL(blob);
         setRecordingUrl(urlRef.current);
         setState("recorded");
+        onRecorded?.(blob);
       };
       recorder.start();
       setState("recording");
