@@ -4,7 +4,7 @@
   "order": 1,
   "title": "Sentences you already own",
   "xpReward": 25,
-  "pedagogy": "Sentence recombination over units 1–5 vocabulary: the ขอ + thing + หน่อย + ครับ/ค่ะ request frame (food-03) recombined with new slot fillers. Cloze drills isolate one decision per sentence — a content slot (what you're asking for) and the particle slot (ครับ male / ค่ะ female statement / คะ question, greet-02). Sentence listening contrasts the near-openers กิน (mid, mid ก + live น) / ขอ (rising, high ข + live) / เอา (mid) that differ mainly by tone and vowel.",
+  "pedagogy": "Sentence recombination over units 1–5 vocabulary: the ขอ + thing + หน่อย + ครับ/ค่ะ request frame (food-03) recombined with new slot fillers. Cloze drills isolate one decision per sentence — a content slot (what you're asking for) and the particle slot (ครับ male / ค่ะ female statement / คะ question, greet-02). Sentence listening contrasts the near-openers กิน (mid, mid ก + live น) / ขอ (rising, high ข + live) / เอา (mid) that differ mainly by tone and vowel. The closing dialogue drills register in context: vendor's casual เอาอะไรคะ answered with the polite frame; เอาข้าว is understood-but-blunt (soft wrong), the other distractors fail on meaning and situation.",
   "teaches": [],
   "reviews": ["kho", "nam", "noi", "khrap", "kha_statement", "khao_rice", "kin", "ao"],
   "exercises": [
@@ -95,6 +95,46 @@
       "correctIndex": 0,
       "explanation": "Three openers, one ear test: เอา starts on a vowel, ขอ rises, กิน stays mid. All three end in น้ำ — the first syllable decides everything.",
       "attributeTo": ["ao", "nam"]
+    },
+    {
+      "type": "dialogue_choice",
+      "context": "Evening at a street-food stall. The vendor looks up as you walk over. You're a man, and you want rice.",
+      "speaker": {
+        "thai": "เอาอะไรคะ",
+        "rtgs": "ao arai kha",
+        "meaning": "What'll you have?",
+        "audioKey": "phrases/ao_arai_kha"
+      },
+      "question": "How do you reply?",
+      "choices": [
+        {
+          "thai": "ขอข้าวหน่อยครับ",
+          "rtgs": "kho khao noi khrap",
+          "audioKey": "phrases/kho_khao_noi_khrap",
+          "quality": "best",
+          "note": "ขอ + thing + หน่อย + ครับ — the polite request frame from Ordering Food, aimed at exactly this moment."
+        },
+        {
+          "thai": "เอาข้าว",
+          "rtgs": "ao khao",
+          "audioKey": "phrases/ao_khao",
+          "quality": "register",
+          "note": "You'd get your rice — but bare เอา with no particle is how you talk to a friend holding the pot, not a vendor you've just met. ครับ at minimum."
+        },
+        {
+          "thai": "ข้าวอร่อยครับ",
+          "rtgs": "khao aroi khrap",
+          "quality": "meaning",
+          "note": "Perfectly polite — but it means “the rice is delicious.” That's a compliment after eating, not an answer to “what'll you have?”"
+        },
+        {
+          "thai": "ไม่เป็นไรครับ",
+          "rtgs": "mai pen rai khrap",
+          "quality": "situation",
+          "note": "ไม่เป็นไร waves off an apology or a thank-you. Nobody apologized — the vendor asked for your order."
+        }
+      ],
+      "attributeTo": ["kho", "khao_rice", "noi", "khrap"]
     },
     {
       "type": "match_pairs",

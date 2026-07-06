@@ -123,6 +123,20 @@ export type RuntimeExercise =
       correctIndex: number;
       explanation?: string;
       attributeTo?: string[];
+    }
+  | {
+      kind: "dialogue_choice";
+      context: string;
+      speaker: { thai: string; rtgs: string; meaning: string; audioKey: string };
+      question: string;
+      choices: {
+        thai: string;
+        rtgs: string;
+        audioKey?: string;
+        quality: "best" | "register" | "meaning" | "situation";
+        note: string;
+      }[];
+      attributeTo?: string[];
     };
 
 /** match_pairs tiles: characters pair glyph↔name, words pair Thai↔meaning. */
@@ -419,6 +433,17 @@ export function buildLessonExercises(lesson: Lesson): RuntimeExercise[] {
           choices: ex.choices,
           correctIndex: ex.correctIndex,
           explanation: ex.explanation,
+          attributeTo: ex.attributeTo,
+        };
+      case "dialogue_choice":
+        return {
+          kind: "dialogue_choice",
+          context: ex.context,
+          speaker: ex.speaker,
+          question: ex.question,
+          // Authored order is already deliberate-looking; shuffle anyway so
+          // the best answer can't be position-learned on retry.
+          choices: shuffle(ex.choices),
           attributeTo: ex.attributeTo,
         };
       case "register_choice":

@@ -212,7 +212,21 @@ architectural decisions.)
   was said; choices are authored and carry thai+rtgs+meaning so
   feedback always reveals both sides; audioKey usually reuses an
   existing `phrases/{slug}` clip — the generate-audio collision check
-  verifies the reuse; SRS via `attributeTo` only, else accuracy-only).
+  verifies the reuse; SRS via `attributeTo` only, else accuracy-only),
+  `dialogue_choice` (a situational prompt: English context line + voiced
+  Thai speaker line → pick the reply that fits; every choice is
+  grammatical, each carries a `quality` — exactly one `best` (must have
+  audioKey; plays with feedback) plus wrong-for-different-reasons
+  distractors — and its own `note` explaining why, shown when picked.
+  Grading (decided 2026-07-06): `register` picks are SOFT wrong — amber
+  "understood but blunt" feedback, dent session accuracy via the
+  synthetic "register" id and re-queue once, but never mark the vocab
+  words wrong in SRS; `meaning`/`situation` picks are hard wrong against
+  `attributeTo`. Content rules: the best answer is the most NATURAL
+  thing a Thai speaker would say, not the most textbook-polite — verify
+  softeners like หน่อย read naturally for the scene; speaker lines may
+  use natural service-Thai slightly above level, choices only taught
+  vocab).
 - Romanization is a toggle, not a default: word exercises show RTGS only
   when `useUiSettings.showRomanization` is on (persisted, default off).
 - **Weakness targeting**: `ExerciseOutcome.tone` from tone drills is

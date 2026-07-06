@@ -88,6 +88,14 @@ function buildManifest(): Map<string, string> {
       if (ex.type === "sentence_listening") {
         add(ex.audioKey, ex.thai, `lesson ${lesson.id}`);
       }
+      if (ex.type === "dialogue_choice") {
+        add(ex.speaker.audioKey, ex.speaker.thai, `lesson ${lesson.id}`);
+        for (const choice of ex.choices) {
+          if (choice.audioKey) {
+            add(choice.audioKey, choice.thai, `lesson ${lesson.id}`);
+          }
+        }
+      }
     }
   }
 

@@ -302,6 +302,21 @@ for (const lesson of lessons) {
         );
       }
     }
+    if (ex.type === "dialogue_choice") {
+      const bestChoices = ex.choices.filter((c) => c.quality === "best");
+      if (bestChoices.length !== 1) {
+        throw new Error(
+          `Lesson ${lesson.id}: dialogue_choice needs exactly one best choice, has ${bestChoices.length}`,
+        );
+      }
+      // The best reply is always voiced with the feedback.
+      if (!bestChoices[0].audioKey) {
+        throw new Error(
+          `Lesson ${lesson.id}: dialogue_choice best choice ${bestChoices[0].thai} needs an audioKey`,
+        );
+      }
+      ex.attributeTo?.forEach((id) => referenced.add(id));
+    }
     if (ex.type === "sentence_cloze") {
       if (ex.blankIndex >= ex.tokens.length) {
         throw new Error(

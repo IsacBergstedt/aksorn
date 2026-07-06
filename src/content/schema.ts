@@ -336,6 +336,49 @@ export const exerciseSchema = z.discriminatedUnion("type", [
     /** Words whose SRS cards this answer should count toward. */
     attributeTo: z.array(characterId).optional(),
   }),
+  // Dialogue turn: a voiced Thai speaker line in a described situation →
+  // pick the reply that fits. Every choice is grammatical Thai; the wrong
+  // ones are wrong for different reasons, and each carries its own
+  // teaching note. Content rules (human-checked): the best answer is the
+  // most NATURAL thing a Thai speaker would say, not the most textbook-
+  // polite (verify softeners like หน่อย read naturally for the scene);
+  // the speaker line may use natural service-Thai slightly above level,
+  // but choices only use taught vocabulary.
+  z.object({
+    type: z.literal("dialogue_choice"),
+    /** Scene-setting in English: place, who's speaking, what you want. */
+    context: z.string().min(1),
+    /** The other speaker's line — voiced; meaning revealed in feedback. */
+    speaker: z.object({
+      thai: z.string().min(1),
+      rtgs: z.string().min(1),
+      meaning: z.string().min(1),
+      audioKey: audioKeySchema, // phrases/{slug}
+    }),
+    question: z.string().min(1),
+    choices: z
+      .array(
+        z.object({
+          thai: z.string().min(1),
+          rtgs: z.string().min(1),
+          /** Required on the best choice (checked at load) — it plays with feedback. */
+          audioKey: audioKeySchema.optional(),
+          /**
+           * best = the reply. register = understood but blunt/over-formal
+           * (soft wrong: dents accuracy via the "register" bucket, never
+           * the vocab SRS). meaning = says the wrong thing. situation =
+           * right phrase, wrong moment.
+           */
+          quality: z.enum(["best", "register", "meaning", "situation"]),
+          /** Why this choice is or isn't right — shown when picked. */
+          note: z.string().min(1),
+        }),
+      )
+      .min(3)
+      .max(4),
+    /** Words in the best reply — they get the SRS credit/blame. */
+    attributeTo: z.array(characterId).optional(),
+  }),
   // Register drill: a social context → pick the appropriate Thai form.
   z.object({
     type: z.literal("register_choice"),

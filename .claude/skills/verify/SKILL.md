@@ -11,7 +11,12 @@ description: How to build, launch, and drive Aksorn (Next.js web app) for runtim
 npm run dev -- --port 3457   # Turbopack dev server; ready in ~2s
 ```
 
-Run it in the background. **Gotcha (Windows):** stopping the npm task
+Run it in the background. **Gotcha:** `npm run build` and the dev server
+share `.next/` — running a production build while the dev server is up
+corrupts its artifacts (ENOENT `_buildManifest.js.tmp.*` spam, pages stop
+rendering). Build first, or kill and restart the dev server after.
+
+**Gotcha (Windows):** stopping the npm task
 leaves the node child holding the port — kill the listener explicitly:
 
 ```powershell
