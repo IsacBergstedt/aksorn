@@ -1,0 +1,67 @@
+{
+  "id": "intro-03",
+  "unitId": "words-introductions",
+  "order": 3,
+  "title": "Where are you from?",
+  "xpReward": 25,
+  "pedagogy": "Vocabulary: มาจาก (low ม + live long อา → mid; mid จ + dead stop ก → low), ไหน (ห-nam: silent ห lends น high class, + live ไ◌ → rising), คน (low ค + live sonorant น → mid; inherent o), ยินดีที่ได้รู้จัก (mid·mid·falling·falling·high·low, receptive). ma_set tone trio (มา/ม้า/หมา) drills the มา syllable. Question-word slot rule reviewed with ไหน; สวีเดน is a literal chip (foreign loan, no derivation).",
+  "teaches": ["ma_chak", "nai", "khon", "yindi_ruchak"],
+  "reviews": ["phom", "khun", "khrap", "arai"],
+  "exercises": [
+    {
+      "type": "concept",
+      "title": "The second question every Thai asks",
+      "thaiExample": "คนไทย",
+      "exampleAudioKey": "examples/khon_thai",
+      "body": [
+        "Right after your name comes มาจากไหน — “where are you from?”. It's friendly curiosity, not border control.",
+        "The answer machine is คน + place: คนไทย “Thai person”, คนสวีเดน “Swede”. One little word builds every nationality.",
+        "ไหน is “where/which”, and it obeys the same slot rule as อะไร: it sits exactly where your answer will."
+      ]
+    },
+    { "type": "word_intro", "wordId": "ma_chak" },
+    { "type": "word_intro", "wordId": "nai" },
+    { "type": "word_choice", "wordId": "ma_chak", "direction": "thai_to_meaning" },
+    {
+      "type": "sentence_build",
+      "meaning": "Where are you from? (male speaker)",
+      "gloss": "you + come-from + where + male polite particle",
+      "promptMode": "meaning",
+      "audioKey": "phrases/khun_ma_chak_nai_khrap",
+      "tokens": [
+        { "thai": "คุณ", "rtgs": "khun", "wordId": "khun" },
+        { "thai": "มาจาก", "rtgs": "ma chak", "wordId": "ma_chak" },
+        { "thai": "ไหน", "rtgs": "nai", "wordId": "nai" },
+        { "thai": "ครับ", "rtgs": "khrap", "wordId": "khrap" }
+      ],
+      "distractors": [{ "thai": "อะไร", "rtgs": "arai" }],
+      "explanation": "ไหน takes the answer's slot, just like อะไร did. (อะไร was in the bank — but places take ไหน, things take อะไร.)"
+    },
+    { "type": "tone_pair", "setId": "ma_set" },
+    { "type": "word_intro", "wordId": "khon" },
+    { "type": "word_choice", "wordId": "khon", "direction": "thai_to_meaning" },
+    {
+      "type": "sentence_build",
+      "meaning": "I'm from Sweden. (male speaker)",
+      "gloss": "I (male) + come-from + Sweden + male polite particle",
+      "promptMode": "audio",
+      "audioKey": "phrases/phom_ma_chak_sawiden_khrap",
+      "tokens": [
+        { "thai": "ผม", "rtgs": "phom", "wordId": "phom" },
+        { "thai": "มาจาก", "rtgs": "ma chak", "wordId": "ma_chak" },
+        { "thai": "สวีเดน", "rtgs": "sawiden" },
+        { "thai": "ครับ", "rtgs": "khrap", "wordId": "khrap" }
+      ],
+      "distractors": [{ "thai": "ไหน", "rtgs": "nai" }],
+      "explanation": "สวีเดน lands exactly where ไหน sat in the question — the slot rule, round trip."
+    },
+    { "type": "word_choice", "wordId": "nai", "direction": "meaning_to_thai" },
+    { "type": "word_intro", "wordId": "yindi_ruchak" },
+    { "type": "word_choice", "wordId": "yindi_ruchak", "direction": "thai_to_meaning" },
+    { "type": "word_listening", "wordId": "ma_chak" },
+    {
+      "type": "match_pairs",
+      "characterIds": ["ma_chak", "nai", "khon", "yindi_ruchak"]
+    }
+  ]
+}

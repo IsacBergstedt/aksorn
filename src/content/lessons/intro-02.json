@@ -1,0 +1,86 @@
+{
+  "id": "intro-02",
+  "unitId": "words-introductions",
+  "order": 2,
+  "title": "What's your name?",
+  "xpReward": 20,
+  "pedagogy": "Vocabulary: อะไร (mid อ + dead short ะ → low; low ร + live ไ◌ → mid). Concept: question words sit in the answer's slot — no word-order inversion (คุณชื่ออะไร = you-name-what). Question particle review: female questions end in high-tone คะ (greet-01 minimal pair), male ครับ is invariant.",
+  "teaches": ["arai"],
+  "reviews": ["chue", "khun", "kha_question", "khrap", "phom"],
+  "exercises": [
+    {
+      "type": "concept",
+      "title": "Questions don't rearrange anything",
+      "thaiExample": "คุณ · ชื่อ · อะไร",
+      "exampleAudioKey": "examples/khun_chue_arai",
+      "body": [
+        "English flips words around to ask a question. Thai doesn't move a thing — the question word simply sits where the answer will go.",
+        "คุณชื่ออะไร is literally “you – are-named – WHAT”. Answer: ผมชื่อมาร์ค — มาร์ค lands exactly where อะไร was.",
+        "That slot rule works for every question word you'll meet: what, where, when, how much."
+      ]
+    },
+    { "type": "word_intro", "wordId": "arai" },
+    { "type": "word_choice", "wordId": "arai", "direction": "thai_to_meaning" },
+    {
+      "type": "sentence_build",
+      "meaning": "What's your name? (male speaker)",
+      "gloss": "you + be-named + what + male polite particle",
+      "promptMode": "meaning",
+      "audioKey": "phrases/khun_chue_arai_khrap",
+      "tokens": [
+        { "thai": "คุณ", "rtgs": "khun", "wordId": "khun" },
+        { "thai": "ชื่อ", "rtgs": "chue", "wordId": "chue" },
+        { "thai": "อะไร", "rtgs": "arai", "wordId": "arai" },
+        { "thai": "ครับ", "rtgs": "khrap", "wordId": "khrap" }
+      ],
+      "distractors": [{ "thai": "ไหน", "rtgs": "nai" }],
+      "explanation": "Statement order, question word in the answer slot, particle at the end. ครับ stays ครับ for questions and statements alike."
+    },
+    { "type": "word_listening", "wordId": "arai" },
+    {
+      "type": "register_choice",
+      "context": "You're a woman asking a new colleague her name.",
+      "question": "How does the question end?",
+      "choices": [
+        {
+          "thai": "คุณชื่ออะไรคะ",
+          "rtgs": "khun chue arai kha",
+          "audioKey": "phrases/khun_chue_arai_kha_question"
+        },
+        {
+          "thai": "คุณชื่ออะไรค่ะ",
+          "rtgs": "khun chue arai kha"
+        },
+        {
+          "thai": "คุณชื่ออะไรครับ",
+          "rtgs": "khun chue arai khrap",
+          "audioKey": "phrases/khun_chue_arai_khrap"
+        }
+      ],
+      "correctIndex": 0,
+      "explanation": "A question from a female speaker ends in high-tone คะ — the greet-01 minimal pair doing real work. Falling ค่ะ is for statements; ครับ is the male particle.",
+      "attributeTo": ["kha_question", "arai"]
+    },
+    {
+      "type": "sentence_build",
+      "meaning": "What's your name? (female speaker)",
+      "gloss": "you + be-named + what + female question particle",
+      "promptMode": "audio",
+      "audioKey": "phrases/khun_chue_arai_kha_question",
+      "tokens": [
+        { "thai": "คุณ", "rtgs": "khun", "wordId": "khun" },
+        { "thai": "ชื่อ", "rtgs": "chue", "wordId": "chue" },
+        { "thai": "อะไร", "rtgs": "arai", "wordId": "arai" },
+        { "thai": "คะ", "rtgs": "kha", "wordId": "kha_question" }
+      ],
+      "distractors": [{ "thai": "ค่ะ", "rtgs": "kha" }],
+      "explanation": "Hear the high tone on the final คะ? That's the question particle — its falling twin ค่ะ was sitting in the bank as a trap."
+    },
+    { "type": "word_choice", "wordId": "arai", "direction": "meaning_to_thai" },
+    { "type": "word_choice", "wordId": "chue", "direction": "meaning_to_thai" },
+    {
+      "type": "match_pairs",
+      "characterIds": ["arai", "chue", "khun", "kha_question"]
+    }
+  ]
+}

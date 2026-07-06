@@ -1,0 +1,62 @@
+{
+  "id": "num-03",
+  "unitId": "words-numbers",
+  "order": 3,
+  "title": "Prices in baht",
+  "xpReward": 25,
+  "pedagogy": "Vocabulary: ร้อย (LOW ร + mai tho → high), พัน (low พ + live น → mid), บาท (mid บ + dead ท → low), เท่าไหร่ (low ท + mai ek → falling; ห-nam ร + mai ek → low). Number stacking drilled by dictation sentence_build (สามสิบห้าบาท — digits in place order); เท่าไหร่ + particle asks the price.",
+  "teaches": ["roi", "phan", "bat", "thao_rai"],
+  "reviews": ["sam", "sip", "ha", "khrap"],
+  "exercises": [
+    {
+      "type": "concept",
+      "title": "Stack digits like bricks",
+      "thaiExample": "สามสิบห้า",
+      "exampleAudioKey": "examples/sam_sip_ha",
+      "body": [
+        "35 is สามสิบห้า — three-ten-five. Say the digits into their places and any number under a hundred is yours.",
+        "One wrinkle: 20 is ยี่สิบ, with ยี่ instead of สอง. It's the only tens-word that changes.",
+        "Then it keeps stacking: ร้อย hundred, พัน thousand. 150 = หนึ่งร้อยห้าสิบ."
+      ]
+    },
+    { "type": "word_intro", "wordId": "bat" },
+    { "type": "word_intro", "wordId": "thao_rai" },
+    {
+      "type": "sentence_build",
+      "meaning": "How much? (male speaker)",
+      "gloss": "how-much + male polite particle",
+      "promptMode": "meaning",
+      "audioKey": "phrases/thao_rai_khrap",
+      "tokens": [
+        { "thai": "เท่าไหร่", "rtgs": "thao rai", "wordId": "thao_rai" },
+        { "thai": "ครับ", "rtgs": "khrap", "wordId": "khrap" }
+      ],
+      "distractors": [{ "thai": "บาท", "rtgs": "bat" }],
+      "explanation": "Point at anything and say เท่าไหร่ครับ — the whole market economy runs on this sentence."
+    },
+    { "type": "word_intro", "wordId": "roi" },
+    { "type": "word_intro", "wordId": "phan" },
+    { "type": "word_choice", "wordId": "thao_rai", "direction": "thai_to_meaning" },
+    {
+      "type": "sentence_build",
+      "meaning": "35 baht.",
+      "gloss": "three + ten + five + baht",
+      "promptMode": "audio",
+      "audioKey": "phrases/sam_sip_ha_bat",
+      "tokens": [
+        { "thai": "สาม", "rtgs": "sam", "wordId": "sam" },
+        { "thai": "สิบ", "rtgs": "sip", "wordId": "sip" },
+        { "thai": "ห้า", "rtgs": "ha", "wordId": "ha" },
+        { "thai": "บาท", "rtgs": "bat", "wordId": "bat" }
+      ],
+      "distractors": [{ "thai": "เจ็ด", "rtgs": "chet" }],
+      "explanation": "Number dictation — the ear has to catch every digit in place order. เจ็ด was lurking in the bank; the audio said ห้า."
+    },
+    { "type": "word_choice", "wordId": "roi", "direction": "meaning_to_thai" },
+    { "type": "word_listening", "wordId": "bat" },
+    {
+      "type": "match_pairs",
+      "characterIds": ["roi", "phan", "bat", "thao_rai"]
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "id": "shop-03",
+  "unitId": "words-shopping",
+  "order": 3,
+  "title": "Bargain with a smile",
+  "xpReward": 25,
+  "pedagogy": "Vocabulary: ลด (low ล + dead-short inherent o + ด → high). Capstone recombination: ลด + หน่อย (unit 5) + ได้ไหม (units 2+6) + particle = the polite counter-offer. Register: markets bargain, malls don't; softeners over stone-facing.",
+  "teaches": ["lot"],
+  "reviews": ["noi", "dai", "mai_question", "phaeng", "thuk", "khrap", "kha_question"],
+  "exercises": [
+    {
+      "type": "concept",
+      "title": "Bargaining is a smile sport",
+      "body": [
+        "Markets expect a counter-offer; malls and 7-Elevens don't. Read the room: price tags mean fixed, a vendor's guess means game on.",
+        "The polite counter is a question, not a demand: ลดหน่อยได้ไหม — “could you come down a little?”.",
+        "Every word in it is a rerun: ลด lower, หน่อย a-little, ได้ can, ไหม question. New sentence, zero new grammar."
+      ]
+    },
+    { "type": "word_intro", "wordId": "lot" },
+    { "type": "word_choice", "wordId": "lot", "direction": "thai_to_meaning" },
+    {
+      "type": "sentence_build",
+      "meaning": "Could you lower it a bit? (male speaker)",
+      "gloss": "lower + softener + can + question particle + male polite particle",
+      "promptMode": "meaning",
+      "audioKey": "phrases/lot_noi_dai_mai_khrap",
+      "tokens": [
+        { "thai": "ลด", "rtgs": "lot", "wordId": "lot" },
+        { "thai": "หน่อย", "rtgs": "noi", "wordId": "noi" },
+        { "thai": "ได้", "rtgs": "dai", "wordId": "dai" },
+        { "thai": "ไหม", "rtgs": "mai", "wordId": "mai_question" },
+        { "thai": "ครับ", "rtgs": "khrap", "wordId": "khrap" }
+      ],
+      "distractors": [{ "thai": "แพง", "rtgs": "phaeng" }],
+      "explanation": "Five chips, four old friends. ได้ไหม “can you?” is the polite hinge — the vendor answers ได้ or ไม่ได้, and the dance begins."
+    },
+    { "type": "word_listening", "wordId": "lot" },
+    {
+      "type": "register_choice",
+      "context": "A market vendor quotes 500 baht for a shirt you like. You're a woman. Open the negotiation politely.",
+      "question": "What do you say?",
+      "choices": [
+        {
+          "thai": "ลดหน่อยได้ไหมคะ",
+          "rtgs": "lot noi dai mai kha",
+          "audioKey": "phrases/lot_noi_dai_mai_kha_question"
+        },
+        {
+          "thai": "แพง",
+          "rtgs": "phaeng",
+          "audioKey": "words/phaeng"
+        },
+        {
+          "thai": "ไม่เอา",
+          "rtgs": "mai ao",
+          "audioKey": "phrases/mai_ao"
+        }
+      ],
+      "correctIndex": 0,
+      "explanation": "The question form keeps everyone smiling. Bare แพง is theater (usable, but bold), and ไม่เอา ends the conversation instead of starting it.",
+      "attributeTo": ["lot", "noi"]
+    },
+    { "type": "word_choice", "wordId": "phaeng", "direction": "meaning_to_thai" },
+    { "type": "word_choice", "wordId": "thuk", "direction": "thai_to_meaning" },
+    {
+      "type": "match_pairs",
+      "characterIds": ["lot", "phaeng", "thuk", "mi"]
+    }
+  ]
+}

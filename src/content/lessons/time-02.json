@@ -1,0 +1,69 @@
+{
+  "id": "time-02",
+  "unitId": "words-time",
+  "order": 2,
+  "title": "What time is it?",
+  "xpReward": 20,
+  "pedagogy": "Vocabulary: กี่ (mid ก + mai ek → low), โมง (low ม + live ง → mid). Pattern: กี่ + classifier asks 'how many' — กี่โมง what time, กี่บาท how many baht. Concept: the Thai six-hour clock (โมง day / ทุ่ม night), presented receptively.",
+  "teaches": ["ki", "mong"],
+  "reviews": ["kha_question", "khrap", "wan_day", "thao_rai"],
+  "exercises": [
+    {
+      "type": "concept",
+      "title": "The clock resets four times a day",
+      "body": [
+        "Officially Thailand uses the 24-hour clock. Out loud, it runs in six-hour blocks: โมง carries the daytime hours, ทุ่ม takes the night shift.",
+        "You don't need to master the blocks yet. กี่โมง — “how many hours?” — asks the time in every one of them.",
+        "กี่ is the counting question word: กี่โมง what time, กี่บาท how many baht, กี่คน how many people. Always with a unit after it."
+      ]
+    },
+    { "type": "word_intro", "wordId": "ki" },
+    { "type": "word_intro", "wordId": "mong" },
+    {
+      "type": "sentence_build",
+      "meaning": "What time? (female speaker)",
+      "gloss": "how-many + o'clock + female question particle",
+      "promptMode": "meaning",
+      "audioKey": "phrases/ki_mong_kha_question",
+      "tokens": [
+        { "thai": "กี่", "rtgs": "ki", "wordId": "ki" },
+        { "thai": "โมง", "rtgs": "mong", "wordId": "mong" },
+        { "thai": "คะ", "rtgs": "kha", "wordId": "kha_question" }
+      ],
+      "distractors": [{ "thai": "วัน", "rtgs": "wan" }],
+      "explanation": "กี่โมงคะ — how-many-hours? A question, so the high-tone คะ closes it."
+    },
+    { "type": "word_choice", "wordId": "mong", "direction": "thai_to_meaning" },
+    { "type": "word_choice", "wordId": "ki", "direction": "thai_to_meaning" },
+    { "type": "word_listening", "wordId": "mong" },
+    {
+      "type": "register_choice",
+      "context": "You're a man asking the hostel desk what time checkout is.",
+      "question": "How do you ask “what time?”",
+      "choices": [
+        {
+          "thai": "กี่โมงครับ",
+          "rtgs": "ki mong khrap",
+          "audioKey": "phrases/ki_mong_khrap"
+        },
+        {
+          "thai": "กี่โมง",
+          "rtgs": "ki mong",
+          "audioKey": "phrases/ki_mong"
+        },
+        {
+          "thai": "กี่วันครับ",
+          "rtgs": "ki wan khrap",
+          "audioKey": "phrases/ki_wan_khrap"
+        }
+      ],
+      "correctIndex": 0,
+      "explanation": "กี่โมงครับ — counted hours plus the particle. Bare กี่โมง is friends-only, and กี่วันครับ asks “how many days?” — a different vacation problem.",
+      "attributeTo": ["ki", "mong"]
+    },
+    {
+      "type": "match_pairs",
+      "characterIds": ["ki", "mong", "wan_day", "thao_rai"]
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "id": "food-01",
+  "unitId": "words-food",
+  "order": 1,
+  "title": "May I have…",
+  "xpReward": 20,
+  "pedagogy": "Vocabulary: ขอ (high ข + live ออ → rising), ข้าว (high ข + mai tho → falling), น้ำ (LOW น + mai tho → high; written short ◌ำ, spoken long). Pattern: ขอ + thing + particle is the polite order — Thai politeness lives in ขอ and the particle, not a separate 'please'.",
+  "teaches": ["kho", "khao_rice", "nam"],
+  "reviews": ["khrap", "kha_statement", "khop_khun"],
+  "exercises": [
+    {
+      "type": "concept",
+      "title": "ขอ is the only “please” you need",
+      "body": [
+        "Start a request with ขอ — “may I have” — and end with ครับ/ค่ะ. That sandwich is fully polite; Thai doesn't need an extra “please” in the middle.",
+        "ขอข้าวครับ gets you rice, ขอน้ำค่ะ gets you water. Swap the middle word, keep the sandwich.",
+        "You already know this ขอ: it's the first syllable of ขอโทษ — literally “I ask for the blame”."
+      ]
+    },
+    { "type": "word_intro", "wordId": "kho" },
+    { "type": "word_intro", "wordId": "khao_rice" },
+    { "type": "word_intro", "wordId": "nam" },
+    {
+      "type": "sentence_build",
+      "meaning": "Rice, please. (male speaker)",
+      "gloss": "ask-for + rice + male polite particle",
+      "promptMode": "meaning",
+      "audioKey": "phrases/kho_khao_khrap",
+      "tokens": [
+        { "thai": "ขอ", "rtgs": "kho", "wordId": "kho" },
+        { "thai": "ข้าว", "rtgs": "khao", "wordId": "khao_rice" },
+        { "thai": "ครับ", "rtgs": "khrap", "wordId": "khrap" }
+      ],
+      "distractors": [{ "thai": "น้ำ", "rtgs": "nam" }],
+      "explanation": "ขอ + thing + particle. Note the tones: ขอ rises, ข้าว falls — same letter ข, different marks."
+    },
+    { "type": "word_choice", "wordId": "nam", "direction": "thai_to_meaning" },
+    { "type": "word_choice", "wordId": "kho", "direction": "thai_to_meaning" },
+    { "type": "word_listening", "wordId": "khao_rice" },
+    {
+      "type": "sentence_build",
+      "meaning": "Water, please. (female speaker)",
+      "gloss": "ask-for + water + female polite particle",
+      "promptMode": "audio",
+      "audioKey": "phrases/kho_nam_kha",
+      "tokens": [
+        { "thai": "ขอ", "rtgs": "kho", "wordId": "kho" },
+        { "thai": "น้ำ", "rtgs": "nam", "wordId": "nam" },
+        { "thai": "ค่ะ", "rtgs": "kha", "wordId": "kha_statement" }
+      ],
+      "distractors": [{ "thai": "ข้าว", "rtgs": "khao" }],
+      "explanation": "Hear น้ำ's high tone? That's mai tho on a low-class น — the rule you'll meet again and again."
+    },
+    {
+      "type": "match_pairs",
+      "characterIds": ["kho", "khao_rice", "nam", "khop_khun"]
+    }
+  ]
+}

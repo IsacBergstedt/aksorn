@@ -1,0 +1,59 @@
+{
+  "id": "talk-01",
+  "unitId": "words-feelings",
+  "order": 1,
+  "title": "Hot, cold — and มาก",
+  "xpReward": 20,
+  "pedagogy": "Vocabulary: ร้อน (LOW ร + mai tho → high), หนาว (ห-nam น: high + live → rising), มาก (low ม + dead-long → falling — the low-class long-dead rule in the wild). Pattern: adjective + มาก intensifies; weather talk is the universal Thai opener.",
+  "teaches": ["ron", "nao", "mak"],
+  "reviews": ["wan_day", "ni_this"],
+  "exercises": [
+    {
+      "type": "concept",
+      "title": "Weather talk is the national handshake",
+      "body": [
+        "ร้อนมาก — “so hot” — may be the most-said sentence in Thailand. Agree with it and you've made a friend.",
+        "มาก is the amplifier, always after the word it boosts: ร้อนมาก, อร่อยมาก, ขอบคุณมาก.",
+        "Its tone is a textbook case: low-class ม + long vowel + stop ก = dead-long syllable = falling. The rare rule, in a word you'll say daily."
+      ]
+    },
+    { "type": "word_intro", "wordId": "ron" },
+    { "type": "word_intro", "wordId": "nao" },
+    { "type": "word_intro", "wordId": "mak" },
+    {
+      "type": "sentence_build",
+      "meaning": "So hot!",
+      "gloss": "hot + very",
+      "promptMode": "meaning",
+      "audioKey": "phrases/ron_mak",
+      "tokens": [
+        { "thai": "ร้อน", "rtgs": "ron", "wordId": "ron" },
+        { "thai": "มาก", "rtgs": "mak", "wordId": "mak" }
+      ],
+      "distractors": [{ "thai": "หนาว", "rtgs": "nao" }],
+      "explanation": "Adjective first, มาก after. Thai never says “very hot” — always “hot very”."
+    },
+    { "type": "word_choice", "wordId": "nao", "direction": "thai_to_meaning" },
+    { "type": "word_listening", "wordId": "ron" },
+    {
+      "type": "sentence_build",
+      "meaning": "It's very hot today.",
+      "gloss": "day + this + hot + very",
+      "promptMode": "audio",
+      "audioKey": "phrases/wan_ni_ron_mak",
+      "tokens": [
+        { "thai": "วัน", "rtgs": "wan", "wordId": "wan_day" },
+        { "thai": "นี้", "rtgs": "ni", "wordId": "ni_this" },
+        { "thai": "ร้อน", "rtgs": "ron", "wordId": "ron" },
+        { "thai": "มาก", "rtgs": "mak", "wordId": "mak" }
+      ],
+      "distractors": [{ "thai": "หนาว", "rtgs": "nao" }],
+      "explanation": "วันนี้ร้อนมาก — a four-word weather report with no verb “to be” anywhere. Thai adjectives do the being themselves."
+    },
+    { "type": "word_choice", "wordId": "mak", "direction": "meaning_to_thai" },
+    {
+      "type": "match_pairs",
+      "characterIds": ["ron", "nao", "mak", "wan_day"]
+    }
+  ]
+}

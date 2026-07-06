@@ -1,0 +1,83 @@
+{
+  "id": "food-02",
+  "unitId": "words-food",
+  "order": 2,
+  "title": "Spicy, sweet, delicious",
+  "xpReward": 20,
+  "pedagogy": "Vocabulary: เผ็ด (high ผ + dead ด → low), หวาน (ห-nam ว: high + live → rising), อร่อย (mid อ + dead → low; อ-nam ร: mid + mai ek → low — อักษรนำ like ห-nam but with อ). Negation review: ไม่เผ็ด. Register: taste words + particle keep kitchen requests friendly.",
+  "teaches": ["phet", "wan_sweet", "aroi"],
+  "reviews": ["mai_not", "kho", "kha_statement", "khrap"],
+  "exercises": [
+    {
+      "type": "concept",
+      "title": "ไม่เผ็ด is self-defense",
+      "body": [
+        "Thai kitchens assume you can take it. ไม่เผ็ดครับ/ค่ะ — “not spicy” — is the sentence that stands between you and a scorching lunch.",
+        "Fair warning: street-stall “not spicy” is still gently on fire. It's a negotiation, not a guarantee.",
+        "And when it's good, say so: อร่อย. No cook in Thailand tires of hearing it."
+      ]
+    },
+    { "type": "word_intro", "wordId": "phet" },
+    { "type": "word_intro", "wordId": "wan_sweet" },
+    { "type": "word_intro", "wordId": "aroi" },
+    {
+      "type": "sentence_build",
+      "meaning": "Not spicy, please. (male speaker)",
+      "gloss": "not + spicy + male polite particle",
+      "promptMode": "meaning",
+      "audioKey": "phrases/mai_phet_khrap",
+      "tokens": [
+        { "thai": "ไม่", "rtgs": "mai", "wordId": "mai_not" },
+        { "thai": "เผ็ด", "rtgs": "phet", "wordId": "phet" },
+        { "thai": "ครับ", "rtgs": "khrap", "wordId": "khrap" }
+      ],
+      "distractors": [{ "thai": "หวาน", "rtgs": "wan" }],
+      "explanation": "The unit-2 negation pattern, now saving your tastebuds: ไม่ + เผ็ด + particle."
+    },
+    { "type": "word_choice", "wordId": "aroi", "direction": "thai_to_meaning" },
+    { "type": "word_listening", "wordId": "phet" },
+    {
+      "type": "register_choice",
+      "context": "The cook at a street stall asks how spicy you want it. You're a woman who wants it mild.",
+      "question": "What do you say?",
+      "choices": [
+        {
+          "thai": "ไม่เผ็ดค่ะ",
+          "rtgs": "mai phet kha",
+          "audioKey": "phrases/mai_phet_kha"
+        },
+        {
+          "thai": "เผ็ดค่ะ",
+          "rtgs": "phet kha",
+          "audioKey": "phrases/phet_kha"
+        },
+        {
+          "thai": "หวานค่ะ",
+          "rtgs": "wan kha",
+          "audioKey": "phrases/wan_kha"
+        }
+      ],
+      "correctIndex": 0,
+      "explanation": "ไม่เผ็ดค่ะ — negation plus the falling statement particle. เผ็ดค่ะ orders the fire, and หวานค่ะ asks for a sweet curry.",
+      "attributeTo": ["phet", "kha_statement"]
+    },
+    { "type": "word_choice", "wordId": "wan_sweet", "direction": "meaning_to_thai" },
+    {
+      "type": "sentence_build",
+      "meaning": "Delicious! (female speaker)",
+      "gloss": "delicious + female polite particle",
+      "promptMode": "audio",
+      "audioKey": "phrases/aroi_kha",
+      "tokens": [
+        { "thai": "อร่อย", "rtgs": "aroi", "wordId": "aroi" },
+        { "thai": "ค่ะ", "rtgs": "kha", "wordId": "kha_statement" }
+      ],
+      "distractors": [{ "thai": "เผ็ด", "rtgs": "phet" }],
+      "explanation": "อร่อยค่ะ — two words, instant friend of the kitchen."
+    },
+    {
+      "type": "match_pairs",
+      "characterIds": ["phet", "wan_sweet", "aroi", "kho"]
+    }
+  ]
+}

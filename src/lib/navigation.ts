@@ -1,6 +1,6 @@
 import { BookOpen, Mic, Route } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
-import { lessonById, wordsUnitById } from "@/content";
+import { lessonById, phrasesUnitById } from "@/content";
 
 export type Section = {
   href: string;
@@ -13,10 +13,10 @@ export type Section = {
 };
 
 /** Both courses share /lesson/*; the lesson's unit decides the section. */
-function isWordsLessonPath(pathname: string): boolean {
+function isPhrasesLessonPath(pathname: string): boolean {
   if (!pathname.startsWith("/lesson/")) return false;
   const lesson = lessonById.get(pathname.slice("/lesson/".length));
-  return !!lesson && wordsUnitById.has(lesson.unitId);
+  return !!lesson && phrasesUnitById.has(lesson.unitId);
 }
 
 /** Top-level learning sections, in display order. */
@@ -29,16 +29,16 @@ export const sections: Section[] = [
     // Script lessons and reviews are part of the script trainer.
     isActive: (pathname) =>
       pathname === "/reading" ||
-      (pathname.startsWith("/lesson") && !isWordsLessonPath(pathname)) ||
+      (pathname.startsWith("/lesson") && !isPhrasesLessonPath(pathname)) ||
       pathname === "/review",
   },
   {
-    href: "/words",
-    label: "Thai Words",
-    shortLabel: "Words",
+    href: "/phrases",
+    label: "Thai Phrases",
+    shortLabel: "Phrases",
     icon: Route,
     isActive: (pathname) =>
-      pathname === "/words" || isWordsLessonPath(pathname),
+      pathname === "/phrases" || isPhrasesLessonPath(pathname),
   },
   {
     href: "/speaking",

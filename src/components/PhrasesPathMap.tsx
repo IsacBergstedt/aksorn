@@ -4,10 +4,9 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { Check, Lock, Star } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
-import { lessonById, unitById, wordsUnits } from "@/content";
+import { lessonById, phrasesUnits } from "@/content";
 import type { Lesson, Unit } from "@/content/schema";
 import { useProgressStore } from "@/lib/progress/store";
 import { useMounted } from "@/lib/use-mounted";
@@ -89,13 +88,11 @@ function UnitBanner({
   unlocked,
   completedCount,
   lessonCount,
-  gateMessage,
 }: {
   unit: Unit;
   unlocked: boolean;
   completedCount: number;
   lessonCount: number;
-  gateMessage?: string;
 }) {
   return (
     <Card
@@ -118,14 +115,6 @@ function UnitBanner({
             !unlocked && <Lock className="h-5 w-5 shrink-0 text-muted-foreground" />
           )}
         </div>
-        {gateMessage && (
-          <div className="mt-3 flex flex-wrap items-center justify-between gap-3 rounded-xl border border-amber-300 bg-amber-50 p-3 text-sm text-amber-900">
-            <span>{gateMessage}</span>
-            <Button size="sm" variant="outline" render={<Link href="/reading" />}>
-              Go to Reading Thai
-            </Button>
-          </div>
-        )}
         {lessonCount > 0 && (
           <div className="mt-4 flex items-center gap-3">
             <Progress value={(completedCount / lessonCount) * 100} className="h-2" />
@@ -140,22 +129,17 @@ function UnitBanner({
 }
 
 /**
- * The Thai Words course path: a winding vertical chain of lesson nodes
- * grouped under unit banners. Units unlock sequentially; the first unit
- * additionally requires the Reading Thai mid-class unit (consonant classes
- * are what make the tone features teachable). Stub units render as locked
- * nodes with their learning goals.
+ * The Thai Phrases course path: a winding vertical chain of lesson nodes
+ * grouped under unit banners. The course is open from lesson one — doing
+ * Reading Thai first is recommended (see ReadingFirstTip), never required.
+ * Units unlock sequentially; stub units render as locked nodes with their
+ * learning goals.
  */
-export function WordsPathMap() {
+export function PhrasesPathMap() {
   const mounted = useMounted();
   const completions = useProgressStore((s) => s.completions);
 
   const isComplete = (lessonId: string) => mounted && !!completions[lessonId];
-
-  // Gate: all mid-class lessons of the Reading Thai course.
-  const midClassUnit = unitById.get("mid-class");
-  const midClassDone =
-    !!midClassUnit && midClassUnit.lessonIds.every(isComplete);
 
   const unitLessons = (unit: Unit): Lesson[] =>
     unit.lessonIds
@@ -167,21 +151,21 @@ export function WordsPathMap() {
     return lessons.length > 0 && lessons.every((l) => isComplete(l.id));
   };
 
-  // Sequential unlocking: unit 1 needs the reading gate, unit N needs
-  // unit N-1 complete (stubs can't complete, so everything after the
-  // first stub stays locked).
-  const unlockedFlags = wordsUnits.map((unit, i): boolean =>
-    i === 0 ? midClassDone : unitComplete(wordsUnits[i - 1]),
+  // Sequential unlocking: unit 1 is always open, unit N needs unit N-1
+  // complete (stubs can't complete, so everything after the first stub
+  // stays locked).
+  const unlockedFlags = phrasesUnits.map((unit, i): boolean =>
+    i === 0 ? true : unitComplete(phrasesUnits[i - 1]),
   );
 
-  const allLessons = wordsUnits.flatMap(unitLessons);
+  const allLessons = phrasesUnits.flatMap(unitLessons);
   const firstIncompleteId = allLessons.find((l) => !isComplete(l.id))?.id;
 
   let nodeIndex = 0; // continuous winding across units
 
   return (
     <div className="flex flex-col items-center gap-8">
-      {wordsUnits.map((unit, unitIdx) => {
+      {phrasesUnits.map((unit, unitIdx) => {
         const lessons = unitLessons(unit);
         const unlocked = unlockedFlags[unitIdx];
         const completedCount = lessons.filter((l) => isComplete(l.id)).length;
@@ -193,11 +177,6 @@ export function WordsPathMap() {
               unlocked={unlocked}
               completedCount={completedCount}
               lessonCount={lessons.length}
-              gateMessage={
-                unitIdx === 0 && mounted && !midClassDone
-                  ? "Finish the Mid-Class Consonants unit in Reading Thai to unlock this course."
-                  : undefined
-              }
             />
 
             {lessons.length > 0 ? (

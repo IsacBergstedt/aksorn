@@ -1,0 +1,110 @@
+{
+  "id": "q-03",
+  "unitId": "words-questions",
+  "order": 3,
+  "title": "The question toolkit",
+  "xpReward": 30,
+  "pedagogy": "Capstone review — no new vocabulary. Drills selection between อะไร / ไหน / ใคร / ทำไม / เมื่อไหร่ / ยังไง / เท่าไหร่ / กี่ / ไหม, recombining sentence frames from units 3–10 (อันนี้เท่าไหร่, ห้องน้ำอยู่ที่ไหน, มี…ไหม). All tones as previously derived; nothing new to verify.",
+  "teaches": [],
+  "reviews": ["khrai", "thammai", "muea_rai", "yangngai", "arai", "nai", "thao_rai", "ki", "mai_question", "an", "ni_this", "hong_nam", "yu", "thi", "mi", "nam", "kha_question", "khrap"],
+  "exercises": [
+    {
+      "type": "concept",
+      "title": "Nine question words, one rule",
+      "body": [
+        "The full set: อะไร what · ไหน where/which · ใคร who · ทำไม why · เมื่อไหร่ when · ยังไง how · เท่าไหร่ how much · กี่ how many · ไหม yes/no.",
+        "One rule runs them all: put the question word where the answer will go. No inversion, no helper verbs, no exceptions.",
+        "This lesson is pure sparring — old sentences, your full toolkit, no new words."
+      ]
+    },
+    {
+      "type": "register_choice",
+      "context": "You're a woman at a fruit stall, pointing at a mango. You want the price.",
+      "question": "Which question word does the job?",
+      "choices": [
+        {
+          "thai": "เท่าไหร่คะ",
+          "rtgs": "thao rai kha",
+          "audioKey": "phrases/thao_rai_kha_question"
+        },
+        {
+          "thai": "ทำไมคะ",
+          "rtgs": "thammai kha",
+          "audioKey": "phrases/thammai_kha_question"
+        },
+        {
+          "thai": "เมื่อไหร่คะ",
+          "rtgs": "muea rai kha",
+          "audioKey": "phrases/muea_rai_kha_question"
+        }
+      ],
+      "correctIndex": 0,
+      "explanation": "Price → เท่าไหร่. ทำไมคะ demands the mango justify itself, and เมื่อไหร่คะ asks when — the vendor will check her watch.",
+      "attributeTo": ["thao_rai"]
+    },
+    { "type": "word_choice", "wordId": "khrai", "direction": "meaning_to_thai" },
+    {
+      "type": "sentence_build",
+      "meaning": "How much is this one? (female speaker)",
+      "gloss": "thing + this + how-much + female question particle",
+      "promptMode": "meaning",
+      "audioKey": "phrases/an_ni_thao_rai_kha_question",
+      "tokens": [
+        { "thai": "อัน", "rtgs": "an", "wordId": "an" },
+        { "thai": "นี้", "rtgs": "ni", "wordId": "ni_this" },
+        { "thai": "เท่าไหร่", "rtgs": "thao rai", "wordId": "thao_rai" },
+        { "thai": "คะ", "rtgs": "kha", "wordId": "kha_question" }
+      ],
+      "distractors": [{ "thai": "ทำไม", "rtgs": "thammai" }],
+      "explanation": "The shop-01 frame, female edition. ทำไม stayed on the bench — wrong tool for a price."
+    },
+    { "type": "word_choice", "wordId": "muea_rai", "direction": "meaning_to_thai" },
+    { "type": "word_choice", "wordId": "thammai", "direction": "thai_to_meaning" },
+    {
+      "type": "sentence_build",
+      "meaning": "Where's the bathroom? (male speaker)",
+      "gloss": "water-room + be-at + at + which + male polite particle",
+      "promptMode": "audio",
+      "audioKey": "phrases/hong_nam_yu_thi_nai_khrap",
+      "tokens": [
+        { "thai": "ห้องน้ำ", "rtgs": "hong nam", "wordId": "hong_nam" },
+        { "thai": "อยู่", "rtgs": "yu", "wordId": "yu" },
+        { "thai": "ที่", "rtgs": "thi", "wordId": "thi" },
+        { "thai": "ไหน", "rtgs": "nai", "wordId": "nai" },
+        { "thai": "ครับ", "rtgs": "khrap", "wordId": "khrap" }
+      ],
+      "distractors": [{ "thai": "อะไร", "rtgs": "arai" }],
+      "explanation": "Places take ไหน, things take อะไร — the go-02 frame from a colder start: this time your ear had to catch every word."
+    },
+    {
+      "type": "register_choice",
+      "context": "You want to ask a shopkeeper IF she has water — a yes/no question, not an open one. You're a woman.",
+      "question": "Which form asks yes-or-no?",
+      "choices": [
+        {
+          "thai": "มีน้ำไหมคะ",
+          "rtgs": "mi nam mai kha",
+          "audioKey": "phrases/mi_nam_mai_kha_question"
+        },
+        {
+          "thai": "มีน้ำอะไรคะ",
+          "rtgs": "mi nam arai kha",
+          "audioKey": "phrases/mi_nam_arai_kha_question"
+        },
+        {
+          "thai": "มีน้ำค่ะ",
+          "rtgs": "mi nam kha"
+        }
+      ],
+      "correctIndex": 0,
+      "explanation": "ไหม is the yes/no switch. มีน้ำอะไรคะ is real Thai too — but it asks WHICH drinks she has. And มีน้ำค่ะ answers a question nobody asked.",
+      "attributeTo": ["mai_question"]
+    },
+    { "type": "word_choice", "wordId": "yangngai", "direction": "meaning_to_thai" },
+    { "type": "word_listening", "wordId": "mai_question" },
+    {
+      "type": "match_pairs",
+      "characterIds": ["khrai", "thammai", "muea_rai", "yangngai", "arai", "mai_question"]
+    }
+  ]
+}

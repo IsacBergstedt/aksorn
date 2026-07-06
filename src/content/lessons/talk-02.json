@@ -1,0 +1,57 @@
+{
+  "id": "talk-02",
+  "unitId": "words-feelings",
+  "order": 2,
+  "title": "Hungry and tired",
+  "xpReward": 20,
+  "pedagogy": "Vocabulary: หิว (high ห sounded + live ว-glide → rising), เหนื่อย (ห-nam น: high + mai ek → low). Contrast: sounded ห (หิว) vs silent leading ห (เหนื่อย) — same letter, two jobs. หิวข้าว compound reviews ข้าว; มาก intensifier recombined.",
+  "teaches": ["hio", "nueai"],
+  "reviews": ["khao_rice", "mak", "kha_statement", "nam"],
+  "exercises": [
+    {
+      "type": "concept",
+      "title": "Hunger says what it's hungry for",
+      "body": [
+        "Thai hunger is specific: หิวข้าว hungry (for food), หิวน้ำ thirsty (hungry for water). The compound tells you the craving.",
+        "Both new words start with ห — but differently. In หิว the ห is the sound itself (h-). In เหนื่อย it's silent, only there to bend the tone of น.",
+        "One letter, two jobs. Your Reading Thai training pays off exactly here."
+      ]
+    },
+    { "type": "word_intro", "wordId": "hio" },
+    { "type": "word_intro", "wordId": "nueai" },
+    {
+      "type": "sentence_build",
+      "meaning": "I'm hungry (lit. “hungry for rice”).",
+      "gloss": "hungry + rice",
+      "promptMode": "meaning",
+      "audioKey": "phrases/hio_khao",
+      "tokens": [
+        { "thai": "หิว", "rtgs": "hio", "wordId": "hio" },
+        { "thai": "ข้าว", "rtgs": "khao", "wordId": "khao_rice" }
+      ],
+      "distractors": [{ "thai": "น้ำ", "rtgs": "nam" }],
+      "explanation": "หิวข้าว — the everyday “I'm hungry”. Swap in น้ำ and you've said you're thirsty; that chip wasn't wrong Thai, just a different complaint."
+    },
+    { "type": "word_choice", "wordId": "hio", "direction": "thai_to_meaning" },
+    { "type": "word_choice", "wordId": "nueai", "direction": "meaning_to_thai" },
+    { "type": "word_listening", "wordId": "nueai" },
+    {
+      "type": "sentence_build",
+      "meaning": "I'm so tired. (female speaker)",
+      "gloss": "tired + very + female polite particle",
+      "promptMode": "audio",
+      "audioKey": "phrases/nueai_mak_kha",
+      "tokens": [
+        { "thai": "เหนื่อย", "rtgs": "nueai", "wordId": "nueai" },
+        { "thai": "มาก", "rtgs": "mak", "wordId": "mak" },
+        { "thai": "ค่ะ", "rtgs": "kha", "wordId": "kha_statement" }
+      ],
+      "distractors": [{ "thai": "หิว", "rtgs": "hio" }],
+      "explanation": "เหนื่อยมากค่ะ — feeling + มาก + particle. The all-purpose end-of-day sentence."
+    },
+    {
+      "type": "match_pairs",
+      "characterIds": ["hio", "nueai", "mak", "khao_rice"]
+    }
+  ]
+}

@@ -76,6 +76,15 @@ function buildManifest(): Map<string, string> {
           }
         }
       }
+      if (ex.type === "sentence_build") {
+        // The clip is the full sentence: tokens joined without spaces,
+        // as Thai writes it.
+        add(
+          ex.audioKey,
+          ex.tokens.map((t) => t.thai).join(""),
+          `lesson ${lesson.id}`,
+        );
+      }
     }
   }
 

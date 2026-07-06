@@ -1,0 +1,72 @@
+{
+  "id": "go-02",
+  "unitId": "words-getting-around",
+  "order": 2,
+  "title": "Where's the bathroom?",
+  "xpReward": 20,
+  "pedagogy": "Vocabulary: ห้องน้ำ (high ห + mai tho → falling; LOW น + mai tho → high). Pattern: X + อยู่ + ที่ไหน asks where anything is — the location-question frame every traveler runs on. Question particle review (คะ vs ครับ).",
+  "teaches": ["hong_nam"],
+  "reviews": ["yu", "thi", "nai", "kha_question", "khrap", "pai"],
+  "exercises": [
+    {
+      "type": "concept",
+      "title": "One frame finds everything",
+      "thaiExample": "ห้องน้ำ · อยู่ · ที่ไหน",
+      "exampleAudioKey": "examples/hong_nam_yu_thi_nai",
+      "body": [
+        "X อยู่ที่ไหน — “where is X?” — locates anything: the bathroom, the BTS, your hotel. Load the frame, swap the X.",
+        "ห้องน้ำ is literally the “water room”, and it's the X you'll need first.",
+        "ที่ไหน is just ที่ (place) + ไหน (which) — “at which place”. The pieces you know, doing their job."
+      ]
+    },
+    { "type": "word_intro", "wordId": "hong_nam" },
+    { "type": "word_choice", "wordId": "hong_nam", "direction": "thai_to_meaning" },
+    {
+      "type": "sentence_build",
+      "meaning": "Where's the bathroom? (female speaker)",
+      "gloss": "water-room + be-at + at + which + female question particle",
+      "promptMode": "meaning",
+      "audioKey": "phrases/hong_nam_yu_thi_nai_kha_question",
+      "tokens": [
+        { "thai": "ห้องน้ำ", "rtgs": "hong nam", "wordId": "hong_nam" },
+        { "thai": "อยู่", "rtgs": "yu", "wordId": "yu" },
+        { "thai": "ที่", "rtgs": "thi", "wordId": "thi" },
+        { "thai": "ไหน", "rtgs": "nai", "wordId": "nai" },
+        { "thai": "คะ", "rtgs": "kha", "wordId": "kha_question" }
+      ],
+      "distractors": [{ "thai": "ไป", "rtgs": "pai" }],
+      "explanation": "Thing first, อยู่ที่ไหน after, question particle last. ไป stayed in the bank — this is location, not motion."
+    },
+    { "type": "word_listening", "wordId": "hong_nam" },
+    {
+      "type": "register_choice",
+      "context": "At a gas station on the highway, you're a man who needs the bathroom. Ask the attendant.",
+      "question": "What do you say?",
+      "choices": [
+        {
+          "thai": "ห้องน้ำอยู่ที่ไหนครับ",
+          "rtgs": "hong nam yu thi nai khrap",
+          "audioKey": "phrases/hong_nam_yu_thi_nai_khrap"
+        },
+        {
+          "thai": "ห้องน้ำ",
+          "rtgs": "hong nam",
+          "audioKey": "words/hong_nam"
+        },
+        {
+          "thai": "ไปห้องน้ำ",
+          "rtgs": "pai hong nam",
+          "audioKey": "phrases/pai_hong_nam"
+        }
+      ],
+      "correctIndex": 0,
+      "explanation": "The full frame plus ครับ. Bare ห้องน้ำ works in a pinch but reads as a demand; ไปห้องน้ำ announces your plans instead of asking where.",
+      "attributeTo": ["hong_nam", "yu"]
+    },
+    { "type": "word_choice", "wordId": "yu", "direction": "meaning_to_thai" },
+    {
+      "type": "match_pairs",
+      "characterIds": ["hong_nam", "yu", "thi", "pai"]
+    }
+  ]
+}

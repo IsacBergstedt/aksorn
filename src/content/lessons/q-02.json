@@ -1,0 +1,58 @@
+{
+  "id": "q-02",
+  "unitId": "words-questions",
+  "order": 2,
+  "title": "When and how",
+  "xpReward": 20,
+  "pedagogy": "Vocabulary: เมื่อไหร่ (low ม + mai ek → falling; ห-nam ร + mai ek → low — both syllables are reruns from เมื่อวาน and เท่าไหร่), ยังไง (low ย + live ง → mid; low ง + live ไ◌ → mid; casual squeeze of อย่างไร, flagged). Slot rule applied with ไป.",
+  "teaches": ["muea_rai", "yangngai"],
+  "reviews": ["pai", "kha_question", "khrap", "muea_wan"],
+  "exercises": [
+    {
+      "type": "concept",
+      "title": "When and how — assembled from spare parts",
+      "body": [
+        "เมื่อไหร่ “when” is pure recycling: เมื่อ from เมื่อวาน plus ไหร่ from เท่าไหร่. You could have invented it yourself.",
+        "ยังไง “how” is what people actually say; its formal written twin is อย่างไร. Recognize both, speak the short one.",
+        "Slot rule, as always: ไปเมื่อไหร่ “go when?”, ไปยังไง “go how?” — the question word sits where the answer will land."
+      ]
+    },
+    { "type": "word_intro", "wordId": "muea_rai" },
+    { "type": "word_intro", "wordId": "yangngai" },
+    {
+      "type": "sentence_build",
+      "meaning": "When are we going? (female speaker)",
+      "gloss": "go + when + female question particle",
+      "promptMode": "meaning",
+      "audioKey": "phrases/pai_muea_rai_kha_question",
+      "tokens": [
+        { "thai": "ไป", "rtgs": "pai", "wordId": "pai" },
+        { "thai": "เมื่อไหร่", "rtgs": "muea rai", "wordId": "muea_rai" },
+        { "thai": "คะ", "rtgs": "kha", "wordId": "kha_question" }
+      ],
+      "distractors": [{ "thai": "ยังไง", "rtgs": "yangngai" }],
+      "explanation": "ไปเมื่อไหร่คะ — verb, question word in the answer slot, question particle. ยังไง waited in the bank for the next sentence."
+    },
+    { "type": "word_choice", "wordId": "muea_rai", "direction": "thai_to_meaning" },
+    { "type": "word_choice", "wordId": "yangngai", "direction": "thai_to_meaning" },
+    { "type": "word_listening", "wordId": "muea_rai" },
+    {
+      "type": "sentence_build",
+      "meaning": "How do we get there? (male speaker)",
+      "gloss": "go + how + male polite particle",
+      "promptMode": "audio",
+      "audioKey": "phrases/pai_yangngai_khrap",
+      "tokens": [
+        { "thai": "ไป", "rtgs": "pai", "wordId": "pai" },
+        { "thai": "ยังไง", "rtgs": "yangngai", "wordId": "yangngai" },
+        { "thai": "ครับ", "rtgs": "khrap", "wordId": "khrap" }
+      ],
+      "distractors": [{ "thai": "เมื่อไหร่", "rtgs": "muea rai" }],
+      "explanation": "ไปยังไงครับ — the question that summons directions, bus numbers, and occasionally a motorbike."
+    },
+    {
+      "type": "match_pairs",
+      "characterIds": ["muea_rai", "yangngai", "muea_wan", "pai"]
+    }
+  ]
+}

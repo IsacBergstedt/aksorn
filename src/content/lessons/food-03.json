@@ -1,0 +1,82 @@
+{
+  "id": "food-03",
+  "unitId": "words-food",
+  "order": 3,
+  "title": "Eat — and soften it with หน่อย",
+  "xpReward": 25,
+  "pedagogy": "Vocabulary: กิน (mid ก + live น → mid), หน่อย (ห-nam น: high + mai ek → low). Pattern: หน่อย after the thing shrinks a request into a favor (ขอน้ำหน่อย); กินข้าว 'eat rice' = have a meal, closing the loop with กินข้าวหรือยัง from unit 1.",
+  "teaches": ["kin", "noi"],
+  "reviews": ["kho", "nam", "khao_rice", "kin_khao_rue_yang", "kha_statement", "khrap"],
+  "exercises": [
+    {
+      "type": "concept",
+      "title": "หน่อย makes any request smaller",
+      "body": [
+        "หน่อย literally means “a little” — but tucked after a request it's pure politeness: ขอน้ำหน่อย ≈ “could I just get some water?”.",
+        "It isn't about quantity. You'll get a full glass; the หน่อย just shrinks the imposition.",
+        "And now กินข้าวหรือยัง from Greetings decodes itself: eat-rice-yet? — กิน + ข้าว were hiding in there all along."
+      ]
+    },
+    { "type": "word_intro", "wordId": "kin" },
+    { "type": "word_choice", "wordId": "kin", "direction": "thai_to_meaning" },
+    { "type": "word_intro", "wordId": "noi" },
+    {
+      "type": "sentence_build",
+      "meaning": "Could I get some water, please? (female speaker)",
+      "gloss": "ask-for + water + softener + female polite particle",
+      "promptMode": "meaning",
+      "audioKey": "phrases/kho_nam_noi_kha",
+      "tokens": [
+        { "thai": "ขอ", "rtgs": "kho", "wordId": "kho" },
+        { "thai": "น้ำ", "rtgs": "nam", "wordId": "nam" },
+        { "thai": "หน่อย", "rtgs": "noi", "wordId": "noi" },
+        { "thai": "ค่ะ", "rtgs": "kha", "wordId": "kha_statement" }
+      ],
+      "distractors": [{ "thai": "กิน", "rtgs": "kin" }],
+      "explanation": "ขอ …หน่อย ครับ/ค่ะ — the full polite request frame. Everything else you ever order slots into the middle."
+    },
+    { "type": "word_listening", "wordId": "kin" },
+    {
+      "type": "sentence_build",
+      "meaning": "To eat / have a meal (lit. “eat rice”).",
+      "gloss": "eat + rice",
+      "promptMode": "audio",
+      "audioKey": "phrases/kin_khao",
+      "tokens": [
+        { "thai": "กิน", "rtgs": "kin", "wordId": "kin" },
+        { "thai": "ข้าว", "rtgs": "khao", "wordId": "khao_rice" }
+      ],
+      "distractors": [{ "thai": "หน่อย", "rtgs": "noi" }],
+      "explanation": "กินข้าว is “to eat”, full stop — rice stands in for every meal, noodle dinners included."
+    },
+    { "type": "word_choice", "wordId": "noi", "direction": "meaning_to_thai" },
+    {
+      "type": "register_choice",
+      "context": "You want more water at a restaurant. You're a man. Flag the waiter and ask nicely.",
+      "question": "What do you say?",
+      "choices": [
+        {
+          "thai": "ขอน้ำหน่อยครับ",
+          "rtgs": "kho nam noi khrap",
+          "audioKey": "phrases/kho_nam_noi_khrap"
+        },
+        {
+          "thai": "เอาน้ำ",
+          "rtgs": "ao nam",
+          "audioKey": "phrases/ao_nam"
+        },
+        {
+          "thai": "น้ำ",
+          "rtgs": "nam"
+        }
+      ],
+      "correctIndex": 0,
+      "explanation": "ขอ + หน่อย + ครับ is the full courtesy frame. เอาน้ำ is what you say to a friend holding the bottle — and bare น้ำ is just naming a liquid at a stranger.",
+      "attributeTo": ["kho", "noi"]
+    },
+    {
+      "type": "match_pairs",
+      "characterIds": ["kin", "noi", "kho", "nam"]
+    }
+  ]
+}

@@ -11,6 +11,9 @@ import { persist } from "zustand/middleware";
 interface UiSettings {
   showRomanization: boolean;
   toggleRomanization(): void;
+  /** "Do Reading Thai first" advisory on /phrases — dismissed for good. */
+  readingTipDismissed: boolean;
+  dismissReadingTip(): void;
 }
 
 export const useUiSettings = create<UiSettings>()(
@@ -19,6 +22,8 @@ export const useUiSettings = create<UiSettings>()(
       showRomanization: false,
       toggleRomanization: () =>
         set((s) => ({ showRomanization: !s.showRomanization })),
+      readingTipDismissed: false,
+      dismissReadingTip: () => set({ readingTipDismissed: true }),
     }),
     { name: "aksorn-ui-settings-v1" },
   ),

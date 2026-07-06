@@ -15,9 +15,18 @@ import { rawCharacters } from "./characters";
 import { rawVowels } from "./vowels";
 import { rawToneMarks } from "./tone-marks";
 import { rawGreetingsWords } from "./vocab/greetings";
+import { rawResponsesWords } from "./vocab/responses";
+import { rawIntroductionsWords } from "./vocab/introductions";
+import { rawNumbersWords } from "./vocab/numbers";
+import { rawFoodWords } from "./vocab/food";
+import { rawShoppingWords } from "./vocab/shopping";
+import { rawGettingAroundWords } from "./vocab/getting-around";
+import { rawTimeWords } from "./vocab/time";
+import { rawFeelingsWords } from "./vocab/feelings";
+import { rawQuestionsWords } from "./vocab/questions";
 import { rawTonePairSets } from "./tone-pairs";
 import unitsJson from "./units.json";
-import wordsUnitsJson from "./words-units.json";
+import phrasesUnitsJson from "./phrases-units.json";
 import mid01 from "./lessons/mid-01.json";
 import mid02 from "./lessons/mid-02.json";
 import mid03 from "./lessons/mid-03.json";
@@ -44,6 +53,33 @@ import greet01 from "./lessons/greet-01.json";
 import greet02 from "./lessons/greet-02.json";
 import greet03 from "./lessons/greet-03.json";
 import greet04 from "./lessons/greet-04.json";
+import resp01 from "./lessons/resp-01.json";
+import resp02 from "./lessons/resp-02.json";
+import resp03 from "./lessons/resp-03.json";
+import intro01 from "./lessons/intro-01.json";
+import intro02 from "./lessons/intro-02.json";
+import intro03 from "./lessons/intro-03.json";
+import num01 from "./lessons/num-01.json";
+import num02 from "./lessons/num-02.json";
+import num03 from "./lessons/num-03.json";
+import food01 from "./lessons/food-01.json";
+import food02 from "./lessons/food-02.json";
+import food03 from "./lessons/food-03.json";
+import shop01 from "./lessons/shop-01.json";
+import shop02 from "./lessons/shop-02.json";
+import shop03 from "./lessons/shop-03.json";
+import go01 from "./lessons/go-01.json";
+import go02 from "./lessons/go-02.json";
+import go03 from "./lessons/go-03.json";
+import time01 from "./lessons/time-01.json";
+import time02 from "./lessons/time-02.json";
+import time03 from "./lessons/time-03.json";
+import talk01 from "./lessons/talk-01.json";
+import talk02 from "./lessons/talk-02.json";
+import talk03 from "./lessons/talk-03.json";
+import q01 from "./lessons/q-01.json";
+import q02 from "./lessons/q-02.json";
+import q03 from "./lessons/q-03.json";
 
 // Parsing happens at module load, so invalid content fails the build the
 // first time any page imports from src/content.
@@ -58,10 +94,21 @@ export const characterById: ReadonlyMap<string, ThaiCharacter> = new Map(
   characters.map((c) => [c.id, c]),
 );
 
-/** Vocab for the Thai Words course (one file per unit under vocab/). */
+/** Vocab for the Thai Phrases course (one file per unit under vocab/). */
 export const vocabWords: VocabWord[] = z
   .array(vocabWordSchema)
-  .parse([...rawGreetingsWords]);
+  .parse([
+    ...rawGreetingsWords,
+    ...rawResponsesWords,
+    ...rawIntroductionsWords,
+    ...rawNumbersWords,
+    ...rawFoodWords,
+    ...rawShoppingWords,
+    ...rawGettingAroundWords,
+    ...rawTimeWords,
+    ...rawFeelingsWords,
+    ...rawQuestionsWords,
+  ]);
 
 export const wordById: ReadonlyMap<string, VocabWord> = new Map(
   vocabWords.map((w) => [w.id, w]),
@@ -103,6 +150,33 @@ export const lessons: Lesson[] = z.array(lessonSchema).parse([
   greet02,
   greet03,
   greet04,
+  resp01,
+  resp02,
+  resp03,
+  intro01,
+  intro02,
+  intro03,
+  num01,
+  num02,
+  num03,
+  food01,
+  food02,
+  food03,
+  shop01,
+  shop02,
+  shop03,
+  go01,
+  go02,
+  go03,
+  time01,
+  time02,
+  time03,
+  talk01,
+  talk02,
+  talk03,
+  q01,
+  q02,
+  q03,
 ]);
 
 export const lessonById: ReadonlyMap<string, Lesson> = new Map(
@@ -118,14 +192,14 @@ export const unitById: ReadonlyMap<string, Unit> = new Map(
   units.map((u) => [u.id, u]),
 );
 
-/** Thai Words course units (unit 1 live, the rest Coming-soon stubs). */
-export const wordsUnits: Unit[] = z
+/** Thai Phrases course units (units 1–3 live, the rest Coming-soon stubs). */
+export const phrasesUnits: Unit[] = z
   .array(unitSchema)
-  .parse(wordsUnitsJson)
+  .parse(phrasesUnitsJson)
   .sort((a, b) => a.order - b.order);
 
-export const wordsUnitById: ReadonlyMap<string, Unit> = new Map(
-  wordsUnits.map((u) => [u.id, u]),
+export const phrasesUnitById: ReadonlyMap<string, Unit> = new Map(
+  phrasesUnits.map((u) => [u.id, u]),
 );
 
 /** All lessons in path order: units by order, lessons by their unit listing. */
@@ -137,8 +211,8 @@ export const orderedLessons: Lesson[] = units.flatMap((u) =>
   }),
 );
 
-/** Thai Words lessons in path order (drives the /words path + unlocking). */
-export const wordsOrderedLessons: Lesson[] = wordsUnits.flatMap((u) =>
+/** Thai Phrases lessons in path order (drives the /phrases path + unlocking). */
+export const phrasesOrderedLessons: Lesson[] = phrasesUnits.flatMap((u) =>
   u.lessonIds.map((id) => {
     const lesson = lessonById.get(id);
     if (!lesson) throw new Error(`Unit ${u.id} references unknown lesson ${id}`);
@@ -200,7 +274,7 @@ for (const w of vocabWords) {
   }
 }
 
-const allUnitIds = new Set([...unitById.keys(), ...wordsUnitById.keys()]);
+const allUnitIds = new Set([...unitById.keys(), ...phrasesUnitById.keys()]);
 
 for (const lesson of lessons) {
   if (!allUnitIds.has(lesson.unitId)) {
@@ -245,6 +319,19 @@ for (const lesson of lessons) {
       throw new Error(
         `Lesson ${lesson.id}: tone_pair references unknown set ${ex.setId}`,
       );
+    }
+    if (ex.type === "sentence_build") {
+      for (const t of ex.tokens) {
+        if (t.wordId) {
+          if (!wordById.has(t.wordId)) {
+            throw new Error(
+              `Lesson ${lesson.id}: sentence_build token ${t.thai} references unknown word ${t.wordId}`,
+            );
+          }
+          referenced.add(t.wordId);
+        }
+      }
+      ex.attributeTo?.forEach((id) => referenced.add(id));
     }
   }
   for (const id of [...lesson.teaches, ...lesson.reviews, ...referenced]) {

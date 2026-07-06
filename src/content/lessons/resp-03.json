@@ -1,0 +1,120 @@
+{
+  "id": "resp-03",
+  "unitId": "words-responses",
+  "order": 3,
+  "title": "Yes please, no thanks",
+  "xpReward": 25,
+  "pedagogy": "Vocabulary: เอา (mid อ + live เ◌า → mid). Recombination: เอา/ได้ + polite particles via sentence_build (เอาครับ, ไม่เอาค่ะ, ได้ค่ะ); register drills on softening refusals — bare ไม่เอา is blunt toward strangers. Reviews ได้, ไม่, ครับ/ค่ะ and ขอบคุณ from earlier lessons.",
+  "teaches": ["ao"],
+  "reviews": ["dai", "mai_not", "khrap", "kha_statement", "khop_khun", "mai_pen_rai"],
+  "exercises": [
+    {
+      "type": "concept",
+      "title": "เอา runs every market in Thailand",
+      "thaiExample": "เอา · ไม่เอา",
+      "exampleAudioKey": "examples/ao_mai_ao",
+      "body": [
+        "เอา is “take/want” — the transaction word. Vendor holds something up: เอาครับ means “yes, that one”, ไม่เอาค่ะ means “no thanks”.",
+        "Notice what makes the refusal polite: the particle. ไม่เอา alone, with the wrong face, is “don't want it!” — with ครับ/ค่ะ it's a soft pass.",
+        "The pattern from this whole unit: verb for yes, ไม่ + verb for no, particle for politeness. That's Thai's entire yes/no system."
+      ]
+    },
+    { "type": "word_intro", "wordId": "ao" },
+    { "type": "word_choice", "wordId": "ao", "direction": "thai_to_meaning" },
+    {
+      "type": "sentence_build",
+      "meaning": "Yes please, I'll take it. (male speaker)",
+      "gloss": "take/want + male polite particle",
+      "promptMode": "meaning",
+      "audioKey": "phrases/ao_khrap",
+      "tokens": [
+        { "thai": "เอา", "rtgs": "ao", "wordId": "ao" },
+        { "thai": "ครับ", "rtgs": "khrap", "wordId": "khrap" }
+      ],
+      "distractors": [{ "thai": "ไม่", "rtgs": "mai" }],
+      "explanation": "Verb + particle — Thai's “yes please”. The verb answers, the particle smiles."
+    },
+    {
+      "type": "sentence_build",
+      "meaning": "No thanks. (female speaker)",
+      "gloss": "not + take/want + female polite particle",
+      "promptMode": "meaning",
+      "audioKey": "phrases/mai_ao_kha",
+      "tokens": [
+        { "thai": "ไม่", "rtgs": "mai", "wordId": "mai_not" },
+        { "thai": "เอา", "rtgs": "ao", "wordId": "ao" },
+        { "thai": "ค่ะ", "rtgs": "kha", "wordId": "kha_statement" }
+      ],
+      "distractors": [{ "thai": "ใช่", "rtgs": "chai" }],
+      "explanation": "ไม่เอาค่ะ — negation in front, particle at the end. The ค่ะ is what keeps it friendly."
+    },
+    { "type": "word_listening", "wordId": "ao" },
+    {
+      "type": "register_choice",
+      "context": "A street vendor offers you a taste of something you don't want. You're a man — decline without offending.",
+      "question": "What do you say?",
+      "choices": [
+        {
+          "thai": "ไม่เอาครับ",
+          "rtgs": "mai ao khrap",
+          "audioKey": "phrases/mai_ao_khrap"
+        },
+        {
+          "thai": "ไม่เอา",
+          "rtgs": "mai ao",
+          "audioKey": "phrases/mai_ao"
+        },
+        {
+          "thai": "เอาครับ",
+          "rtgs": "ao khrap",
+          "audioKey": "phrases/ao_khrap"
+        }
+      ],
+      "correctIndex": 0,
+      "explanation": "ไม่เอา is the right words but the bare form lands blunt with a stranger — ครับ softens it into a polite pass. (เอาครับ would buy you the snack.)",
+      "attributeTo": ["ao", "khrap"]
+    },
+    {
+      "type": "sentence_build",
+      "meaning": "Sure, that works. (female speaker)",
+      "gloss": "can/OK + female polite particle",
+      "promptMode": "audio",
+      "audioKey": "phrases/dai_kha",
+      "tokens": [
+        { "thai": "ได้", "rtgs": "dai", "wordId": "dai" },
+        { "thai": "ค่ะ", "rtgs": "kha", "wordId": "kha_statement" }
+      ],
+      "distractors": [{ "thai": "เอา", "rtgs": "ao" }],
+      "explanation": "ได้ค่ะ — the female “sure, no problem”. You'll say this ten times a day."
+    },
+    { "type": "word_choice", "wordId": "ao", "direction": "meaning_to_thai" },
+    {
+      "type": "register_choice",
+      "context": "Your hotel asks if a 2pm checkout is OK. It is. You're a woman.",
+      "question": "How do you agree?",
+      "choices": [
+        {
+          "thai": "ได้ค่ะ",
+          "rtgs": "dai kha",
+          "audioKey": "phrases/dai_kha"
+        },
+        {
+          "thai": "ได้คะ",
+          "rtgs": "dai kha"
+        },
+        {
+          "thai": "ไม่ได้ค่ะ",
+          "rtgs": "mai dai kha",
+          "audioKey": "phrases/mai_dai_kha"
+        }
+      ],
+      "correctIndex": 0,
+      "explanation": "Agreeing is a statement → falling ค่ะ. ได้คะ mismatches the particle tone, and ไม่ได้ค่ะ politely refuses the checkout you wanted.",
+      "attributeTo": ["dai", "kha_statement"]
+    },
+    {
+      "type": "match_pairs",
+      "characterIds": ["ao", "dai", "khop_khun", "mai_pen_rai"]
+    }
+  ]
+}

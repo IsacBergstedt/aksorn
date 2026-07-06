@@ -1,0 +1,57 @@
+{
+  "id": "time-03",
+  "unitId": "words-time",
+  "order": 3,
+  "title": "The week",
+  "xpReward": 25,
+  "pedagogy": "Vocabulary: จันทร์ (mid จ + live น → mid; ทร์ karan), เสาร์ (high ส + live เ◌า → rising; ร์ karan), อาทิตย์ (mid อ + live อา → mid; low ท + dead-short ต → high; ย์ karan). Days are วัน + planet name; the three karan words teach silent-letter endings. Full week given in a concept card.",
+  "teaches": ["chan_monday", "sao", "athit"],
+  "reviews": ["wan_day"],
+  "exercises": [
+    {
+      "type": "concept",
+      "title": "Seven days, seven planets, seven colors",
+      "body": [
+        "Thai days are วัน + a planet: จันทร์ Moon (Mon), อังคาร Mars (Tue), พุธ Mercury (Wed), พฤหัสฯ Jupiter (Thu), ศุกร์ Venus (Fri), เสาร์ Saturn (Sat), อาทิตย์ Sun (Sun).",
+        "Each day owns a color — Monday yellow, Tuesday pink, Sunday red. Thais know their birth-day color; the King's yellow flags fly for a Monday birth.",
+        "Start with the weekend plus Monday. The spelling quirk to spot: that ◌์ mark (karan) silences the letter under it."
+      ]
+    },
+    { "type": "word_intro", "wordId": "chan_monday" },
+    {
+      "type": "sentence_build",
+      "meaning": "Monday (lit. “moon day”).",
+      "gloss": "day + moon",
+      "promptMode": "meaning",
+      "audioKey": "phrases/wan_chan",
+      "tokens": [
+        { "thai": "วัน", "rtgs": "wan", "wordId": "wan_day" },
+        { "thai": "จันทร์", "rtgs": "chan", "wordId": "chan_monday" }
+      ],
+      "distractors": [{ "thai": "เสาร์", "rtgs": "sao" }],
+      "explanation": "วัน + planet = the day. Same recipe all week."
+    },
+    { "type": "word_intro", "wordId": "sao" },
+    { "type": "word_intro", "wordId": "athit" },
+    { "type": "word_choice", "wordId": "sao", "direction": "thai_to_meaning" },
+    { "type": "word_choice", "wordId": "athit", "direction": "thai_to_meaning" },
+    { "type": "word_listening", "wordId": "chan_monday" },
+    {
+      "type": "sentence_build",
+      "meaning": "Saturday (lit. “Saturn day”).",
+      "gloss": "day + Saturn",
+      "promptMode": "audio",
+      "audioKey": "phrases/wan_sao",
+      "tokens": [
+        { "thai": "วัน", "rtgs": "wan", "wordId": "wan_day" },
+        { "thai": "เสาร์", "rtgs": "sao", "wordId": "sao" }
+      ],
+      "distractors": [{ "thai": "อาทิตย์", "rtgs": "athit" }],
+      "explanation": "วันเสาร์ — rising tone on เสาร์, and the ร์ stays silent. Weekend unlocked."
+    },
+    {
+      "type": "match_pairs",
+      "characterIds": ["chan_monday", "sao", "athit", "wan_day"]
+    }
+  ]
+}

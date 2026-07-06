@@ -1,0 +1,47 @@
+{
+  "id": "shop-01",
+  "unitId": "words-shopping",
+  "order": 1,
+  "title": "This one — how much?",
+  "xpReward": 20,
+  "pedagogy": "Vocabulary: อัน (mid อ + live น → mid), นี้ (LOW น + mai tho → high), แพง (low พ + live ง → mid), ถูก (high ถ + dead ก → low). Pattern: อันนี้ 'this one' + เท่าไหร่ (unit 4 review) is the universal price question — pointing does the vocabulary's job.",
+  "teaches": ["an", "ni_this", "phaeng", "thuk"],
+  "reviews": ["thao_rai", "bat", "khrap"],
+  "exercises": [
+    {
+      "type": "concept",
+      "title": "อันนี้ — the pointing phrase",
+      "body": [
+        "You don't need the word for mango. Point and say อันนี้ — “this one” — and every market in Thailand understands you.",
+        "อันนี้เท่าไหร่ครับ/คะ is the complete shopping starter kit: this one, how much?",
+        "Then judge the answer: แพง expensive, ถูก cheap. (ถูก also means “correct” — Thai enjoys a pun.)"
+      ]
+    },
+    { "type": "word_intro", "wordId": "an" },
+    { "type": "word_intro", "wordId": "ni_this" },
+    {
+      "type": "sentence_build",
+      "meaning": "How much is this one? (male speaker)",
+      "gloss": "thing + this + how-much + male polite particle",
+      "promptMode": "meaning",
+      "audioKey": "phrases/an_ni_thao_rai_khrap",
+      "tokens": [
+        { "thai": "อัน", "rtgs": "an", "wordId": "an" },
+        { "thai": "นี้", "rtgs": "ni", "wordId": "ni_this" },
+        { "thai": "เท่าไหร่", "rtgs": "thao rai", "wordId": "thao_rai" },
+        { "thai": "ครับ", "rtgs": "khrap", "wordId": "khrap" }
+      ],
+      "distractors": [{ "thai": "บาท", "rtgs": "bat" }],
+      "explanation": "อันนี้ first, question word in the answer slot, particle last — the pattern you already own, now earning money."
+    },
+    { "type": "word_intro", "wordId": "phaeng" },
+    { "type": "word_intro", "wordId": "thuk" },
+    { "type": "word_choice", "wordId": "phaeng", "direction": "thai_to_meaning" },
+    { "type": "word_choice", "wordId": "thuk", "direction": "meaning_to_thai" },
+    { "type": "word_listening", "wordId": "ni_this" },
+    {
+      "type": "match_pairs",
+      "characterIds": ["an", "ni_this", "phaeng", "thuk"]
+    }
+  ]
+}

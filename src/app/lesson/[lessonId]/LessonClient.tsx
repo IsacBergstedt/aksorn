@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
-import { getItem, lessonById, wordsUnitById } from "@/content";
+import { getItem, lessonById, phrasesUnitById } from "@/content";
 import { buildLessonExercises, type RuntimeExercise } from "@/lib/engine";
 import type { ToneStats } from "@/lib/srs";
 import { useProgressStore, type CharResults } from "@/lib/progress/store";
@@ -15,8 +15,8 @@ export function LessonClient({ lessonId }: { lessonId: string }) {
   const completeLesson = useProgressStore((s) => s.completeLesson);
   const streak = useProgressStore((s) => s.stats.currentStreak);
 
-  // Words lessons exit back to the Words path, script lessons to Reading.
-  const exitHref = wordsUnitById.has(lesson.unitId) ? "/words" : "/reading";
+  // Phrases lessons exit back to the Phrases path, script lessons to Reading.
+  const exitHref = phrasesUnitById.has(lesson.unitId) ? "/phrases" : "/reading";
 
   // Exercises are randomized (distractors, shuffles), so they're built
   // after mount to keep server and client HTML identical.

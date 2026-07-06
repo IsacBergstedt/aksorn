@@ -1,0 +1,45 @@
+{
+  "id": "time-01",
+  "unitId": "words-time",
+  "order": 1,
+  "title": "Today, tomorrow, yesterday",
+  "xpReward": 20,
+  "pedagogy": "Vocabulary: วัน (low ว + live น → mid), พรุ่งนี้ (true พร cluster: LOW พ + mai ek → falling; LOW น + mai tho → high), เมื่อวาน (low ม + mai ek → falling; low ว + live น → mid). Compounding: วัน + นี้ (unit 6 review) = วันนี้ today — Thai time words are transparent stacks.",
+  "teaches": ["wan_day", "phrung_ni", "muea_wan"],
+  "reviews": ["ni_this"],
+  "exercises": [
+    {
+      "type": "concept",
+      "title": "Thai time words are see-through",
+      "body": [
+        "วันนี้ “today” is literally day-this. No new idea, just วัน + the นี้ you learned pointing at mangoes.",
+        "พรุ่งนี้ tomorrow, เมื่อวาน yesterday — and Thai verbs never change for tense. The time word does all the work: กินข้าวเมื่อวาน “ate yesterday”, done.",
+        "Notice วัน (level tone) versus หวาน “sweet” (rising) — the silent ห is the whole difference."
+      ]
+    },
+    { "type": "word_intro", "wordId": "wan_day" },
+    {
+      "type": "sentence_build",
+      "meaning": "Today (lit. “this day”).",
+      "gloss": "day + this",
+      "promptMode": "meaning",
+      "audioKey": "phrases/wan_ni",
+      "tokens": [
+        { "thai": "วัน", "rtgs": "wan", "wordId": "wan_day" },
+        { "thai": "นี้", "rtgs": "ni", "wordId": "ni_this" }
+      ],
+      "distractors": [{ "thai": "เมื่อวาน", "rtgs": "muea wan" }],
+      "explanation": "วัน + นี้ = today. You'll build dates the same way all unit long."
+    },
+    { "type": "word_intro", "wordId": "phrung_ni" },
+    { "type": "word_intro", "wordId": "muea_wan" },
+    { "type": "word_choice", "wordId": "phrung_ni", "direction": "thai_to_meaning" },
+    { "type": "word_choice", "wordId": "muea_wan", "direction": "meaning_to_thai" },
+    { "type": "word_listening", "wordId": "wan_day" },
+    { "type": "word_choice", "wordId": "wan_day", "direction": "thai_to_meaning" },
+    {
+      "type": "match_pairs",
+      "characterIds": ["wan_day", "phrung_ni", "muea_wan", "ni_this"]
+    }
+  ]
+}

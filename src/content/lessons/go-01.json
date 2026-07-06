@@ -1,0 +1,46 @@
+{
+  "id": "go-01",
+  "unitId": "words-getting-around",
+  "order": 1,
+  "title": "Go — and ask where to",
+  "xpReward": 20,
+  "pedagogy": "Vocabulary: ไป (mid ป + live ไ◌ → mid), อยู่ (อ-nam: silent อ leads ย into mid class, + mai ek → low; one of the four อ+ย words), ที่ (low ท + mai ek → falling). Motion vs location: ไป goes, อยู่ sits. ไปไหน reviews the ไหน slot rule from unit 3.",
+  "teaches": ["pai", "yu", "thi"],
+  "reviews": ["nai", "khrap", "ma_chak"],
+  "exercises": [
+    {
+      "type": "concept",
+      "title": "ไป goes, อยู่ stays",
+      "body": [
+        "Two verbs carry all of Thai geography: ไป “go (to)” and อยู่ “be (at)”. Motion versus location — pick the one that matches.",
+        "ไปไหน “where are you going?” is also Bangkok's favorite casual hello, right up there with กินข้าวหรือยัง.",
+        "อยู่ hides a spelling rarity: a silent อ leads the ย, forcing mid-class tone rules. Only four words in the language do this — อย่า อยู่ อย่าง อยาก."
+      ]
+    },
+    { "type": "word_intro", "wordId": "pai" },
+    { "type": "word_intro", "wordId": "yu" },
+    { "type": "word_intro", "wordId": "thi" },
+    {
+      "type": "sentence_build",
+      "meaning": "Where are you going? (male speaker)",
+      "gloss": "go + where + male polite particle",
+      "promptMode": "meaning",
+      "audioKey": "phrases/pai_nai_khrap",
+      "tokens": [
+        { "thai": "ไป", "rtgs": "pai", "wordId": "pai" },
+        { "thai": "ไหน", "rtgs": "nai", "wordId": "nai" },
+        { "thai": "ครับ", "rtgs": "khrap", "wordId": "khrap" }
+      ],
+      "distractors": [{ "thai": "มาจาก", "rtgs": "ma chak" }],
+      "explanation": "ไหน sits in the answer's slot, exactly like in มาจากไหน. Same rule, new verb."
+    },
+    { "type": "word_choice", "wordId": "pai", "direction": "thai_to_meaning" },
+    { "type": "word_choice", "wordId": "yu", "direction": "thai_to_meaning" },
+    { "type": "word_listening", "wordId": "pai" },
+    { "type": "word_choice", "wordId": "thi", "direction": "meaning_to_thai" },
+    {
+      "type": "match_pairs",
+      "characterIds": ["pai", "yu", "thi", "nai"]
+    }
+  ]
+}

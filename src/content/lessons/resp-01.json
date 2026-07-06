@@ -1,0 +1,59 @@
+{
+  "id": "resp-01",
+  "unitId": "words-responses",
+  "order": 1,
+  "title": "Yes, no, that's right",
+  "xpReward": 20,
+  "pedagogy": "Vocabulary: ใช่ (low ช + mai ek → falling), ไม่ (low ม + mai ek → falling), ได้ (mid ด + mai tho → falling). Concept: Thai has no universal 'yes' — verb questions are answered by echoing the verb; ใช่ confirms identity questions only. Negation pattern ไม่ + X introduced with sentence_build; ไม่/ไม้/ใหม่/ไหม minimal pairs from the tone-pair bank.",
+  "teaches": ["chai", "mai_not", "dai"],
+  "reviews": ["khrap", "kha_statement"],
+  "exercises": [
+    {
+      "type": "concept",
+      "title": "Thai has no word for “yes”",
+      "body": [
+        "Ask a Thai speaker “do you want it?” and the answer is the verb again: เอา (want) or ไม่เอา (not want). The question hands you the word to answer with.",
+        "ใช่ only confirms “is it X?” questions — “is this the bus?” ใช่. Using it for everything is a learner tell.",
+        "And ครับ/ค่ะ on its own works as a soft “yes, I hear you” — the particles from Greetings keep paying rent."
+      ]
+    },
+    { "type": "word_intro", "wordId": "chai" },
+    { "type": "word_intro", "wordId": "mai_not" },
+    { "type": "word_choice", "wordId": "chai", "direction": "thai_to_meaning" },
+    {
+      "type": "sentence_build",
+      "meaning": "No, that's not it.",
+      "gloss": "not + be-so",
+      "promptMode": "meaning",
+      "audioKey": "phrases/mai_chai",
+      "tokens": [
+        { "thai": "ไม่", "rtgs": "mai", "wordId": "mai_not" },
+        { "thai": "ใช่", "rtgs": "chai", "wordId": "chai" }
+      ],
+      "distractors": [{ "thai": "ได้", "rtgs": "dai" }],
+      "explanation": "ไม่ negates whatever follows it: ไม่ใช่ = “not so”. Same pattern for every verb you'll ever learn."
+    },
+    { "type": "word_intro", "wordId": "dai" },
+    { "type": "word_choice", "wordId": "dai", "direction": "meaning_to_thai" },
+    { "type": "tone_pair", "setId": "mai_set" },
+    { "type": "word_listening", "wordId": "chai" },
+    {
+      "type": "sentence_build",
+      "meaning": "Sure, no problem! (male speaker)",
+      "gloss": "can + male polite particle",
+      "promptMode": "audio",
+      "audioKey": "phrases/dai_khrap",
+      "tokens": [
+        { "thai": "ได้", "rtgs": "dai", "wordId": "dai" },
+        { "thai": "ครับ", "rtgs": "khrap", "wordId": "khrap" }
+      ],
+      "distractors": [{ "thai": "ใช่", "rtgs": "chai" }],
+      "explanation": "ได้ครับ is the everyday “sure thing” — you'll hear it from every waiter, driver, and receptionist in Thailand."
+    },
+    { "type": "word_choice", "wordId": "mai_not", "direction": "thai_to_meaning" },
+    {
+      "type": "match_pairs",
+      "characterIds": ["chai", "mai_not", "dai", "khrap"]
+    }
+  ]
+}

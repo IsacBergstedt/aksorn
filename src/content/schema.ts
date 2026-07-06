@@ -113,7 +113,7 @@ export const syllableSchema = z.object({
 export type Syllable = z.infer<typeof syllableSchema>;
 
 /**
- * A vocab word or phrase for the Thai Words course. Ids share the SRS
+ * A vocab word or phrase for the Thai Phrases course. Ids share the SRS
  * namespace with character ids (collisions rejected at load) and are just
  * as immutable once shipped.
  */
@@ -227,6 +227,48 @@ export const exerciseSchema = z.discriminatedUnion("type", [
   // The target option is chosen at runtime; the outcome carries its tone
   // for weakness tracking.
   z.object({ type: z.literal("tone_pair"), setId: z.string().min(1) }),
+  // Arrange Thai word-chips into the target sentence. The core mechanic of
+  // the Thai Phrases course: meaning-prompted (translate and build) or
+  // audio-prompted (listen and build). Chips are shuffled at runtime.
+  z.object({
+    type: z.literal("sentence_build"),
+    /** English prompt; in audio mode it's revealed with the feedback. */
+    meaning: z.string().min(1),
+    /** Word-for-word gloss for content review, e.g. "not + be-right". */
+    gloss: z.string().min(1),
+    /**
+     * Full-sentence TTS clip (phrases/{slug}) of the tokens joined in
+     * order — the prompt in audio mode, feedback audio otherwise.
+     */
+    audioKey: audioKeySchema,
+    promptMode: z.enum(["meaning", "audio"]),
+    /**
+     * Chips in correct order. wordId ties the chip to a vocab word (SRS
+     * attribution); literal chips (names, places) carry no wordId.
+     */
+    tokens: z
+      .array(
+        z.object({
+          thai: z.string().min(1),
+          rtgs: z.string().min(1),
+          wordId: characterId.optional(),
+        }),
+      )
+      .min(2)
+      .max(8),
+    /**
+     * Extra wrong chips mixed into the bank. Content rule (human-checked,
+     * not machine-checkable): a distractor must not allow an alternate
+     * grammatical sentence.
+     */
+    distractors: z
+      .array(z.object({ thai: z.string().min(1), rtgs: z.string().min(1) }))
+      .max(3)
+      .optional(),
+    explanation: z.string().optional(),
+    /** Defaults to the token wordIds; set to narrow SRS attribution. */
+    attributeTo: z.array(characterId).optional(),
+  }),
   // Register drill: a social context → pick the appropriate Thai form.
   z.object({
     type: z.literal("register_choice"),

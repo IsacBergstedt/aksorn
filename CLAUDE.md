@@ -70,22 +70,29 @@ links; mobile: fixed bottom tab bar, hidden on `/lesson/*`):
   low class (5), vowels (4), tone rules (4), mixed review (2).
   `/lesson/*` and `/review` belong to this section for active-state
   purposes. `/` currently redirects here (default landing until Thai
-  Words ships — the redirect in `src/app/page.tsx` is the one line to
-  flip).
-- **Thai Words** (`/words`) — LIVE as the main course skeleton (shipped
-  2026-07-05): 10 themed units in `src/content/words-units.json`, rendered
-  by `src/components/WordsPathMap.tsx` as a Duolingo-style winding path of
-  lesson nodes under unit banners (layout concept only — visuals are our
-  own). Unit 1 **Greetings & Politeness** is real content (greet-01..04);
-  units 2–10 (Numbers & Prices, Food & Ordering, Getting Around, Shopping
-  & Bargaining, Time & Days, People & Family, Common Verbs, Feelings &
-  Small Talk, Help & Emergencies) are locked `comingSoon` stubs with
-  `goals` bullets — write their lessons in that order. **Gating**: unit 1
-  unlocks only when every Reading-Thai mid-class lesson is complete
-  (checked against `unitById.get("mid-class")` completions); unit N+1
-  unlocks when unit N's lessons are all complete. Words lessons run on the
-  same engine and `/lesson/[lessonId]` route (exit href picks /words vs
-  /reading by unit) — never a separate engine.
+  Phrases becomes the main track — the redirect in `src/app/page.tsx`
+  is the one line to flip).
+- **Thai Phrases** (`/phrases`) — LIVE (renamed from "Thai Words"
+  2026-07-06; `/words` still redirects). 11 themed units in
+  `src/content/phrases-units.json`, rendered by
+  `src/components/PhrasesPathMap.tsx` as a winding path of lesson nodes
+  under unit banners (layout concept only — visuals are our own).
+  Units 1–10 are real content (user signed off on the pattern
+  2026-07-06): Greetings & Politeness (greet-01..04), Yes/No & Basic
+  Responses (resp-01..03), Introducing Yourself (intro-01..03), Numbers &
+  Counting (num-01..03), Ordering Food & Drink (food-01..03), Shopping &
+  Prices (shop-01..03), Directions & Getting Around (go-01..03), Time &
+  Days (time-01..03), Small Talk & Feelings (talk-01..03), Question Words
+  (q-01..03; q-03 is a no-new-words capstone). Vocab lives one file per
+  unit in `src/content/vocab/`. Unit 11 (First Sentences) is the
+  sentence-focused `comingSoon` stub that recombines units 1–10 — that's
+  the next content phase. **No cross-course gate** (removed
+  2026-07-06): the course is open from lesson one; a dismissible
+  advisory (`ReadingFirstTip`, persisted in `useUiSettings`) recommends
+  Reading Thai first. Unit N+1 still unlocks when unit N's lessons are
+  all complete. Phrases lessons run on the same engine and
+  `/lesson/[lessonId]` route (exit href picks /phrases vs /reading by
+  unit) — never a separate engine.
 - **Practice Speaking** (`/speaking`) — MINIMAL V1 (shipped 2026-07-04):
   self-assessment loop — step through consonants + vowels, play the TTS
   target, record yourself via MediaRecorder, replay both side by side.
@@ -127,7 +134,8 @@ links; mobile: fixed bottom tab bar, hidden on `/lesson/*`):
   one mp3 per `audioKey` (`consonants/{id}`, `vowels/{id}`,
   `tone-marks/{id}`, `syllables/{rtgs}` for rule_choice prompts,
   `examples/...` for concept thaiExamples, `words/{id}` for vocab words
-  and tone-pair options, `phrases/{slug}` for register_choice phrases). `src/lib/audio.ts` exposes
+  and tone-pair options, `phrases/{slug}` for register_choice and
+  sentence_build phrases). `src/lib/audio.ts` exposes
   `playAudioKey(key, fallbackText)` / `useAudio` / `useCharacterAudio`;
   URL is `{SUPABASE_URL}/storage/v1/object/public/audio/{key}.mp3`, with
   `/public/audio` as the no-env dev fallback and Web Speech as the final
@@ -152,7 +160,7 @@ architectural decisions.)
   in glyphs), `tone-marks.ts` (4 marks, quizzed by name — their tone
   effect depends on class). `lessons/*.json` (id, unit, title, xp,
   teaches[], reviews[], pedagogy, exercises[]).
-- **Vocab words** (`vocab/*.ts`, one file per Words unit, kind: "word"):
+- **Vocab words** (`vocab/*.ts`, one file per Phrases unit, kind: "word"):
   thai, RTGS, meaning, optional literal meaning + usageNote, register
   (neutral/casual/polite/formal), optional particleGender (ครับ/ค่ะ),
   audioKey `words/{id}`, and `syllables[]` — each syllable carries its
@@ -184,7 +192,13 @@ architectural decisions.)
   the target at runtime — options stay uncolored until answered; outcome
   carries the tone), `register_choice` (social-context prompt, Thai-form
   choices with optional `phrases/{slug}` audio, `attributeTo` like
-  rule_choice). `match_pairs` accepts word ids too (Thai ↔ meaning).
+  rule_choice), `sentence_build` (added 2026-07-06: arrange Thai
+  word-chips into the target sentence; `meaning` + `gloss` metadata for
+  human review, required `phrases/{slug}` audioKey of the joined tokens,
+  `promptMode` meaning|audio, tokens carry optional `wordId` for SRS
+  attribution — literal chips for names/places; content rule: distractor
+  chips must not form an alternate grammatical sentence, human-checked).
+  `match_pairs` accepts word ids too (Thai ↔ meaning).
 - Romanization is a toggle, not a default: word exercises show RTGS only
   when `useUiSettings.showRomanization` is on (persisted, default off).
 - **Weakness targeting**: `ExerciseOutcome.tone` from tone drills is
@@ -212,8 +226,10 @@ and uploads to Supabase Storage:
 - Manifest = every character's `audioKey`→`nameThai`, every vocab word's
   `audioKey`→`thai` (`words/{id}`), every tone-pair option, every
   `register_choice` choice with an `audioKey` (`phrases/{slug}`), every
-  `rule_choice.audioKey`→`prompt`, every `concept.exampleAudioKey`→
-  `thaiExample` (with the `·` separator stripped). The script fails if
+  `sentence_build.audioKey`→tokens joined without spaces
+  (`phrases/{slug}`), every `rule_choice.audioKey`→`prompt`, every
+  `concept.exampleAudioKey`→`thaiExample` (with the `·` separator
+  stripped). The script fails if
   one key maps to two different texts — that check is what keeps lesson
   JSON and audio in sync; run `--dry-run` (no env needed) to see the
   manifest.

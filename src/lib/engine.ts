@@ -80,6 +80,19 @@ export type RuntimeExercise =
       correctIndex: number; // target option, chosen at build time
     }
   | {
+      kind: "sentence_build";
+      meaning: string;
+      gloss: string;
+      audioKey: string;
+      promptMode: "meaning" | "audio";
+      /** Correct order. */
+      tokens: SentenceChip[];
+      /** Tokens + distractors, shuffled for the chip bank. */
+      chips: SentenceChip[];
+      explanation?: string;
+      attributeTo?: string[];
+    }
+  | {
       kind: "register_choice";
       context: string;
       question: string;
@@ -91,6 +104,9 @@ export type RuntimeExercise =
 
 /** match_pairs tiles: characters pair glyph↔name, words pair Thai↔meaning. */
 export type MatchItem = ThaiCharacter | VocabWord;
+
+/** One draggable/tappable chip of a sentence_build bank. */
+export type SentenceChip = { thai: string; rtgs: string; wordId?: string };
 
 /**
  * What a choice answer displays for a character. Consonants answer with
@@ -338,6 +354,18 @@ export function buildLessonExercises(lesson: Lesson): RuntimeExercise[] {
         if (!set) throw new Error(`Unknown tone pair set: ${ex.setId}`);
         return buildTonePair(set);
       }
+      case "sentence_build":
+        return {
+          kind: "sentence_build",
+          meaning: ex.meaning,
+          gloss: ex.gloss,
+          audioKey: ex.audioKey,
+          promptMode: ex.promptMode,
+          tokens: ex.tokens,
+          chips: shuffle([...ex.tokens, ...(ex.distractors ?? [])]),
+          explanation: ex.explanation,
+          attributeTo: ex.attributeTo,
+        };
       case "register_choice":
         return {
           kind: "register_choice",

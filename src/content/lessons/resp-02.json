@@ -1,0 +1,83 @@
+{
+  "id": "resp-02",
+  "unitId": "words-responses",
+  "order": 2,
+  "title": "I understand — or I don't",
+  "xpReward": 20,
+  "pedagogy": "Vocabulary: เข้าใจ (high ข + mai tho → falling; mid จ + live ใ◌ → mid), รู้ (LOW ร + mai tho → high). Negation ไม่ + verb recombined into ไม่เข้าใจ and ไม่รู้ via sentence_build; register drill on particle choice (ค่ะ statements vs คะ questions, reviewing greet-01). Politeness flag: bare ไม่รู้ is curt with strangers (ไม่ทราบ mentioned as the polite counterpart, not taught).",
+  "teaches": ["khao_chai", "ru"],
+  "reviews": ["mai_not", "chai", "kha_statement", "khrap"],
+  "exercises": [
+    {
+      "type": "concept",
+      "title": "The sentence that buys you time",
+      "thaiExample": "ไม่เข้าใจ",
+      "exampleAudioKey": "phrases/mai_khao_chai",
+      "body": [
+        "เข้าใจ is literally “enter the heart” — when something is understood, it has gotten in.",
+        "Put yesterday's ไม่ in front and you own the most useful sentence in the language: ไม่เข้าใจ, “I don't understand”.",
+        "Said with a smile and a ครับ/ค่ะ, it turns confusion into a conversation instead of a standoff."
+      ]
+    },
+    { "type": "word_intro", "wordId": "khao_chai" },
+    { "type": "word_choice", "wordId": "khao_chai", "direction": "thai_to_meaning" },
+    {
+      "type": "sentence_build",
+      "meaning": "I don't understand.",
+      "gloss": "not + enter-heart",
+      "promptMode": "meaning",
+      "audioKey": "phrases/mai_khao_chai",
+      "tokens": [
+        { "thai": "ไม่", "rtgs": "mai", "wordId": "mai_not" },
+        { "thai": "เข้าใจ", "rtgs": "khao chai", "wordId": "khao_chai" }
+      ],
+      "distractors": [{ "thai": "ใช่", "rtgs": "chai" }],
+      "explanation": "ไม่ + เข้าใจ — the same negation slot as ไม่ใช่. One pattern, endless mileage."
+    },
+    { "type": "word_intro", "wordId": "ru" },
+    { "type": "word_choice", "wordId": "ru", "direction": "meaning_to_thai" },
+    {
+      "type": "sentence_build",
+      "meaning": "I don't know.",
+      "gloss": "not + know",
+      "promptMode": "audio",
+      "audioKey": "phrases/mai_ru",
+      "tokens": [
+        { "thai": "ไม่", "rtgs": "mai", "wordId": "mai_not" },
+        { "thai": "รู้", "rtgs": "ru", "wordId": "ru" }
+      ],
+      "distractors": [{ "thai": "เข้าใจ", "rtgs": "khao chai" }],
+      "explanation": "ไม่รู้ — “dunno”. Between friends it's honest; to a stranger, add ครับ/ค่ะ (the extra-polite version you'll hear back is ไม่ทราบ)."
+    },
+    { "type": "word_listening", "wordId": "khao_chai" },
+    {
+      "type": "register_choice",
+      "context": "A taxi driver rattles off a question you didn't catch. You're a woman — tell him you don't understand.",
+      "question": "What do you say?",
+      "choices": [
+        {
+          "thai": "ไม่เข้าใจค่ะ",
+          "rtgs": "mai khao chai kha",
+          "audioKey": "phrases/mai_khao_chai_kha"
+        },
+        {
+          "thai": "ไม่เข้าใจคะ",
+          "rtgs": "mai khao chai kha"
+        },
+        {
+          "thai": "ไม่เข้าใจครับ",
+          "rtgs": "mai khao chai khrap",
+          "audioKey": "phrases/mai_khao_chai_khrap"
+        }
+      ],
+      "correctIndex": 0,
+      "explanation": "You're stating a fact, so the female particle is falling-tone ค่ะ. High-tone คะ would turn it into a question, and ครับ is for male speakers.",
+      "attributeTo": ["khao_chai", "kha_statement"]
+    },
+    { "type": "word_choice", "wordId": "ru", "direction": "thai_to_meaning" },
+    {
+      "type": "match_pairs",
+      "characterIds": ["khao_chai", "ru", "mai_not", "chai"]
+    }
+  ]
+}

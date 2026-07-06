@@ -1,0 +1,37 @@
+{
+  "id": "num-01",
+  "unitId": "words-numbers",
+  "order": 1,
+  "title": "One to five",
+  "xpReward": 20,
+  "pedagogy": "Vocabulary: หนึ่ง (ห-nam น: high + mai ek → low), สอง (high ส + live ง → rising), สาม (high ส + live ม → rising), สี่ (high ส + mai ek → low), ห้า (high ห + mai tho → falling — here ห is the sounded initial, not a leader). si_set drills สี่ (low) against สี color (rising).",
+  "teaches": ["nueng", "song", "sam", "si", "ha"],
+  "reviews": [],
+  "exercises": [
+    {
+      "type": "concept",
+      "title": "Numbers are tone practice in disguise",
+      "thaiExample": "๑ · ๒ · ๓ · ๔ · ๕",
+      "exampleAudioKey": "examples/thai_numerals",
+      "body": [
+        "Thai has its own digits — ๑ ๒ ๓ ๔ ๕ — alive on banknotes, temple signs, and (usefully) the cheaper “Thai price” menus.",
+        "The first five numbers use four different tones. Learn them well and your ears get a free tone workout.",
+        "And 555? That's ห้าห้าห้า — hâ hâ hâ. It's how Thais laugh online."
+      ]
+    },
+    { "type": "word_intro", "wordId": "nueng" },
+    { "type": "word_intro", "wordId": "song" },
+    { "type": "word_intro", "wordId": "sam" },
+    { "type": "word_choice", "wordId": "sam", "direction": "thai_to_meaning" },
+    { "type": "word_intro", "wordId": "si" },
+    { "type": "word_intro", "wordId": "ha" },
+    { "type": "tone_pair", "setId": "si_set" },
+    { "type": "word_choice", "wordId": "nueng", "direction": "meaning_to_thai" },
+    { "type": "word_listening", "wordId": "song" },
+    { "type": "word_choice", "wordId": "ha", "direction": "thai_to_meaning" },
+    {
+      "type": "match_pairs",
+      "characterIds": ["nueng", "song", "sam", "si", "ha"]
+    }
+  ]
+}

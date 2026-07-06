@@ -1,0 +1,35 @@
+{
+  "id": "num-02",
+  "unitId": "words-numbers",
+  "order": 2,
+  "title": "Six to ten — and zero",
+  "xpReward": 20,
+  "pedagogy": "Vocabulary: หก (high ห + dead ก → low), เจ็ด (mid จ + dead ด → low), แปด (mid ป + dead ด → low), เก้า (mid ก + mai tho → falling), สิบ (high ส + dead บ → low), ศูนย์ (high ศ + live น → rising; ย์ karan). Note the dead-syllable cluster: 6, 7, 8, 10 all land low by rule, from two different classes.",
+  "teaches": ["hok", "chet", "paet", "kao", "sip", "sun"],
+  "reviews": ["ha", "si"],
+  "exercises": [
+    {
+      "type": "concept",
+      "title": "Four numbers, one tone, two reasons",
+      "body": [
+        "หก เจ็ด แปด สิบ all come out low — but not by copying each other. Each one earns it: high class + dead ending, or mid class + dead ending. Both roads lead to low.",
+        "เก้า (nine) breaks the pattern with a falling tone — and it's the lucky one, because it sounds like ก้าว, “to step forward”.",
+        "ศูนย์ (zero) you'll use most for phone numbers, which Thais read digit by digit."
+      ]
+    },
+    { "type": "word_intro", "wordId": "hok" },
+    { "type": "word_intro", "wordId": "chet" },
+    { "type": "word_intro", "wordId": "paet" },
+    { "type": "word_choice", "wordId": "hok", "direction": "thai_to_meaning" },
+    { "type": "word_intro", "wordId": "kao" },
+    { "type": "word_intro", "wordId": "sip" },
+    { "type": "word_intro", "wordId": "sun" },
+    { "type": "word_choice", "wordId": "kao", "direction": "meaning_to_thai" },
+    { "type": "word_listening", "wordId": "sip" },
+    { "type": "word_choice", "wordId": "paet", "direction": "thai_to_meaning" },
+    {
+      "type": "match_pairs",
+      "characterIds": ["hok", "chet", "paet", "kao", "sip", "sun"]
+    }
+  ]
+}

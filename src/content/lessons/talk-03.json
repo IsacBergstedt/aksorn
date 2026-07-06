@@ -1,0 +1,70 @@
+{
+  "id": "talk-03",
+  "unitId": "words-feelings",
+  "order": 3,
+  "title": "Glad — really?",
+  "xpReward": 25,
+  "pedagogy": "Vocabulary: ดีใจ (mid ด + live → mid; mid จ + live ใ◌ → mid — the ใจ heart-compound family, after เข้าใจ), จริงเหรอ (mid จ + live ง → mid, silent ร in จร; ห-nam ร + live → rising). Register: จริงเหรอ is casual — friends yes, formal settings round up to จริงหรือครับ/คะ.",
+  "teaches": ["di_chai", "ching_roe"],
+  "reviews": ["mak", "khrap", "hio", "nueai", "sabai_di"],
+  "exercises": [
+    {
+      "type": "concept",
+      "title": "จริงเหรอ keeps every story going",
+      "body": [
+        "Small talk needs fuel, and Thai's favorite is จริงเหรอ — “really?!”. Say it and the storyteller happily continues.",
+        "It's casual by design. With your boss or an elder, upgrade to จริงหรือครับ/คะ — same surprise, ironed shirt.",
+        "ดีใจ “glad” is another ใจ (heart) compound, like เข้าใจ “enter-heart”. Thai builds feelings out of hearts — ใจ words number in the hundreds."
+      ]
+    },
+    { "type": "word_intro", "wordId": "di_chai" },
+    { "type": "word_choice", "wordId": "di_chai", "direction": "thai_to_meaning" },
+    {
+      "type": "sentence_build",
+      "meaning": "I'm really glad! (male speaker)",
+      "gloss": "glad + very + male polite particle",
+      "promptMode": "meaning",
+      "audioKey": "phrases/di_chai_mak_khrap",
+      "tokens": [
+        { "thai": "ดีใจ", "rtgs": "di chai", "wordId": "di_chai" },
+        { "thai": "มาก", "rtgs": "mak", "wordId": "mak" },
+        { "thai": "ครับ", "rtgs": "khrap", "wordId": "khrap" }
+      ],
+      "distractors": [{ "thai": "เหนื่อย", "rtgs": "nueai" }],
+      "explanation": "ดีใจมากครับ — good news, amplified, polite. The pattern from ร้อนมาก, now for feelings."
+    },
+    { "type": "word_intro", "wordId": "ching_roe" },
+    { "type": "word_choice", "wordId": "ching_roe", "direction": "thai_to_meaning" },
+    { "type": "word_listening", "wordId": "di_chai" },
+    {
+      "type": "register_choice",
+      "context": "Your close friend says they just won concert tickets. React like a friend.",
+      "question": "What do you say?",
+      "choices": [
+        {
+          "thai": "จริงเหรอ",
+          "rtgs": "ching roe",
+          "audioKey": "words/ching_roe"
+        },
+        {
+          "thai": "ยินดีที่ได้รู้จัก",
+          "rtgs": "yindi thi dai ru chak",
+          "audioKey": "words/yindi_ruchak"
+        },
+        {
+          "thai": "ไม่เป็นไร",
+          "rtgs": "mai pen rai",
+          "audioKey": "words/mai_pen_rai"
+        }
+      ],
+      "correctIndex": 0,
+      "explanation": "จริงเหรอ — casual amazement, exactly right between friends. ยินดีที่ได้รู้จัก formally greets a stranger, and ไม่เป็นไร forgives an apology nobody made.",
+      "attributeTo": ["ching_roe"]
+    },
+    { "type": "word_choice", "wordId": "di_chai", "direction": "meaning_to_thai" },
+    {
+      "type": "match_pairs",
+      "characterIds": ["di_chai", "ching_roe", "hio", "nueai"]
+    }
+  ]
+}

@@ -64,6 +64,77 @@ export const rawTonePairSets: TonePairSet[] = [
       },
     ],
   },
+  // มา = low ม + live (long อา) → mid; ม้า = LOW ม + mai tho → high;
+  // หมา = ห-nam (high) + live → rising.
+  {
+    id: "ma_set",
+    note: "Come, horse, dog — the trio every Thai teacher opens with. Get the tone wrong and the dog comes instead of you.",
+    options: [
+      {
+        thai: "มา",
+        rtgs: "ma",
+        tone: "mid",
+        meaning: "to come",
+        audioKey: "words/ma_come",
+      },
+      {
+        thai: "ม้า",
+        rtgs: "ma",
+        tone: "high",
+        meaning: "horse",
+        audioKey: "words/ma_horse",
+      },
+      {
+        thai: "หมา",
+        rtgs: "ma",
+        tone: "rising",
+        meaning: "dog",
+        audioKey: "words/ma_dog",
+      },
+    ],
+  },
+  // สี่ = high ส + mai ek → low; สี = high ส + live → rising.
+  {
+    id: "si_set",
+    note: "Four or a color — สี่ dips low, สี rises. Market stakes: สี่สิบ is 40, สีสิบ is nonsense.",
+    options: [
+      {
+        thai: "สี่",
+        rtgs: "si",
+        tone: "low",
+        meaning: "four (4)",
+        audioKey: "words/si",
+      },
+      {
+        thai: "สี",
+        rtgs: "si",
+        tone: "rising",
+        meaning: "color",
+        audioKey: "words/si_color",
+      },
+    ],
+  },
+  // ใกล้ = mid ก + mai tho → falling; ไกล = mid ก + live → mid.
+  {
+    id: "klai_set",
+    note: "Near or far — same sound, opposite meanings, one tone apart. The pair that decides your taxi fare.",
+    options: [
+      {
+        thai: "ใกล้",
+        rtgs: "klai",
+        tone: "falling",
+        meaning: "near",
+        audioKey: "words/klai_near",
+      },
+      {
+        thai: "ไกล",
+        rtgs: "klai",
+        tone: "mid",
+        meaning: "far",
+        audioKey: "words/klai_far",
+      },
+    ],
+  },
   // เสือ = high ส + live → rising; เสื้อ = high ส + mai tho → falling;
   // เสื่อ = high ส + mai ek → low.
   {

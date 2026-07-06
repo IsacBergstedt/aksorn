@@ -1,0 +1,71 @@
+{
+  "id": "shop-02",
+  "unitId": "words-shopping",
+  "order": 2,
+  "title": "Do you have…?",
+  "xpReward": 20,
+  "pedagogy": "Vocabulary: มี (low ม + live อี → mid), ไหม (ห-nam ม: high + live ไ◌ → rising — the same particle heard in สบายดีไหม, now taught for production). Pattern: statement + ไหม = yes/no question; answered by echoing the verb (มี / ไม่มี), reviewing the unit-2 rule.",
+  "teaches": ["mi", "mai_question"],
+  "reviews": ["nam", "khao_rice", "kha_question", "khrap", "mai_not"],
+  "exercises": [
+    {
+      "type": "concept",
+      "title": "ไหม turns anything into a question",
+      "thaiExample": "มีน้ำ · ไหม",
+      "exampleAudioKey": "examples/mi_nam_mai",
+      "body": [
+        "Take a statement — มีน้ำ “there's water” — and hang ไหม on the end: มีน้ำไหม “is there water?”. That's the whole grammar.",
+        "You've heard this particle since Greetings: สบายดีไหม. Rising tone, thanks to a silent ห leading the ม.",
+        "The answer comes back Thai-style: มี (have) or ไม่มี (not have) — the verb echoes, just like unit 2 taught you."
+      ]
+    },
+    { "type": "word_intro", "wordId": "mi" },
+    { "type": "word_intro", "wordId": "mai_question" },
+    {
+      "type": "sentence_build",
+      "meaning": "Do you have water? (female speaker)",
+      "gloss": "have + water + question particle + female question particle",
+      "promptMode": "meaning",
+      "audioKey": "phrases/mi_nam_mai_kha_question",
+      "tokens": [
+        { "thai": "มี", "rtgs": "mi", "wordId": "mi" },
+        { "thai": "น้ำ", "rtgs": "nam", "wordId": "nam" },
+        { "thai": "ไหม", "rtgs": "mai", "wordId": "mai_question" },
+        { "thai": "คะ", "rtgs": "kha", "wordId": "kha_question" }
+      ],
+      "distractors": [{ "thai": "ค่ะ", "rtgs": "kha" }],
+      "explanation": "Two question markers stack politely: ไหม makes the question, คะ makes it a woman's polite one. Falling ค่ะ was the trap — statements only."
+    },
+    { "type": "word_choice", "wordId": "mi", "direction": "thai_to_meaning" },
+    { "type": "word_choice", "wordId": "mai_question", "direction": "meaning_to_thai" },
+    { "type": "word_listening", "wordId": "mai_question" },
+    {
+      "type": "register_choice",
+      "context": "You're a man asking a shopkeeper whether they have rice.",
+      "question": "What do you say?",
+      "choices": [
+        {
+          "thai": "มีข้าวไหมครับ",
+          "rtgs": "mi khao mai khrap",
+          "audioKey": "phrases/mi_khao_mai_khrap"
+        },
+        {
+          "thai": "มีข้าวค่ะ",
+          "rtgs": "mi khao kha"
+        },
+        {
+          "thai": "ข้าวครับ",
+          "rtgs": "khao khrap",
+          "audioKey": "phrases/khao_khrap"
+        }
+      ],
+      "correctIndex": 0,
+      "explanation": "มี + ข้าว + ไหม + ครับ — the question machine fully assembled. มีข้าวค่ะ is a woman *stating* she has rice; ข้าวครับ just names the product.",
+      "attributeTo": ["mi", "mai_question"]
+    },
+    {
+      "type": "match_pairs",
+      "characterIds": ["mi", "mai_question", "nam", "khao_rice"]
+    }
+  ]
+}

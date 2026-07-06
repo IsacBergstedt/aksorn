@@ -1,0 +1,187 @@
+[
+  {
+    "id": "words-greetings",
+    "title": "Greetings & Politeness",
+    "description": "Hello, thank you, sorry — and the particles and tones that make them polite.",
+    "order": 1,
+    "lessonIds": [
+      "greet-01",
+      "greet-02",
+      "greet-03",
+      "greet-04"
+    ],
+    "goals": [
+      "Greet anyone with สวัสดี — and know when หวัดดี is fine",
+      "Use ครับ / ค่ะ / คะ correctly, by gender and by tone",
+      "Thank, apologize, and wave it all off with ไม่เป็นไร",
+      "Ask and answer how someone is doing — the Thai way"
+    ]
+  },
+  {
+    "id": "words-responses",
+    "title": "Yes, No & Basic Responses",
+    "description": "Thai has no word for “yes” — learn what it uses instead, and never be stuck for an answer.",
+    "order": 2,
+    "lessonIds": [
+      "resp-01",
+      "resp-02",
+      "resp-03"
+    ],
+    "goals": [
+      "Answer yes/no questions the Thai way: echo the verb",
+      "Negate anything with ไม่ — one pattern, every verb",
+      "Say “I don't understand” and “I don't know” politely",
+      "Accept and decline offers without offending anyone"
+    ]
+  },
+  {
+    "id": "words-introductions",
+    "title": "Introducing Yourself",
+    "description": "Names, where you're from, and the pronouns that depend on who's talking.",
+    "order": 3,
+    "lessonIds": [
+      "intro-01",
+      "intro-02",
+      "intro-03"
+    ],
+    "goals": [
+      "Say your name with ผม/ฉัน ชื่อ… — no “is” required",
+      "Ask names and origins: ชื่ออะไร, มาจากไหน",
+      "Build nationalities with คน + place",
+      "Put question words in the answer's slot — no inversion"
+    ]
+  },
+  {
+    "id": "words-numbers",
+    "title": "Numbers & Counting",
+    "description": "Count to 10,000, read Thai numerals, and survive any price tag.",
+    "order": 4,
+    "lessonIds": [
+      "num-01",
+      "num-02",
+      "num-03"
+    ],
+    "goals": [
+      "Count 0–10,000 and hear prices at speed",
+      "Read the Thai numerals ๑ ๒ ๓ on signs and menus",
+      "Ask “how much?” and understand the answer in baht",
+      "Handle 25, 150, 1,990 — real market and 7-Eleven prices"
+    ]
+  },
+  {
+    "id": "words-food",
+    "title": "Ordering Food & Drink",
+    "description": "Order at a street stall like you have done it a hundred times.",
+    "order": 5,
+    "lessonIds": [
+      "food-01",
+      "food-02",
+      "food-03"
+    ],
+    "goals": [
+      "Order street-stall staples by their real names",
+      "Say “not spicy”, “a little spicy”, and mean it",
+      "Ask for the check, a bag, no sugar, extra rice",
+      "Name the flavors: sweet, sour, salty, spicy, อร่อย"
+    ]
+  },
+  {
+    "id": "words-shopping",
+    "title": "Shopping & Prices",
+    "description": "How much, too expensive, can you go lower — bargaining with a smile.",
+    "order": 6,
+    "lessonIds": [
+      "shop-01",
+      "shop-02",
+      "shop-03"
+    ],
+    "goals": [
+      "Ask prices and counter them politely",
+      "Say “too expensive” and “can you lower it?” with the right softeners",
+      "Sizes, colors, “do you have…?”",
+      "Know when to bargain (market) and when not to (mall)"
+    ]
+  },
+  {
+    "id": "words-getting-around",
+    "title": "Directions & Getting Around",
+    "description": "Taxis, the BTS, and asking where things are — and understanding the answer.",
+    "order": 7,
+    "lessonIds": [
+      "go-01",
+      "go-02",
+      "go-03"
+    ],
+    "goals": [
+      "Tell a taxi or motorbike driver where you are going",
+      "Ask “where is…?” and follow left / right / straight",
+      "Name the transport: BTS, songthaew, boat, bus",
+      "Read destination signs in Thai script"
+    ]
+  },
+  {
+    "id": "words-time",
+    "title": "Time & Days",
+    "description": "Days of the week, today and tomorrow, and the Thai six-hour clock.",
+    "order": 8,
+    "lessonIds": [
+      "time-01",
+      "time-02",
+      "time-03"
+    ],
+    "goals": [
+      "The seven days and their colors",
+      "Today, tomorrow, yesterday, next week",
+      "Tell time the Thai way: โมง, บ่าย, ทุ่ม",
+      "Ask “when?” and make simple plans"
+    ]
+  },
+  {
+    "id": "words-feelings",
+    "title": "Small Talk & Feelings",
+    "description": "Hungry, tired, hot — and the small talk that keeps Thailand running.",
+    "order": 9,
+    "lessonIds": [
+      "talk-01",
+      "talk-02",
+      "talk-03"
+    ],
+    "goals": [
+      "Say how you feel: hungry, tired, happy, hot",
+      "The สบาย ๆ mindset and how to talk about it",
+      "Weather talk — the universal opener",
+      "Keep a conversation alive with จริงเหรอ and มาก"
+    ]
+  },
+  {
+    "id": "words-questions",
+    "title": "Question Words",
+    "description": "What, where, when, who, why, how much — the full toolkit, one slot rule.",
+    "order": 10,
+    "lessonIds": [
+      "q-01",
+      "q-02",
+      "q-03"
+    ],
+    "goals": [
+      "Master all the question words: อะไร ไหน เมื่อไหร่ ใคร ทำไม เท่าไหร่",
+      "Every question uses the same slot rule — no inversion, ever",
+      "Tell ไหม yes/no questions apart from open questions",
+      "Ask follow-ups that keep a conversation going"
+    ]
+  },
+  {
+    "id": "words-first-sentences",
+    "title": "First Sentences",
+    "description": "Everything from units 1–10, recombined into full sentences you build yourself.",
+    "order": 11,
+    "lessonIds": [],
+    "comingSoon": true,
+    "goals": [
+      "Build complete sentences from the words you already own",
+      "Chain verbs the Thai way: ไป + กิน, อยาก + ไป",
+      "Handle real mini-dialogues: order, pay, thank, leave",
+      "Graduate from phrases to talking"
+    ]
+  }
+]

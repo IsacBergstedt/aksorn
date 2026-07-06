@@ -1,0 +1,85 @@
+{
+  "id": "intro-01",
+  "unitId": "words-introductions",
+  "order": 1,
+  "title": "I, you, and names",
+  "xpReward": 20,
+  "pedagogy": "Vocabulary: ผม (high ผ + live sonorant final ม → rising; inherent o vowel), ฉัน (high ฉ + live sonorant final น → rising; ◌ั short a), ชื่อ (low ช + mai ek → falling). Concept: gendered first-person pronouns, pronoun dropping, ชื่อ as a verb (no copula). Name chips (แอนนา, มาร์ค) are literal tokens — foreign names, no tone derivation. Reviews คุณ and the polite particles.",
+  "teaches": ["phom", "chan", "chue"],
+  "reviews": ["khun", "khrap", "kha_statement"],
+  "exercises": [
+    {
+      "type": "concept",
+      "title": "“I” depends on who's talking",
+      "body": [
+        "Thai pronouns pick sides: men say ผม, women usually say ฉัน. Same “I”, different speaker — just like ครับ and ค่ะ.",
+        "And half the time, nobody says either: Thai drops pronouns whenever context makes them obvious. ชื่อแอนนา alone is a fine “I'm Anna.”",
+        "คุณ from Greetings is still your polite “you” — and it doubles as Mr./Ms. before a name."
+      ]
+    },
+    { "type": "word_intro", "wordId": "phom" },
+    { "type": "word_intro", "wordId": "chan" },
+    { "type": "word_choice", "wordId": "phom", "direction": "thai_to_meaning" },
+    { "type": "word_intro", "wordId": "chue" },
+    { "type": "word_choice", "wordId": "chue", "direction": "thai_to_meaning" },
+    {
+      "type": "sentence_build",
+      "meaning": "My name is Anna. (female speaker)",
+      "gloss": "I (female) + be-named + Anna + polite particle",
+      "promptMode": "meaning",
+      "audioKey": "phrases/chan_chue_aenna_kha",
+      "tokens": [
+        { "thai": "ฉัน", "rtgs": "chan", "wordId": "chan" },
+        { "thai": "ชื่อ", "rtgs": "chue", "wordId": "chue" },
+        { "thai": "แอนนา", "rtgs": "aenna" },
+        { "thai": "ค่ะ", "rtgs": "kha", "wordId": "kha_statement" }
+      ],
+      "distractors": [{ "thai": "ผม", "rtgs": "phom" }],
+      "explanation": "ชื่อ works as the verb — no “is” needed. Subject, ชื่อ, name, particle: that's the whole sentence."
+    },
+    { "type": "word_listening", "wordId": "phom" },
+    {
+      "type": "sentence_build",
+      "meaning": "My name is Mark. (male speaker)",
+      "gloss": "I (male) + be-named + Mark + polite particle",
+      "promptMode": "audio",
+      "audioKey": "phrases/phom_chue_mak_khrap",
+      "tokens": [
+        { "thai": "ผม", "rtgs": "phom", "wordId": "phom" },
+        { "thai": "ชื่อ", "rtgs": "chue", "wordId": "chue" },
+        { "thai": "มาร์ค", "rtgs": "mak" },
+        { "thai": "ครับ", "rtgs": "khrap", "wordId": "khrap" }
+      ],
+      "distractors": [{ "thai": "ฉัน", "rtgs": "chan" }],
+      "explanation": "Male speaker, so ผม up front and ครับ at the end — the pronoun and the particle always agree with the speaker."
+    },
+    { "type": "word_choice", "wordId": "chan", "direction": "meaning_to_thai" },
+    {
+      "type": "register_choice",
+      "context": "A woman is introducing herself at a hotel reception.",
+      "question": "Which introduction is right?",
+      "choices": [
+        {
+          "thai": "ฉันชื่อแอนนาค่ะ",
+          "rtgs": "chan chue aenna kha",
+          "audioKey": "phrases/chan_chue_aenna_kha"
+        },
+        {
+          "thai": "ผมชื่อแอนนาค่ะ",
+          "rtgs": "phom chue aenna kha"
+        },
+        {
+          "thai": "ฉันชื่อแอนนาคะ",
+          "rtgs": "chan chue aenna kha"
+        }
+      ],
+      "correctIndex": 0,
+      "explanation": "Female speaker → ฉัน and falling-tone ค่ะ. ผม belongs to male speakers, and question-tone คะ doesn't fit a statement.",
+      "attributeTo": ["chan", "kha_statement"]
+    },
+    {
+      "type": "match_pairs",
+      "characterIds": ["phom", "chan", "chue", "khun"]
+    }
+  ]
+}

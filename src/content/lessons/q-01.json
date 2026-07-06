@@ -1,0 +1,44 @@
+{
+  "id": "q-01",
+  "unitId": "words-questions",
+  "order": 1,
+  "title": "Who and why",
+  "xpReward": 20,
+  "pedagogy": "Vocabulary: ใคร (true คร cluster: low ค + live ใ◌ → mid), ทำไม (low ท + live ◌ำ → mid; low ม + live ไ◌ → mid — no tone mark, unlike ไม่). Slot rule review: question words sit where the answer goes; ทำไม can also lead the sentence.",
+  "teaches": ["khrai", "thammai"],
+  "reviews": ["arai", "nai", "khrap", "mai_not"],
+  "exercises": [
+    {
+      "type": "concept",
+      "title": "Your question toolkit is almost full",
+      "body": [
+        "You already ask what (อะไร), where (ไหน), and how much (เท่าไหร่). This unit hands you the rest of the set.",
+        "ใคร is “who” — same คร cluster as ครับ. ทำไม is “why”, literally “do what?”.",
+        "Spot the trap: ทำไม ends in ไม (no tone mark, mid tone) — not ไม่ (mai ek, falling), the “not” you know. One little mark, opposite jobs."
+      ]
+    },
+    { "type": "word_intro", "wordId": "khrai" },
+    { "type": "word_intro", "wordId": "thammai" },
+    { "type": "word_choice", "wordId": "khrai", "direction": "thai_to_meaning" },
+    {
+      "type": "sentence_build",
+      "meaning": "Why? (male speaker)",
+      "gloss": "why + male polite particle",
+      "promptMode": "meaning",
+      "audioKey": "phrases/thammai_khrap",
+      "tokens": [
+        { "thai": "ทำไม", "rtgs": "thammai", "wordId": "thammai" },
+        { "thai": "ครับ", "rtgs": "khrap", "wordId": "khrap" }
+      ],
+      "distractors": [{ "thai": "ใคร", "rtgs": "khrai" }],
+      "explanation": "ทำไมครับ — the particle keeps a bare “why?” from sounding like a challenge."
+    },
+    { "type": "word_choice", "wordId": "thammai", "direction": "meaning_to_thai" },
+    { "type": "word_listening", "wordId": "khrai" },
+    { "type": "word_choice", "wordId": "arai", "direction": "thai_to_meaning" },
+    {
+      "type": "match_pairs",
+      "characterIds": ["khrai", "thammai", "arai", "nai"]
+    }
+  ]
+}

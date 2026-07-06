@@ -1,0 +1,47 @@
+{
+  "id": "go-03",
+  "unitId": "words-getting-around",
+  "order": 3,
+  "title": "Left, right, straight — near and far",
+  "xpReward": 25,
+  "pedagogy": "Vocabulary: ซ้าย (LOW ซ + mai tho → high), ขวา (true ขว cluster: high ข + live → rising), ตรง (true ตร cluster: mid ต + live ง → mid), ใกล้ (mid ก + mai tho → falling), ไกล (mid ก + live ไ◌ → mid). klai_set drills the near/far minimal pair — same sound, one tone apart, opposite meanings.",
+  "teaches": ["sai", "khwa", "trong", "klai_near", "klai_far"],
+  "reviews": ["pai"],
+  "exercises": [
+    {
+      "type": "concept",
+      "title": "Taxi Thai is three words — and one trap",
+      "body": [
+        "ซ้าย left, ขวา right, ตรงไป straight ahead. That's enough to co-pilot any ride in the kingdom.",
+        "The trap: ใกล้ (falling) means near, ไกล (mid) means far. Same sound to a beginner's ear, opposite bills at the meter.",
+        "Written, they're easy — ใ for near, ไ for far. Spoken, only the tone tells them apart. Time to train your ear."
+      ]
+    },
+    { "type": "word_intro", "wordId": "sai" },
+    { "type": "word_intro", "wordId": "khwa" },
+    { "type": "word_choice", "wordId": "sai", "direction": "thai_to_meaning" },
+    { "type": "word_intro", "wordId": "trong" },
+    {
+      "type": "sentence_build",
+      "meaning": "Go straight.",
+      "gloss": "straight + go",
+      "promptMode": "meaning",
+      "audioKey": "phrases/trong_pai",
+      "tokens": [
+        { "thai": "ตรง", "rtgs": "trong", "wordId": "trong" },
+        { "thai": "ไป", "rtgs": "pai", "wordId": "pai" }
+      ],
+      "distractors": [{ "thai": "ซ้าย", "rtgs": "sai" }],
+      "explanation": "ตรงไป — straight-go. Add ครับ/ค่ะ when it's a driver, not a friend."
+    },
+    { "type": "word_intro", "wordId": "klai_near" },
+    { "type": "word_intro", "wordId": "klai_far" },
+    { "type": "tone_pair", "setId": "klai_set" },
+    { "type": "word_choice", "wordId": "khwa", "direction": "meaning_to_thai" },
+    { "type": "word_listening", "wordId": "trong" },
+    {
+      "type": "match_pairs",
+      "characterIds": ["sai", "khwa", "trong", "klai_near", "klai_far"]
+    }
+  ]
+}
