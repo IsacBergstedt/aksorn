@@ -100,6 +100,29 @@ export type RuntimeExercise =
       correctIndex: number;
       explanation: string;
       attributeTo?: string[];
+    }
+  | {
+      kind: "sentence_cloze";
+      meaning: string;
+      audioKey: string;
+      tokens: SentenceChip[];
+      blankIndex: number;
+      /** Blanked token + distractors, shuffled. */
+      choices: { thai: string; rtgs: string }[];
+      correctIndex: number;
+      explanation: string;
+      attributeTo?: string[];
+    }
+  | {
+      kind: "sentence_listening";
+      audioKey: string;
+      thai: string;
+      rtgs: string;
+      mode: "meaning" | "transcript";
+      choices: { thai: string; rtgs: string; meaning: string }[];
+      correctIndex: number;
+      explanation?: string;
+      attributeTo?: string[];
     };
 
 /** match_pairs tiles: characters pair glyph↔name, words pair Thai↔meaning. */
@@ -363,6 +386,38 @@ export function buildLessonExercises(lesson: Lesson): RuntimeExercise[] {
           promptMode: ex.promptMode,
           tokens: ex.tokens,
           chips: shuffle([...ex.tokens, ...(ex.distractors ?? [])]),
+          explanation: ex.explanation,
+          attributeTo: ex.attributeTo,
+        };
+      case "sentence_cloze": {
+        const blank = ex.tokens[ex.blankIndex];
+        // The blanked token joins the distractors as the choice set; its
+        // shuffled position becomes the correct index.
+        const choices = shuffle([
+          { thai: blank.thai, rtgs: blank.rtgs },
+          ...ex.distractors,
+        ]);
+        return {
+          kind: "sentence_cloze",
+          meaning: ex.meaning,
+          audioKey: ex.audioKey,
+          tokens: ex.tokens,
+          blankIndex: ex.blankIndex,
+          choices,
+          correctIndex: choices.findIndex((c) => c.thai === blank.thai),
+          explanation: ex.explanation,
+          attributeTo: ex.attributeTo,
+        };
+      }
+      case "sentence_listening":
+        return {
+          kind: "sentence_listening",
+          audioKey: ex.audioKey,
+          thai: ex.thai,
+          rtgs: ex.rtgs,
+          mode: ex.mode,
+          choices: ex.choices,
+          correctIndex: ex.correctIndex,
           explanation: ex.explanation,
           attributeTo: ex.attributeTo,
         };

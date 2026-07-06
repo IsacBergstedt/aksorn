@@ -76,7 +76,7 @@ function buildManifest(): Map<string, string> {
           }
         }
       }
-      if (ex.type === "sentence_build") {
+      if (ex.type === "sentence_build" || ex.type === "sentence_cloze") {
         // The clip is the full sentence: tokens joined without spaces,
         // as Thai writes it.
         add(
@@ -84,6 +84,9 @@ function buildManifest(): Map<string, string> {
           ex.tokens.map((t) => t.thai).join(""),
           `lesson ${lesson.id}`,
         );
+      }
+      if (ex.type === "sentence_listening") {
+        add(ex.audioKey, ex.thai, `lesson ${lesson.id}`);
       }
     }
   }

@@ -198,7 +198,21 @@ architectural decisions.)
   `promptMode` meaning|audio, tokens carry optional `wordId` for SRS
   attribution — literal chips for names/places; content rule: distractor
   chips must not form an alternate grammatical sentence, human-checked).
-  `match_pairs` accepts word ids too (Thai ↔ meaning).
+  `match_pairs` accepts word ids too (Thai ↔ meaning). Sentence-phase
+  types (added 2026-07-06): `sentence_cloze` (sentence with one token
+  blanked — particle or content word, same schema; choices = blanked
+  token + 2–3 authored distractors shuffled at runtime; required
+  full-sentence `phrases/{slug}` audioKey plays with feedback; content
+  rule: a distractor may be grammatical but must not also match
+  `meaning`, and particle-blank meanings must pin speaker gender /
+  statement-vs-question; SRS via `attributeTo`, defaulting to the
+  blanked token's wordId), `sentence_listening` (audio-first
+  comprehension over a full sentence; `mode: "meaning"` = pick the
+  English translation, `mode: "transcript"` = pick which Thai sentence
+  was said; choices are authored and carry thai+rtgs+meaning so
+  feedback always reveals both sides; audioKey usually reuses an
+  existing `phrases/{slug}` clip — the generate-audio collision check
+  verifies the reuse; SRS via `attributeTo` only, else accuracy-only).
 - Romanization is a toggle, not a default: word exercises show RTGS only
   when `useUiSettings.showRomanization` is on (persisted, default off).
 - **Weakness targeting**: `ExerciseOutcome.tone` from tone drills is

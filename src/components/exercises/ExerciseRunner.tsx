@@ -21,6 +21,8 @@ import { WordListening } from "./WordListening";
 import { TonePair } from "./TonePair";
 import { RegisterChoice } from "./RegisterChoice";
 import { SentenceBuild } from "./SentenceBuild";
+import { SentenceCloze } from "./SentenceCloze";
+import { SentenceListening } from "./SentenceListening";
 import type { ExerciseOutcome } from "./types";
 
 type QueuedExercise = RuntimeExercise & { isRetry?: boolean };
@@ -35,6 +37,8 @@ const RETRYABLE = new Set<RuntimeExercise["kind"]>([
   "tone_pair",
   "register_choice",
   "sentence_build",
+  "sentence_cloze",
+  "sentence_listening",
 ]);
 
 /**
@@ -176,6 +180,12 @@ export function ExerciseRunner({
           )}
           {current.kind === "sentence_build" && (
             <SentenceBuild exercise={current} onComplete={handleComplete} />
+          )}
+          {current.kind === "sentence_cloze" && (
+            <SentenceCloze exercise={current} onComplete={handleComplete} />
+          )}
+          {current.kind === "sentence_listening" && (
+            <SentenceListening exercise={current} onComplete={handleComplete} />
           )}
         </motion.div>
       </AnimatePresence>

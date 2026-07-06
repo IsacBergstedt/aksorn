@@ -80,6 +80,7 @@ import talk03 from "./lessons/talk-03.json";
 import q01 from "./lessons/q-01.json";
 import q02 from "./lessons/q-02.json";
 import q03 from "./lessons/q-03.json";
+import sent01 from "./lessons/sent-01.json";
 
 // Parsing happens at module load, so invalid content fails the build the
 // first time any page imports from src/content.
@@ -177,6 +178,10 @@ export const lessons: Lesson[] = z.array(lessonSchema).parse([
   q01,
   q02,
   q03,
+  // Unit 11 (First Sentences) staging: routable at /lesson/sent-01 for
+  // review, not yet listed in the unit's lessonIds — the path map keeps
+  // showing the comingSoon stub until the unit's content is complete.
+  sent01,
 ]);
 
 export const lessonById: ReadonlyMap<string, Lesson> = new Map(
@@ -285,13 +290,42 @@ for (const lesson of lessons) {
     if ("characterId" in ex) referenced.add(ex.characterId);
     if ("wordId" in ex) referenced.add(ex.wordId);
     if ("characterIds" in ex) ex.characterIds.forEach((id) => referenced.add(id));
-    if (ex.type === "rule_choice" || ex.type === "register_choice") {
+    if (
+      ex.type === "rule_choice" ||
+      ex.type === "register_choice" ||
+      ex.type === "sentence_listening"
+    ) {
       ex.attributeTo?.forEach((id) => referenced.add(id));
       if (ex.correctIndex >= ex.choices.length) {
         throw new Error(
           `Lesson ${lesson.id}: ${ex.type} correctIndex out of range`,
         );
       }
+    }
+    if (ex.type === "sentence_cloze") {
+      if (ex.blankIndex >= ex.tokens.length) {
+        throw new Error(
+          `Lesson ${lesson.id}: sentence_cloze blankIndex out of range`,
+        );
+      }
+      const blank = ex.tokens[ex.blankIndex];
+      // A distractor identical to the answer would make two correct choices.
+      if (ex.distractors.some((d) => d.thai === blank.thai)) {
+        throw new Error(
+          `Lesson ${lesson.id}: sentence_cloze distractor duplicates the blanked token ${blank.thai}`,
+        );
+      }
+      for (const t of ex.tokens) {
+        if (t.wordId) {
+          if (!wordById.has(t.wordId)) {
+            throw new Error(
+              `Lesson ${lesson.id}: sentence_cloze token ${t.thai} references unknown word ${t.wordId}`,
+            );
+          }
+          referenced.add(t.wordId);
+        }
+      }
+      ex.attributeTo?.forEach((id) => referenced.add(id));
     }
     if (ex.type === "concept" && ex.exampleAudioKey && !ex.thaiExample) {
       throw new Error(

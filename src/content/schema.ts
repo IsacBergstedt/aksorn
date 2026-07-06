@@ -269,6 +269,73 @@ export const exerciseSchema = z.discriminatedUnion("type", [
     /** Defaults to the token wordIds; set to narrow SRS attribution. */
     attributeTo: z.array(characterId).optional(),
   }),
+  // Sentence fill-in-the-blank: the sentence is shown with one token
+  // hidden; the learner picks the missing token from the blanked token +
+  // authored distractors. Particle blanks and content-word blanks are the
+  // same schema — only blankIndex differs.
+  z.object({
+    type: z.literal("sentence_cloze"),
+    /** Sentence tokens in order; exactly one (blankIndex) is hidden. */
+    tokens: z
+      .array(
+        z.object({
+          thai: z.string().min(1),
+          rtgs: z.string().min(1),
+          wordId: characterId.optional(),
+        }),
+      )
+      .min(2)
+      .max(8),
+    blankIndex: z.number().int().nonnegative(),
+    /**
+     * English of the full sentence — the prompt above the gap. For
+     * particle blanks it must pin the context the particle depends on
+     * (speaker gender, statement vs question).
+     */
+    meaning: z.string().min(1),
+    /** Full-sentence clip (phrases/{slug}) — plays when feedback shows. */
+    audioKey: audioKeySchema,
+    /**
+     * Wrong fillers, mixed with the blanked token as the choices.
+     * Content rule (human-checked): a distractor may be grammatical, but
+     * must not produce a sentence that also matches `meaning`.
+     */
+    distractors: z
+      .array(z.object({ thai: z.string().min(1), rtgs: z.string().min(1) }))
+      .min(2)
+      .max(3),
+    explanation: z.string().min(1),
+    /** Defaults to the blanked token's wordId. */
+    attributeTo: z.array(characterId).optional(),
+  }),
+  // Sentence-level listening comprehension: play a full sentence, then
+  // either pick its English meaning or pick which Thai sentence was said.
+  // Distractors are authored (sentences aren't a pool the engine can draw
+  // from); every choice carries both sides so feedback shows the full story.
+  z.object({
+    type: z.literal("sentence_listening"),
+    /** phrases/{slug} — often reuses an existing sentence clip. */
+    audioKey: audioKeySchema,
+    /** What the clip says — revealed in the feedback panel. */
+    thai: z.string().min(1),
+    rtgs: z.string().min(1),
+    /** meaning: options are English translations. transcript: options are Thai. */
+    mode: z.enum(["meaning", "transcript"]),
+    choices: z
+      .array(
+        z.object({
+          thai: z.string().min(1),
+          rtgs: z.string().min(1),
+          meaning: z.string().min(1),
+        }),
+      )
+      .min(2)
+      .max(4),
+    correctIndex: z.number().int().nonnegative(),
+    explanation: z.string().optional(),
+    /** Words whose SRS cards this answer should count toward. */
+    attributeTo: z.array(characterId).optional(),
+  }),
   // Register drill: a social context → pick the appropriate Thai form.
   z.object({
     type: z.literal("register_choice"),
