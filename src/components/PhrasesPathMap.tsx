@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Check, Lock, Star } from "lucide-react";
+import { Check, Lock, Star, Trophy } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
@@ -32,6 +32,7 @@ function LessonNode({
   state: NodeState;
   offsetClass: string;
 }) {
+  const isCheckpoint = lesson.kind === "checkpoint";
   const node = (
     <div className={cn("relative flex flex-col items-center", offsetClass)}>
       {state === "current" && (
@@ -47,9 +48,13 @@ function LessonNode({
           state === "completed" && "border-amber-400 bg-amber-100 text-amber-600",
           state === "current" && "border-primary bg-primary text-primary-foreground",
           state === "locked" && "border-border bg-secondary text-muted-foreground",
+          // Checkpoints read as the unit's gate: gold ring, trophy glyph.
+          isCheckpoint && "ring-4 ring-amber-300/60",
         )}
       >
-        {state === "completed" ? (
+        {isCheckpoint ? (
+          <Trophy className="h-7 w-7" />
+        ) : state === "completed" ? (
           <Check className="h-7 w-7" />
         ) : state === "locked" ? (
           <Lock className="h-6 w-6" />
@@ -65,7 +70,12 @@ function LessonNode({
       >
         {lesson.title}
       </p>
-      <p className="text-xs text-muted-foreground">{lesson.xpReward} XP</p>
+      <p className="text-xs text-muted-foreground">
+        {lesson.xpReward} XP
+        {isCheckpoint && lesson.passThreshold !== undefined && (
+          <> · pass {Math.round(lesson.passThreshold * 100)}%</>
+        )}
+      </p>
     </div>
   );
 

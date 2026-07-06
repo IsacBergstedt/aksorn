@@ -409,6 +409,16 @@ export const lessonSchema = z.object({
   unitId: z.string(),
   order: z.number().int().positive(),
   title: z.string(),
+  /**
+   * checkpoint = a unit's closing cumulative review: teaches nothing,
+   * requires passThreshold accuracy to record a completion (so the next
+   * unit stays locked until passed — failing still feeds SRS and can be
+   * retried immediately), and the engine appends due-card callbacks from
+   * earlier units plus weak-tone drills at runtime. Absent = standard.
+   */
+  kind: z.enum(["standard", "checkpoint"]).optional(),
+  /** Accuracy (0–1] required to pass. Checkpoints only (checked at load). */
+  passThreshold: z.number().gt(0).lte(1).optional(),
   xpReward: z.number().int().positive(),
   /** Characters or vocab words introduced here (get new SRS cards). */
   teaches: z.array(characterId),

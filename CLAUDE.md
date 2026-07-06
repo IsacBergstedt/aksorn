@@ -235,6 +235,19 @@ architectural decisions.)
   append pinned-target tone_pair drills for tones with ≥3 attempts and
   >30% miss rate (`weakTones` in engine.ts). Words get SRS cards through
   the same store path as characters.
+- **Checkpoint lessons** (added 2026-07-07): `lessonSchema.kind:
+  "checkpoint"` + required `passThreshold` (0.8 by convention) — a
+  unit's closing cumulative review. Rules (load-checked): teaches
+  nothing, must be last in its unit's lessonIds. Runtime: the engine
+  appends `buildCheckpointExtras` (up to 3 due SRS cards from OUTSIDE
+  the unit, weakest-first, + weak-tone tone_pair drills) to the
+  authored exercises. Pass (accuracy ≥ threshold) → normal
+  `completeLesson` (author ~40 XP); fail → NO completion (so the next
+  unit stays gated and retry is immediate), but SRS/tone stats still
+  update via `completeReview` with 5 consolation XP. Path map renders
+  checkpoint nodes with a gold ring + trophy and "pass N%". Units 1–10
+  don't have checkpoints yet — retrofitting them re-locks later units
+  for mid-course users, a UX call to make deliberately.
 - Every lesson has a required `pedagogy` field citing the consonant
   class / tone rule it teaches, so content can be human-verified against
   the tone tables. Keep it accurate when editing lessons.

@@ -1,0 +1,96 @@
+{
+  "id": "sent-check",
+  "unitId": "words-first-sentences",
+  "order": 2,
+  "kind": "checkpoint",
+  "passThreshold": 0.8,
+  "title": "Checkpoint: the request frame",
+  "xpReward": 40,
+  "pedagogy": "Checkpoint over sent-01 material: the ขอ + thing + หน่อย + ครับ/ค่ะ request frame recombined across every sentence-phase exercise type — cloze (content + particle slots), listening comprehension (meaning + transcript), build, and word recall. Nothing new is taught; the engine appends due-card callbacks from earlier units and weak-tone drills at runtime. Pass = 80% accuracy; a failed run still updates SRS.",
+  "teaches": [],
+  "reviews": ["kho", "nam", "noi", "khrap", "kha_statement", "khao_rice", "kin", "ao"],
+  "exercises": [
+    {
+      "type": "sentence_cloze",
+      "meaning": "Could I get some water, please? (female speaker)",
+      "audioKey": "phrases/kho_nam_noi_kha",
+      "tokens": [
+        { "thai": "ขอ", "rtgs": "kho", "wordId": "kho" },
+        { "thai": "น้ำ", "rtgs": "nam", "wordId": "nam" },
+        { "thai": "หน่อย", "rtgs": "noi", "wordId": "noi" },
+        { "thai": "ค่ะ", "rtgs": "kha", "wordId": "kha_statement" }
+      ],
+      "blankIndex": 1,
+      "distractors": [
+        { "thai": "ข้าว", "rtgs": "khao" },
+        { "thai": "กิน", "rtgs": "kin" }
+      ],
+      "explanation": "The thing you want follows ขอ — here it's water. ข้าว would order rice; กิน is a verb and doesn't fit the slot."
+    },
+    { "type": "word_choice", "wordId": "kho", "direction": "thai_to_meaning" },
+    {
+      "type": "sentence_listening",
+      "mode": "meaning",
+      "audioKey": "phrases/kin_khao",
+      "thai": "กินข้าว",
+      "rtgs": "kin khao",
+      "choices": [
+        { "thai": "กินข้าว", "rtgs": "kin khao", "meaning": "To eat / have a meal" },
+        { "thai": "เอาข้าว", "rtgs": "ao khao", "meaning": "I'll take rice" },
+        { "thai": "ขอน้ำ", "rtgs": "kho nam", "meaning": "May I have water" }
+      ],
+      "correctIndex": 0,
+      "explanation": "กิน stays flat on the mid tone; เอา opens on a bare vowel and ขอ rises. The opener carries the meaning.",
+      "attributeTo": ["kin", "khao_rice"]
+    },
+    {
+      "type": "sentence_build",
+      "meaning": "Could I get some water, please? (male speaker)",
+      "gloss": "ask-for + water + softener + male polite particle",
+      "promptMode": "meaning",
+      "audioKey": "phrases/kho_nam_noi_khrap",
+      "tokens": [
+        { "thai": "ขอ", "rtgs": "kho", "wordId": "kho" },
+        { "thai": "น้ำ", "rtgs": "nam", "wordId": "nam" },
+        { "thai": "หน่อย", "rtgs": "noi", "wordId": "noi" },
+        { "thai": "ครับ", "rtgs": "khrap", "wordId": "khrap" }
+      ],
+      "distractors": [{ "thai": "ค่ะ", "rtgs": "kha" }],
+      "explanation": "ขอ + น้ำ + หน่อย + ครับ — the frame, assembled without a prompt to lean on."
+    },
+    { "type": "word_choice", "wordId": "kin", "direction": "meaning_to_thai" },
+    {
+      "type": "sentence_listening",
+      "mode": "transcript",
+      "audioKey": "phrases/ao_nam",
+      "thai": "เอาน้ำ",
+      "rtgs": "ao nam",
+      "choices": [
+        { "thai": "เอาน้ำ", "rtgs": "ao nam", "meaning": "I'll take water (casual)" },
+        { "thai": "ขอน้ำ", "rtgs": "kho nam", "meaning": "May I have water" },
+        { "thai": "กินน้ำ", "rtgs": "kin nam", "meaning": "to drink water" }
+      ],
+      "correctIndex": 0,
+      "explanation": "Same น้ำ every time — only the opener changes. เอา starts on the vowel, no consonant attack at all.",
+      "attributeTo": ["ao", "nam"]
+    },
+    { "type": "word_listening", "wordId": "khao_rice" },
+    {
+      "type": "sentence_cloze",
+      "meaning": "Could I get some rice, please? (male speaker)",
+      "audioKey": "phrases/kho_khao_noi_khrap",
+      "tokens": [
+        { "thai": "ขอ", "rtgs": "kho", "wordId": "kho" },
+        { "thai": "ข้าว", "rtgs": "khao", "wordId": "khao_rice" },
+        { "thai": "หน่อย", "rtgs": "noi", "wordId": "noi" },
+        { "thai": "ครับ", "rtgs": "khrap", "wordId": "khrap" }
+      ],
+      "blankIndex": 1,
+      "distractors": [
+        { "thai": "น้ำ", "rtgs": "nam" },
+        { "thai": "อร่อย", "rtgs": "aroi" }
+      ],
+      "explanation": "Rice this time — ข้าว in the slot. น้ำ would order water; อร่อย describes food, it can't be ordered."
+    }
+  ]
+}

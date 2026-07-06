@@ -16,7 +16,12 @@ import type {
   TonePairSet,
   VocabWord,
 } from "@/content/schema";
-import type { ToneStats } from "@/lib/srs";
+import {
+  dueCards,
+  weaknessFirst,
+  type SrsCard,
+  type ToneStats,
+} from "@/lib/srs";
 
 /**
  * Runtime exercise shapes consumed by the exercise components.
@@ -526,4 +531,39 @@ export function buildReviewExercises(
 
 export function reviewXp(characterCount: number): number {
   return Math.min(5 + 2 * characterCount, 20);
+}
+
+const CHECKPOINT_CALLBACKS = 3;
+
+/**
+ * The dynamic tail of a checkpoint lesson: light SRS callbacks — due
+ * cards from OUTSIDE the checkpoint's own material, weakest first — plus
+ * the same weak-tone minimal-pair drills reviews append. The authored
+ * exercises cover the unit; this part personalizes the session.
+ */
+export function buildCheckpointExtras(
+  lesson: Lesson,
+  srsCards: Record<string, SrsCard>,
+  toneStats: ToneStats = {},
+): RuntimeExercise[] {
+  const own = new Set([...lesson.teaches, ...lesson.reviews]);
+  const callbacks = weaknessFirst(dueCards(srsCards))
+    .filter((c) => !own.has(c.characterId))
+    .slice(0, CHECKPOINT_CALLBACKS)
+    .map((c) => getItem(c.characterId));
+
+  const charPool = characters.filter((c) => !isObsolete(c));
+  const exercises: RuntimeExercise[] = callbacks.map((item) =>
+    item.kind === "word"
+      ? buildWordChoice("thai_to_meaning", item.id, vocabWords)
+      : buildChoice("glyph_to_sound", item.id, charPool),
+  );
+
+  for (const tone of weakTones(toneStats).slice(0, 2)) {
+    const set = shuffle(
+      tonePairSets.filter((s) => s.options.some((o) => o.tone === tone)),
+    )[0];
+    if (set) exercises.push(buildTonePair(set, tone));
+  }
+  return exercises;
 }

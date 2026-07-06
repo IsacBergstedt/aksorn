@@ -81,6 +81,7 @@ import q01 from "./lessons/q-01.json";
 import q02 from "./lessons/q-02.json";
 import q03 from "./lessons/q-03.json";
 import sent01 from "./lessons/sent-01.json";
+import sentCheck from "./lessons/sent-check.json";
 
 // Parsing happens at module load, so invalid content fails the build the
 // first time any page imports from src/content.
@@ -178,10 +179,12 @@ export const lessons: Lesson[] = z.array(lessonSchema).parse([
   q01,
   q02,
   q03,
-  // Unit 11 (First Sentences) staging: routable at /lesson/sent-01 for
-  // review, not yet listed in the unit's lessonIds — the path map keeps
-  // showing the comingSoon stub until the unit's content is complete.
+  // Unit 11 (First Sentences) staging: routable at /lesson/sent-01 and
+  // /lesson/sent-check for review, not yet listed in the unit's lessonIds —
+  // the path map keeps showing the comingSoon stub until the unit's
+  // content is complete.
   sent01,
+  sentCheck,
 ]);
 
 export const lessonById: ReadonlyMap<string, Lesson> = new Map(
@@ -224,6 +227,20 @@ export const phrasesOrderedLessons: Lesson[] = phrasesUnits.flatMap((u) =>
     return lesson;
   }),
 );
+
+// A checkpoint gates the next unit, so it must close its own unit's path.
+for (const u of [...units, ...phrasesUnits]) {
+  u.lessonIds.forEach((id, i) => {
+    if (
+      lessonById.get(id)?.kind === "checkpoint" &&
+      i !== u.lessonIds.length - 1
+    ) {
+      throw new Error(
+        `Checkpoint ${id} must be the last lesson of unit ${u.id}`,
+      );
+    }
+  });
+}
 
 export function getCharacter(id: string): ThaiCharacter {
   const c = characterById.get(id);
@@ -284,6 +301,21 @@ const allUnitIds = new Set([...unitById.keys(), ...phrasesUnitById.keys()]);
 for (const lesson of lessons) {
   if (!allUnitIds.has(lesson.unitId)) {
     throw new Error(`Lesson ${lesson.id} references unknown unit ${lesson.unitId}`);
+  }
+  if (lesson.kind === "checkpoint") {
+    if (lesson.passThreshold === undefined) {
+      throw new Error(`Checkpoint ${lesson.id} needs a passThreshold`);
+    }
+    // Checkpoints only review — a fresh teach couldn't be practiced enough
+    // in one gated session, and failed attempts feed SRS via the
+    // existing-cards-only review path.
+    if (lesson.teaches.length > 0) {
+      throw new Error(`Checkpoint ${lesson.id} must not teach new items`);
+    }
+  } else if (lesson.passThreshold !== undefined) {
+    throw new Error(
+      `Lesson ${lesson.id} has a passThreshold but isn't a checkpoint`,
+    );
   }
   const referenced = new Set<string>();
   for (const ex of lesson.exercises) {
