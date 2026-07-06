@@ -9,11 +9,12 @@ import {
 } from "./store";
 
 /**
- * Guest → account migration and ongoing sync.
- * On sign-in: if the account has no progress yet, the local (guest) state is
- * pushed up; otherwise the remote state wins and replaces local. After that,
- * every store change is pushed (debounced). Data volume is tiny (≤44 cards),
- * so we upsert the full snapshot rather than tracking diffs.
+ * Account progress sync. On sign-in the remote state always wins: an
+ * account with progress replaces local, and a brand-new account starts
+ * fresh — guest progress is discarded, not migrated (decided 2026-07-06).
+ * After that, every store change is pushed (debounced). Data volume is
+ * tiny (≤44 cards), so we upsert the full snapshot rather than tracking
+ * diffs.
  */
 
 let unsubscribe: (() => void) | null = null;
@@ -32,6 +33,7 @@ export async function startSync(supabase: SupabaseClient, user: User) {
   if (remote) {
     store.getState().adoptSnapshot(remote);
   } else {
+    store.getState().resetAll();
     await pushSnapshot(supabase, user.id, store.getState());
   }
 

@@ -102,8 +102,9 @@ links; mobile: fixed bottom tab bar, hidden on `/lesson/*`):
 3. **Spaced repetition**: per-character strength in Supabase, SM-2-style
    scheduling.
 4. **Gamification**: XP per lesson, daily streak, per-unit progress.
-5. **Auth**: Supabase email + Google. Guest mode with local progress that
-   migrates to the account on signup.
+5. **Auth**: Supabase email/password (+ reset flow) and Google OAuth.
+   Guest mode with local progress; signing up starts a fresh account —
+   guest progress is discarded, not migrated (decided 2026-07-06).
 6. **Design**: clean, premium, desktop-first but fully responsive.
    Original branding, clearly distinct from Duolingo's green-owl aesthetic.
 
@@ -116,7 +117,10 @@ links; mobile: fixed bottom tab bar, hidden on `/lesson/*`):
 - **Exercise engine generates distractors** at runtime from the character
   pool (same-class / similar-sound heuristics), so lesson JSON stays compact.
 - **Guest mode**: identical progress shapes persisted to `localStorage`
-  (namespaced key), upserted to Supabase on signup.
+  (namespaced key). On sign-in the remote snapshot always wins; a
+  brand-new account resets local state (no guest→account migration,
+  decided 2026-07-06). Auth UI: `/login` (login/signup/forgot modes,
+  Google button) and `/reset-password` (recovery-link landing).
 - **Reviews** are dynamically generated lessons built from due SRS cards.
 - **Audio (shipped 2026-07-04)**: pre-generated Azure TTS clips (voice
   `th-TH-PremwadeeNeural`) in the public Supabase Storage bucket `audio`,

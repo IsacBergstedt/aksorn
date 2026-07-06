@@ -55,21 +55,35 @@ export function Header() {
           )}
           {mounted &&
             (session ? (
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={() => getSupabase()?.auth.signOut()}
-              >
-                Sign out
-              </Button>
+              <>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  render={<Link href="/login" />}
+                >
+                  Account
+                </Button>
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={() => getSupabase()?.auth.signOut()}
+                >
+                  Sign out
+                </Button>
+              </>
             ) : (
-              <Button
-                variant="outline"
-                size="sm"
-                render={<Link href="/login" />}
-              >
-                Sign in
-              </Button>
+              <>
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  render={<Link href="/login" />}
+                >
+                  Log in
+                </Button>
+                <Button size="sm" render={<Link href="/login?mode=signup" />}>
+                  Sign up
+                </Button>
+              </>
             ))}
         </div>
       </div>
