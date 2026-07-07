@@ -4,18 +4,155 @@
   "order": 1,
   "title": "Sentences you already own",
   "xpReward": 25,
-  "pedagogy": "Sentence recombination over units 1–5 vocabulary: the ขอ + thing + หน่อย + ครับ/ค่ะ request frame (food-03) recombined with new slot fillers. Cloze drills isolate one decision per sentence — a content slot (what you're asking for) and the particle slot (ครับ male / ค่ะ female statement / คะ question, greet-02). Sentence listening contrasts the near-openers กิน (mid, mid ก + live น) / ขอ (rising, high ข + live) / เอา (mid) that differ mainly by tone and vowel. The closing dialogue drills register in context: vendor's casual เอาอะไรคะ answered with the polite frame; เอาข้าว is understood-but-blunt (soft wrong), the other distractors fail on meaning and situation.",
+  "pedagogy": "Statement patterns recombining units 1–10 vocabulary, nothing new taught. Patterns: (1) adjective follows noun with no copula — ข้าวอร่อยมาก (khao F: high ข + mai tho; aroi L·L; mak F: low ม + dead long), อันนี้แพงมาก (an M: mid อ + live น; ni H: LOW น + mai tho; phaeng M: low พ + live ง; mak F); (2) วัน + นี้ composes 'today' — วันนี้ร้อนมาก (wan M: low ว + live น; ni H; ron H: LOW ร + mai tho; mak F); (3) verb chaining ไป + กิน with no 'to'; (4) the ขอ + thing + หน่อย + particle request frame from food-03. Listening contrasts the openers กิน (mid) / หิว (rising) / ขอ (rising) that differ by consonant and tone, and the bare-feeling statement เหนื่อยมากค่ะ with its dropped subject. The closing dialogue drills register at a street stall per the soft-wrong rule: เอาข้าว is understood-but-blunt, the other distractors fail on meaning and situation. All per-syllable tones verify against each token's vocab toneReason via wordId.",
   "teaches": [],
-  "reviews": ["kho", "nam", "noi", "khrap", "kha_statement", "khao_rice", "kin", "ao"],
+  "reviews": [
+    "kin",
+    "khao_rice",
+    "hio",
+    "aroi",
+    "mak",
+    "an",
+    "ni_this",
+    "phaeng",
+    "wan_day",
+    "ron",
+    "phom",
+    "pai",
+    "nueai",
+    "kho",
+    "nam",
+    "noi",
+    "khrap",
+    "kha_statement"
+  ],
   "exercises": [
     {
       "type": "concept",
       "title": "You already own these sentences",
       "body": [
-        "Every sentence in this unit is built from words you've already learned — nothing new to memorize, only new combinations.",
-        "The request frame from Ordering Food — ขอ + thing + หน่อย + ครับ/ค่ะ — takes anything in its middle slot. Swap น้ำ for ข้าว and you've ordered dinner instead of water.",
-        "From here on you'll fill gaps in sentences and catch whole sentences by ear. One decision at a time."
-      ]
+        "Every sentence in this unit recombines words you've already learned — nothing new to memorize, only new combinations.",
+        "Thai needs no 'is': the describing word follows straight after the thing. ข้าวอร่อยมาก — 'rice delicious very' — is a complete, natural sentence.",
+        "Same trick everywhere: อันนี้แพงมาก 'this one is really expensive', วันนี้ร้อนมาก 'today is very hot'. And วันนี้ itself is just วัน + นี้ — 'day-this'."
+      ],
+      "thaiExample": "ข้าวอร่อยมาก",
+      "exampleAudioKey": "phrases/khao_aroi_mak"
+    },
+    {
+      "type": "sentence_listening",
+      "mode": "meaning",
+      "audioKey": "phrases/kin_khao",
+      "thai": "กินข้าว",
+      "rtgs": "kin khao",
+      "choices": [
+        { "thai": "กินข้าว", "rtgs": "kin khao", "meaning": "To eat / have a meal" },
+        { "thai": "หิวข้าว", "rtgs": "hio khao", "meaning": "To be hungry (lit. hungry for rice)" },
+        { "thai": "ขอข้าว", "rtgs": "kho khao", "meaning": "May I have some rice" }
+      ],
+      "correctIndex": 0,
+      "explanation": "Three near-openers on the same ข้าว: กิน stays mid, หิว and ขอ both rise — the consonant and tone of the first syllable decide whether you're eating, hungry, or asking.",
+      "attributeTo": ["kin", "khao_rice"]
+    },
+    {
+      "type": "sentence_build",
+      "meaning": "The rice is really delicious.",
+      "gloss": "rice + delicious + very",
+      "promptMode": "audio",
+      "audioKey": "phrases/khao_aroi_mak",
+      "tokens": [
+        { "thai": "ข้าว", "rtgs": "khao", "wordId": "khao_rice" },
+        { "thai": "อร่อย", "rtgs": "aroi", "wordId": "aroi" },
+        { "thai": "มาก", "rtgs": "mak", "wordId": "mak" }
+      ],
+      "distractors": [{ "thai": "คะ", "rtgs": "kha" }],
+      "explanation": "Noun first, then the describing words pile on after: ข้าว + อร่อย + มาก. No 'is' anywhere — and question-particle คะ has no place in a plain statement."
+    },
+    {
+      "type": "sentence_cloze",
+      "meaning": "This one is really expensive.",
+      "audioKey": "phrases/an_ni_phaeng_mak",
+      "tokens": [
+        { "thai": "อัน", "rtgs": "an", "wordId": "an" },
+        { "thai": "นี้", "rtgs": "ni", "wordId": "ni_this" },
+        { "thai": "แพง", "rtgs": "phaeng", "wordId": "phaeng" },
+        { "thai": "มาก", "rtgs": "mak", "wordId": "mak" }
+      ],
+      "blankIndex": 2,
+      "distractors": [
+        { "thai": "ถูก", "rtgs": "thuk" },
+        { "thai": "หิว", "rtgs": "hio" }
+      ],
+      "explanation": "อันนี้ + adjective + มาก. ถูก would make a fine sentence too — but it says this one is cheap, the opposite of the meaning. หิว is a feeling; things aren't hungry."
+    },
+    {
+      "type": "sentence_cloze",
+      "meaning": "Today is very hot — literally 'day-this hot very'.",
+      "audioKey": "phrases/wan_ni_ron_mak",
+      "tokens": [
+        { "thai": "วัน", "rtgs": "wan", "wordId": "wan_day" },
+        { "thai": "นี้", "rtgs": "ni", "wordId": "ni_this" },
+        { "thai": "ร้อน", "rtgs": "ron", "wordId": "ron" },
+        { "thai": "มาก", "rtgs": "mak", "wordId": "mak" }
+      ],
+      "blankIndex": 1,
+      "distractors": [
+        { "thai": "ไหน", "rtgs": "nai" },
+        { "thai": "ที่", "rtgs": "thi" }
+      ],
+      "explanation": "วัน + นี้ = 'day-this' = today, composed from two words you know. วันไหน would ask 'which day?' — a question this statement isn't asking."
+    },
+    {
+      "type": "sentence_build",
+      "meaning": "I'm really hungry. (male speaker)",
+      "gloss": "I(male) + hungry + very",
+      "promptMode": "meaning",
+      "audioKey": "phrases/phom_hio_mak",
+      "tokens": [
+        { "thai": "ผม", "rtgs": "phom", "wordId": "phom" },
+        { "thai": "หิว", "rtgs": "hio", "wordId": "hio" },
+        { "thai": "มาก", "rtgs": "mak", "wordId": "mak" }
+      ],
+      "distractors": [{ "thai": "ค่ะ", "rtgs": "kha" }],
+      "explanation": "ผม + หิว + มาก — feeling sentences work exactly like adjective sentences. ค่ะ can't close this one: ผม is a man talking, ค่ะ is the female particle."
+    },
+    {
+      "type": "concept",
+      "title": "Chain the verbs",
+      "body": [
+        "Thai chains verbs with nothing between them: ไป + กิน + ข้าว — 'go eat rice'. No 'to', no 'and', no endings.",
+        "Answering ไปไหน ('where are you going?') with ไปกินข้าว is one of the most natural exchanges in Thailand — you'll build exactly that in the next lesson."
+      ],
+      "thaiExample": "ไปกินข้าว",
+      "exampleAudioKey": "phrases/pai_kin_khao"
+    },
+    {
+      "type": "sentence_build",
+      "meaning": "Off to eat. / I'm going to go eat.",
+      "gloss": "go + eat + rice",
+      "promptMode": "meaning",
+      "audioKey": "phrases/pai_kin_khao",
+      "tokens": [
+        { "thai": "ไป", "rtgs": "pai", "wordId": "pai" },
+        { "thai": "กิน", "rtgs": "kin", "wordId": "kin" },
+        { "thai": "ข้าว", "rtgs": "khao", "wordId": "khao_rice" }
+      ],
+      "distractors": [{ "thai": "มาจาก", "rtgs": "ma chak" }],
+      "explanation": "ไป then กิน, verb after verb — Thai never says 'to'. มาจาก points the wrong way: it means 'come from' and can't chain onto ไป."
+    },
+    {
+      "type": "sentence_listening",
+      "mode": "transcript",
+      "audioKey": "phrases/nueai_mak_kha",
+      "thai": "เหนื่อยมากค่ะ",
+      "rtgs": "nueai mak kha",
+      "choices": [
+        { "thai": "เหนื่อยมากค่ะ", "rtgs": "nueai mak kha", "meaning": "I'm really tired (female speaker)" },
+        { "thai": "หิวมากค่ะ", "rtgs": "hio mak kha", "meaning": "I'm really hungry (female speaker)" },
+        { "thai": "ร้อนมากค่ะ", "rtgs": "ron mak kha", "meaning": "It's really hot (female speaker)" }
+      ],
+      "correctIndex": 0,
+      "explanation": "No 'I' anywhere — Thai states the feeling bare and lets context point it. The ค่ะ tail tells you a woman is speaking.",
+      "attributeTo": ["nueai", "mak"]
     },
     {
       "type": "sentence_cloze",
@@ -27,74 +164,12 @@
         { "thai": "หน่อย", "rtgs": "noi", "wordId": "noi" },
         { "thai": "ครับ", "rtgs": "khrap", "wordId": "khrap" }
       ],
-      "blankIndex": 1,
-      "distractors": [
-        { "thai": "ข้าว", "rtgs": "khao" },
-        { "thai": "กิน", "rtgs": "kin" }
-      ],
-      "explanation": "The thing you want sits right after ขอ. ข้าว would be a fine sentence too — but it orders rice, not water. กิน is a verb and can't fill the thing-slot."
-    },
-    {
-      "type": "sentence_listening",
-      "mode": "meaning",
-      "audioKey": "phrases/kin_khao",
-      "thai": "กินข้าว",
-      "rtgs": "kin khao",
-      "choices": [
-        { "thai": "กินข้าว", "rtgs": "kin khao", "meaning": "To eat / have a meal" },
-        { "thai": "ขอข้าว", "rtgs": "kho khao", "meaning": "May I have some rice" },
-        { "thai": "ข้าวอร่อย", "rtgs": "khao aroi", "meaning": "The rice is delicious" }
-      ],
-      "correctIndex": 0,
-      "explanation": "กิน (mid tone) and ขอ (rising) open almost alike — the tone is the difference between eating and asking.",
-      "attributeTo": ["kin", "khao_rice"]
-    },
-    {
-      "type": "sentence_cloze",
-      "meaning": "Could I get some water, please? (female speaker)",
-      "audioKey": "phrases/kho_nam_noi_kha",
-      "tokens": [
-        { "thai": "ขอ", "rtgs": "kho", "wordId": "kho" },
-        { "thai": "น้ำ", "rtgs": "nam", "wordId": "nam" },
-        { "thai": "หน่อย", "rtgs": "noi", "wordId": "noi" },
-        { "thai": "ค่ะ", "rtgs": "kha", "wordId": "kha_statement" }
-      ],
       "blankIndex": 3,
       "distractors": [
-        { "thai": "ครับ", "rtgs": "khrap" },
+        { "thai": "ค่ะ", "rtgs": "kha" },
         { "thai": "คะ", "rtgs": "kha" }
       ],
-      "explanation": "A female speaker making a request ends on ค่ะ (falling). ครับ is the male particle, and high-tone คะ belongs on questions — this is a request, not a question."
-    },
-    {
-      "type": "sentence_build",
-      "meaning": "Could I get some rice, please? (male speaker)",
-      "gloss": "ask-for + rice + softener + male polite particle",
-      "promptMode": "meaning",
-      "audioKey": "phrases/kho_khao_noi_khrap",
-      "tokens": [
-        { "thai": "ขอ", "rtgs": "kho", "wordId": "kho" },
-        { "thai": "ข้าว", "rtgs": "khao", "wordId": "khao_rice" },
-        { "thai": "หน่อย", "rtgs": "noi", "wordId": "noi" },
-        { "thai": "ครับ", "rtgs": "khrap", "wordId": "khrap" }
-      ],
-      "distractors": [{ "thai": "คะ", "rtgs": "kha" }],
-      "explanation": "Same frame, new filling: ขอ + ข้าว + หน่อย + ครับ. The middle slot is yours — everything you ever order goes there."
-    },
-    {
-      "type": "sentence_listening",
-      "mode": "transcript",
-      "audioKey": "phrases/ao_nam",
-      "thai": "เอาน้ำ",
-      "rtgs": "ao nam",
-      "choices": [
-        { "thai": "เอาน้ำ", "rtgs": "ao nam", "meaning": "I'll take water (casual)" },
-        { "thai": "ขอน้ำ", "rtgs": "kho nam", "meaning": "May I have water" },
-        { "thai": "กินน้ำ", "rtgs": "kin nam", "meaning": "to drink water" }
-      ],
-      "correctIndex": 0,
-      "explanation": "Three openers, one ear test: เอา starts on a vowel, ขอ rises, กิน stays mid. All three end in น้ำ — the first syllable decides everything.",
-      "attributeTo": ["ao", "nam"]
+      "explanation": "A man closes the request with ครับ. ค่ะ and คะ belong to female speakers — and high-tone คะ only ever ends questions."
     },
     {
       "type": "dialogue_choice",
@@ -135,11 +210,6 @@
         }
       ],
       "attributeTo": ["kho", "khao_rice", "noi", "khrap"]
-    },
-    {
-      "type": "match_pairs",
-      "characterIds": ["kho", "khao_rice", "kin", "ao"]
-    },
-    { "type": "word_choice", "wordId": "noi", "direction": "meaning_to_thai" }
+    }
   ]
 }

@@ -1,0 +1,251 @@
+{
+  "id": "sent-03",
+  "unitId": "words-first-sentences",
+  "order": 3,
+  "title": "A whole conversation",
+  "xpReward": 25,
+  "pedagogy": "A complete service encounter run as dialogue turns: offer (เอาน้ำไหมคะ) → decline by echoing the verb negated (ไม่เอาครับ — never ไม่ใช่, which only rejects identity statements, resp-01) → settle up (เท่าไหร่ครับ → สี่สิบบาทค่ะ; digit order สี่สิบ 40 vs สิบสี่ 14, num-02) → compliment the cook (อร่อยมากครับ) → close with สวัสดีครับ, which says goodbye as well as hello (greet-01). Plus the small-talk loop สบายดีไหมคะ → สบายดีครับ แล้วคุณล่ะ, where แล้วคุณล่ะ (laeo H: LOW ล + mai tho; khun M: low ค + live ณ; la F: LOW ล + mai ek) bounces any question back. Each dialogue's wrong answers fail for different reasons — register (bare ไม่เอา / อร่อย / สบายดี are understood but blunt, soft-wrong per the decided rule), meaning (ไม่ใช่ is the wrong yes/no system; หิวมากครับ and ไปกินข้าวครับ answer questions that weren't asked), situation (ลาก่อนครับ mid-meal, ไม่เป็นไรครับ with no apology, ยินดีที่ได้รู้จักครับ on day three). All per-syllable tones verify against each token's vocab toneReason via wordId.",
+  "teaches": [],
+  "reviews": [
+    "ao",
+    "nam",
+    "mai_question",
+    "kha_question",
+    "mai_not",
+    "thao_rai",
+    "khrap",
+    "si",
+    "sip",
+    "bat",
+    "khop_khun",
+    "aroi",
+    "mak",
+    "sabai_di",
+    "sabai_di_mai",
+    "laeo_khun_la",
+    "sawatdi"
+  ],
+  "exercises": [
+    {
+      "type": "concept",
+      "title": "One scene, start to finish",
+      "body": [
+        "This lesson is one continuous scene: a stall you've come back to three days running. Order, decline the extras, pay, compliment the cook, leave.",
+        "Two closers do all the framing: ขอบคุณครับ for the exchange, สวัสดีครับ for the exit — yes, สวัสดี says goodbye too.",
+        "By the end you'll have spoken every turn of a real Thai transaction with words from units 1–10."
+      ],
+      "thaiExample": "สวัสดีครับ",
+      "exampleAudioKey": "phrases/sawatdi_khrap"
+    },
+    {
+      "type": "dialogue_choice",
+      "context": "The stall from before — you've just ordered rice. You're a man. The vendor holds up a bottle of water:",
+      "speaker": {
+        "thai": "เอาน้ำไหมคะ",
+        "rtgs": "ao nam mai kha",
+        "meaning": "Would you like water too?",
+        "audioKey": "phrases/ao_nam_mai_kha_question"
+      },
+      "question": "You don't want any. How do you decline?",
+      "choices": [
+        {
+          "thai": "ไม่เอาครับ",
+          "rtgs": "mai ao khrap",
+          "audioKey": "phrases/mai_ao_khrap",
+          "quality": "best",
+          "note": "Echo the verb, negated, plus ครับ — the polite no. เอา came in the question; ไม่เอา sends it back."
+        },
+        {
+          "thai": "ไม่เอา",
+          "rtgs": "mai ao",
+          "audioKey": "phrases/mai_ao",
+          "quality": "register",
+          "note": "Understood — but bare ไม่เอา to a vendor lands like 'don't want it!'. The ครับ is what makes it a decline instead of a rebuff."
+        },
+        {
+          "thai": "ไม่ใช่",
+          "rtgs": "mai chai",
+          "audioKey": "phrases/mai_chai",
+          "quality": "meaning",
+          "note": "ไม่ใช่ rejects an identity — 'no, that's not the one'. She asked whether you WANT it; want-questions echo เอา, not ใช่."
+        },
+        {
+          "thai": "ลาก่อนครับ",
+          "rtgs": "la kon khrap",
+          "quality": "situation",
+          "note": "A weighty farewell, mid-meal, to a woman offering you water. You're not leaving — and even when you do, สวัสดีครับ is the everyday exit."
+        }
+      ],
+      "attributeTo": ["ao", "mai_not"]
+    },
+    {
+      "type": "sentence_build",
+      "meaning": "Would you like water? (the vendor — a woman — offering)",
+      "gloss": "take + water + question particle + polite(f, question)",
+      "promptMode": "meaning",
+      "audioKey": "phrases/ao_nam_mai_kha_question",
+      "tokens": [
+        { "thai": "เอา", "rtgs": "ao", "wordId": "ao" },
+        { "thai": "น้ำ", "rtgs": "nam", "wordId": "nam" },
+        { "thai": "ไหม", "rtgs": "mai", "wordId": "mai_question" },
+        { "thai": "คะ", "rtgs": "kha", "wordId": "kha_question" }
+      ],
+      "distractors": [{ "thai": "ค่ะ", "rtgs": "kha" }],
+      "explanation": "Offers are just เอา + thing + ไหม. The question tail takes high-tone คะ — ค่ะ after ไหม is the one place it can never go."
+    },
+    {
+      "type": "sentence_cloze",
+      "meaning": "How much (do I owe)? (male speaker)",
+      "audioKey": "phrases/thao_rai_khrap",
+      "tokens": [
+        { "thai": "เท่าไหร่", "rtgs": "thao rai", "wordId": "thao_rai" },
+        { "thai": "ครับ", "rtgs": "khrap", "wordId": "khrap" }
+      ],
+      "blankIndex": 0,
+      "distractors": [
+        { "thai": "ยังไง", "rtgs": "yangngai" },
+        { "thai": "เมื่อไหร่", "rtgs": "muea rai" }
+      ],
+      "explanation": "Three question words, one slot: เท่าไหร่ asks how much, ยังไง how, เมื่อไหร่ when. At the end of a meal, only one of them settles the bill."
+    },
+    {
+      "type": "sentence_listening",
+      "mode": "meaning",
+      "audioKey": "phrases/si_sip_bat_kha",
+      "thai": "สี่สิบบาทค่ะ",
+      "rtgs": "si sip bat kha",
+      "choices": [
+        { "thai": "สี่สิบบาทค่ะ", "rtgs": "si sip bat kha", "meaning": "Forty baht" },
+        { "thai": "สิบสี่บาทค่ะ", "rtgs": "sip si bat kha", "meaning": "Fourteen baht" },
+        { "thai": "สี่บาทค่ะ", "rtgs": "si bat kha", "meaning": "Four baht" }
+      ],
+      "correctIndex": 0,
+      "explanation": "สี่สิบ '4-10' = 40; flip it to สิบสี่ '10-4' and it's 14. First word first.",
+      "attributeTo": ["si", "sip", "bat"]
+    },
+    {
+      "type": "dialogue_choice",
+      "context": "Plate empty, spoon down. You're a man. The vendor collects the dishes and asks:",
+      "speaker": {
+        "thai": "อร่อยไหมคะ",
+        "rtgs": "aroi mai kha",
+        "meaning": "Was it good?",
+        "audioKey": "phrases/aroi_mai_kha_question"
+      },
+      "question": "It really was. What do you say?",
+      "choices": [
+        {
+          "thai": "อร่อยมากครับ",
+          "rtgs": "aroi mak khrap",
+          "audioKey": "phrases/aroi_mak_khrap",
+          "quality": "best",
+          "note": "Echo อร่อย, crank it with มาก, close with ครับ. This sentence feeds every street cook in Thailand."
+        },
+        {
+          "thai": "อร่อย",
+          "rtgs": "aroi",
+          "quality": "register",
+          "note": "True, and she'll smile — but one bare syllable reads flat for food she just cooked you. มาก…ครับ costs nothing."
+        },
+        {
+          "thai": "หิวมากครับ",
+          "rtgs": "hio mak khrap",
+          "quality": "meaning",
+          "note": "'I'm very hungry' — with an empty plate in front of you? หิว is the before-word; อร่อย is the after-word."
+        },
+        {
+          "thai": "ไม่เป็นไรครับ",
+          "rtgs": "mai pen rai khrap",
+          "quality": "situation",
+          "note": "ไม่เป็นไร shrugs off thanks or apologies. She asked for your verdict — give one."
+        }
+      ],
+      "attributeTo": ["aroi", "mak"]
+    },
+    {
+      "type": "sentence_cloze",
+      "meaning": "It was REALLY good. (male, complimenting the cook)",
+      "audioKey": "phrases/aroi_mak_khrap",
+      "tokens": [
+        { "thai": "อร่อย", "rtgs": "aroi", "wordId": "aroi" },
+        { "thai": "มาก", "rtgs": "mak", "wordId": "mak" },
+        { "thai": "ครับ", "rtgs": "khrap", "wordId": "khrap" }
+      ],
+      "blankIndex": 1,
+      "distractors": [
+        { "thai": "หน่อย", "rtgs": "noi" },
+        { "thai": "ไหม", "rtgs": "mai" }
+      ],
+      "explanation": "มาก amplifies whatever it follows. หน่อย softens requests, not compliments — and ไหม would turn your praise back into a question."
+    },
+    {
+      "type": "concept",
+      "title": "The conversation loop",
+      "body": [
+        "Small talk runs on a loop: answer, then return the serve. สบายดีไหมคะ → สบายดีครับ แล้วคุณล่ะ — 'fine, and you?'.",
+        "แล้วคุณล่ะ bounces ANY question back, not just this one. It's how two sentences become a conversation."
+      ],
+      "thaiExample": "สบายดีครับ แล้วคุณล่ะ",
+      "exampleAudioKey": "phrases/sabai_di_khrap_laeo_khun_la"
+    },
+    {
+      "type": "dialogue_choice",
+      "context": "Day three — the vendor recognizes you now. You're a man. Before you even order, she smiles:",
+      "speaker": {
+        "thai": "สบายดีไหมคะ",
+        "rtgs": "sabai di mai kha",
+        "meaning": "How are you?",
+        "audioKey": "phrases/sabai_di_mai_kha_question"
+      },
+      "question": "Keep the conversation alive — what do you say?",
+      "choices": [
+        {
+          "thai": "สบายดีครับ แล้วคุณล่ะ",
+          "rtgs": "sabai di khrap laeo khun la",
+          "audioKey": "phrases/sabai_di_khrap_laeo_khun_la",
+          "quality": "best",
+          "note": "Answer, then return the serve — แล้วคุณล่ะ is what turns a greeting into a chat."
+        },
+        {
+          "thai": "สบายดี",
+          "rtgs": "sabai di",
+          "quality": "register",
+          "note": "Fine between old friends; to a friendly acquaintance it answers the question and then drops the ball. The bounce-back is the warmth."
+        },
+        {
+          "thai": "ไปกินข้าวครับ",
+          "rtgs": "pai kin khao khrap",
+          "audioKey": "phrases/pai_kin_khao_khrap",
+          "quality": "meaning",
+          "note": "That answers ไปไหน ('where are you going?') — she asked how you ARE. Match the answer to the question word you actually heard."
+        },
+        {
+          "thai": "ยินดีที่ได้รู้จักครับ",
+          "rtgs": "yindi thi dai ru chak khrap",
+          "quality": "situation",
+          "note": "'Nice to meet you' — on day three? That ship has sailed; the meeting already happened."
+        }
+      ],
+      "attributeTo": ["sabai_di", "laeo_khun_la"]
+    },
+    {
+      "type": "sentence_listening",
+      "mode": "transcript",
+      "audioKey": "phrases/sabai_di_mai_kha_question",
+      "thai": "สบายดีไหมคะ",
+      "rtgs": "sabai di mai kha",
+      "choices": [
+        { "thai": "สบายดีไหมคะ", "rtgs": "sabai di mai kha", "meaning": "How are you?" },
+        { "thai": "สบายดีค่ะ", "rtgs": "sabai di kha", "meaning": "I'm fine (female speaker)" },
+        { "thai": "สวัสดีค่ะ", "rtgs": "sawatdi kha", "meaning": "Hello (female speaker)" }
+      ],
+      "correctIndex": 0,
+      "explanation": "The ไหม…คะ tail is the question switch — without it, สบายดี is the answer, not the ask.",
+      "attributeTo": ["sabai_di_mai"]
+    },
+    {
+      "type": "match_pairs",
+      "characterIds": ["khop_khun", "sawatdi", "thao_rai", "aroi"]
+    }
+  ]
+}

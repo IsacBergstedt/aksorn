@@ -1,0 +1,202 @@
+{
+  "id": "sent-cp",
+  "unitId": "words-first-sentences",
+  "order": 4,
+  "kind": "checkpoint",
+  "passThreshold": 0.8,
+  "title": "Checkpoint: first sentences",
+  "xpReward": 40,
+  "pedagogy": "Checkpoint over sent-01/02/03, nothing new taught. The request frame returns with the female particle (ขอข้าวหน่อยค่ะ — kho R: high ข + live; khao F: high ข + mai tho; noi L: ห-nam + mai ek; kha F: low ค + mai ek); วันนี้ร้อนมาก is rebuilt by ear; price listening sets the digit-order trap สามสิบห้า 35 vs ห้าสิบสาม 53; the verb-echo question is blanked on its verb (มี___ไหมคะ against เอา/กิน); particles are pinned on a question (อันนี้เท่าไหร่คะ); and the dialogue turn is taken as a female speaker for the first time. The engine appends due-card callbacks from outside the unit and weak-tone drills at runtime. Pass = accuracy ≥ 0.8 → normal completion; fail → no completion (unit 12 stays gated, retry immediate) but SRS and tone stats still update. All per-syllable tones verify against each token's vocab toneReason via wordId.",
+  "teaches": [],
+  "reviews": [
+    "kho",
+    "khao_rice",
+    "noi",
+    "kha_statement",
+    "wan_day",
+    "ni_this",
+    "ron",
+    "mak",
+    "sam",
+    "sip",
+    "ha",
+    "bat",
+    "mi",
+    "nam",
+    "mai_question",
+    "kha_question",
+    "phet",
+    "pai",
+    "nai",
+    "an",
+    "thao_rai",
+    "ao"
+  ],
+  "exercises": [
+    {
+      "type": "sentence_cloze",
+      "meaning": "Could I get some rice, please? (female speaker)",
+      "audioKey": "phrases/kho_khao_noi_kha",
+      "tokens": [
+        { "thai": "ขอ", "rtgs": "kho", "wordId": "kho" },
+        { "thai": "ข้าว", "rtgs": "khao", "wordId": "khao_rice" },
+        { "thai": "หน่อย", "rtgs": "noi", "wordId": "noi" },
+        { "thai": "ค่ะ", "rtgs": "kha", "wordId": "kha_statement" }
+      ],
+      "blankIndex": 3,
+      "distractors": [
+        { "thai": "ครับ", "rtgs": "khrap" },
+        { "thai": "คะ", "rtgs": "kha" }
+      ],
+      "explanation": "A woman making a request closes on falling ค่ะ. ครับ is the male particle, and high-tone คะ marks questions — a request is a statement."
+    },
+    {
+      "type": "sentence_build",
+      "meaning": "Today is very hot.",
+      "gloss": "day + this + hot + very",
+      "promptMode": "audio",
+      "audioKey": "phrases/wan_ni_ron_mak",
+      "tokens": [
+        { "thai": "วัน", "rtgs": "wan", "wordId": "wan_day" },
+        { "thai": "นี้", "rtgs": "ni", "wordId": "ni_this" },
+        { "thai": "ร้อน", "rtgs": "ron", "wordId": "ron" },
+        { "thai": "มาก", "rtgs": "mak", "wordId": "mak" }
+      ],
+      "explanation": "วัน + นี้ composes 'today'; the weather report follows with no 'is': ร้อนมาก."
+    },
+    {
+      "type": "sentence_listening",
+      "mode": "meaning",
+      "audioKey": "phrases/sam_sip_ha_bat",
+      "thai": "สามสิบห้าบาท",
+      "rtgs": "sam sip ha bat",
+      "choices": [
+        { "thai": "สามสิบห้าบาท", "rtgs": "sam sip ha bat", "meaning": "Thirty-five baht" },
+        { "thai": "ห้าสิบสามบาท", "rtgs": "ha sip sam bat", "meaning": "Fifty-three baht" },
+        { "thai": "สามสิบบาท", "rtgs": "sam sip bat", "meaning": "Thirty baht" }
+      ],
+      "correctIndex": 0,
+      "explanation": "สามสิบ 30, then ห้า on the end: 35. Reversed, ห้าสิบสาม is 53 — digit order is the whole price.",
+      "attributeTo": ["sam", "sip", "ha", "bat"]
+    },
+    {
+      "type": "sentence_cloze",
+      "meaning": "Do you have water? (a woman asking a vendor)",
+      "audioKey": "phrases/mi_nam_mai_kha_question",
+      "tokens": [
+        { "thai": "มี", "rtgs": "mi", "wordId": "mi" },
+        { "thai": "น้ำ", "rtgs": "nam", "wordId": "nam" },
+        { "thai": "ไหม", "rtgs": "mai", "wordId": "mai_question" },
+        { "thai": "คะ", "rtgs": "kha", "wordId": "kha_question" }
+      ],
+      "blankIndex": 0,
+      "distractors": [
+        { "thai": "เอา", "rtgs": "ao" },
+        { "thai": "กิน", "rtgs": "kin" }
+      ],
+      "explanation": "มี asks about having — the stock-check question. เอาน้ำไหมคะ would offer the water, and กินน้ำไหมคะ invites someone to drink it: same frame, three verbs, three different questions."
+    },
+    {
+      "type": "dialogue_choice",
+      "context": "Evening at a street-food stall — this time you're a woman, and you want rice. The vendor looks up:",
+      "speaker": {
+        "thai": "เอาอะไรคะ",
+        "rtgs": "ao arai kha",
+        "meaning": "What'll you have?",
+        "audioKey": "phrases/ao_arai_kha"
+      },
+      "question": "How do you order?",
+      "choices": [
+        {
+          "thai": "ขอข้าวหน่อยค่ะ",
+          "rtgs": "kho khao noi kha",
+          "audioKey": "phrases/kho_khao_noi_kha",
+          "quality": "best",
+          "note": "The request frame, closed with ค่ะ — the same sentence you built as a man in the first lesson, now in your own voice."
+        },
+        {
+          "thai": "เอาข้าว",
+          "rtgs": "ao khao",
+          "audioKey": "phrases/ao_khao",
+          "quality": "register",
+          "note": "She'll bring the rice — but bare เอา with no particle is for a friend holding the pot. ค่ะ at minimum."
+        },
+        {
+          "thai": "ขอน้ำหน่อยค่ะ",
+          "rtgs": "kho nam noi kha",
+          "audioKey": "phrases/kho_nam_noi_kha",
+          "quality": "meaning",
+          "note": "Perfectly polite — and it orders water. The frame is right; the thing in the middle slot isn't."
+        },
+        {
+          "thai": "ขอบคุณค่ะ",
+          "rtgs": "khop khun kha",
+          "quality": "situation",
+          "note": "Thanking her — for what? Nothing's been ordered yet. ขอบคุณ comes when the plate lands."
+        }
+      ],
+      "attributeTo": ["kho", "khao_rice", "noi", "kha_statement"]
+    },
+    {
+      "type": "sentence_build",
+      "meaning": "Is it spicy? (a woman asking before she orders)",
+      "gloss": "spicy + question particle + polite(f, question)",
+      "promptMode": "meaning",
+      "audioKey": "phrases/phet_mai_kha_question",
+      "tokens": [
+        { "thai": "เผ็ด", "rtgs": "phet", "wordId": "phet" },
+        { "thai": "ไหม", "rtgs": "mai", "wordId": "mai_question" },
+        { "thai": "คะ", "rtgs": "kha", "wordId": "kha_question" }
+      ],
+      "distractors": [{ "thai": "ค่ะ", "rtgs": "kha" }],
+      "explanation": "Verb + ไหม + คะ — the yes/no check. ค่ะ never follows ไหม; questions rise to คะ."
+    },
+    {
+      "type": "sentence_listening",
+      "mode": "transcript",
+      "audioKey": "phrases/pai_nai_khrap",
+      "thai": "ไปไหนครับ",
+      "rtgs": "pai nai khrap",
+      "choices": [
+        { "thai": "ไปไหนครับ", "rtgs": "pai nai khrap", "meaning": "Where are you going?" },
+        { "thai": "ไปยังไงครับ", "rtgs": "pai yangngai khrap", "meaning": "How do I get there?" },
+        { "thai": "ไปเมื่อไหร่ครับ", "rtgs": "pai muea rai khrap", "meaning": "When are you going?" }
+      ],
+      "correctIndex": 0,
+      "explanation": "ไป opens all three — the ear's job is the question word: ไหน, ยังไง, เมื่อไหร่.",
+      "attributeTo": ["pai", "nai"]
+    },
+    {
+      "type": "sentence_cloze",
+      "meaning": "How much is this one? (a woman asking)",
+      "audioKey": "phrases/an_ni_thao_rai_kha_question",
+      "tokens": [
+        { "thai": "อัน", "rtgs": "an", "wordId": "an" },
+        { "thai": "นี้", "rtgs": "ni", "wordId": "ni_this" },
+        { "thai": "เท่าไหร่", "rtgs": "thao rai", "wordId": "thao_rai" },
+        { "thai": "คะ", "rtgs": "kha", "wordId": "kha_question" }
+      ],
+      "blankIndex": 3,
+      "distractors": [
+        { "thai": "ค่ะ", "rtgs": "kha" },
+        { "thai": "ครับ", "rtgs": "khrap" }
+      ],
+      "explanation": "Price questions end on the question particle — for a woman, high-tone คะ. Falling ค่ะ would close a statement she isn't making."
+    },
+    {
+      "type": "sentence_listening",
+      "mode": "meaning",
+      "audioKey": "phrases/ao_nam_mai_kha_question",
+      "thai": "เอาน้ำไหมคะ",
+      "rtgs": "ao nam mai kha",
+      "choices": [
+        { "thai": "เอาน้ำไหมคะ", "rtgs": "ao nam mai kha", "meaning": "Would you like some water?" },
+        { "thai": "มีน้ำไหมคะ", "rtgs": "mi nam mai kha", "meaning": "Do you have water?" },
+        { "thai": "ขอน้ำค่ะ", "rtgs": "kho nam kha", "meaning": "Water, please" }
+      ],
+      "correctIndex": 0,
+      "explanation": "Three water sentences, three openers: เอา offers, มี checks stock, ขอ asks for it. The first word is the whole transaction.",
+      "attributeTo": ["ao", "nam", "mai_question"]
+    }
+  ]
+}

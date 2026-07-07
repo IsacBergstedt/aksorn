@@ -175,11 +175,15 @@
     "title": "First Sentences",
     "description": "Everything from units 1–10, recombined into full sentences you build yourself.",
     "order": 11,
-    "lessonIds": [],
-    "comingSoon": true,
+    "lessonIds": [
+      "sent-01",
+      "sent-02",
+      "sent-03",
+      "sent-cp"
+    ],
     "goals": [
       "Build complete sentences from the words you already own",
-      "Chain verbs the Thai way: ไป + กิน, อยาก + ไป",
+      "Chain verbs the Thai way: ไป + กิน",
       "Handle real mini-dialogues: order, pay, thank, leave",
       "Graduate from phrases to talking"
     ]

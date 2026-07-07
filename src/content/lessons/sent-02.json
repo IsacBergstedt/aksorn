@@ -1,0 +1,240 @@
+{
+  "id": "sent-02",
+  "unitId": "words-first-sentences",
+  "order": 2,
+  "title": "Ask, then answer",
+  "xpReward": 25,
+  "pedagogy": "Question/answer patterns over taught vocabulary. Patterns: (1) ไหม turns a statement into a yes/no question and Thai answers by echoing the verb — มีน้ำไหมคะ → มีค่ะ, เผ็ดไหม → ไม่เผ็ด; there is no word for 'yes' (resp-01); (2) question words sit in the answer's slot with no inversion (q-01): ไปไหน → ไปกินข้าว, อันนี้เท่าไหร่ → ห้าสิบบาท; (3) digit order decides the price — ห้าสิบ (5-10) is 50, สิบห้า (10-5) is 15 (num-02); (4) คะ (high: low ค + dead short) ends questions, ค่ะ (falling: low ค + mai ek) ends statements (greet-02). The dialogue drills asking เผ็ดไหมครับ before ordering — checking the heat first is what a Thai customer actually does; its distractors fail on register (bare เผ็ดไหม), meaning (อร่อยไหมครับ asks the wrong thing), and situation (ไม่เผ็ดครับ is the vendor's line). All per-syllable tones verify against each token's vocab toneReason via wordId.",
+  "teaches": [],
+  "reviews": [
+    "mi",
+    "nam",
+    "mai_question",
+    "kha_question",
+    "phet",
+    "mai_not",
+    "pai",
+    "nai",
+    "kin",
+    "khao_rice",
+    "khrap",
+    "an",
+    "ni_this",
+    "thao_rai",
+    "ha",
+    "sip",
+    "bat",
+    "hong_nam",
+    "yu",
+    "thi",
+    "trong"
+  ],
+  "exercises": [
+    {
+      "type": "concept",
+      "title": "Thai has no 'yes'",
+      "body": [
+        "Ask มีน้ำไหมคะ ('do you have water?') and the answer is not 'yes' — it's มีค่ะ: the verb, echoed back. Thai answers yes/no questions by repeating the verb.",
+        "'No' is the same verb with ไม่ in front: เผ็ดไหม? ไม่เผ็ด. One rule, every verb.",
+        "Open questions never flip the word order either — the question word sits exactly where the answer will: ไปไหน → ไปกินข้าว."
+      ],
+      "thaiExample": "มีค่ะ",
+      "exampleAudioKey": "phrases/mi_kha"
+    },
+    {
+      "type": "sentence_cloze",
+      "meaning": "Do you have water? (a woman asking)",
+      "audioKey": "phrases/mi_nam_mai_kha_question",
+      "tokens": [
+        { "thai": "มี", "rtgs": "mi", "wordId": "mi" },
+        { "thai": "น้ำ", "rtgs": "nam", "wordId": "nam" },
+        { "thai": "ไหม", "rtgs": "mai", "wordId": "mai_question" },
+        { "thai": "คะ", "rtgs": "kha", "wordId": "kha_question" }
+      ],
+      "blankIndex": 2,
+      "distractors": [
+        { "thai": "อะไร", "rtgs": "arai" },
+        { "thai": "เท่าไหร่", "rtgs": "thao rai" }
+      ],
+      "explanation": "ไหม is the yes/no switch — it turns มีน้ำ into a question. อะไร would ask what kinds of water they have, and เท่าไหร่ would ask how much — real sentences, different questions."
+    },
+    {
+      "type": "sentence_listening",
+      "mode": "meaning",
+      "audioKey": "phrases/mi_kha",
+      "thai": "มีค่ะ",
+      "rtgs": "mi kha",
+      "choices": [
+        { "thai": "มีค่ะ", "rtgs": "mi kha", "meaning": "Yes, we have some" },
+        { "thai": "ไม่เอาค่ะ", "rtgs": "mai ao kha", "meaning": "No, thanks" },
+        { "thai": "ได้ค่ะ", "rtgs": "dai kha", "meaning": "Sure, no problem" }
+      ],
+      "correctIndex": 0,
+      "explanation": "One syllable of verb-echo: มี. Add ค่ะ and it's a complete polite answer — 'yes, we have.'",
+      "attributeTo": ["mi"]
+    },
+    {
+      "type": "sentence_cloze",
+      "meaning": "Is it spicy? (a woman asking)",
+      "audioKey": "phrases/phet_mai_kha_question",
+      "tokens": [
+        { "thai": "เผ็ด", "rtgs": "phet", "wordId": "phet" },
+        { "thai": "ไหม", "rtgs": "mai", "wordId": "mai_question" },
+        { "thai": "คะ", "rtgs": "kha", "wordId": "kha_question" }
+      ],
+      "blankIndex": 2,
+      "distractors": [
+        { "thai": "ค่ะ", "rtgs": "kha" },
+        { "thai": "ครับ", "rtgs": "khrap" }
+      ],
+      "explanation": "Questions take the high-tone คะ; falling ค่ะ closes statements, and ครับ belongs to male speakers. Same sentence, three tails — only one fits a woman asking."
+    },
+    {
+      "type": "sentence_listening",
+      "mode": "transcript",
+      "audioKey": "phrases/pai_nai_khrap",
+      "thai": "ไปไหนครับ",
+      "rtgs": "pai nai khrap",
+      "choices": [
+        { "thai": "ไปไหนครับ", "rtgs": "pai nai khrap", "meaning": "Where are you going?" },
+        { "thai": "ไปยังไงครับ", "rtgs": "pai yangngai khrap", "meaning": "How do I get there?" },
+        { "thai": "ไปเมื่อไหร่ครับ", "rtgs": "pai muea rai khrap", "meaning": "When are you going?" }
+      ],
+      "correctIndex": 0,
+      "explanation": "All three open with ไป — the question word after it does the work: ไหน where, ยังไง how, เมื่อไหร่ when.",
+      "attributeTo": ["pai", "nai"]
+    },
+    {
+      "type": "sentence_build",
+      "meaning": "I'm going to eat. (male, answering 'where are you going?')",
+      "gloss": "go + eat + rice + polite(m)",
+      "promptMode": "meaning",
+      "audioKey": "phrases/pai_kin_khao_khrap",
+      "tokens": [
+        { "thai": "ไป", "rtgs": "pai", "wordId": "pai" },
+        { "thai": "กิน", "rtgs": "kin", "wordId": "kin" },
+        { "thai": "ข้าว", "rtgs": "khao", "wordId": "khao_rice" },
+        { "thai": "ครับ", "rtgs": "khrap", "wordId": "khrap" }
+      ],
+      "distractors": [{ "thai": "คะ", "rtgs": "kha" }],
+      "explanation": "The answer walks the question's path: ไปไหน → ไป + where you're actually going. คะ has no place here — it's female and question-only, and this is a man's statement."
+    },
+    {
+      "type": "sentence_cloze",
+      "meaning": "How much is this one? (male speaker)",
+      "audioKey": "phrases/an_ni_thao_rai_khrap",
+      "tokens": [
+        { "thai": "อัน", "rtgs": "an", "wordId": "an" },
+        { "thai": "นี้", "rtgs": "ni", "wordId": "ni_this" },
+        { "thai": "เท่าไหร่", "rtgs": "thao rai", "wordId": "thao_rai" },
+        { "thai": "ครับ", "rtgs": "khrap", "wordId": "khrap" }
+      ],
+      "blankIndex": 2,
+      "distractors": [
+        { "thai": "อะไร", "rtgs": "arai" },
+        { "thai": "ไหม", "rtgs": "mai" }
+      ],
+      "explanation": "เท่าไหร่ asks the price. อันนี้อะไรครับ asks what the thing is, and อันนี้ไหมครับ ('this one, right?') checks a choice — real sentences, wrong meanings."
+    },
+    {
+      "type": "sentence_listening",
+      "mode": "meaning",
+      "audioKey": "phrases/ha_sip_bat_kha",
+      "thai": "ห้าสิบบาทค่ะ",
+      "rtgs": "ha sip bat kha",
+      "choices": [
+        { "thai": "ห้าสิบบาทค่ะ", "rtgs": "ha sip bat kha", "meaning": "Fifty baht" },
+        { "thai": "สิบห้าบาทค่ะ", "rtgs": "sip ha bat kha", "meaning": "Fifteen baht" },
+        { "thai": "ห้าบาทค่ะ", "rtgs": "ha bat kha", "meaning": "Five baht" }
+      ],
+      "correctIndex": 0,
+      "explanation": "Order is everything: ห้าสิบ '5-10' = 50, สิบห้า '10-5' = 15. Prices come at you fast — anchor on which word comes first.",
+      "attributeTo": ["ha", "sip", "bat"]
+    },
+    {
+      "type": "sentence_build",
+      "meaning": "Where is the bathroom? (male speaker)",
+      "gloss": "bathroom + is-at + at + where + polite(m)",
+      "promptMode": "audio",
+      "audioKey": "phrases/hong_nam_yu_thi_nai_khrap",
+      "tokens": [
+        { "thai": "ห้องน้ำ", "rtgs": "hong nam", "wordId": "hong_nam" },
+        { "thai": "อยู่", "rtgs": "yu", "wordId": "yu" },
+        { "thai": "ที่", "rtgs": "thi", "wordId": "thi" },
+        { "thai": "ไหน", "rtgs": "nai", "wordId": "nai" },
+        { "thai": "ครับ", "rtgs": "khrap", "wordId": "khrap" }
+      ],
+      "explanation": "อยู่ที่ไหน — 'is at where' — the location question, with the question word sitting right where the answer will."
+    },
+    {
+      "type": "sentence_listening",
+      "mode": "meaning",
+      "audioKey": "phrases/trong_pai_kha",
+      "thai": "ตรงไปค่ะ",
+      "rtgs": "trong pai kha",
+      "choices": [
+        { "thai": "ตรงไปค่ะ", "rtgs": "trong pai kha", "meaning": "Straight ahead" },
+        { "thai": "อยู่ใกล้ค่ะ", "rtgs": "yu klai kha", "meaning": "It's close by" },
+        { "thai": "อยู่ไกลค่ะ", "rtgs": "yu klai kha", "meaning": "It's far away" }
+      ],
+      "correctIndex": 0,
+      "explanation": "ตรงไป — 'straight go' — is the answer you'll actually hear. And mind the trap in the other two: ใกล้ (falling) is near, ไกล (mid) is far — same letters, different tone.",
+      "attributeTo": ["trong", "pai"]
+    },
+    {
+      "type": "dialogue_choice",
+      "context": "A curry stall in the south — the pots here have a reputation for heat, and you can't handle much. You're a man, still deciding. The vendor looks up:",
+      "speaker": {
+        "thai": "เอาอะไรคะ",
+        "rtgs": "ao arai kha",
+        "meaning": "What'll you have?",
+        "audioKey": "phrases/ao_arai_kha"
+      },
+      "question": "You want to check the heat before you order. What do you say?",
+      "choices": [
+        {
+          "thai": "เผ็ดไหมครับ",
+          "rtgs": "phet mai khrap",
+          "audioKey": "phrases/phet_mai_khrap",
+          "quality": "best",
+          "note": "Ask before you order — เผ็ดไหมครับ is exactly what a heat-shy Thai customer says. The vendor answers with the verb: เผ็ด or ไม่เผ็ด."
+        },
+        {
+          "thai": "เผ็ดไหม",
+          "rtgs": "phet mai",
+          "quality": "register",
+          "note": "Right question, bare delivery. Between friends it's fine — to a vendor you've just met, tack on ครับ."
+        },
+        {
+          "thai": "อร่อยไหมครับ",
+          "rtgs": "aroi mai khrap",
+          "quality": "meaning",
+          "note": "Grammatical and polite — but it asks if it's tasty. Every vendor answers yes; it won't save your tongue."
+        },
+        {
+          "thai": "ไม่เผ็ดครับ",
+          "rtgs": "mai phet khrap",
+          "audioKey": "phrases/mai_phet_khrap",
+          "quality": "situation",
+          "note": "'It's not spicy' — that's the vendor's line, not yours. You'd be answering a question nobody asked."
+        }
+      ],
+      "attributeTo": ["phet", "mai_question"]
+    },
+    {
+      "type": "sentence_listening",
+      "mode": "meaning",
+      "audioKey": "phrases/mai_phet_khrap",
+      "thai": "ไม่เผ็ดครับ",
+      "rtgs": "mai phet khrap",
+      "choices": [
+        { "thai": "ไม่เผ็ดครับ", "rtgs": "mai phet khrap", "meaning": "It's not spicy" },
+        { "thai": "เผ็ดมากครับ", "rtgs": "phet mak khrap", "meaning": "It's very spicy" },
+        { "thai": "ไม่อร่อยครับ", "rtgs": "mai aroi khrap", "meaning": "It's not tasty" }
+      ],
+      "correctIndex": 0,
+      "explanation": "The vendor's answer: ไม่ in front of the verb flips it. เผ็ด spicy, ไม่เผ็ด not spicy — trust that first syllable.",
+      "attributeTo": ["mai_not", "phet"]
+    }
+  ]
+}

@@ -81,7 +81,9 @@ import q01 from "./lessons/q-01.json";
 import q02 from "./lessons/q-02.json";
 import q03 from "./lessons/q-03.json";
 import sent01 from "./lessons/sent-01.json";
-import sentCheck from "./lessons/sent-check.json";
+import sent02 from "./lessons/sent-02.json";
+import sent03 from "./lessons/sent-03.json";
+import sentCp from "./lessons/sent-cp.json";
 
 // Parsing happens at module load, so invalid content fails the build the
 // first time any page imports from src/content.
@@ -179,12 +181,10 @@ export const lessons: Lesson[] = z.array(lessonSchema).parse([
   q01,
   q02,
   q03,
-  // Unit 11 (First Sentences) staging: routable at /lesson/sent-01 and
-  // /lesson/sent-check for review, not yet listed in the unit's lessonIds —
-  // the path map keeps showing the comingSoon stub until the unit's
-  // content is complete.
   sent01,
-  sentCheck,
+  sent02,
+  sent03,
+  sentCp,
 ]);
 
 export const lessonById: ReadonlyMap<string, Lesson> = new Map(
