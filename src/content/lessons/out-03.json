@@ -1,0 +1,235 @@
+{
+  "id": "out-03",
+  "unitId": "words-afternoon-out",
+  "order": 3,
+  "title": "Make a deal",
+  "xpReward": 25,
+  "pedagogy": "Bargaining, recombining units 1–11 — no new words, one new pattern: VERB + ได้ไหม 'can you…?' answered by the verb, ได้ (dai F: mid ด + mai tho) 'can' / ไม่ได้ 'can't' (ไม่ F: low ม + mai ek). Built from ได้ (unit 2) + ไหม (mai R: ห-nam ม + live, unit 6) + ไม่ (unit 2). Patterns: (1) ลดหน่อยได้ไหมครับ (lot H: LOW ล + dead short; noi L: ห-nam น + mai ek) 'can you lower it a bit?'; (2) ไป after an adjective = 'too' — แพงไปครับ (phaeng M: low พ + live ง; pai M) 'too expensive'; (3) two clauses in one turn — แพงมากครับ ลดหน่อยได้ไหมครับ; (4) the vendor's ถูกแล้วค่ะ (thuk L: high ถ + dead; laeo H) uses แล้ว in its 'already' sense — 'that's already a good price'. Price listening drills digit order: สองร้อย 200 vs สามร้อย/ห้าร้อย. The dialogues open a haggle (best names the problem then asks) and close a deal (best seals it with เอาอันนี้); wrong answers fail on register (bare ลด/เอา), meaning (ถูกมาก agrees it's cheap / ไม่เอา walks away), and situation (ขอบคุณ or อร่อยมาก out of place). All per-syllable tones verify against each token's vocab toneReason via wordId.",
+  "teaches": [],
+  "reviews": [
+    "an",
+    "ni_this",
+    "thao_rai",
+    "khrap",
+    "lot",
+    "noi",
+    "dai",
+    "mai_question",
+    "mai_not",
+    "phaeng",
+    "pai",
+    "mak",
+    "thuk",
+    "ao",
+    "song",
+    "roi",
+    "bat"
+  ],
+  "exercises": [
+    {
+      "type": "concept",
+      "title": "Can you…? — VERB + ได้ไหม",
+      "body": [
+        "To ask if something's possible, tack ได้ไหม onto the verb: ลดหน่อยได้ไหม — 'can you lower it a bit?'. It's ได้ 'can' + ไหม, the yes/no switch.",
+        "The answer echoes the verb, just like every yes/no question: ได้ 'can', or ไม่ได้ 'can't'.",
+        "And ไป after an adjective means 'too': แพงไป 'too expensive'. Name the problem, then ask — that's the whole polite haggle."
+      ],
+      "thaiExample": "ลดหน่อยได้ไหมครับ",
+      "exampleAudioKey": "phrases/lot_noi_dai_mai_khrap"
+    },
+    {
+      "type": "sentence_build",
+      "meaning": "How much is this one? (male speaker)",
+      "gloss": "this-one + how-much + polite(m)",
+      "promptMode": "meaning",
+      "audioKey": "phrases/an_ni_thao_rai_khrap",
+      "tokens": [
+        { "thai": "อัน", "rtgs": "an", "wordId": "an" },
+        { "thai": "นี้", "rtgs": "ni", "wordId": "ni_this" },
+        { "thai": "เท่าไหร่", "rtgs": "thao rai", "wordId": "thao_rai" },
+        { "thai": "ครับ", "rtgs": "khrap", "wordId": "khrap" }
+      ],
+      "distractors": [{ "thai": "ค่ะ", "rtgs": "kha" }],
+      "explanation": "อันนี้ points at the thing, เท่าไหร่ asks the price. A man closes with ครับ."
+    },
+    {
+      "type": "sentence_listening",
+      "mode": "meaning",
+      "audioKey": "phrases/song_roi_bat_kha",
+      "thai": "สองร้อยบาทค่ะ",
+      "rtgs": "song roi bat kha",
+      "choices": [
+        { "thai": "สองร้อยบาทค่ะ", "rtgs": "song roi bat kha", "meaning": "Two hundred baht" },
+        { "thai": "สามร้อยบาทค่ะ", "rtgs": "sam roi bat kha", "meaning": "Three hundred baht" },
+        { "thai": "ห้าร้อยบาทค่ะ", "rtgs": "ha roi bat kha", "meaning": "Five hundred baht" }
+      ],
+      "correctIndex": 0,
+      "explanation": "ร้อย is 'hundred'; the number in front counts them — สอง 2, สาม 3, ห้า 5. Catch the first word and you have the price.",
+      "attributeTo": ["song", "roi", "bat"]
+    },
+    {
+      "type": "sentence_build",
+      "meaning": "Can you lower it a bit? (male speaker)",
+      "gloss": "lower + a-bit + can + question particle + polite(m)",
+      "promptMode": "meaning",
+      "audioKey": "phrases/lot_noi_dai_mai_khrap",
+      "tokens": [
+        { "thai": "ลด", "rtgs": "lot", "wordId": "lot" },
+        { "thai": "หน่อย", "rtgs": "noi", "wordId": "noi" },
+        { "thai": "ได้", "rtgs": "dai", "wordId": "dai" },
+        { "thai": "ไหม", "rtgs": "mai", "wordId": "mai_question" },
+        { "thai": "ครับ", "rtgs": "khrap", "wordId": "khrap" }
+      ],
+      "distractors": [{ "thai": "ค่ะ", "rtgs": "kha" }],
+      "explanation": "ลดหน่อย 'lower it a bit', then ได้ไหม makes it 'can you?'. The softener หน่อย keeps the haggle friendly."
+    },
+    {
+      "type": "sentence_cloze",
+      "meaning": "Can you lower it a bit? (male speaker)",
+      "audioKey": "phrases/lot_noi_dai_mai_khrap",
+      "tokens": [
+        { "thai": "ลด", "rtgs": "lot", "wordId": "lot" },
+        { "thai": "หน่อย", "rtgs": "noi", "wordId": "noi" },
+        { "thai": "ได้", "rtgs": "dai", "wordId": "dai" },
+        { "thai": "ไหม", "rtgs": "mai", "wordId": "mai_question" },
+        { "thai": "ครับ", "rtgs": "khrap", "wordId": "khrap" }
+      ],
+      "blankIndex": 2,
+      "distractors": [
+        { "thai": "เอา", "rtgs": "ao" },
+        { "thai": "มี", "rtgs": "mi" }
+      ],
+      "explanation": "ได้ is what turns ลดหน่อย…ไหม into 'can you?'. เอา and มี are real verbs, but neither fits this slot — they make no sentence here.",
+      "attributeTo": ["lot", "dai"]
+    },
+    {
+      "type": "dialogue_choice",
+      "context": "A market stall, a woven bag you like. The tag feels steep and it's a place where haggling is expected. You're a man. The vendor says:",
+      "speaker": {
+        "thai": "สองร้อยบาทค่ะ",
+        "rtgs": "song roi bat kha",
+        "meaning": "Two hundred baht",
+        "audioKey": "phrases/song_roi_bat_kha"
+      },
+      "question": "It's too much. Open the haggle.",
+      "choices": [
+        {
+          "thai": "แพงไปครับ ลดหน่อยได้ไหมครับ",
+          "rtgs": "phaeng pai khrap lot noi dai mai khrap",
+          "audioKey": "phrases/phaeng_pai_lot_noi_dai_mai_khrap",
+          "quality": "best",
+          "note": "Name the problem — แพงไป 'too pricey' — then ask — ลดหน่อยได้ไหม. That one-two is the polite Thai haggle."
+        },
+        {
+          "thai": "ลดหน่อย",
+          "rtgs": "lot noi",
+          "quality": "register",
+          "note": "The right ask, but bare it lands like an order. A smile and ครับ — ลดหน่อยได้ไหมครับ — keep it friendly."
+        },
+        {
+          "thai": "ถูกมากครับ",
+          "rtgs": "thuk mak khrap",
+          "quality": "meaning",
+          "note": "'Very cheap!' — you'd be agreeing it's a bargain. That's the opposite of talking the price down."
+        },
+        {
+          "thai": "ขอบคุณครับ",
+          "rtgs": "khop khun khrap",
+          "quality": "situation",
+          "note": "Thanking her closes the deal — before you've even made one. Save it for when you've settled on a price."
+        }
+      ],
+      "attributeTo": ["phaeng", "lot", "noi", "dai"]
+    },
+    {
+      "type": "sentence_listening",
+      "mode": "meaning",
+      "audioKey": "phrases/lot_mai_dai_kha",
+      "thai": "ลดไม่ได้ค่ะ",
+      "rtgs": "lot mai dai kha",
+      "choices": [
+        { "thai": "ลดไม่ได้ค่ะ", "rtgs": "lot mai dai kha", "meaning": "I can't lower it" },
+        { "thai": "ลดได้ค่ะ", "rtgs": "lot dai kha", "meaning": "I can lower it" },
+        { "thai": "ถูกแล้วค่ะ", "rtgs": "thuk laeo kha", "meaning": "It's already a good price" }
+      ],
+      "correctIndex": 0,
+      "explanation": "ได้ 'can' vs ไม่ได้ 'can't' — the ไม่ in the middle is the whole answer. And her other pushback, ถูกแล้วค่ะ, uses แล้ว in its 'already' sense: 'that's already cheap'.",
+      "attributeTo": ["lot", "dai"]
+    },
+    {
+      "type": "sentence_build",
+      "meaning": "It's too expensive. (male speaker)",
+      "gloss": "expensive + too + polite(m)",
+      "promptMode": "audio",
+      "audioKey": "phrases/phaeng_pai_khrap",
+      "tokens": [
+        { "thai": "แพง", "rtgs": "phaeng", "wordId": "phaeng" },
+        { "thai": "ไป", "rtgs": "pai", "wordId": "pai" },
+        { "thai": "ครับ", "rtgs": "khrap", "wordId": "khrap" }
+      ],
+      "distractors": [{ "thai": "ถูก", "rtgs": "thuk" }],
+      "explanation": "ไป after an adjective means 'too': แพงไป 'too expensive'. ถูก 'cheap' would say the opposite — not a complaint at all."
+    },
+    {
+      "type": "sentence_build",
+      "meaning": "That's really expensive — can you lower it a bit? (male speaker)",
+      "gloss": "expensive + very + polite(m) + lower + a-bit + can + question particle + polite(m)",
+      "promptMode": "audio",
+      "audioKey": "phrases/phaeng_mak_lot_noi_dai_mai_khrap",
+      "tokens": [
+        { "thai": "แพง", "rtgs": "phaeng", "wordId": "phaeng" },
+        { "thai": "มาก", "rtgs": "mak", "wordId": "mak" },
+        { "thai": "ครับ", "rtgs": "khrap", "wordId": "khrap" },
+        { "thai": "ลด", "rtgs": "lot", "wordId": "lot" },
+        { "thai": "หน่อย", "rtgs": "noi", "wordId": "noi" },
+        { "thai": "ได้", "rtgs": "dai", "wordId": "dai" },
+        { "thai": "ไหม", "rtgs": "mai", "wordId": "mai_question" },
+        { "thai": "ครับ", "rtgs": "khrap", "wordId": "khrap" }
+      ],
+      "explanation": "Two full sentences in one turn: the complaint แพงมากครับ, then the request ลดหน่อยได้ไหมครับ. Each keeps its own ครับ."
+    },
+    {
+      "type": "dialogue_choice",
+      "context": "She meets you halfway and drops the price to a hundred and fifty. You're happy with it. You're a man. She says:",
+      "speaker": {
+        "thai": "ลดได้ค่ะ ร้อยห้าสิบบาทค่ะ",
+        "rtgs": "lot dai kha roi ha sip bat kha",
+        "meaning": "I can lower it — a hundred and fifty baht",
+        "audioKey": "phrases/lot_dai_roi_ha_sip_bat_kha"
+      },
+      "question": "Deal. Close it.",
+      "choices": [
+        {
+          "thai": "เอาอันนี้ครับ",
+          "rtgs": "ao an ni khrap",
+          "audioKey": "phrases/ao_an_ni_khrap",
+          "quality": "best",
+          "note": "Seal it — เอา 'I'll take', อันนี้ 'this one', ครับ. The deal is done."
+        },
+        {
+          "thai": "เอา",
+          "rtgs": "ao",
+          "quality": "register",
+          "note": "You'll get it — but a lone เอา to a vendor is abrupt. เอาอันนี้ครับ closes the deal warmly."
+        },
+        {
+          "thai": "ไม่เอาครับ",
+          "rtgs": "mai ao khrap",
+          "quality": "meaning",
+          "note": "'No thanks' — but you DO want it, at the price you just won. This walks away from your own deal."
+        },
+        {
+          "thai": "อร่อยมากครับ",
+          "rtgs": "aroi mak khrap",
+          "quality": "situation",
+          "note": "'Very delicious' — you're buying a bag, not eating. Right enthusiasm, wrong scene entirely."
+        }
+      ],
+      "attributeTo": ["ao", "an"]
+    },
+    {
+      "type": "match_pairs",
+      "characterIds": ["phaeng", "thuk", "lot", "thao_rai"]
+    }
+  ]
+}

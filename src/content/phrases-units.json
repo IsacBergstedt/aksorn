@@ -187,5 +187,23 @@
       "Handle real mini-dialogues: order, pay, thank, leave",
       "Graduate from phrases to talking"
     ]
+  },
+  {
+    "id": "words-afternoon-out",
+    "title": "An Afternoon Out",
+    "description": "Longer, connected sentences for a real afternoon in town — directions, a custom order, and haggling.",
+    "order": 12,
+    "lessonIds": [
+      "out-01",
+      "out-02",
+      "out-03",
+      "out-cp"
+    ],
+    "goals": [
+      "Give turn-by-turn directions: ตรงไปแล้วเลี้ยวซ้าย",
+      "Order it your way — เผ็ดน้อย, หวานน้อยหน่อย",
+      "Haggle politely: แพงไป, ลดหน่อยได้ไหม",
+      "String two clauses into one natural turn"
+    ]
   }
 ]

@@ -1,0 +1,219 @@
+{
+  "id": "out-01",
+  "unitId": "words-afternoon-out",
+  "order": 1,
+  "title": "Getting around",
+  "xpReward": 25,
+  "pedagogy": "Directions, recombining units 1–11 and introducing two new words: เลี้ยว (liao H: LOW ล + mai tho, vowel เ◌ีย + glide ว) 'to turn' and แล้ว (laeo H: LOW ล + mai tho) 'then/already'. Patterns: (1) turn-by-turn directions chain clauses with แล้ว — ตรงไปแล้วเลี้ยวซ้าย (trong M: mid ต cluster + live ง; pai M: mid ป + live ไ◌; laeo H; liao H; sai H: LOW ซ + mai tho); (2) the location question ห้องน้ำอยู่ที่ไหน returns from earlier, now closed with the female question particle คะ (kha H: low ค + dead short); (3) two-clause answers by juxtaposition — ไม่ไกลครับ เลี้ยวซ้าย (mai F: low ม + mai ek; klai M: mid ก cluster + live ไ◌). Listening contrasts เลี้ยวซ้าย/เลี้ยวขวา/ตรงไป (sai H vs khwa R: high ข cluster + live vs trong M) and near/far ไม่ไกล vs อยู่ไกล. The taxi dialogue directs the driver (best gives both steps with แล้ว) and the passer-by dialogue gives directions to a stranger; wrong answers fail on register (bare/clipped), meaning (wrong direction), and situation (asking the fare before arriving / waving off a non-existent apology). All per-syllable tones verify against each token's vocab toneReason via wordId.",
+  "teaches": ["liao", "laeo"],
+  "reviews": [
+    "trong",
+    "pai",
+    "sai",
+    "khwa",
+    "klai_far",
+    "mai_not",
+    "hong_nam",
+    "yu",
+    "thi",
+    "nai",
+    "khrap",
+    "kha_question",
+    "kha_statement"
+  ],
+  "exercises": [
+    {
+      "type": "word_intro",
+      "wordId": "liao"
+    },
+    {
+      "type": "word_intro",
+      "wordId": "laeo"
+    },
+    {
+      "type": "concept",
+      "title": "String directions together with แล้ว",
+      "body": [
+        "Two new words open the afternoon: เลี้ยว 'to turn' and แล้ว 'then'. เลี้ยวซ้าย is 'turn left', เลี้ยวขวา 'turn right'.",
+        "แล้ว links one step to the next: ตรงไปแล้วเลี้ยวซ้าย — 'go straight, then turn left'. Now a direction can have two parts instead of one.",
+        "The same แล้ว also means 'already' after a verb — กินข้าวแล้ว 'already ate' — but here it's just the joiner between steps."
+      ],
+      "thaiExample": "ตรงไปแล้วเลี้ยวซ้าย",
+      "exampleAudioKey": "phrases/trong_pai_laeo_liao_sai"
+    },
+    {
+      "type": "sentence_build",
+      "meaning": "Turn left. (male speaker)",
+      "gloss": "turn + left + polite(m)",
+      "promptMode": "meaning",
+      "audioKey": "phrases/liao_sai_khrap",
+      "tokens": [
+        { "thai": "เลี้ยว", "rtgs": "liao", "wordId": "liao" },
+        { "thai": "ซ้าย", "rtgs": "sai", "wordId": "sai" },
+        { "thai": "ครับ", "rtgs": "khrap", "wordId": "khrap" }
+      ],
+      "distractors": [{ "thai": "ค่ะ", "rtgs": "kha" }],
+      "explanation": "เลี้ยว + direction: เลี้ยวซ้าย turn left. A man closes with ครับ — ค่ะ is the female particle."
+    },
+    {
+      "type": "sentence_listening",
+      "mode": "meaning",
+      "audioKey": "phrases/liao_sai_khrap",
+      "thai": "เลี้ยวซ้ายครับ",
+      "rtgs": "liao sai khrap",
+      "choices": [
+        { "thai": "เลี้ยวซ้ายครับ", "rtgs": "liao sai khrap", "meaning": "Turn left" },
+        { "thai": "เลี้ยวขวาครับ", "rtgs": "liao khwa khrap", "meaning": "Turn right" },
+        { "thai": "ตรงไปครับ", "rtgs": "trong pai khrap", "meaning": "Go straight ahead" }
+      ],
+      "correctIndex": 0,
+      "explanation": "Same เลี้ยว, different direction — ซ้าย (high) left, ขวา (rising) right — or no turn at all: ตรงไป straight.",
+      "attributeTo": ["liao", "sai"]
+    },
+    {
+      "type": "sentence_build",
+      "meaning": "Go straight, then turn left. (male speaker)",
+      "gloss": "straight + go + then + turn + left + polite(m)",
+      "promptMode": "audio",
+      "audioKey": "phrases/trong_pai_laeo_liao_sai_khrap",
+      "tokens": [
+        { "thai": "ตรง", "rtgs": "trong", "wordId": "trong" },
+        { "thai": "ไป", "rtgs": "pai", "wordId": "pai" },
+        { "thai": "แล้ว", "rtgs": "laeo", "wordId": "laeo" },
+        { "thai": "เลี้ยว", "rtgs": "liao", "wordId": "liao" },
+        { "thai": "ซ้าย", "rtgs": "sai", "wordId": "sai" },
+        { "thai": "ครับ", "rtgs": "khrap", "wordId": "khrap" }
+      ],
+      "distractors": [{ "thai": "ไม่", "rtgs": "mai" }],
+      "explanation": "Two steps, joined by แล้ว: ตรงไป then เลี้ยวซ้าย. ไม่ has no place — nothing here is being negated."
+    },
+    {
+      "type": "sentence_cloze",
+      "meaning": "Go straight, then turn left. (male speaker)",
+      "audioKey": "phrases/trong_pai_laeo_liao_sai_khrap",
+      "tokens": [
+        { "thai": "ตรง", "rtgs": "trong", "wordId": "trong" },
+        { "thai": "ไป", "rtgs": "pai", "wordId": "pai" },
+        { "thai": "แล้ว", "rtgs": "laeo", "wordId": "laeo" },
+        { "thai": "เลี้ยว", "rtgs": "liao", "wordId": "liao" },
+        { "thai": "ซ้าย", "rtgs": "sai", "wordId": "sai" },
+        { "thai": "ครับ", "rtgs": "khrap", "wordId": "khrap" }
+      ],
+      "blankIndex": 2,
+      "distractors": [
+        { "thai": "ที่", "rtgs": "thi" },
+        { "thai": "ไหน", "rtgs": "nai" }
+      ],
+      "explanation": "แล้ว is the joiner between the two steps. ที่ and ไหน are place words — dropped in here they make no sentence at all."
+    },
+    {
+      "type": "dialogue_choice",
+      "context": "You flag down a taxi. You're a woman. The market you want is straight ahead, then a left. The driver looks back:",
+      "speaker": {
+        "thai": "ไปไหนครับ",
+        "rtgs": "pai nai khrap",
+        "meaning": "Where to?",
+        "audioKey": "phrases/pai_nai_khrap"
+      },
+      "question": "Give him the way.",
+      "choices": [
+        {
+          "thai": "ตรงไปแล้วเลี้ยวซ้ายค่ะ",
+          "rtgs": "trong pai laeo liao sai kha",
+          "audioKey": "phrases/trong_pai_laeo_liao_sai_kha",
+          "quality": "best",
+          "note": "Both steps in one breath, joined by แล้ว — exactly what a driver needs, closed with ค่ะ."
+        },
+        {
+          "thai": "ตรงไปเลี้ยวซ้าย",
+          "rtgs": "trong pai liao sai",
+          "quality": "register",
+          "note": "He'll follow it — but with no แล้ว between the steps and no ค่ะ it comes out clipped. The joiner and the particle make it clear and polite."
+        },
+        {
+          "thai": "เลี้ยวขวาค่ะ",
+          "rtgs": "liao khwa kha",
+          "quality": "meaning",
+          "note": "Polite, but it says turn RIGHT — you needed left. One word, wrong direction, wrong destination."
+        },
+        {
+          "thai": "เท่าไหร่คะ",
+          "rtgs": "thao rai kha",
+          "quality": "situation",
+          "note": "'How much?' — before he's even pulled out. The fare comes at the end of the ride, not the start."
+        }
+      ],
+      "attributeTo": ["trong", "pai", "liao", "sai"]
+    },
+    {
+      "type": "sentence_build",
+      "meaning": "Where's the bathroom? (female speaker)",
+      "gloss": "bathroom + is-at + at + where + polite(f, question)",
+      "promptMode": "meaning",
+      "audioKey": "phrases/hong_nam_yu_thi_nai_kha_question",
+      "tokens": [
+        { "thai": "ห้องน้ำ", "rtgs": "hong nam", "wordId": "hong_nam" },
+        { "thai": "อยู่", "rtgs": "yu", "wordId": "yu" },
+        { "thai": "ที่", "rtgs": "thi", "wordId": "thi" },
+        { "thai": "ไหน", "rtgs": "nai", "wordId": "nai" },
+        { "thai": "คะ", "rtgs": "kha", "wordId": "kha_question" }
+      ],
+      "distractors": [{ "thai": "ครับ", "rtgs": "khrap" }],
+      "explanation": "อยู่ที่ไหน — 'is at where' — with the question word in the answer's slot. A woman's question ends on คะ, not male ครับ."
+    },
+    {
+      "type": "sentence_listening",
+      "mode": "meaning",
+      "audioKey": "phrases/mai_klai_khrap_liao_sai",
+      "thai": "ไม่ไกลครับ เลี้ยวซ้าย",
+      "rtgs": "mai klai khrap liao sai",
+      "choices": [
+        { "thai": "ไม่ไกลครับ เลี้ยวซ้าย", "rtgs": "mai klai khrap liao sai", "meaning": "Not far — turn left" },
+        { "thai": "อยู่ไกลครับ", "rtgs": "yu klai khrap", "meaning": "It's far away" },
+        { "thai": "เลี้ยวขวาครับ", "rtgs": "liao khwa khrap", "meaning": "Turn right" }
+      ],
+      "correctIndex": 0,
+      "explanation": "Two clauses back to back: reassure (ไม่ไกล 'not far') then direct (เลี้ยวซ้าย). Mind ไกล (mid) 'far' — ไม่ไกล flips it to 'not far'.",
+      "attributeTo": ["klai_far", "liao"]
+    },
+    {
+      "type": "dialogue_choice",
+      "context": "A stranger stops near the toilets, looking lost. You're a man; the bathroom is straight ahead and not far. She asks:",
+      "speaker": {
+        "thai": "ห้องน้ำอยู่ที่ไหนคะ",
+        "rtgs": "hong nam yu thi nai kha",
+        "meaning": "Where's the bathroom?",
+        "audioKey": "phrases/hong_nam_yu_thi_nai_kha_question"
+      },
+      "question": "Point her the right way.",
+      "choices": [
+        {
+          "thai": "ตรงไปครับ ไม่ไกล",
+          "rtgs": "trong pai khrap mai klai",
+          "audioKey": "phrases/trong_pai_khrap_mai_klai",
+          "quality": "best",
+          "note": "The direction plus a reassurance — ตรงไป, and ไม่ไกล so she knows it's close. Two short clauses, one helpful answer."
+        },
+        {
+          "thai": "ตรงไป",
+          "rtgs": "trong pai",
+          "quality": "register",
+          "note": "Right way, but a bare ตรงไป to a stranger is curt. ครับ softens it into help rather than a command."
+        },
+        {
+          "thai": "เลี้ยวซ้ายครับ",
+          "rtgs": "liao sai khrap",
+          "quality": "meaning",
+          "note": "Polite — but it sends her left when the toilet is straight ahead. Wrong direction, lost stranger."
+        },
+        {
+          "thai": "ไม่เป็นไรครับ",
+          "rtgs": "mai pen rai khrap",
+          "quality": "situation",
+          "note": "ไม่เป็นไร waves off a thank-you or apology. She asked for directions — there's nothing to wave off yet."
+        }
+      ],
+      "attributeTo": ["trong", "pai"]
+    }
+  ]
+}

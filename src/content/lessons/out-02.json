@@ -1,0 +1,223 @@
+{
+  "id": "out-02",
+  "unitId": "words-afternoon-out",
+  "order": 2,
+  "title": "Order it your way",
+  "xpReward": 25,
+  "pedagogy": "Customising an order, recombining units 1–11 and introducing น้อย (noi H: LOW น + mai tho, vowel ◌อ + glide ย) 'a little / less'. Patterns: (1) the modifier น้อย follows what it scales — เผ็ดน้อย (phet L: high ผ + dead) 'mildly spicy', หวานน้อย (wan R: ห-nam ว + live) 'less sweet'; (2) น้อย (high, 'less') stacks with หน่อย (noi L: ห-nam น + mai ek, the softener) inside the ขอ…หน่อย frame — ขอข้าวเผ็ดน้อยหน่อยครับ / ขอน้ำหวานน้อยหน่อยค่ะ — the tone is the whole difference between the two 'noi's; (3) checking a dish before ordering, อันนี้เผ็ดไหมคะ (an M: mid อ + live น; ni H: LOW น + mai tho; mai R: ห-nam ม + live). Listening contrasts เผ็ดน้อย/เผ็ดมาก/ไม่เผ็ด. The two dialogues order rice mild (male) and a drink less-sweet (female); wrong answers fail on register (bare เอา, no particle), meaning (right frame, wrong item), and situation (complimenting or thanking before anything is served). All per-syllable tones verify against each token's vocab toneReason via wordId.",
+  "teaches": ["noi_little"],
+  "reviews": [
+    "kho",
+    "khao_rice",
+    "nam",
+    "phet",
+    "wan_sweet",
+    "noi",
+    "an",
+    "ni_this",
+    "mai_question",
+    "khrap",
+    "kha_statement",
+    "kha_question",
+    "aroi",
+    "mak"
+  ],
+  "exercises": [
+    {
+      "type": "word_intro",
+      "wordId": "noi_little"
+    },
+    {
+      "type": "concept",
+      "title": "Dial it down: น้อย",
+      "body": [
+        "To ask for less of something, put น้อย right after it: เผ็ดน้อย 'mildly spicy', หวานน้อย 'less sweet'. Street-stall 'not spicy' is often still spicy — เผ็ดน้อย is the realistic ask.",
+        "Careful with the two 'noi's: น้อย (high tone) means 'less', หน่อย (low tone) is the polite softener. Only the tone tells them apart.",
+        "They even stack in one order: ขอน้ำหวานน้อยหน่อยค่ะ — 'a drink, a little less sweet, please'."
+      ],
+      "thaiExample": "ขอข้าวเผ็ดน้อยหน่อยครับ",
+      "exampleAudioKey": "phrases/kho_khao_phet_noi_noi_khrap"
+    },
+    {
+      "type": "sentence_build",
+      "meaning": "Some rice, mildly spicy, please. (male speaker)",
+      "gloss": "ask-for + rice + spicy + less + a-bit + polite(m)",
+      "promptMode": "meaning",
+      "audioKey": "phrases/kho_khao_phet_noi_noi_khrap",
+      "tokens": [
+        { "thai": "ขอ", "rtgs": "kho", "wordId": "kho" },
+        { "thai": "ข้าว", "rtgs": "khao", "wordId": "khao_rice" },
+        { "thai": "เผ็ด", "rtgs": "phet", "wordId": "phet" },
+        { "thai": "น้อย", "rtgs": "noi", "wordId": "noi_little" },
+        { "thai": "หน่อย", "rtgs": "noi", "wordId": "noi" },
+        { "thai": "ครับ", "rtgs": "khrap", "wordId": "khrap" }
+      ],
+      "distractors": [{ "thai": "คะ", "rtgs": "kha" }],
+      "explanation": "The modifier rides after the noun — ข้าวเผ็ดน้อย 'mildly-spicy rice' — then หน่อย softens the request and ครับ closes it. High น้อย 'less', then low หน่อย 'please'."
+    },
+    {
+      "type": "sentence_cloze",
+      "meaning": "Some rice, mildly spicy, please. (male speaker)",
+      "audioKey": "phrases/kho_khao_phet_noi_noi_khrap",
+      "tokens": [
+        { "thai": "ขอ", "rtgs": "kho", "wordId": "kho" },
+        { "thai": "ข้าว", "rtgs": "khao", "wordId": "khao_rice" },
+        { "thai": "เผ็ด", "rtgs": "phet", "wordId": "phet" },
+        { "thai": "น้อย", "rtgs": "noi", "wordId": "noi_little" },
+        { "thai": "หน่อย", "rtgs": "noi", "wordId": "noi" },
+        { "thai": "ครับ", "rtgs": "khrap", "wordId": "khrap" }
+      ],
+      "blankIndex": 5,
+      "distractors": [
+        { "thai": "ค่ะ", "rtgs": "kha" },
+        { "thai": "คะ", "rtgs": "kha" }
+      ],
+      "explanation": "A man's request closes on ครับ. ค่ะ and คะ are the female particles — and คะ only ends questions, not orders."
+    },
+    {
+      "type": "sentence_listening",
+      "mode": "meaning",
+      "audioKey": "phrases/phet_noi_khrap",
+      "thai": "เผ็ดน้อยครับ",
+      "rtgs": "phet noi khrap",
+      "choices": [
+        { "thai": "เผ็ดน้อยครับ", "rtgs": "phet noi khrap", "meaning": "Just a little spicy" },
+        { "thai": "เผ็ดมากครับ", "rtgs": "phet mak khrap", "meaning": "Very spicy" },
+        { "thai": "ไม่เผ็ดครับ", "rtgs": "mai phet khrap", "meaning": "Not spicy" }
+      ],
+      "correctIndex": 0,
+      "explanation": "น้อย turns เผ็ด down to 'mildly'; มาก turns it up to 'very'; ไม่ switches it off. One syllable after เผ็ด decides how much heat you're in for.",
+      "attributeTo": ["phet", "noi_little"]
+    },
+    {
+      "type": "dialogue_choice",
+      "context": "A curry stall with a fearsome reputation. You can't take much heat. You're a man. The vendor looks up:",
+      "speaker": {
+        "thai": "เอาอะไรคะ",
+        "rtgs": "ao arai kha",
+        "meaning": "What'll you have?",
+        "audioKey": "phrases/ao_arai_kha"
+      },
+      "question": "Order the rice, but ask for it mild.",
+      "choices": [
+        {
+          "thai": "ขอข้าวเผ็ดน้อยหน่อยครับ",
+          "rtgs": "kho khao phet noi noi khrap",
+          "audioKey": "phrases/kho_khao_phet_noi_noi_khrap",
+          "quality": "best",
+          "note": "The full custom order: the ขอ…หน่อย frame with เผ็ดน้อย tucked in. Polite, precise, and it saves your tongue."
+        },
+        {
+          "thai": "เอาข้าวเผ็ดน้อย",
+          "rtgs": "ao khao phet noi",
+          "quality": "register",
+          "note": "The heat request lands, but bare เอา with no particle is how you talk to a friend, not a vendor. ขอ…ครับ makes it a request."
+        },
+        {
+          "thai": "ขอน้ำหวานน้อยหน่อยครับ",
+          "rtgs": "kho nam wan noi noi khrap",
+          "quality": "meaning",
+          "note": "Same polite frame — but it orders a less-sweet drink. Right sentence, wrong thing in the middle: you wanted the rice."
+        },
+        {
+          "thai": "อร่อยมากครับ",
+          "rtgs": "aroi mak khrap",
+          "quality": "situation",
+          "note": "'Very delicious' — a compliment for after you've eaten, not an answer to 'what'll you have?'"
+        }
+      ],
+      "attributeTo": ["kho", "khao_rice", "phet", "noi_little"]
+    },
+    {
+      "type": "sentence_build",
+      "meaning": "A drink, less sweet, please. (female speaker)",
+      "gloss": "ask-for + drink + sweet + less + a-bit + polite(f)",
+      "promptMode": "audio",
+      "audioKey": "phrases/kho_nam_wan_noi_noi_kha",
+      "tokens": [
+        { "thai": "ขอ", "rtgs": "kho", "wordId": "kho" },
+        { "thai": "น้ำ", "rtgs": "nam", "wordId": "nam" },
+        { "thai": "หวาน", "rtgs": "wan", "wordId": "wan_sweet" },
+        { "thai": "น้อย", "rtgs": "noi", "wordId": "noi_little" },
+        { "thai": "หน่อย", "rtgs": "noi", "wordId": "noi" },
+        { "thai": "ค่ะ", "rtgs": "kha", "wordId": "kha_statement" }
+      ],
+      "distractors": [{ "thai": "ครับ", "rtgs": "khrap" }],
+      "explanation": "Thai drinks run very sweet — หวานน้อย tames them. น้อยหน่อย stacks 'less' and 'please'; a woman closes on ค่ะ."
+    },
+    {
+      "type": "sentence_build",
+      "meaning": "Is this one spicy? (female speaker)",
+      "gloss": "this-one + spicy + question particle + polite(f, question)",
+      "promptMode": "meaning",
+      "audioKey": "phrases/an_ni_phet_mai_kha_question",
+      "tokens": [
+        { "thai": "อัน", "rtgs": "an", "wordId": "an" },
+        { "thai": "นี้", "rtgs": "ni", "wordId": "ni_this" },
+        { "thai": "เผ็ด", "rtgs": "phet", "wordId": "phet" },
+        { "thai": "ไหม", "rtgs": "mai", "wordId": "mai_question" },
+        { "thai": "คะ", "rtgs": "kha", "wordId": "kha_question" }
+      ],
+      "distractors": [{ "thai": "ค่ะ", "rtgs": "kha" }],
+      "explanation": "อันนี้ points at the dish; เผ็ดไหม asks the yes/no. A woman's question ends on คะ — ค่ะ never follows ไหม."
+    },
+    {
+      "type": "dialogue_choice",
+      "context": "A drinks cart. Thai sweet tea could stand a spoon up. You're a woman and you'd like it toned down. The vendor asks:",
+      "speaker": {
+        "thai": "เอาอะไรคะ",
+        "rtgs": "ao arai kha",
+        "meaning": "What'll you have?",
+        "audioKey": "phrases/ao_arai_kha"
+      },
+      "question": "Order a drink, but less sweet.",
+      "choices": [
+        {
+          "thai": "ขอน้ำหวานน้อยหน่อยค่ะ",
+          "rtgs": "kho nam wan noi noi kha",
+          "audioKey": "phrases/kho_nam_wan_noi_noi_kha",
+          "quality": "best",
+          "note": "หวานน้อยหน่อย — 'a little less sweet' — in the polite ขอ…ค่ะ frame. Exactly how Thais order their drinks down."
+        },
+        {
+          "thai": "เอาน้ำหวานน้อย",
+          "rtgs": "ao nam wan noi",
+          "quality": "register",
+          "note": "Understood — but bare เอา with no particle is blunt to a vendor. ขอ…ค่ะ is the polite version of the same order."
+        },
+        {
+          "thai": "ขอข้าวเผ็ดน้อยหน่อยค่ะ",
+          "rtgs": "kho khao phet noi noi kha",
+          "quality": "meaning",
+          "note": "Perfect frame — but it orders mildly-spicy rice. You're at a drinks cart; น้ำหวานน้อย is what you meant."
+        },
+        {
+          "thai": "ขอบคุณค่ะ",
+          "rtgs": "khop khun kha",
+          "quality": "situation",
+          "note": "Thanking her before you've ordered anything. ขอบคุณ comes when the drink lands, not now."
+        }
+      ],
+      "attributeTo": ["kho", "nam", "wan_sweet", "noi_little"]
+    },
+    {
+      "type": "sentence_listening",
+      "mode": "meaning",
+      "audioKey": "phrases/kho_nam_wan_noi_noi_kha",
+      "thai": "ขอน้ำหวานน้อยหน่อยค่ะ",
+      "rtgs": "kho nam wan noi noi kha",
+      "choices": [
+        { "thai": "ขอน้ำหวานน้อยหน่อยค่ะ", "rtgs": "kho nam wan noi noi kha", "meaning": "A drink, less sweet, please" },
+        { "thai": "ขอข้าวเผ็ดน้อยหน่อยค่ะ", "rtgs": "kho khao phet noi noi kha", "meaning": "Some rice, mildly spicy, please" },
+        { "thai": "ขอน้ำหน่อยค่ะ", "rtgs": "kho nam noi kha", "meaning": "Some water, please" }
+      ],
+      "correctIndex": 0,
+      "explanation": "หวานน้อย is the giveaway — it's about sweetness, so it's the drink toned down. Drop หวานน้อย and it's just 'some water, please'.",
+      "attributeTo": ["nam", "wan_sweet", "noi_little"]
+    },
+    {
+      "type": "match_pairs",
+      "characterIds": ["phet", "wan_sweet", "noi_little", "noi"]
+    }
+  ]
+}

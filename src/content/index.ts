@@ -24,6 +24,7 @@ import { rawGettingAroundWords } from "./vocab/getting-around";
 import { rawTimeWords } from "./vocab/time";
 import { rawFeelingsWords } from "./vocab/feelings";
 import { rawQuestionsWords } from "./vocab/questions";
+import { rawAfternoonOutWords } from "./vocab/afternoon-out";
 import { rawTonePairSets } from "./tone-pairs";
 import unitsJson from "./units.json";
 import phrasesUnitsJson from "./phrases-units.json";
@@ -84,6 +85,10 @@ import sent01 from "./lessons/sent-01.json";
 import sent02 from "./lessons/sent-02.json";
 import sent03 from "./lessons/sent-03.json";
 import sentCp from "./lessons/sent-cp.json";
+import out01 from "./lessons/out-01.json";
+import out02 from "./lessons/out-02.json";
+import out03 from "./lessons/out-03.json";
+import outCp from "./lessons/out-cp.json";
 
 // Parsing happens at module load, so invalid content fails the build the
 // first time any page imports from src/content.
@@ -112,6 +117,7 @@ export const vocabWords: VocabWord[] = z
     ...rawTimeWords,
     ...rawFeelingsWords,
     ...rawQuestionsWords,
+    ...rawAfternoonOutWords,
   ]);
 
 export const wordById: ReadonlyMap<string, VocabWord> = new Map(
@@ -185,6 +191,10 @@ export const lessons: Lesson[] = z.array(lessonSchema).parse([
   sent02,
   sent03,
   sentCp,
+  out01,
+  out02,
+  out03,
+  outCp,
 ]);
 
 export const lessonById: ReadonlyMap<string, Lesson> = new Map(

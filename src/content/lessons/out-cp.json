@@ -1,0 +1,210 @@
+{
+  "id": "out-cp",
+  "unitId": "words-afternoon-out",
+  "order": 4,
+  "kind": "checkpoint",
+  "passThreshold": 0.8,
+  "title": "Checkpoint: an afternoon out",
+  "xpReward": 40,
+  "pedagogy": "Checkpoint over out-01/02/03, nothing new taught. The three new words return by ear and by hand: น้อย in a female-voiced order (ขอข้าวเผ็ดน้อยหน่อยค่ะ — kho R; khao F: high ข + mai tho; phet L; noi H: LOW น + mai tho; noi L: ห-nam + mai ek; kha F: low ค + mai ek), เลี้ยว + แล้ว rebuilt by ear (ตรงไปแล้วเลี้ยวซ้ายค่ะ), and the ได้ไหม pattern taken as a woman (ลดหน่อยได้ไหมคะ). Price listening sets the digit-order trap ร้อยห้าสิบ 150 (roi H, ha F, sip L) vs ร้อยห้า 105 vs ห้าร้อย 500 — the สิบ is the whole difference. The order dialogue is taken as a female speaker and the directions dialogue as a male speaker. The engine appends due-card callbacks from outside the unit and weak-tone drills at runtime. Pass = accuracy ≥ 0.8 → normal completion; fail → no completion (the next unit stays gated, retry immediate) but SRS and tone stats still update. All per-syllable tones verify against each token's vocab toneReason via wordId.",
+  "teaches": [],
+  "reviews": [
+    "kho",
+    "khao_rice",
+    "phet",
+    "noi_little",
+    "noi",
+    "kha_statement",
+    "kha_question",
+    "khrap",
+    "trong",
+    "pai",
+    "laeo",
+    "liao",
+    "sai",
+    "roi",
+    "ha",
+    "sip",
+    "bat",
+    "lot",
+    "dai",
+    "mai_question"
+  ],
+  "exercises": [
+    {
+      "type": "sentence_cloze",
+      "meaning": "Some rice, mildly spicy, please. (female speaker)",
+      "audioKey": "phrases/kho_khao_phet_noi_noi_kha",
+      "tokens": [
+        { "thai": "ขอ", "rtgs": "kho", "wordId": "kho" },
+        { "thai": "ข้าว", "rtgs": "khao", "wordId": "khao_rice" },
+        { "thai": "เผ็ด", "rtgs": "phet", "wordId": "phet" },
+        { "thai": "น้อย", "rtgs": "noi", "wordId": "noi_little" },
+        { "thai": "หน่อย", "rtgs": "noi", "wordId": "noi" },
+        { "thai": "ค่ะ", "rtgs": "kha", "wordId": "kha_statement" }
+      ],
+      "blankIndex": 5,
+      "distractors": [
+        { "thai": "ครับ", "rtgs": "khrap" },
+        { "thai": "คะ", "rtgs": "kha" }
+      ],
+      "explanation": "A woman's request closes on falling ค่ะ. ครับ is the male particle, and high คะ ends questions — this is a statement."
+    },
+    {
+      "type": "sentence_build",
+      "meaning": "Go straight, then turn left. (female speaker)",
+      "gloss": "straight + go + then + turn + left + polite(f)",
+      "promptMode": "audio",
+      "audioKey": "phrases/trong_pai_laeo_liao_sai_kha",
+      "tokens": [
+        { "thai": "ตรง", "rtgs": "trong", "wordId": "trong" },
+        { "thai": "ไป", "rtgs": "pai", "wordId": "pai" },
+        { "thai": "แล้ว", "rtgs": "laeo", "wordId": "laeo" },
+        { "thai": "เลี้ยว", "rtgs": "liao", "wordId": "liao" },
+        { "thai": "ซ้าย", "rtgs": "sai", "wordId": "sai" },
+        { "thai": "ค่ะ", "rtgs": "kha", "wordId": "kha_statement" }
+      ],
+      "distractors": [{ "thai": "ไม่", "rtgs": "mai" }],
+      "explanation": "แล้ว joins the two steps: ตรงไป then เลี้ยวซ้าย. A woman closes on ค่ะ."
+    },
+    {
+      "type": "sentence_listening",
+      "mode": "meaning",
+      "audioKey": "phrases/roi_ha_sip_bat",
+      "thai": "ร้อยห้าสิบบาท",
+      "rtgs": "roi ha sip bat",
+      "choices": [
+        { "thai": "ร้อยห้าสิบบาท", "rtgs": "roi ha sip bat", "meaning": "A hundred and fifty baht" },
+        { "thai": "ร้อยห้าบาท", "rtgs": "roi ha bat", "meaning": "A hundred and five baht" },
+        { "thai": "ห้าร้อยบาท", "rtgs": "ha roi bat", "meaning": "Five hundred baht" }
+      ],
+      "correctIndex": 0,
+      "explanation": "ร้อยห้าสิบ is 100 + 50; the สิบ is what makes it fifty. Drop it and ร้อยห้า is 105; flip it and ห้าร้อย is 500.",
+      "attributeTo": ["roi", "ha", "sip", "bat"]
+    },
+    {
+      "type": "sentence_build",
+      "meaning": "Can you lower it a bit? (female speaker)",
+      "gloss": "lower + a-bit + can + question particle + polite(f, question)",
+      "promptMode": "audio",
+      "audioKey": "phrases/lot_noi_dai_mai_kha_question",
+      "tokens": [
+        { "thai": "ลด", "rtgs": "lot", "wordId": "lot" },
+        { "thai": "หน่อย", "rtgs": "noi", "wordId": "noi" },
+        { "thai": "ได้", "rtgs": "dai", "wordId": "dai" },
+        { "thai": "ไหม", "rtgs": "mai", "wordId": "mai_question" },
+        { "thai": "คะ", "rtgs": "kha", "wordId": "kha_question" }
+      ],
+      "distractors": [{ "thai": "ค่ะ", "rtgs": "kha" }],
+      "explanation": "VERB + ได้ไหม asks 'can you?'. A woman's question ends on high คะ — falling ค่ะ would close a statement."
+    },
+    {
+      "type": "dialogue_choice",
+      "context": "The curry stall again — this time you're a woman, and you can't take much heat. The vendor looks up:",
+      "speaker": {
+        "thai": "เอาอะไรคะ",
+        "rtgs": "ao arai kha",
+        "meaning": "What'll you have?",
+        "audioKey": "phrases/ao_arai_kha"
+      },
+      "question": "Order the rice, mild.",
+      "choices": [
+        {
+          "thai": "ขอข้าวเผ็ดน้อยหน่อยค่ะ",
+          "rtgs": "kho khao phet noi noi kha",
+          "audioKey": "phrases/kho_khao_phet_noi_noi_kha",
+          "quality": "best",
+          "note": "The custom order in your own voice — เผ็ดน้อย in the ขอ…ค่ะ frame."
+        },
+        {
+          "thai": "เอาข้าวเผ็ดน้อย",
+          "rtgs": "ao khao phet noi",
+          "quality": "register",
+          "note": "The heat request lands, but bare เอา with no particle is blunt to a vendor. ขอ…ค่ะ is the polite form."
+        },
+        {
+          "thai": "ขอน้ำหวานน้อยหน่อยค่ะ",
+          "rtgs": "kho nam wan noi noi kha",
+          "quality": "meaning",
+          "note": "Polite and correct — but it orders a less-sweet drink. You wanted the mild rice."
+        },
+        {
+          "thai": "อร่อยมากค่ะ",
+          "rtgs": "aroi mak kha",
+          "quality": "situation",
+          "note": "'Very delicious' — before you've eaten anything. That's the after-word, not an order."
+        }
+      ],
+      "attributeTo": ["kho", "khao_rice", "phet", "noi_little"]
+    },
+    {
+      "type": "sentence_listening",
+      "mode": "meaning",
+      "audioKey": "phrases/lot_mai_dai_kha",
+      "thai": "ลดไม่ได้ค่ะ",
+      "rtgs": "lot mai dai kha",
+      "choices": [
+        { "thai": "ลดไม่ได้ค่ะ", "rtgs": "lot mai dai kha", "meaning": "I can't lower it" },
+        { "thai": "ลดได้ค่ะ", "rtgs": "lot dai kha", "meaning": "I can lower it" },
+        { "thai": "ถูกแล้วค่ะ", "rtgs": "thuk laeo kha", "meaning": "It's already a good price" }
+      ],
+      "correctIndex": 0,
+      "explanation": "ไม่ได้ 'can't' vs ได้ 'can' — the ไม่ is the whole answer. ถูกแล้ว is the other refusal: 'that's already cheap'.",
+      "attributeTo": ["lot", "dai"]
+    },
+    {
+      "type": "dialogue_choice",
+      "context": "A lost stranger stops you near the toilets. You're a man; it's straight ahead, not far. She asks:",
+      "speaker": {
+        "thai": "ห้องน้ำอยู่ที่ไหนคะ",
+        "rtgs": "hong nam yu thi nai kha",
+        "meaning": "Where's the bathroom?",
+        "audioKey": "phrases/hong_nam_yu_thi_nai_kha_question"
+      },
+      "question": "Point her the right way.",
+      "choices": [
+        {
+          "thai": "ตรงไปครับ ไม่ไกล",
+          "rtgs": "trong pai khrap mai klai",
+          "audioKey": "phrases/trong_pai_khrap_mai_klai",
+          "quality": "best",
+          "note": "The direction plus the reassurance — ตรงไป, ไม่ไกล. Two short clauses, one clear answer."
+        },
+        {
+          "thai": "ตรงไป",
+          "rtgs": "trong pai",
+          "quality": "register",
+          "note": "Right way, but a bare ตรงไป to a stranger is curt. ครับ turns it into help."
+        },
+        {
+          "thai": "เลี้ยวซ้ายครับ",
+          "rtgs": "liao sai khrap",
+          "quality": "meaning",
+          "note": "Polite, but it sends her left when it's straight ahead. Wrong direction."
+        },
+        {
+          "thai": "ไม่เป็นไรครับ",
+          "rtgs": "mai pen rai khrap",
+          "quality": "situation",
+          "note": "ไม่เป็นไร waves off thanks or an apology — but she asked for directions."
+        }
+      ],
+      "attributeTo": ["trong", "pai"]
+    },
+    {
+      "type": "sentence_listening",
+      "mode": "transcript",
+      "audioKey": "phrases/liao_sai_khrap",
+      "thai": "เลี้ยวซ้ายครับ",
+      "rtgs": "liao sai khrap",
+      "choices": [
+        { "thai": "เลี้ยวซ้ายครับ", "rtgs": "liao sai khrap", "meaning": "Turn left" },
+        { "thai": "เลี้ยวขวาครับ", "rtgs": "liao khwa khrap", "meaning": "Turn right" },
+        { "thai": "ตรงไปครับ", "rtgs": "trong pai khrap", "meaning": "Go straight ahead" }
+      ],
+      "correctIndex": 0,
+      "explanation": "เลี้ยว opens two of the three — the ear's job is ซ้าย (high) left vs ขวา (rising) right, or ตรงไป for no turn.",
+      "attributeTo": ["liao", "sai"]
+    }
+  ]
+}
