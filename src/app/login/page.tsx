@@ -55,7 +55,7 @@ function LoginCard() {
   const [busy, setBusy] = useState(false);
 
   useEffect(() => {
-    if (oauthReturn && session) router.replace("/reading");
+    if (oauthReturn && session) router.replace("/phrases");
   }, [oauthReturn, session, router]);
 
   const switchMode = (next: Mode) => {
@@ -84,14 +84,14 @@ function LoginCard() {
       // Session is null only when email confirmation is enabled in the
       // Supabase dashboard; otherwise we're signed in — head into the app.
       else if (!data.session) setSent("confirm");
-      else router.replace("/reading");
+      else router.replace("/phrases");
     } else {
       const { error: err } = await supabase.auth.signInWithPassword({
         email,
         password,
       });
       if (err) setError(err.message);
-      else router.replace("/reading");
+      else router.replace("/phrases");
     }
     setBusy(false);
   };

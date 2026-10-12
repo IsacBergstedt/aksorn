@@ -1,9 +1,11 @@
 # Aksorn — อักษร
 
-Script-first Thai for serious learners. Aksorn teaches the Thai writing
-system the way it actually works: the 44 consonants by consonant class
-(mid → high → low), then vowels, then tone rules — because consonant class
-is the key that unlocks Thai tones.
+Thai words, sounds, and script for serious learners. Start with useful
+words and phrases: hear their pronunciation, learn each syllable's tone,
+and optionally record an attempt to compare by ear. Reading Thai is a
+companion course in letter recognition, sounds, vowels, and tone rules.
+Consonant class is hidden in an optional explanation rather than an early
+memorization or sorting task.
 
 ## Stack
 

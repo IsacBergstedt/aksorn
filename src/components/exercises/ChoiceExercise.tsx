@@ -9,6 +9,7 @@ import { useCharacterAudio } from "@/lib/audio";
 import { answerLabel, type RuntimeExercise } from "@/lib/engine";
 import type { ThaiCharacter } from "@/content/schema";
 import type { OnExerciseComplete } from "./types";
+import { ConsonantClassNote } from "@/components/ConsonantClassNote";
 
 type ChoiceRuntime = Extract<RuntimeExercise, { kind: "choice" }>;
 
@@ -109,6 +110,10 @@ export function ChoiceExercise({
           );
         })}
       </div>
+
+      {(direction === "glyph_to_sound" || status !== "idle") && (
+        <ConsonantClassNote character={target} />
+      )}
 
       <AnimatePresence>
         {status !== "idle" && (

@@ -7,7 +7,9 @@ import type { ThaiCharacter, VocabWord } from "@/content/schema";
 import { playAudioKey } from "@/lib/audio";
 import { trackPitch, type PitchPoint } from "@/lib/pitch";
 import { assessPronunciation, type AssessmentResult } from "@/lib/speech-assess";
-import { classBadgeClasses, classLabel, kindBadgeClasses } from "@/lib/class-colors";
+import { kindBadgeClasses } from "@/lib/class-colors";
+import { ConsonantClassNote } from "@/components/ConsonantClassNote";
+import { WordToneGuide } from "@/components/WordToneGuide";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -45,7 +47,7 @@ function referenceText(target: Target): string {
  * (see src/lib/pitch.ts). Tones deliberately stay unscored.
  */
 export function SpeakingPractice() {
-  const [mode, setMode] = useState<"letters" | "words">("letters");
+  const [mode, setMode] = useState<"letters" | "words">("words");
   const [letterIndex, setLetterIndex] = useState(0);
   const [wordIndex, setWordIndex] = useState(0);
 
@@ -144,18 +146,14 @@ export function SpeakingPractice() {
           <Badge variant="outline">
             {target.register === "neutral" ? "word" : target.register}
           </Badge>
-          ) : (
+          ) : target.kind === "vowel" ? (
             <Badge
               variant="outline"
-              className={
-                target.kind === "consonant"
-                  ? classBadgeClasses[target.class]
-                  : kindBadgeClasses.vowel
-              }
+              className={kindBadgeClasses.vowel}
             >
-              {target.kind === "consonant" ? classLabel[target.class] : "Vowel"}
+              Vowel
             </Badge>
-          )}
+          ) : null}
 
           <button
             type="button"
@@ -189,6 +187,8 @@ export function SpeakingPractice() {
             )}
           </div>
 
+          {target.kind === "word" && <WordToneGuide word={target} />}
+
           <Button variant="outline" onClick={playTarget}>
             <Volume2 className="mr-2 h-4 w-4" /> Play target
           </Button>
@@ -199,6 +199,8 @@ export function SpeakingPractice() {
             onPlayTarget={playTarget}
             onRecorded={handleRecorded}
           />
+
+          {target.kind !== "word" && <ConsonantClassNote character={target} />}
 
           <PronunciationPanel
             status={status}

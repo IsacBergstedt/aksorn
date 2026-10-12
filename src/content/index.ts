@@ -44,6 +44,8 @@ import vowel01 from "./lessons/vowel-01.json";
 import vowel02 from "./lessons/vowel-02.json";
 import vowel03 from "./lessons/vowel-03.json";
 import vowel04 from "./lessons/vowel-04.json";
+import endings01 from "./lessons/endings-01.json";
+import endings02 from "./lessons/endings-02.json";
 import tone01 from "./lessons/tone-01.json";
 import tone02 from "./lessons/tone-02.json";
 import tone03 from "./lessons/tone-03.json";
@@ -150,6 +152,8 @@ export const lessons: Lesson[] = z.array(lessonSchema).parse([
   vowel02,
   vowel03,
   vowel04,
+  endings01,
+  endings02,
   tone01,
   tone02,
   tone03,

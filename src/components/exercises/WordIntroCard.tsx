@@ -1,12 +1,14 @@
 "use client";
 
-import { useState } from "react";
+import { useId, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ChevronDown, Volume2 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ThaiWordText } from "@/components/ThaiWordText";
 import { ToneContour } from "@/components/ToneContour";
+import { WordToneGuide } from "@/components/WordToneGuide";
+import { Recorder } from "@/components/speaking/Recorder";
 import { useAudio } from "@/lib/audio";
 import { classBadgeClasses, classLabel } from "@/lib/class-colors";
 import { toneBadgeClasses, toneLabel } from "@/lib/tone-colors";
@@ -90,6 +92,9 @@ export function WordIntroCard({
   const { play } = useAudio(word.audioKey, word.thai);
   const [playTrigger, setPlayTrigger] = useState(0);
   const [showBreakdown, setShowBreakdown] = useState(false);
+  const [practiceOpen, setPracticeOpen] = useState(false);
+  const breakdownId = useId();
+  const practiceId = useId();
   const showRomanization = useUiSettings((s) => s.showRomanization);
   const toggleRomanization = useUiSettings((s) => s.toggleRomanization);
 
@@ -117,17 +122,15 @@ export function WordIntroCard({
         <Volume2 className="absolute right-3 top-3 h-5 w-5 text-muted-foreground transition-colors group-hover:text-primary" />
       </motion.button>
 
-      {/* Per-syllable tone contours, drawn along with the audio. */}
-      <div className="flex items-end justify-center gap-4">
-        {word.syllables.map((s, i) => (
-          <div key={i} className="flex flex-col items-center gap-0.5">
-            <ToneContour tone={s.tone} playTrigger={playTrigger} className="h-5 w-11" />
-            {showRomanization && (
-              <span className="text-xs text-muted-foreground">{s.rtgs}</span>
-            )}
-          </div>
-        ))}
-      </div>
+      <WordToneGuide word={word} playTrigger={playTrigger} />
+
+      <Button variant="outline" onClick={playWithContours}>
+        <Volume2 className="mr-2 h-4 w-4" /> Listen to pronunciation
+      </Button>
+      <p className="max-w-md text-sm text-muted-foreground">
+        Listen, then say it aloud. Copy the rise and fall of each syllable
+        along with its sounds.
+      </p>
 
       <div className="space-y-1">
         <p className="text-2xl font-semibold">{word.meaning}</p>
@@ -165,10 +168,36 @@ export function WordIntroCard({
         <p className="max-w-md text-sm text-muted-foreground">{word.usageNote}</p>
       )}
 
+      <div className="w-full max-w-md rounded-xl border p-4">
+        <button
+          type="button"
+          onClick={() => setPracticeOpen((open) => !open)}
+          aria-expanded={practiceOpen}
+          aria-controls={practiceId}
+          className="flex w-full items-center justify-center gap-1 text-sm font-medium text-primary"
+        >
+          Practice saying it (optional)
+          <ChevronDown className={cn("h-4 w-4 transition-transform", practiceOpen && "rotate-180")} />
+        </button>
+        <div id={practiceId} hidden={!practiceOpen}>
+          {practiceOpen && (
+            <div className="mt-4 space-y-4">
+              <p className="text-xs text-muted-foreground">
+                Record a short attempt and compare it with the target by ear.
+                This practice stays on your device and is not scored.
+              </p>
+              <Recorder onPlayTarget={playWithContours} />
+            </div>
+          )}
+        </div>
+      </div>
+
       <div className="w-full max-w-md">
         <button
           type="button"
           onClick={() => setShowBreakdown((v) => !v)}
+          aria-expanded={showBreakdown}
+          aria-controls={breakdownId}
           className="mx-auto flex items-center gap-1 text-sm font-medium text-primary"
         >
           Why these tones?
@@ -182,6 +211,7 @@ export function WordIntroCard({
         <AnimatePresence initial={false}>
           {showBreakdown && (
             <motion.div
+              id={breakdownId}
               initial={{ height: 0, opacity: 0 }}
               animate={{ height: "auto", opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}

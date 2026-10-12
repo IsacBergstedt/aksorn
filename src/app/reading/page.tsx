@@ -8,8 +8,9 @@ export default function ReadingPage() {
           Learn to read Thai.
         </h1>
         <p className="mt-2 text-muted-foreground">
-          Master the script the way it actually works: consonant by consonant,
-          class by class — the key that unlocks Thai tones.
+          Start with letter shapes and sounds. Practice recognizing what you
+          see and hear, then explore vowels, syllable endings, and tones when
+          you are ready.
         </p>
       </div>
       <PathMap />

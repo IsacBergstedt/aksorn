@@ -13,9 +13,9 @@ import { Header } from "@/components/Header";
 import { SectionTabs } from "@/components/SectionTabs";
 
 export const metadata: Metadata = {
-  title: "Aksorn — Learn to read Thai",
+  title: "Aksorn — Learn Thai words, sounds, and script",
   description:
-    "Script-first Thai for serious learners: consonant classes, vowels, and tone rules taught through bite-sized lessons and spaced repetition.",
+    "Learn useful Thai words and phrases with audio, spoken tones, and spaced repetition. Explore the writing system and tone rules alongside your practice.",
 };
 
 export default function RootLayout({

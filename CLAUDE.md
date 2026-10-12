@@ -10,6 +10,30 @@ the Thai writing system. We teach the 44 consonants by consonant class
 key that unlocks Thai tones, and skipping it is why other apps fail serious
 learners.
 
+## Reading curriculum (updated 2026-10-12)
+
+- Start with recognizing consonant shapes, names, sounds, and listening.
+- Do not quiz consonant class or add class-sorting exercises. Show class
+  only inside a collapsed optional explanation below letter exercises, without revealing
+  the target glyph before an answer in reverse or listening exercises.
+- Reading unit labels describe letter learning, not high/mid/low classes.
+  Keep existing unit and lesson IDs stable for saved progress.
+- Explain class when it becomes relevant in the later tone lessons. Class
+  is not itself the tone of a syllable. This supersedes earlier class-first
+  curriculum descriptions in this document.
+- After Vowels, the Syllable Endings unit (`endings-01`, `endings-02`)
+  practises starting versus ending consonant sounds in real words. Cover
+  the eight ending groups before Tone Rules; attribute answers to the
+  tested consonant. This unit does not cover all clusters or exceptions.
+- The home route and login destinations are `/phrases`. Learn pronunciation,
+  meaning, and each syllable's spoken tone together; Reading Thai is a
+  companion track, not a prerequisite. Speaking opens in Words mode.
+- Word introduction cards show labeled syllable tones and offer optional
+  local record-and-compare practice (no assessment upload). Keep spelling
+  derivations under the collapsed "Why these tones?" explanation.
+- Word-choice and listening feedback show the spoken-tone guide only after
+  answering. Never reveal the target through tone guides before an answer.
+
 ## Branding (decided 2026-07-02)
 
 - Name: **Aksorn** (อักษร = "letter/script"). Wordmark: Thai อักษร in

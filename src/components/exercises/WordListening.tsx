@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Volume2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ThaiWordText } from "@/components/ThaiWordText";
+import { WordToneGuide } from "@/components/WordToneGuide";
 import { cn } from "@/lib/utils";
 import { useAudio } from "@/lib/audio";
 import type { RuntimeExercise } from "@/lib/engine";
@@ -94,6 +95,8 @@ export function WordListening({
           );
         })}
       </div>
+
+      {status !== "idle" && <WordToneGuide word={target} />}
 
       <AnimatePresence>
         {status !== "idle" && (

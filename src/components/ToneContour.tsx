@@ -8,16 +8,19 @@ import { cn } from "@/lib/utils";
 /**
  * Small pitch-contour glyph for a tone, stroked in the tone's color.
  * Bump `playTrigger` (e.g. increment on every audio play) to re-run the
- * draw-along animation in time with the clip; leave it 0 for a static
+ * draw-along animation; leave it 0 for a static
  * contour.
  */
 export function ToneContour({
   tone,
   playTrigger = 0,
+  delay = 0,
   className,
 }: {
   tone: Tone;
   playTrigger?: number;
+  /** Seconds before drawing, for successive syllables in a word. */
+  delay?: number;
   className?: string;
 }) {
   return (
@@ -45,7 +48,7 @@ export function ToneContour({
         strokeLinecap="round"
         initial={{ pathLength: playTrigger > 0 ? 0 : 1 }}
         animate={{ pathLength: 1 }}
-        transition={{ duration: 0.7, ease: "easeInOut" }}
+        transition={{ duration: 0.7, delay: playTrigger > 0 ? delay : 0, ease: "easeInOut" }}
       />
     </svg>
   );

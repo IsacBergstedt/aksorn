@@ -1,0 +1,269 @@
+{
+  "id": "endings-02",
+  "unitId": "syllable-endings",
+  "order": 2,
+  "title": "Ending sounds: n, m, ng, y, w",
+  "xpReward": 25,
+  "pedagogy": "Practise nasal and glide endings, including ร ล ญ changing to n. Contrast starts and endings and distinguish vowel components from final consonants.",
+  "teaches": [],
+  "reviews": [
+    "ro_ruea",
+    "lo_ling",
+    "yo_ying",
+    "no_nu",
+    "mo_ma",
+    "ngo_ngu",
+    "yo_yak",
+    "wo_waen",
+    "bo_baimai",
+    "do_dek"
+  ],
+  "exercises": [
+    {
+      "type": "concept",
+      "title": "ร and ล become n at the end",
+      "body": [
+        "ร starts รส with r, and ล starts ลด with l. As syllable endings, both letters are pronounced n.",
+        "การ and กาล are both pronounced kan. Their spelling and meaning differ, but their ending sound is the same.",
+        "The usual n-ending spellings are น ณ ญ ร ล ฬ. Do not pronounce a final ร as r or a final ล as l."
+      ],
+      "thaiExample": "การ",
+      "exampleAudioKey": "syllables/kaan"
+    },
+    {
+      "type": "rule_choice",
+      "prompt": "รส",
+      "audioKey": "syllables/rot",
+      "promptNote": "taste — one syllable",
+      "question": "What sound does ร make at the start of this syllable?",
+      "choices": [
+        "r",
+        "n",
+        "l"
+      ],
+      "correctIndex": 0,
+      "explanation": "ร starts รส with r. The ending ส is t.",
+      "attributeTo": [
+        "ro_ruea"
+      ]
+    },
+    {
+      "type": "rule_choice",
+      "prompt": "การ",
+      "audioKey": "syllables/kaan",
+      "promptNote": "act / matter — one syllable",
+      "question": "What sound does ร make at the end of this syllable?",
+      "choices": [
+        "r",
+        "n",
+        "l"
+      ],
+      "correctIndex": 1,
+      "explanation": "ร ends การ with n. Compare ร at the start of รส, where it sounds r.",
+      "attributeTo": [
+        "ro_ruea"
+      ]
+    },
+    {
+      "type": "rule_choice",
+      "prompt": "ลด",
+      "audioKey": "words/lot",
+      "promptNote": "reduce / discount — one syllable",
+      "question": "What sound does ล make at the start of this syllable?",
+      "choices": [
+        "l",
+        "n",
+        "r"
+      ],
+      "correctIndex": 0,
+      "explanation": "ล starts ลด with l. It would sound n at the end of a syllable.",
+      "attributeTo": [
+        "lo_ling"
+      ]
+    },
+    {
+      "type": "rule_choice",
+      "prompt": "กาล",
+      "audioKey": "syllables/kaan_time",
+      "promptNote": "time / era — one syllable",
+      "question": "What sound does ล make at the end of this syllable?",
+      "choices": [
+        "l",
+        "n",
+        "r"
+      ],
+      "correctIndex": 1,
+      "explanation": "ล ends กาล with n. การ and กาล share the pronunciation kan.",
+      "attributeTo": [
+        "lo_ling"
+      ]
+    },
+    {
+      "type": "concept",
+      "title": "ญ: y at the start, n at the end",
+      "body": [
+        "ญ has y as its starting sound, but n as its ending sound.",
+        "In บุญ, meaning merit, ญ is final: bun, not buy.",
+        "น and ณ also end syllables with n; ง and ม retain their ng and m sounds."
+      ],
+      "thaiExample": "บุญ",
+      "exampleAudioKey": "syllables/bun"
+    },
+    {
+      "type": "rule_choice",
+      "prompt": "บุญ",
+      "audioKey": "syllables/bun",
+      "promptNote": "merit — one syllable",
+      "question": "What sound does ญ make at the end of this syllable?",
+      "choices": [
+        "y",
+        "n",
+        "ng"
+      ],
+      "correctIndex": 1,
+      "explanation": "ญ ends บุญ with n. This differs from its starting sound y.",
+      "attributeTo": [
+        "yo_ying"
+      ]
+    },
+    {
+      "type": "rule_choice",
+      "prompt": "กิน",
+      "audioKey": "syllables/kin",
+      "promptNote": "eat — one syllable",
+      "question": "What sound does น make at the end of this syllable?",
+      "choices": [
+        "n",
+        "ng",
+        "m"
+      ],
+      "correctIndex": 0,
+      "explanation": "น ends กิน with n. Its basic sound stays n in both starting and ending positions.",
+      "attributeTo": [
+        "no_nu"
+      ]
+    },
+    {
+      "type": "rule_choice",
+      "prompt": "สาม",
+      "audioKey": "words/sam",
+      "promptNote": "three — one syllable",
+      "question": "What sound does ม make at the end of this syllable?",
+      "choices": [
+        "n",
+        "m",
+        "ng"
+      ],
+      "correctIndex": 1,
+      "explanation": "ม ends สาม with m: close your lips while the voiced sound continues through the nose.",
+      "attributeTo": [
+        "mo_ma"
+      ]
+    },
+    {
+      "type": "rule_choice",
+      "prompt": "สอง",
+      "audioKey": "words/song",
+      "promptNote": "two — one syllable",
+      "question": "What sound does ง make at the end of this syllable?",
+      "choices": [
+        "n",
+        "m",
+        "ng"
+      ],
+      "correctIndex": 2,
+      "explanation": "ง ends สอง with ng. Do not add a separate g sound or a vowel afterwards.",
+      "attributeTo": [
+        "ngo_ngu"
+      ]
+    },
+    {
+      "type": "concept",
+      "title": "ย and ว can end with a glide",
+      "body": [
+        "When ย and ว are syllable-final glides, the vowel moves smoothly into a y-like or w-like ending. They do not create another syllable.",
+        "ขาย ends in ย, giving the ai glide. ข้าว ends in ว, giving the ao glide. This course labels those ending sounds y and w.",
+        "These letters can also be pieces of vowel spellings: ย in เ◌ีย and ว in ◌ัว belong to the vowel pattern. Identify the whole vowel before deciding a letter is a final consonant."
+      ],
+      "thaiExample": "ขาย",
+      "exampleAudioKey": "syllables/khaai"
+    },
+    {
+      "type": "rule_choice",
+      "prompt": "ขาย",
+      "audioKey": "syllables/khaai",
+      "promptNote": "sell — one syllable",
+      "question": "What sound does ย make at the end of this syllable?",
+      "choices": [
+        "y glide",
+        "n",
+        "ng"
+      ],
+      "correctIndex": 0,
+      "explanation": "ย ends ขาย with a y glide after the vowel. Unlike ญ, final ย does not become n.",
+      "attributeTo": [
+        "yo_yak"
+      ]
+    },
+    {
+      "type": "rule_choice",
+      "prompt": "ข้าว",
+      "audioKey": "words/khao_rice",
+      "promptNote": "rice — one syllable",
+      "question": "What sound does ว make at the end of this syllable?",
+      "choices": [
+        "w glide",
+        "n",
+        "m"
+      ],
+      "correctIndex": 0,
+      "explanation": "ว ends ข้าว with a w glide. Keep it within the same syllable without adding another vowel.",
+      "attributeTo": [
+        "wo_waen"
+      ]
+    },
+    {
+      "type": "concept",
+      "title": "Eight ending sounds to listen for",
+      "body": [
+        "Pronounced written consonant endings fall into eight basic sound groups: k, t, p, ng, n, m, y, w.",
+        "The first three stop the airflow. The other five are nasal sounds or glides. These groups will help with the live/dead distinction in the next unit.",
+        "Ask which syllable the letter belongs to, whether it is pronounced, and whether it is part of a vowel spelling. More complex words need cluster, silent-letter, and vowel rules too."
+      ]
+    },
+    {
+      "type": "rule_choice",
+      "prompt": "สิบ",
+      "audioKey": "words/sip",
+      "promptNote": "ten — one syllable",
+      "question": "What sound does บ make at the end of this syllable?",
+      "choices": [
+        "b",
+        "p",
+        "m"
+      ],
+      "correctIndex": 1,
+      "explanation": "บ ends สิบ with p. This is a stop ending, unlike nasal m.",
+      "attributeTo": [
+        "bo_baimai"
+      ]
+    },
+    {
+      "type": "rule_choice",
+      "prompt": "แปด",
+      "audioKey": "words/paet",
+      "promptNote": "eight — one syllable",
+      "question": "What sound does ด make at the end of this syllable?",
+      "choices": [
+        "d",
+        "t",
+        "n"
+      ],
+      "correctIndex": 1,
+      "explanation": "ด ends แปด with t. Its ending sound differs from its starting sound d.",
+      "attributeTo": [
+        "do_dek"
+      ]
+    }
+  ]
+}

@@ -22,17 +22,17 @@ export function ReadingFirstTip() {
     <div className="mb-8 flex items-start gap-3 rounded-2xl border border-primary/25 bg-primary/5 p-4">
       <BookOpen className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
       <div className="flex-1 text-sm">
-        <p className="font-semibold">New to Thai script?</p>
+        <p className="font-semibold">Learn by ear, explore the script</p>
         <p className="mt-0.5 text-muted-foreground">
-          Everything here is written in Thai. We recommend the{" "}
+          Start with the audio and practice saying each word. The{" "}
           <Link
             href="/reading"
             className="font-medium text-primary underline-offset-2 hover:underline"
           >
             Reading Thai
           </Link>{" "}
-          course first, so the words below read as sounds instead of shapes —
-          but nothing is locked. Every word comes with audio.
+          course is available alongside these lessons whenever you want help
+          recognizing letters. You do not need to learn tone rules first.
         </p>
       </div>
       <Button

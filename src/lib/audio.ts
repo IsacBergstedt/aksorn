@@ -3,6 +3,34 @@
 import { useCallback } from "react";
 import type { ThaiCharacter } from "@/content/schema";
 
+let activeAudio: HTMLAudioElement | null = null;
+let playbackVersion = 0;
+
+/** Cancel playing and pending clips before switching between audio sources. */
+export function stopAudio(): void {
+  playbackVersion += 1;
+  activeAudio?.pause();
+  activeAudio = null;
+  if (typeof window !== "undefined" && "speechSynthesis" in window) {
+    window.speechSynthesis.cancel();
+  }
+}
+
+export function playAudioElement(
+  audio: HTMLAudioElement,
+  onError?: () => void,
+): void {
+  stopAudio();
+  const version = playbackVersion;
+  activeAudio = audio;
+  audio.currentTime = 0;
+  void audio.play().catch(() => {
+    if (version !== playbackVersion) return;
+    activeAudio = null;
+    onError?.();
+  });
+}
+
 /**
  * Pre-generated TTS clips (scripts/generate-audio.ts) live in the public
  * Supabase Storage bucket `audio` under {audioKey}.mp3. Without Supabase
@@ -40,7 +68,7 @@ export function playAudioKey(
 ): void {
   if (!audioKey || typeof window === "undefined") return;
   const audio = new Audio(audioUrl(audioKey));
-  audio.play().catch(() => speakFallback(fallbackText));
+  playAudioElement(audio, () => speakFallback(fallbackText));
 }
 
 /** Hook form for a fixed key (syllable prompts, concept examples). */

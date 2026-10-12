@@ -4,23 +4,111 @@
   "order": 1,
   "title": "Full script sweep",
   "xpReward": 30,
-  "pedagogy": "Mixed review (1/2): recognition across all three consonant classes, vowels, and tone marks; class sorting for mid-vs-high and high-vs-low.",
+  "pedagogy": "Letter shape, name, initial sound, and listening recognition; consonant class is reference information only. Mixed recognition of consonants, vowels, and tone marks.",
   "teaches": [],
-  "reviews": ["kho_khai", "cho_chang", "sara_uea", "ko_kai", "to_tao", "bo_baimai", "so_suea", "pho_phueng", "ngo_ngu", "sara_am", "mai_ek", "ho_hip", "sara_ai_maimuan", "mo_ma", "kho_khwai", "tho_thahan", "fo_fan", "tho_thung", "fo_fa", "pho_phan", "tho_than", "sara_o_open_long", "do_chada", "to_patak", "yo_ying", "no_nen", "mai_chattawa"],
+  "reviews": [
+    "kho_khai",
+    "cho_chang",
+    "sara_uea",
+    "ko_kai",
+    "to_tao",
+    "bo_baimai",
+    "so_suea",
+    "pho_phueng",
+    "ngo_ngu",
+    "sara_am",
+    "mai_ek",
+    "ho_hip",
+    "sara_ai_maimuan",
+    "mo_ma",
+    "kho_khwai",
+    "tho_thahan",
+    "fo_fan",
+    "tho_thung",
+    "fo_fa",
+    "pho_phan",
+    "tho_than",
+    "sara_o_open_long",
+    "do_chada",
+    "to_patak",
+    "yo_ying",
+    "no_nen",
+    "mai_chattawa"
+  ],
   "exercises": [
-    { "type": "glyph_to_sound", "characterId": "kho_khai" },
-    { "type": "sound_to_glyph", "characterId": "cho_chang" },
-    { "type": "glyph_to_sound", "characterId": "sara_uea" },
-    { "type": "class_sort", "characterIds": ["ko_kai", "to_tao", "bo_baimai", "kho_khai", "so_suea", "pho_phueng"], "classes": ["mid", "high"] },
-    { "type": "match_pairs", "characterIds": ["ngo_ngu", "sara_am", "mai_ek", "ho_hip"] },
-    { "type": "sound_to_glyph", "characterId": "sara_ai_maimuan" },
-    { "type": "glyph_to_sound", "characterId": "mo_ma" },
-    { "type": "class_sort", "characterIds": ["kho_khwai", "tho_thahan", "fo_fan", "kho_khai", "tho_thung", "fo_fa", "so_suea", "pho_phan"], "classes": ["high", "low"] },
-    { "type": "listening", "characterId": "kho_khwai" },
-    { "type": "sound_to_glyph", "characterId": "tho_than" },
-    { "type": "glyph_to_sound", "characterId": "sara_o_open_long" },
-    { "type": "match_pairs", "characterIds": ["do_chada", "to_patak", "yo_ying", "no_nen"] },
-    { "type": "listening", "characterId": "sara_uea" },
-    { "type": "glyph_to_sound", "characterId": "mai_chattawa" }
+    {
+      "type": "glyph_to_sound",
+      "characterId": "kho_khai"
+    },
+    {
+      "type": "sound_to_glyph",
+      "characterId": "cho_chang"
+    },
+    {
+      "type": "glyph_to_sound",
+      "characterId": "sara_uea"
+    },
+    {
+      "type": "sound_to_glyph",
+      "characterId": "ko_kai"
+    },
+    {
+      "type": "sound_to_glyph",
+      "characterId": "to_tao"
+    },
+    {
+      "type": "match_pairs",
+      "characterIds": [
+        "ngo_ngu",
+        "sara_am",
+        "mai_ek",
+        "ho_hip"
+      ]
+    },
+    {
+      "type": "sound_to_glyph",
+      "characterId": "sara_ai_maimuan"
+    },
+    {
+      "type": "glyph_to_sound",
+      "characterId": "mo_ma"
+    },
+    {
+      "type": "sound_to_glyph",
+      "characterId": "kho_khwai"
+    },
+    {
+      "type": "sound_to_glyph",
+      "characterId": "tho_thahan"
+    },
+    {
+      "type": "listening",
+      "characterId": "kho_khwai"
+    },
+    {
+      "type": "sound_to_glyph",
+      "characterId": "tho_than"
+    },
+    {
+      "type": "glyph_to_sound",
+      "characterId": "sara_o_open_long"
+    },
+    {
+      "type": "match_pairs",
+      "characterIds": [
+        "do_chada",
+        "to_patak",
+        "yo_ying",
+        "no_nen"
+      ]
+    },
+    {
+      "type": "listening",
+      "characterId": "sara_uea"
+    },
+    {
+      "type": "glyph_to_sound",
+      "characterId": "mai_chattawa"
+    }
   ]
 }

@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Mic, Play, RotateCcw, Square } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { playAudioElement, stopAudio } from "@/lib/audio";
 
 type RecorderState =
   | "unsupported"
@@ -29,9 +30,13 @@ export function Recorder({
   const recorderRef = useRef<MediaRecorder | null>(null);
   const chunksRef = useRef<Blob[]>([]);
   const urlRef = useRef<string | null>(null);
+  const activeRef = useRef(false);
+  const playbackRef = useRef<HTMLAudioElement | null>(null);
   const [recordingUrl, setRecordingUrl] = useState<string | null>(null);
+  const [playbackError, setPlaybackError] = useState(false);
 
   useEffect(() => {
+    activeRef.current = true;
     if (
       typeof navigator === "undefined" ||
       !navigator.mediaDevices?.getUserMedia ||
@@ -40,18 +45,30 @@ export function Recorder({
       setState("unsupported");
     }
     return () => {
+      activeRef.current = false;
       if (recorderRef.current?.state === "recording") {
         recorderRef.current.stop();
-        recorderRef.current.stream.getTracks().forEach((t) => t.stop());
       }
+      recorderRef.current?.stream.getTracks().forEach((t) => t.stop());
       if (urlRef.current) URL.revokeObjectURL(urlRef.current);
     };
   }, []);
 
+  useEffect(() => {
+    const audio = playbackRef.current;
+    return () => audio?.pause();
+  }, [recordingUrl]);
+
   const start = async () => {
+    stopAudio();
+    setPlaybackError(false);
     setState("requesting");
     try {
       const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      if (!activeRef.current) {
+        stream.getTracks().forEach((track) => track.stop());
+        return;
+      }
       // No explicit mimeType: Chrome/Firefox record webm/opus, Safari mp4 —
       // both play back fine from an object URL.
       const recorder = new MediaRecorder(stream);
@@ -62,6 +79,7 @@ export function Recorder({
       };
       recorder.onstop = () => {
         stream.getTracks().forEach((t) => t.stop());
+        if (!activeRef.current) return;
         const blob = new Blob(chunksRef.current, { type: recorder.mimeType });
         if (urlRef.current) URL.revokeObjectURL(urlRef.current);
         urlRef.current = URL.createObjectURL(blob);
@@ -72,6 +90,8 @@ export function Recorder({
       recorder.start();
       setState("recording");
     } catch (err) {
+      recorderRef.current?.stream.getTracks().forEach((track) => track.stop());
+      if (!activeRef.current) return;
       setState(
         err instanceof DOMException && err.name === "NotAllowedError"
           ? "denied"
@@ -83,7 +103,12 @@ export function Recorder({
   const stop = () => recorderRef.current?.stop();
 
   const playRecording = () => {
-    if (recordingUrl) new Audio(recordingUrl).play().catch(() => {});
+    setPlaybackError(false);
+    if (playbackRef.current) {
+      playAudioElement(playbackRef.current, () => {
+        if (activeRef.current) setPlaybackError(true);
+      });
+    }
   };
 
   if (state === "unsupported") {
@@ -134,13 +159,23 @@ export function Recorder({
             Compare — switch back and forth until they match:
           </p>
           <div className="grid w-full max-w-sm grid-cols-2 gap-3">
-            <Button variant="outline" onClick={onPlayTarget}>
+            <Button variant="outline" onClick={() => {
+              stopAudio();
+              setPlaybackError(false);
+              onPlayTarget();
+            }}>
               <Play className="mr-2 h-4 w-4" /> Target
             </Button>
             <Button variant="outline" onClick={playRecording}>
               <RotateCcw className="mr-2 h-4 w-4" /> My attempt
             </Button>
           </div>
+          <audio ref={playbackRef} src={recordingUrl} preload="auto" />
+          {playbackError && (
+            <p role="alert" className="text-sm text-muted-foreground">
+              Couldn&apos;t play your recording. Try again or record a new attempt.
+            </p>
+          )}
         </div>
       )}
     </div>

@@ -10,6 +10,15 @@
   "exercises": [
     {
       "type": "concept",
+      "title": "Using the class reference",
+      "body": [
+        "The small reference notes on consonant cards name three spelling groups: mid, high, and low class. These are not the tones of the letters themselves.",
+        "For these exercises, the prompt tells you the starting consonant's class. Use that reference with the syllable ending to work out the tone; you do not need to recall every letter's class from memory.",
+        "Start with a few example words and listen to their tones. The spelling patterns will become familiar through practice."
+      ]
+    },
+    {
+      "type": "concept",
       "title": "No mark ≠ no tone",
       "thaiExample": "กา ขา มา",
       "exampleAudioKey": "examples/kaa_khaa_maa",

@@ -5,11 +5,8 @@ import { Volume2 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { useCharacterAudio } from "@/lib/audio";
-import {
-  classBadgeClasses,
-  classLabel,
-  kindBadgeClasses,
-} from "@/lib/class-colors";
+import { kindBadgeClasses } from "@/lib/class-colors";
+import { ConsonantClassNote } from "@/components/ConsonantClassNote";
 import { answerLabel } from "@/lib/engine";
 import type { ThaiCharacter, ThaiVowel } from "@/content/schema";
 import type { OnExerciseComplete } from "./types";
@@ -96,9 +93,7 @@ export function IntroCard({
       </div>
 
       {character.kind === "consonant" ? (
-        <Badge variant="outline" className={classBadgeClasses[character.class]}>
-          {classLabel[character.class]}
-        </Badge>
+        <ConsonantClassNote character={character} />
       ) : character.kind === "vowel" ? (
         <Badge variant="outline" className={kindBadgeClasses.vowel}>
           {character.length === "short" ? "Short vowel" : "Long vowel"}

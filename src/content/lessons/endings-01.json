@@ -1,0 +1,241 @@
+{
+  "id": "endings-01",
+  "unitId": "syllable-endings",
+  "order": 1,
+  "title": "One letter, different sounds: p, t, k",
+  "xpReward": 25,
+  "pedagogy": "Identify syllable-initial versus syllable-final sounds in real words; practise unreleased stop endings and their spelling groups before tone rules.",
+  "teaches": [],
+  "reviews": [
+    "bo_baimai",
+    "do_dek",
+    "cho_chan",
+    "so_suea",
+    "kho_khai",
+    "ko_kai",
+    "tho_thahan"
+  ],
+  "exercises": [
+    {
+      "type": "concept",
+      "title": "Position means position in a syllable",
+      "body": [
+        "A letter can sound different at the start and end of a syllable. Identify which syllable it belongs to; its place in the whole word is not enough.",
+        "For example, ด starts ดี with d, but ends แปด with t. บ starts บาท with b, but ends สิบ with p.",
+        "This lesson tests the consonant sound, not the tone. Tap a word to hear it. The feedback explains the letter’s role."
+      ]
+    },
+    {
+      "type": "concept",
+      "title": "บ: b at the start, p at the end",
+      "body": [
+        "บาท means baht. Its first consonant บ is pronounced b; its last consonant ท is pronounced t.",
+        "สิบ means ten. Here บ is the final consonant, so it sounds p, not b.",
+        "For a final p, close your lips and stop. Do not add a vowel or a released puff after it."
+      ],
+      "thaiExample": "สิบ",
+      "exampleAudioKey": "words/sip"
+    },
+    {
+      "type": "rule_choice",
+      "prompt": "บาท",
+      "audioKey": "words/bat",
+      "promptNote": "baht — one syllable",
+      "question": "What sound does บ make at the start of this syllable?",
+      "choices": [
+        "b",
+        "p",
+        "ph"
+      ],
+      "correctIndex": 0,
+      "explanation": "บ starts บาท, so it has its starting sound b. It is not the final consonant.",
+      "attributeTo": [
+        "bo_baimai"
+      ]
+    },
+    {
+      "type": "rule_choice",
+      "prompt": "สิบ",
+      "audioKey": "words/sip",
+      "promptNote": "ten — one syllable",
+      "question": "What sound does บ make at the end of this syllable?",
+      "choices": [
+        "b",
+        "p",
+        "ph"
+      ],
+      "correctIndex": 1,
+      "explanation": "บ ends สิบ, so it sounds p. Close your lips to end the syllable without adding a vowel.",
+      "attributeTo": [
+        "bo_baimai"
+      ]
+    },
+    {
+      "type": "concept",
+      "title": "ด: d at the start, t at the end",
+      "body": [
+        "ด starts ดี, meaning good, with d. In ลด, meaning reduce, ด is final and sounds t.",
+        "Other starting sounds also become t at the end: จ and ช (ch), ซ ศ ษ ส (s), and ถ ท ธ (th).",
+        "A final t ends with the tongue closing the airflow. Do not release it with another vowel."
+      ],
+      "thaiExample": "ลด",
+      "exampleAudioKey": "words/lot"
+    },
+    {
+      "type": "rule_choice",
+      "prompt": "ดี",
+      "audioKey": "syllables/dii",
+      "promptNote": "good — one syllable",
+      "question": "What sound does ด make at the start of this syllable?",
+      "choices": [
+        "d",
+        "t",
+        "th"
+      ],
+      "correctIndex": 0,
+      "explanation": "ด starts ดี with d. Compare final ด in ลด, where it sounds t.",
+      "attributeTo": [
+        "do_dek"
+      ]
+    },
+    {
+      "type": "rule_choice",
+      "prompt": "ลด",
+      "audioKey": "words/lot",
+      "promptNote": "reduce / discount — one syllable",
+      "question": "What sound does ด make at the end of this syllable?",
+      "choices": [
+        "d",
+        "t",
+        "th"
+      ],
+      "correctIndex": 1,
+      "explanation": "ด ends ลด with t, even though the same letter starts ดี with d.",
+      "attributeTo": [
+        "do_dek"
+      ]
+    },
+    {
+      "type": "rule_choice",
+      "prompt": "จาก",
+      "audioKey": "syllables/chaak",
+      "promptNote": "from — one syllable",
+      "question": "What sound does จ make at the start of this syllable?",
+      "choices": [
+        "ch",
+        "t",
+        "s"
+      ],
+      "correctIndex": 0,
+      "explanation": "จ starts จาก with ch. It would sound t as a syllable-final consonant.",
+      "attributeTo": [
+        "cho_chan"
+      ]
+    },
+    {
+      "type": "rule_choice",
+      "prompt": "รส",
+      "audioKey": "syllables/rot",
+      "promptNote": "taste — one syllable",
+      "question": "What sound does ส make at the end of this syllable?",
+      "choices": [
+        "s",
+        "t",
+        "ch"
+      ],
+      "correctIndex": 1,
+      "explanation": "ส ends รส with t, not s. รส has an unwritten short o vowel; focus here on final ส.",
+      "attributeTo": [
+        "so_suea"
+      ]
+    },
+    {
+      "type": "rule_choice",
+      "prompt": "บาท",
+      "audioKey": "words/bat",
+      "promptNote": "baht — one syllable",
+      "question": "What sound does ท make at the end of this syllable?",
+      "choices": [
+        "th",
+        "t",
+        "d"
+      ],
+      "correctIndex": 1,
+      "explanation": "ท ends บาท. Its starting sound th becomes t at the end of a syllable.",
+      "attributeTo": [
+        "tho_thahan"
+      ]
+    },
+    {
+      "type": "concept",
+      "title": "ข and ค lose the puff at the end",
+      "body": [
+        "ข and ค begin syllables with kh. As final consonants, they sound k, like final ก and ฆ.",
+        "In เลข, meaning number, ข is final: the word ends with k, not kh.",
+        "A final k ends by closing the airflow at the back of the mouth. Do not add a puff or a vowel."
+      ],
+      "thaiExample": "เลข",
+      "exampleAudioKey": "syllables/lek"
+    },
+    {
+      "type": "rule_choice",
+      "prompt": "ขอ",
+      "audioKey": "syllables/kho",
+      "promptNote": "ask for — one syllable",
+      "question": "What sound does ข make at the start of this syllable?",
+      "choices": [
+        "k",
+        "kh",
+        "h"
+      ],
+      "correctIndex": 1,
+      "explanation": "ข starts ขอ with kh. อ is part of the vowel here.",
+      "attributeTo": [
+        "kho_khai"
+      ]
+    },
+    {
+      "type": "rule_choice",
+      "prompt": "เลข",
+      "audioKey": "syllables/lek",
+      "promptNote": "number — one syllable",
+      "question": "What sound does ข make at the end of this syllable?",
+      "choices": [
+        "k",
+        "kh",
+        "h"
+      ],
+      "correctIndex": 0,
+      "explanation": "ข ends เลข with k. Compare starting ข in ขอ: kh at the start, k at the end.",
+      "attributeTo": [
+        "kho_khai"
+      ]
+    },
+    {
+      "type": "rule_choice",
+      "prompt": "มาก",
+      "audioKey": "syllables/maak",
+      "promptNote": "very / much — one syllable",
+      "question": "What sound does ก make at the end of this syllable?",
+      "choices": [
+        "k",
+        "kh",
+        "ng"
+      ],
+      "correctIndex": 0,
+      "explanation": "ก ends มาก with k. Some letters, including ก, have the same basic sound at the start and end.",
+      "attributeTo": [
+        "ko_kai"
+      ]
+    },
+    {
+      "type": "concept",
+      "title": "Three stop endings, many spellings",
+      "body": [
+        "The usual k-ending spellings are ก ข ค ฆ. The usual p-ending spellings are บ ป พ ฟ ภ.",
+        "The t-ending group includes จ ช ซ ฎ ฏ ฐ ฑ ฒ ด ต ถ ท ธ ศ ษ ส. Learn the groups gradually through words rather than memorising the entire list now.",
+        "These are pronounced syllable endings. Silent letters and special spelling patterns need separate rules; not every last written letter is a pronounced ending."
+      ]
+    }
+  ]
+}

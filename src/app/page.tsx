@@ -1,7 +1,6 @@
 import { redirect } from "next/navigation";
 
-// Reading Thai is the default landing section for now; when Thai Phrases
-// becomes the main track this flips to "/phrases".
+// Start with useful words, audio, and spoken tones; reading is a companion track.
 export default function Home() {
-  redirect("/reading");
+  redirect("/phrases");
 }

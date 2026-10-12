@@ -2,43 +2,100 @@
   "id": "low-01",
   "unitId": "low-class",
   "order": 1,
-  "title": "Low class begins: ค ช ซ ท",
+  "title": "Meet ค ช ซ ท",
   "xpReward": 20,
-  "pedagogy": "Low-class consonants (1/5): paired low ค ช ซ ท — same sounds as high-class partners ข ฉ ส ถ, opposite tone behavior. Concepts: size of the low class; paired vs unpaired.",
-  "teaches": ["kho_khwai", "cho_chang", "so_so", "tho_thahan"],
-  "reviews": ["kho_khai", "cho_ching", "so_suea", "tho_thung"],
+  "pedagogy": "Letter shape, name, initial sound, and listening recognition; consonant class is reference information only. Practice the taught letters and review familiar spellings.",
+  "teaches": [
+    "kho_khwai",
+    "cho_chang",
+    "so_so",
+    "tho_thahan"
+  ],
+  "reviews": [
+    "kho_khai",
+    "cho_ching",
+    "so_suea",
+    "tho_thung"
+  ],
   "exercises": [
     {
       "type": "concept",
-      "title": "The low class — the big one",
+      "title": "More letters, familiar sounds",
       "body": [
-        "Twenty-four consonants — more than half the alphabet — are low class. This unit covers all of them.",
-        "The low class splits in two: paired letters that share a sound with a high-class partner, and unpaired sonorants (nasals, liquids, glides) with no partner.",
-        "The pairing matters: a high/low pair can spell every one of the five tones between them."
+        "Thai sometimes uses different letters for the same initial sound.",
+        "This unit introduces more spellings alongside new letters. Learn their shapes and names one at a time."
       ]
     },
     {
       "type": "concept",
-      "title": "Same sound, different class",
+      "title": "Same sound, different letter",
       "thaiExample": "ข ↔ ค",
       "body": [
-        "ค sounds exactly like ข — both say kh. But ข is high class and ค is low class, so the same written syllable carries a different tone.",
-        "This lesson's four letters all have a high partner: ค↔ข, ช↔ฉ, ซ↔ส, ท↔ถ.",
-        "When you meet a consonant that sounds like one you know, the class is the difference that matters."
+        "ค and ข both have the initial sound kh.",
+        "You will also meet ช (ch), ซ (s), and ท (th), with sounds you have heard before.",
+        "Use each letter's full name to tell the spellings apart."
       ]
     },
-    { "type": "intro", "characterId": "kho_khwai" },
-    { "type": "glyph_to_sound", "characterId": "kho_khwai" },
-    { "type": "intro", "characterId": "cho_chang" },
-    { "type": "glyph_to_sound", "characterId": "cho_chang" },
-    { "type": "sound_to_glyph", "characterId": "kho_khwai" },
-    { "type": "intro", "characterId": "so_so" },
-    { "type": "glyph_to_sound", "characterId": "so_so" },
-    { "type": "intro", "characterId": "tho_thahan" },
-    { "type": "glyph_to_sound", "characterId": "tho_thahan" },
-    { "type": "match_pairs", "characterIds": ["kho_khwai", "cho_chang", "so_so", "tho_thahan"] },
-    { "type": "listening", "characterId": "so_so" },
-    { "type": "class_sort", "characterIds": ["kho_khwai", "cho_chang", "so_so", "kho_khai", "cho_ching", "so_suea"], "classes": ["low", "high"] },
-    { "type": "sound_to_glyph", "characterId": "tho_thahan" }
+    {
+      "type": "intro",
+      "characterId": "kho_khwai"
+    },
+    {
+      "type": "glyph_to_sound",
+      "characterId": "kho_khwai"
+    },
+    {
+      "type": "intro",
+      "characterId": "cho_chang"
+    },
+    {
+      "type": "glyph_to_sound",
+      "characterId": "cho_chang"
+    },
+    {
+      "type": "sound_to_glyph",
+      "characterId": "kho_khwai"
+    },
+    {
+      "type": "intro",
+      "characterId": "so_so"
+    },
+    {
+      "type": "glyph_to_sound",
+      "characterId": "so_so"
+    },
+    {
+      "type": "intro",
+      "characterId": "tho_thahan"
+    },
+    {
+      "type": "glyph_to_sound",
+      "characterId": "tho_thahan"
+    },
+    {
+      "type": "match_pairs",
+      "characterIds": [
+        "kho_khwai",
+        "cho_chang",
+        "so_so",
+        "tho_thahan"
+      ]
+    },
+    {
+      "type": "listening",
+      "characterId": "so_so"
+    },
+    {
+      "type": "sound_to_glyph",
+      "characterId": "kho_khwai"
+    },
+    {
+      "type": "sound_to_glyph",
+      "characterId": "cho_chang"
+    },
+    {
+      "type": "sound_to_glyph",
+      "characterId": "tho_thahan"
+    }
   ]
 }
