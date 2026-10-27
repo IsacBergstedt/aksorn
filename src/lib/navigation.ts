@@ -1,6 +1,6 @@
-import { BookOpen, Mic, Route } from "lucide-react";
+import { BookOpen, Layers, Mic, Route } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
-import { lessonById, phrasesUnitById } from "@/content";
+import { coreUnitById, lessonById, phrasesUnitById } from "@/content";
 
 export type Section = {
   href: string;
@@ -19,6 +19,12 @@ function isPhrasesLessonPath(pathname: string): boolean {
   return !!lesson && phrasesUnitById.has(lesson.unitId);
 }
 
+function isCoreLessonPath(pathname: string): boolean {
+  if (!pathname.startsWith("/lesson/")) return false;
+  const lesson = lessonById.get(pathname.slice("/lesson/".length));
+  return !!lesson && coreUnitById.has(lesson.unitId);
+}
+
 /** Top-level learning sections, in display order. */
 export const sections: Section[] = [
   {
@@ -29,7 +35,7 @@ export const sections: Section[] = [
     // Script lessons and reviews are part of the script trainer.
     isActive: (pathname) =>
       pathname === "/reading" ||
-      (pathname.startsWith("/lesson") && !isPhrasesLessonPath(pathname)) ||
+      (pathname.startsWith("/lesson") && !isPhrasesLessonPath(pathname) && !isCoreLessonPath(pathname)) ||
       pathname === "/review",
   },
   {
@@ -39,6 +45,13 @@ export const sections: Section[] = [
     icon: Route,
     isActive: (pathname) =>
       pathname === "/phrases" || isPhrasesLessonPath(pathname),
+  },
+  {
+    href: "/core",
+    label: "Core 1,000",
+    shortLabel: "Core 1,000",
+    icon: Layers,
+    isActive: (pathname) => pathname === "/core" || pathname.startsWith("/core/") || isCoreLessonPath(pathname),
   },
   {
     href: "/speaking",

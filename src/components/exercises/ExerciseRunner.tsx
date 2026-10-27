@@ -166,7 +166,7 @@ export function ExerciseRunner({
             />
           )}
           {current.kind === "word_intro" && (
-            <WordIntroCard word={current.word} onComplete={handleComplete} />
+            <WordIntroCard word={current.word} example={current.example} onComplete={handleComplete} />
           )}
           {current.kind === "word_choice" && (
             <WordChoice exercise={current} onComplete={handleComplete} />

@@ -1,5 +1,7 @@
 import {
   characters,
+  corePilot,
+  coreUnitById,
   getCharacter,
   getItem,
   getWord,
@@ -67,7 +69,7 @@ export type RuntimeExercise =
       explanation: string;
       attributeTo?: string[];
     }
-  | { kind: "word_intro"; word: VocabWord }
+  | { kind: "word_intro"; word: VocabWord; example?: { thai: string; rtgs: string; meaning: string; audioKey: string; sourceRank: number } }
   | {
       kind: "word_choice";
       direction: "thai_to_meaning" | "meaning_to_thai";
@@ -386,7 +388,8 @@ export function buildLessonExercises(lesson: Lesson): RuntimeExercise[] {
           attributeTo: ex.attributeTo,
         };
       case "word_intro":
-        return { kind: "word_intro", word: getWord(ex.wordId) };
+        return { kind: "word_intro", word: getWord(ex.wordId),
+          ...(coreUnitById.has(lesson.unitId) ? { example: corePilot.find(e => e.wordId === ex.wordId) } : {}) };
       case "word_choice":
         return buildWordChoice(ex.direction, ex.wordId, lessonWordPool);
       case "word_listening":

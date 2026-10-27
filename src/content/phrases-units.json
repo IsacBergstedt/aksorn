@@ -172,8 +172,8 @@
   },
   {
     "id": "words-first-sentences",
-    "title": "First Sentences",
-    "description": "Everything from units 1–10, recombined into full sentences you build yourself.",
+    "title": "Sentences You Already Know",
+    "description": "Sentence bridge 1 of 3: build statements, questions, and replies using vocabulary from units 1–10.",
     "order": 11,
     "lessonIds": [
       "sent-01",
@@ -190,8 +190,8 @@
   },
   {
     "id": "words-afternoon-out",
-    "title": "An Afternoon Out",
-    "description": "Longer, connected sentences for a real afternoon in town — directions, a custom order, and haggling.",
+    "title": "Getting Things Done",
+    "description": "Sentence bridge 2 of 3: familiar food, shopping, and directions vocabulary, with just three new words to connect and customize your sentences.",
     "order": 12,
     "lessonIds": [
       "out-01",
@@ -204,6 +204,84 @@
       "Order it your way — เผ็ดน้อย, หวานน้อยหน่อย",
       "Haggle politely: แพงไป, ลดหน่อยได้ไหม",
       "String two clauses into one natural turn"
+    ]
+  },
+  {
+    "id": "words-short-conversations",
+    "title": "Short Conversations",
+    "description": "Sentence bridge 3 of 3: listen, respond, and keep an exchange moving. No new vocabulary — use the words you already know.",
+    "order": 13,
+    "lessonIds": ["conv-01", "conv-02", "conv-03", "conv-cp"],
+    "goals": [
+      "Introduce yourself and answer a follow-up question",
+      "Move from checking a menu to ordering and paying",
+      "Use directions and negotiate a purchase in connected exchanges",
+      "Pass a conversation checkpoint using familiar vocabulary"
+    ]
+  },
+  {
+    "id": "words-wants-requests",
+    "title": "Wants & Requests",
+    "description": "Build on familiar request sentences to say what you want, ask for help, and respond to someone else's request.",
+    "order": 14,
+    "lessonIds": [],
+    "comingSoon": true,
+    "goals": [
+      "Say what you want and do not want",
+      "Ask someone to help or do something for you",
+      "Accept or decline a request naturally"
+    ]
+  },
+  {
+    "id": "words-everyday-life",
+    "title": "Everyday Life",
+    "description": "Describe your routines in full sentences, introducing new words through familiar patterns.",
+    "order": 15,
+    "lessonIds": [],
+    "comingSoon": true,
+    "goals": [
+      "Talk about what you do during a normal day",
+      "Ask about someone else's routine",
+      "Reuse time words to say when things happen"
+    ]
+  },
+  {
+    "id": "words-plans-invitations",
+    "title": "Plans & Invitations",
+    "description": "Suggest an activity, agree on a time and place, and keep a plan moving across several turns.",
+    "order": 16,
+    "lessonIds": [],
+    "comingSoon": true,
+    "goals": [
+      "Invite someone to eat or go somewhere",
+      "Arrange when and where to meet",
+      "Accept, decline, or suggest another plan"
+    ]
+  },
+  {
+    "id": "words-past-experiences",
+    "title": "Past Experiences",
+    "description": "Use familiar activities to talk about what happened and what you have tried.",
+    "order": 17,
+    "lessonIds": [],
+    "comingSoon": true,
+    "goals": [
+      "Describe something you did yesterday",
+      "Say what has already happened",
+      "Ask about someone's experiences and answer a follow-up"
+    ]
+  },
+  {
+    "id": "words-reasons-preferences",
+    "title": "Reasons & Preferences",
+    "description": "Explain what you like and why, gradually connecting familiar sentences into longer thoughts.",
+    "order": 18,
+    "lessonIds": [],
+    "comingSoon": true,
+    "goals": [
+      "Say what you prefer and compare options",
+      "Give a reason for a choice",
+      "Connect ideas while revisiting earlier conversation patterns"
     ]
   }
 ]

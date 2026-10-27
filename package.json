@@ -7,7 +7,9 @@
     "build": "next build --turbopack",
     "start": "next start",
     "lint": "eslint",
-    "audio:generate": "tsx scripts/generate-audio.ts"
+    "audio:generate": "tsx scripts/generate-audio.ts",
+    "audio:bundle-core": "node scripts/run-local-typescript.cjs scripts/export-core-audio.ts",
+    "check:core": "node scripts/run-local-typescript.cjs scripts/validate-core.ts"
   },
   "dependencies": {
     "@base-ui/react": "^1.6.0",

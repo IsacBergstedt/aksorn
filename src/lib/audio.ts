@@ -2,6 +2,9 @@
 
 import { useCallback } from "react";
 import type { ThaiCharacter } from "@/content/schema";
+import bundledAudio from "./bundled-audio.json";
+
+const bundledAudioKeys = new Set(bundledAudio);
 
 let activeAudio: HTMLAudioElement | null = null;
 let playbackVersion = 0;
@@ -38,6 +41,7 @@ export function playAudioElement(
  * recordings can still be dropped in by hand.
  */
 function audioUrl(audioKey: string): string {
+  if (bundledAudioKeys.has(audioKey)) return `/audio/${audioKey}.mp3`;
   const base = process.env.NEXT_PUBLIC_SUPABASE_URL;
   return base
     ? `${base}/storage/v1/object/public/audio/${audioKey}.mp3`

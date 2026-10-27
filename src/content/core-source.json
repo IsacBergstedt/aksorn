@@ -1,0 +1,10 @@
+{
+  "name": "Thai National Corpus word frequencies, distributed by PyThaiNLP",
+  "credit": "Korakot Chaovavanich; PyThaiNLP contributors",
+  "url": "https://raw.githubusercontent.com/PyThaiNLP/pythainlp/10c1e82db675344140ef514821bf3a40f9601c2b/pythainlp/corpus/tnc_freq.txt",
+  "revision": "10c1e82db675344140ef514821bf3a40f9601c2b",
+  "retrievedAt": "2026-10-27",
+  "sha256": "554984d62e8735e2705bb30b06096d5710d0c9011e340ab717134e10d6dd0dda",
+  "repositoryLicense": "Apache-2.0",
+  "modifications": "Retain first 1,000 unique Thai-script entries; remove punctuation, numeral-containing, and mixed-script forms. Preserve counts and original source ranks."
+}

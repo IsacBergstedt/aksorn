@@ -15,7 +15,7 @@ export function SectionTabs({ variant }: { variant: "desktop" | "mobile" }) {
 
   if (variant === "desktop") {
     return (
-      <nav className="hidden items-center gap-1 md:flex">
+      <nav className="hidden items-center gap-1 lg:flex">
         {sections.map((section) => {
           const active = section.isActive(pathname);
           return (
@@ -38,13 +38,13 @@ export function SectionTabs({ variant }: { variant: "desktop" | "mobile" }) {
     );
   }
 
-  if (pathname.startsWith("/lesson")) return null;
+  if (pathname.startsWith("/lesson") || pathname === "/core/review") return null;
 
   return (
     <>
       {/* In-flow spacer so page content can scroll clear of the fixed bar. */}
-      <div className="h-16 md:hidden" aria-hidden />
-      <nav className="fixed inset-x-0 bottom-0 z-40 border-t border-border bg-background/90 backdrop-blur md:hidden">
+      <div className="h-16 lg:hidden" aria-hidden />
+      <nav className="fixed inset-x-0 bottom-0 z-40 border-t border-border bg-background/90 backdrop-blur lg:hidden">
         <div className="mx-auto flex max-w-md">
           {sections.map((section) => {
             const active = section.isActive(pathname);

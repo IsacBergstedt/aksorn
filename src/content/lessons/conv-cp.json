@@ -1,0 +1,384 @@
+{
+  "id": "conv-cp",
+  "unitId": "words-short-conversations",
+  "order": 4,
+  "title": "A day of conversations",
+  "kind": "checkpoint",
+  "passThreshold": 0.8,
+  "xpReward": 40,
+  "teaches": [],
+  "reviews": [
+    "phom",
+    "chue",
+    "khrap",
+    "ma_chak",
+    "pai",
+    "nai",
+    "kin",
+    "khao_rice",
+    "mai_not",
+    "ao",
+    "kha_statement",
+    "an",
+    "ni_this",
+    "phet",
+    "mai_question",
+    "kha_question",
+    "thao_rai",
+    "trong",
+    "laeo",
+    "liao",
+    "sai",
+    "lot",
+    "noi",
+    "dai"
+  ],
+  "pedagogy": "Cumulative checkpoint: no new words or patterns. Transfer familiar name, origin, destination, food, price, and directions sentences to connected scenes with no concept cards. Listening, sentence building, gap completion, and contextual replies assess meaning and response selection. Existing syllable-tone metadata is unchanged. Pass at 80 percent; all responses attribute only to known vocab ids.",
+  "exercises": [
+    {
+      "type": "dialogue_choice",
+      "context": "You are Mark, a man meeting another guest for the first time. She asks your name.",
+      "speaker": {
+        "thai": "คุณชื่ออะไรคะ",
+        "rtgs": "khun chue arai kha",
+        "meaning": "What's your name?",
+        "audioKey": "phrases/khun_chue_arai_kha_question"
+      },
+      "question": "What do you say next?",
+      "choices": [
+        {
+          "thai": "ผมชื่อมาร์คครับ",
+          "rtgs": "phom chue mak khrap",
+          "audioKey": "phrases/phom_chue_mak_khrap",
+          "quality": "best",
+          "note": "Give your name before moving on to other details."
+        },
+        {
+          "thai": "ผมมาจากสวีเดนครับ",
+          "rtgs": "phom ma chak sawiden khrap",
+          "quality": "meaning",
+          "note": "This answers an origin question."
+        },
+        {
+          "thai": "เท่าไหร่ครับ",
+          "rtgs": "thao rai khrap",
+          "quality": "situation",
+          "note": "There is no price to ask about."
+        }
+      ],
+      "attributeTo": [
+        "phom",
+        "chue",
+        "khrap"
+      ]
+    },
+    {
+      "type": "sentence_build",
+      "meaning": "I'm from Sweden. (male speaker)",
+      "gloss": "I (male) + come-from + Sweden + male polite particle",
+      "promptMode": "meaning",
+      "audioKey": "phrases/phom_ma_chak_sawiden_khrap",
+      "tokens": [
+        {
+          "thai": "ผม",
+          "rtgs": "phom",
+          "wordId": "phom"
+        },
+        {
+          "thai": "มาจาก",
+          "rtgs": "ma chak",
+          "wordId": "ma_chak"
+        },
+        {
+          "thai": "สวีเดน",
+          "rtgs": "sawiden"
+        },
+        {
+          "thai": "ครับ",
+          "rtgs": "khrap",
+          "wordId": "khrap"
+        }
+      ],
+      "explanation": "Use the familiar origin frame."
+    },
+    {
+      "type": "sentence_listening",
+      "audioKey": "phrases/pai_nai_khrap",
+      "thai": "ไปไหนครับ",
+      "rtgs": "pai nai khrap",
+      "mode": "meaning",
+      "choices": [
+        {
+          "thai": "ไปไหนครับ",
+          "rtgs": "pai nai khrap",
+          "meaning": "Where are you going? (male speaker)"
+        },
+        {
+          "thai": "คุณมาจากไหนครับ",
+          "rtgs": "khun ma chak nai khrap",
+          "meaning": "Where are you from? (male speaker)"
+        },
+        {
+          "thai": "คุณชื่ออะไรครับ",
+          "rtgs": "khun chue arai khrap",
+          "meaning": "What's your name? (male speaker)"
+        }
+      ],
+      "correctIndex": 0,
+      "explanation": "Destination and origin questions need different answers.",
+      "attributeTo": [
+        "pai",
+        "nai"
+      ]
+    },
+    {
+      "type": "sentence_build",
+      "meaning": "I'm going to eat. (male speaker)",
+      "gloss": "go + eat + rice + polite(m)",
+      "promptMode": "audio",
+      "audioKey": "phrases/pai_kin_khao_khrap",
+      "tokens": [
+        {
+          "thai": "ไป",
+          "rtgs": "pai",
+          "wordId": "pai"
+        },
+        {
+          "thai": "กิน",
+          "rtgs": "kin",
+          "wordId": "kin"
+        },
+        {
+          "thai": "ข้าว",
+          "rtgs": "khao",
+          "wordId": "khao_rice"
+        },
+        {
+          "thai": "ครับ",
+          "rtgs": "khrap",
+          "wordId": "khrap"
+        }
+      ],
+      "explanation": "Answer a destination question with your immediate plan."
+    },
+    {
+      "type": "dialogue_choice",
+      "context": "At the food stall, the vendor offers water. You are a woman and do not want any.",
+      "speaker": {
+        "thai": "เอาน้ำไหมคะ",
+        "rtgs": "ao nam mai kha",
+        "meaning": "Would you like water?",
+        "audioKey": "phrases/ao_nam_mai_kha_question"
+      },
+      "question": "What do you say next?",
+      "choices": [
+        {
+          "thai": "ไม่เอาค่ะ",
+          "rtgs": "mai ao kha",
+          "audioKey": "phrases/mai_ao_kha",
+          "quality": "best",
+          "note": "ไม่เอาค่ะ politely declines this offer."
+        },
+        {
+          "thai": "ขอน้ำหน่อยค่ะ",
+          "rtgs": "kho nam noi kha",
+          "quality": "meaning",
+          "note": "This requests water rather than declining it."
+        },
+        {
+          "thai": "อร่อยค่ะ",
+          "rtgs": "aroi kha",
+          "quality": "situation",
+          "note": "This compliments something you have tasted."
+        }
+      ],
+      "attributeTo": [
+        "mai_not",
+        "ao",
+        "kha_statement"
+      ]
+    },
+    {
+      "type": "sentence_cloze",
+      "tokens": [
+        {
+          "thai": "อัน",
+          "rtgs": "an",
+          "wordId": "an"
+        },
+        {
+          "thai": "นี้",
+          "rtgs": "ni",
+          "wordId": "ni_this"
+        },
+        {
+          "thai": "เผ็ด",
+          "rtgs": "phet",
+          "wordId": "phet"
+        },
+        {
+          "thai": "ไหม",
+          "rtgs": "mai",
+          "wordId": "mai_question"
+        },
+        {
+          "thai": "คะ",
+          "rtgs": "kha",
+          "wordId": "kha_question"
+        }
+      ],
+      "blankIndex": 2,
+      "meaning": "Is this one spicy? (female speaker)",
+      "audioKey": "phrases/an_ni_phet_mai_kha_question",
+      "distractors": [
+        {
+          "thai": "หวาน",
+          "rtgs": "wan"
+        },
+        {
+          "thai": "แพง",
+          "rtgs": "phaeng"
+        }
+      ],
+      "explanation": "Pick the describing word that matches the spice question."
+    },
+    {
+      "type": "sentence_build",
+      "meaning": "How much is this one? (female speaker)",
+      "gloss": "thing + this + how-much + female question particle",
+      "promptMode": "meaning",
+      "audioKey": "phrases/an_ni_thao_rai_kha_question",
+      "tokens": [
+        {
+          "thai": "อัน",
+          "rtgs": "an",
+          "wordId": "an"
+        },
+        {
+          "thai": "นี้",
+          "rtgs": "ni",
+          "wordId": "ni_this"
+        },
+        {
+          "thai": "เท่าไหร่",
+          "rtgs": "thao rai",
+          "wordId": "thao_rai"
+        },
+        {
+          "thai": "คะ",
+          "rtgs": "kha",
+          "wordId": "kha_question"
+        }
+      ],
+      "explanation": "Use the price question for the item in front of you."
+    },
+    {
+      "type": "sentence_listening",
+      "audioKey": "phrases/trong_pai_laeo_liao_sai_khrap",
+      "thai": "ตรงไปแล้วเลี้ยวซ้ายครับ",
+      "rtgs": "trong pai laeo liao sai khrap",
+      "mode": "meaning",
+      "choices": [
+        {
+          "thai": "ตรงไปแล้วเลี้ยวซ้ายครับ",
+          "rtgs": "trong pai laeo liao sai khrap",
+          "meaning": "Go straight, then turn left. (male speaker)"
+        },
+        {
+          "thai": "ตรงไป",
+          "rtgs": "trong pai",
+          "meaning": "Go straight."
+        },
+        {
+          "thai": "เลี้ยวซ้ายครับ",
+          "rtgs": "liao sai khrap",
+          "meaning": "Turn left. (male speaker)"
+        }
+      ],
+      "correctIndex": 0,
+      "explanation": "The full route has two steps linked by แล้ว.",
+      "attributeTo": [
+        "trong",
+        "pai",
+        "laeo",
+        "liao",
+        "sai"
+      ]
+    },
+    {
+      "type": "dialogue_choice",
+      "context": "Later at the market, a vendor quotes 35 baht. You are a man and want to ask for a lower price.",
+      "speaker": {
+        "thai": "สามสิบห้าบาท",
+        "rtgs": "sam sip ha bat",
+        "meaning": "35 baht.",
+        "audioKey": "phrases/sam_sip_ha_bat"
+      },
+      "question": "What do you say next?",
+      "choices": [
+        {
+          "thai": "ลดหน่อยได้ไหมครับ",
+          "rtgs": "lot noi dai mai khrap",
+          "audioKey": "phrases/lot_noi_dai_mai_khrap",
+          "quality": "best",
+          "note": "Ask for a reduction before accepting the deal."
+        },
+        {
+          "thai": "เอาครับ",
+          "rtgs": "ao khrap",
+          "quality": "meaning",
+          "note": "This accepts without negotiating."
+        },
+        {
+          "thai": "ขอข้าวครับ",
+          "rtgs": "kho khao khrap",
+          "quality": "situation",
+          "note": "This is an order for rice, not a price request."
+        }
+      ],
+      "attributeTo": [
+        "lot",
+        "noi",
+        "dai",
+        "mai_question",
+        "khrap"
+      ]
+    },
+    {
+      "type": "dialogue_choice",
+      "context": "The vendor accepts your offer. You are a man who wants to take the item.",
+      "speaker": {
+        "thai": "ได้ค่ะ",
+        "rtgs": "dai kha",
+        "meaning": "Yes, that works.",
+        "audioKey": "phrases/dai_kha"
+      },
+      "question": "What do you say next?",
+      "choices": [
+        {
+          "thai": "เอาครับ",
+          "rtgs": "ao khrap",
+          "audioKey": "phrases/ao_khrap",
+          "quality": "best",
+          "note": "Accept the item to finish the exchange."
+        },
+        {
+          "thai": "ไม่เอาค่ะ",
+          "rtgs": "mai ao kha",
+          "quality": "meaning",
+          "note": "This declines the item."
+        },
+        {
+          "thai": "ไปไหนครับ",
+          "rtgs": "pai nai khrap",
+          "quality": "situation",
+          "note": "This asks where the vendor is going."
+        }
+      ],
+      "attributeTo": [
+        "ao",
+        "khrap"
+      ]
+    }
+  ]
+}

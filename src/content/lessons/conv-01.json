@@ -1,0 +1,326 @@
+{
+  "id": "conv-01",
+  "unitId": "words-short-conversations",
+  "order": 1,
+  "title": "Meet someone",
+  "xpReward": 25,
+  "teaches": [],
+  "reviews": [
+    "chue",
+    "arai",
+    "phom",
+    "khrap",
+    "ma_chak",
+    "pai",
+    "nai",
+    "kin",
+    "khao_rice",
+    "hio",
+    "mak"
+  ],
+  "pedagogy": "No new vocabulary. Recombine introductions, origins, feelings, and destinations into a connected first meeting. Listen for the question word, fill its answer slot, then respond in context. All token wordIds retain their existing syllable-tone derivations; no new tone rules. Meaning and situation distractors are grammatical replies to different questions.",
+  "exercises": [
+    {
+      "type": "concept",
+      "title": "Familiar words, a new person",
+      "body": [
+        "You already know every word in these replies. This time, keep track of what the other person asked: a name, an origin, or a destination.",
+        "Follow one meeting from introductions to leaving for lunch. First listen, then complete a sentence, then choose your own reply."
+      ]
+    },
+    {
+      "type": "sentence_listening",
+      "audioKey": "phrases/khun_chue_arai_kha_question",
+      "thai": "คุณชื่ออะไรคะ",
+      "rtgs": "khun chue arai kha",
+      "mode": "meaning",
+      "choices": [
+        {
+          "thai": "คุณชื่ออะไรคะ",
+          "rtgs": "khun chue arai kha",
+          "meaning": "What's your name? (female speaker)"
+        },
+        {
+          "thai": "คุณมาจากไหนครับ",
+          "rtgs": "khun ma chak nai khrap",
+          "meaning": "Where are you from? (male speaker)"
+        },
+        {
+          "thai": "ไปไหนครับ",
+          "rtgs": "pai nai khrap",
+          "meaning": "Where are you going? (male speaker)"
+        }
+      ],
+      "correctIndex": 0,
+      "explanation": "ชื่ออะไร asks for a name. Listen for ชื่อ rather than answering every question with a place.",
+      "attributeTo": [
+        "chue",
+        "arai"
+      ]
+    },
+    {
+      "type": "sentence_cloze",
+      "tokens": [
+        {
+          "thai": "ผม",
+          "rtgs": "phom",
+          "wordId": "phom"
+        },
+        {
+          "thai": "ชื่อ",
+          "rtgs": "chue",
+          "wordId": "chue"
+        },
+        {
+          "thai": "มาร์ค",
+          "rtgs": "mak"
+        },
+        {
+          "thai": "ครับ",
+          "rtgs": "khrap",
+          "wordId": "khrap"
+        }
+      ],
+      "blankIndex": 1,
+      "meaning": "My name is Mark. (male speaker)",
+      "audioKey": "phrases/phom_chue_mak_khrap",
+      "distractors": [
+        {
+          "thai": "กิน",
+          "rtgs": "kin"
+        },
+        {
+          "thai": "ไป",
+          "rtgs": "pai"
+        }
+      ],
+      "explanation": "ชื่อ introduces the name; กิน means eat and ไป means go."
+    },
+    {
+      "type": "dialogue_choice",
+      "context": "At a guesthouse breakfast, a woman introduces herself and asks your name. You are Mark, a man.",
+      "speaker": {
+        "thai": "คุณชื่ออะไรคะ",
+        "rtgs": "khun chue arai kha",
+        "meaning": "What's your name?",
+        "audioKey": "phrases/khun_chue_arai_kha_question"
+      },
+      "question": "What do you say next?",
+      "choices": [
+        {
+          "thai": "ผมชื่อมาร์คครับ",
+          "rtgs": "phom chue mak khrap",
+          "audioKey": "phrases/phom_chue_mak_khrap",
+          "quality": "best",
+          "note": "Answer the name question with ผมชื่อมาร์คครับ."
+        },
+        {
+          "thai": "ผมมาจากสวีเดนครับ",
+          "rtgs": "phom ma chak sawiden khrap",
+          "quality": "meaning",
+          "note": "This gives your origin, not your name."
+        },
+        {
+          "thai": "ขอข้าวครับ",
+          "rtgs": "kho khao khrap",
+          "quality": "situation",
+          "note": "This orders rice. You are introducing yourself first."
+        }
+      ],
+      "attributeTo": [
+        "phom",
+        "chue",
+        "khrap"
+      ]
+    },
+    {
+      "type": "sentence_build",
+      "meaning": "I'm from Sweden. (male speaker)",
+      "gloss": "I (male) + come-from + Sweden + male polite particle",
+      "promptMode": "meaning",
+      "audioKey": "phrases/phom_ma_chak_sawiden_khrap",
+      "tokens": [
+        {
+          "thai": "ผม",
+          "rtgs": "phom",
+          "wordId": "phom"
+        },
+        {
+          "thai": "มาจาก",
+          "rtgs": "ma chak",
+          "wordId": "ma_chak"
+        },
+        {
+          "thai": "สวีเดน",
+          "rtgs": "sawiden"
+        },
+        {
+          "thai": "ครับ",
+          "rtgs": "khrap",
+          "wordId": "khrap"
+        }
+      ],
+      "explanation": "ผม + มาจาก + place + ครับ. Use the same origin frame from Introducing Yourself."
+    },
+    {
+      "type": "dialogue_choice",
+      "context": "The same guest asks where you are from. You are a man from Sweden.",
+      "speaker": {
+        "thai": "คุณมาจากไหนครับ",
+        "rtgs": "khun ma chak nai khrap",
+        "meaning": "Where are you from?",
+        "audioKey": "phrases/khun_ma_chak_nai_khrap"
+      },
+      "question": "What do you say next?",
+      "choices": [
+        {
+          "thai": "ผมมาจากสวีเดนครับ",
+          "rtgs": "phom ma chak sawiden khrap",
+          "audioKey": "phrases/phom_ma_chak_sawiden_khrap",
+          "quality": "best",
+          "note": "Replace the question slot ไหน with your home country."
+        },
+        {
+          "thai": "ผมชื่อมาร์คครับ",
+          "rtgs": "phom chue mak khrap",
+          "quality": "meaning",
+          "note": "You already gave your name; this question asks where you come from."
+        },
+        {
+          "thai": "เท่าไหร่ครับ",
+          "rtgs": "thao rai khrap",
+          "quality": "situation",
+          "note": "Nobody is selling anything. This asks a price."
+        }
+      ],
+      "attributeTo": [
+        "phom",
+        "ma_chak",
+        "khrap"
+      ]
+    },
+    {
+      "type": "sentence_listening",
+      "audioKey": "phrases/pai_nai_khrap",
+      "thai": "ไปไหนครับ",
+      "rtgs": "pai nai khrap",
+      "mode": "transcript",
+      "choices": [
+        {
+          "thai": "ไปไหนครับ",
+          "rtgs": "pai nai khrap",
+          "meaning": "Where are you going? (male speaker)"
+        },
+        {
+          "thai": "คุณมาจากไหนครับ",
+          "rtgs": "khun ma chak nai khrap",
+          "meaning": "Where are you from? (male speaker)"
+        },
+        {
+          "thai": "คุณชื่ออะไรครับ",
+          "rtgs": "khun chue arai khrap",
+          "meaning": "What's your name? (male speaker)"
+        }
+      ],
+      "correctIndex": 0,
+      "explanation": "ไปไหน asks about your destination; มาจากไหน asks your origin.",
+      "attributeTo": [
+        "pai",
+        "nai"
+      ]
+    },
+    {
+      "type": "sentence_build",
+      "meaning": "I'm going to eat. (male speaker)",
+      "gloss": "go + eat + rice + polite(m)",
+      "promptMode": "audio",
+      "audioKey": "phrases/pai_kin_khao_khrap",
+      "tokens": [
+        {
+          "thai": "ไป",
+          "rtgs": "pai",
+          "wordId": "pai"
+        },
+        {
+          "thai": "กิน",
+          "rtgs": "kin",
+          "wordId": "kin"
+        },
+        {
+          "thai": "ข้าว",
+          "rtgs": "khao",
+          "wordId": "khao_rice"
+        },
+        {
+          "thai": "ครับ",
+          "rtgs": "khrap",
+          "wordId": "khrap"
+        }
+      ],
+      "explanation": "ไป + กิน + ข้าว chains familiar verbs into a useful answer."
+    },
+    {
+      "type": "dialogue_choice",
+      "context": "Breakfast introductions are over. You are a man leaving to get a meal; another guest asks where you are going.",
+      "speaker": {
+        "thai": "ไปไหนครับ",
+        "rtgs": "pai nai khrap",
+        "meaning": "Where are you going?",
+        "audioKey": "phrases/pai_nai_khrap"
+      },
+      "question": "What do you say next?",
+      "choices": [
+        {
+          "thai": "ไปกินข้าวครับ",
+          "rtgs": "pai kin khao khrap",
+          "audioKey": "phrases/pai_kin_khao_khrap",
+          "quality": "best",
+          "note": "ไปกินข้าวครับ tells them what you are heading off to do."
+        },
+        {
+          "thai": "ผมมาจากสวีเดนครับ",
+          "rtgs": "phom ma chak sawiden khrap",
+          "quality": "meaning",
+          "note": "That is where you come from, not where you are going now."
+        },
+        {
+          "thai": "ลดหน่อยได้ไหมครับ",
+          "rtgs": "lot noi dai mai khrap",
+          "quality": "situation",
+          "note": "This asks for a discount; there is no price being discussed."
+        }
+      ],
+      "attributeTo": [
+        "pai",
+        "kin",
+        "khao_rice",
+        "khrap"
+      ]
+    },
+    {
+      "type": "sentence_build",
+      "meaning": "I'm really hungry. (male speaker)",
+      "gloss": "I(male) + hungry + very",
+      "promptMode": "meaning",
+      "audioKey": "phrases/phom_hio_mak",
+      "tokens": [
+        {
+          "thai": "ผม",
+          "rtgs": "phom",
+          "wordId": "phom"
+        },
+        {
+          "thai": "หิว",
+          "rtgs": "hio",
+          "wordId": "hio"
+        },
+        {
+          "thai": "มาก",
+          "rtgs": "mak",
+          "wordId": "mak"
+        }
+      ],
+      "explanation": "Familiar feeling + มาก explains why you are heading for food. No new vocabulary is needed."
+    }
+  ]
+}

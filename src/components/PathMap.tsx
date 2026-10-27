@@ -11,11 +11,12 @@ import { lessonById, orderedLessons, units } from "@/content";
 import { dueCards } from "@/lib/srs";
 import { useProgressStore } from "@/lib/progress/store";
 import { useMounted } from "@/lib/use-mounted";
+import { COURSE_FREE_ACCESS } from "@/lib/course-access";
 import { cn } from "@/lib/utils";
 
 /**
  * Home-screen lesson path: units in order, each with its lessons as nodes.
- * A lesson unlocks when the previous lesson in the overall path is complete.
+ * Lessons are temporarily open through COURSE_FREE_ACCESS.
  */
 export function PathMap() {
   const mounted = useMounted();
@@ -27,11 +28,11 @@ export function PathMap() {
     (l) => !completions[l.id],
   );
 
-  const lessonState = (lessonId: string): "completed" | "current" | "locked" => {
-    if (!mounted) return "locked";
-    if (completions[lessonId]) return "completed";
+  const lessonState = (lessonId: string): "completed" | "current" | "available" | "locked" => {
+    if (mounted && completions[lessonId]) return "completed";
     const pathIndex = orderedLessons.findIndex((l) => l.id === lessonId);
-    return pathIndex === firstIncompleteIndex ? "current" : "locked";
+    if (mounted && pathIndex === firstIncompleteIndex) return "current";
+    return COURSE_FREE_ACCESS ? "available" : "locked";
   };
 
   return (
@@ -112,6 +113,8 @@ export function PathMap() {
                                   "border-amber-400 bg-amber-100 text-amber-600",
                                 state === "current" &&
                                   "border-primary bg-primary text-primary-foreground",
+                                state === "available" &&
+                                  "border-primary/40 bg-primary/10 text-primary",
                                 state === "locked" &&
                                   "border-border bg-secondary text-muted-foreground",
                               )}

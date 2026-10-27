@@ -9,7 +9,7 @@ import { ThaiWordText } from "@/components/ThaiWordText";
 import { ToneContour } from "@/components/ToneContour";
 import { WordToneGuide } from "@/components/WordToneGuide";
 import { Recorder } from "@/components/speaking/Recorder";
-import { useAudio } from "@/lib/audio";
+import { playAudioKey, useAudio } from "@/lib/audio";
 import { classBadgeClasses, classLabel } from "@/lib/class-colors";
 import { toneBadgeClasses, toneLabel } from "@/lib/tone-colors";
 import { useUiSettings } from "@/lib/ui-settings";
@@ -84,9 +84,11 @@ function SyllableBreakdown({ syllable }: { syllable: Syllable }) {
 /** Unscored teaching card for a vocab word — the word-level IntroCard. */
 export function WordIntroCard({
   word,
+  example,
   onComplete,
 }: {
   word: VocabWord;
+  example?: { thai: string; rtgs: string; meaning: string; audioKey: string; sourceRank: number };
   onComplete: OnExerciseComplete;
 }) {
   const { play } = useAudio(word.audioKey, word.thai);
@@ -166,6 +168,18 @@ export function WordIntroCard({
 
       {word.usageNote && (
         <p className="max-w-md text-sm text-muted-foreground">{word.usageNote}</p>
+      )}
+
+      {example && (
+        <div className="w-full max-w-md rounded-2xl border border-primary/15 bg-primary/5 p-4 text-left">
+          <div className="mb-3 flex items-center justify-between gap-3">
+            <p className="text-xs font-semibold text-primary">In a sentence · corpus rank #{example.sourceRank}</p>
+            <Button variant="ghost" size="icon" aria-label="Listen to the example sentence" onClick={() => playAudioKey(example.audioKey, example.thai)}><Volume2 className="h-4 w-4" /></Button>
+          </div>
+          <p className="font-thai text-xl leading-relaxed">{example.thai}</p>
+          {showRomanization && <p className="mt-1 text-xs text-muted-foreground">{example.rtgs}</p>}
+          <p className="mt-2 text-sm text-muted-foreground">{example.meaning}</p>
+        </div>
       )}
 
       <div className="w-full max-w-md rounded-xl border p-4">

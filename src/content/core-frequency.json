@@ -1,0 +1,5002 @@
+[
+  {
+    "thai": "ที่",
+    "count": 818364,
+    "sourceRank": 1
+  },
+  {
+    "thai": "การ",
+    "count": 592036,
+    "sourceRank": 2
+  },
+  {
+    "thai": "เป็น",
+    "count": 540030,
+    "sourceRank": 3
+  },
+  {
+    "thai": "ใน",
+    "count": 537563,
+    "sourceRank": 4
+  },
+  {
+    "thai": "ของ",
+    "count": 506314,
+    "sourceRank": 5
+  },
+  {
+    "thai": "มี",
+    "count": 506209,
+    "sourceRank": 6
+  },
+  {
+    "thai": "จะ",
+    "count": 501374,
+    "sourceRank": 7
+  },
+  {
+    "thai": "และ",
+    "count": 467702,
+    "sourceRank": 8
+  },
+  {
+    "thai": "ไม่",
+    "count": 451244,
+    "sourceRank": 9
+  },
+  {
+    "thai": "ได้",
+    "count": 396750,
+    "sourceRank": 10
+  },
+  {
+    "thai": "ให้",
+    "count": 360539,
+    "sourceRank": 11
+  },
+  {
+    "thai": "ว่า",
+    "count": 358393,
+    "sourceRank": 12
+  },
+  {
+    "thai": "ไป",
+    "count": 351980,
+    "sourceRank": 13
+  },
+  {
+    "thai": "มา",
+    "count": 315308,
+    "sourceRank": 14
+  },
+  {
+    "thai": "ก็",
+    "count": 299255,
+    "sourceRank": 15
+  },
+  {
+    "thai": "ความ",
+    "count": 230926,
+    "sourceRank": 17
+  },
+  {
+    "thai": "คน",
+    "count": 221718,
+    "sourceRank": 18
+  },
+  {
+    "thai": "กับ",
+    "count": 196873,
+    "sourceRank": 19
+  },
+  {
+    "thai": "แล้ว",
+    "count": 192645,
+    "sourceRank": 20
+  },
+  {
+    "thai": "อยู่",
+    "count": 184712,
+    "sourceRank": 21
+  },
+  {
+    "thai": "หรือ",
+    "count": 184518,
+    "sourceRank": 22
+  },
+  {
+    "thai": "จาก",
+    "count": 174522,
+    "sourceRank": 23
+  },
+  {
+    "thai": "กัน",
+    "count": 173642,
+    "sourceRank": 24
+  },
+  {
+    "thai": "นี้",
+    "count": 173270,
+    "sourceRank": 25
+  },
+  {
+    "thai": "แต่",
+    "count": 169729,
+    "sourceRank": 26
+  },
+  {
+    "thai": "อย่าง",
+    "count": 156145,
+    "sourceRank": 27
+  },
+  {
+    "thai": "ต้อง",
+    "count": 152506,
+    "sourceRank": 28
+  },
+  {
+    "thai": "ด้วย",
+    "count": 144359,
+    "sourceRank": 29
+  },
+  {
+    "thai": "ขึ้น",
+    "count": 143277,
+    "sourceRank": 30
+  },
+  {
+    "thai": "เขา",
+    "count": 141791,
+    "sourceRank": 31
+  },
+  {
+    "thai": "นั้น",
+    "count": 134924,
+    "sourceRank": 32
+  },
+  {
+    "thai": "ผู้",
+    "count": 121530,
+    "sourceRank": 33
+  },
+  {
+    "thai": "ซึ่ง",
+    "count": 120255,
+    "sourceRank": 34
+  },
+  {
+    "thai": "ตาม",
+    "count": 114643,
+    "sourceRank": 35
+  },
+  {
+    "thai": "มาก",
+    "count": 111366,
+    "sourceRank": 36
+  },
+  {
+    "thai": "โดย",
+    "count": 110905,
+    "sourceRank": 37
+  },
+  {
+    "thai": "ใช้",
+    "count": 110741,
+    "sourceRank": 38
+  },
+  {
+    "thai": "ทาง",
+    "count": 104557,
+    "sourceRank": 39
+  },
+  {
+    "thai": "เรื่อง",
+    "count": 103410,
+    "sourceRank": 40
+  },
+  {
+    "thai": "เรา",
+    "count": 102429,
+    "sourceRank": 41
+  },
+  {
+    "thai": "ยัง",
+    "count": 102249,
+    "sourceRank": 42
+  },
+  {
+    "thai": "ทำ",
+    "count": 94736,
+    "sourceRank": 43
+  },
+  {
+    "thai": "เพื่อ",
+    "count": 93642,
+    "sourceRank": 44
+  },
+  {
+    "thai": "ผม",
+    "count": 90499,
+    "sourceRank": 45
+  },
+  {
+    "thai": "อีก",
+    "count": 90482,
+    "sourceRank": 46
+  },
+  {
+    "thai": "หนึ่ง",
+    "count": 90196,
+    "sourceRank": 47
+  },
+  {
+    "thai": "เมื่อ",
+    "count": 90185,
+    "sourceRank": 48
+  },
+  {
+    "thai": "ถึง",
+    "count": 88464,
+    "sourceRank": 49
+  },
+  {
+    "thai": "เข้า",
+    "count": 87791,
+    "sourceRank": 50
+  },
+  {
+    "thai": "เพราะ",
+    "count": 85251,
+    "sourceRank": 51
+  },
+  {
+    "thai": "ดี",
+    "count": 85098,
+    "sourceRank": 52
+  },
+  {
+    "thai": "ออก",
+    "count": 82369,
+    "sourceRank": 53
+  },
+  {
+    "thai": "ฉัน",
+    "count": 81824,
+    "sourceRank": 54
+  },
+  {
+    "thai": "เกิด",
+    "count": 79436,
+    "sourceRank": 55
+  },
+  {
+    "thai": "คือ",
+    "count": 79009,
+    "sourceRank": 56
+  },
+  {
+    "thai": "เห็น",
+    "count": 78336,
+    "sourceRank": 57
+  },
+  {
+    "thai": "จึง",
+    "count": 75094,
+    "sourceRank": 58
+  },
+  {
+    "thai": "ทำให้",
+    "count": 73165,
+    "sourceRank": 59
+  },
+  {
+    "thai": "กว่า",
+    "count": 71636,
+    "sourceRank": 60
+  },
+  {
+    "thai": "ไทย",
+    "count": 70666,
+    "sourceRank": 61
+  },
+  {
+    "thai": "ไว้",
+    "count": 70213,
+    "sourceRank": 62
+  },
+  {
+    "thai": "ตัว",
+    "count": 69977,
+    "sourceRank": 63
+  },
+  {
+    "thai": "ปี",
+    "count": 69923,
+    "sourceRank": 64
+  },
+  {
+    "thai": "เธอ",
+    "count": 68911,
+    "sourceRank": 65
+  },
+  {
+    "thai": "คุณ",
+    "count": 67639,
+    "sourceRank": 66
+  },
+  {
+    "thai": "ต่อ",
+    "count": 66480,
+    "sourceRank": 67
+  },
+  {
+    "thai": "ทั้ง",
+    "count": 66393,
+    "sourceRank": 68
+  },
+  {
+    "thai": "มัน",
+    "count": 66023,
+    "sourceRank": 69
+  },
+  {
+    "thai": "เลย",
+    "count": 65857,
+    "sourceRank": 70
+  },
+  {
+    "thai": "ถ้า",
+    "count": 63755,
+    "sourceRank": 71
+  },
+  {
+    "thai": "อะไร",
+    "count": 62000,
+    "sourceRank": 72
+  },
+  {
+    "thai": "เวลา",
+    "count": 61608,
+    "sourceRank": 73
+  },
+  {
+    "thai": "ลง",
+    "count": 61584,
+    "sourceRank": 74
+  },
+  {
+    "thai": "ต่าง",
+    "count": 59691,
+    "sourceRank": 75
+  },
+  {
+    "thai": "ส่วน",
+    "count": 59277,
+    "sourceRank": 76
+  },
+  {
+    "thai": "ประเทศ",
+    "count": 58909,
+    "sourceRank": 77
+  },
+  {
+    "thai": "อาจ",
+    "count": 57922,
+    "sourceRank": 78
+  },
+  {
+    "thai": "แบบ",
+    "count": 55674,
+    "sourceRank": 79
+  },
+  {
+    "thai": "ถูก",
+    "count": 55654,
+    "sourceRank": 80
+  },
+  {
+    "thai": "ทุก",
+    "count": 54867,
+    "sourceRank": 81
+  },
+  {
+    "thai": "วัน",
+    "count": 54715,
+    "sourceRank": 82
+  },
+  {
+    "thai": "ก่อน",
+    "count": 52599,
+    "sourceRank": 83
+  },
+  {
+    "thai": "เช่น",
+    "count": 50911,
+    "sourceRank": 84
+  },
+  {
+    "thai": "อื่น",
+    "count": 50886,
+    "sourceRank": 85
+  },
+  {
+    "thai": "ดู",
+    "count": 50710,
+    "sourceRank": 86
+  },
+  {
+    "thai": "ครั้ง",
+    "count": 48705,
+    "sourceRank": 87
+  },
+  {
+    "thai": "รู้",
+    "count": 48379,
+    "sourceRank": 88
+  },
+  {
+    "thai": "เอา",
+    "count": 47499,
+    "sourceRank": 89
+  },
+  {
+    "thai": "สอง",
+    "count": 46774,
+    "sourceRank": 90
+  },
+  {
+    "thai": "นำ",
+    "count": 46168,
+    "sourceRank": 91
+  },
+  {
+    "thai": "งาน",
+    "count": 45447,
+    "sourceRank": 92
+  },
+  {
+    "thai": "สามารถ",
+    "count": 44557,
+    "sourceRank": 93
+  },
+  {
+    "thai": "นาย",
+    "count": 44544,
+    "sourceRank": 94
+  },
+  {
+    "thai": "นะ",
+    "count": 44537,
+    "sourceRank": 95
+  },
+  {
+    "thai": "หน้า",
+    "count": 44132,
+    "sourceRank": 96
+  },
+  {
+    "thai": "บอก",
+    "count": 43675,
+    "sourceRank": 97
+  },
+  {
+    "thai": "กลับ",
+    "count": 43632,
+    "sourceRank": 98
+  },
+  {
+    "thai": "แห่ง",
+    "count": 43331,
+    "sourceRank": 99
+  },
+  {
+    "thai": "บาง",
+    "count": 42278,
+    "sourceRank": 100
+  },
+  {
+    "thai": "ได้รับ",
+    "count": 42018,
+    "sourceRank": 101
+  },
+  {
+    "thai": "จน",
+    "count": 41260,
+    "sourceRank": 102
+  },
+  {
+    "thai": "ด้าน",
+    "count": 41108,
+    "sourceRank": 103
+  },
+  {
+    "thai": "คิด",
+    "count": 40240,
+    "sourceRank": 104
+  },
+  {
+    "thai": "เด็ก",
+    "count": 40233,
+    "sourceRank": 105
+  },
+  {
+    "thai": "ชีวิต",
+    "count": 40210,
+    "sourceRank": 106
+  },
+  {
+    "thai": "สิ่ง",
+    "count": 39830,
+    "sourceRank": 107
+  },
+  {
+    "thai": "พระ",
+    "count": 39627,
+    "sourceRank": 108
+  },
+  {
+    "thai": "เหมือน",
+    "count": 39596,
+    "sourceRank": 109
+  },
+  {
+    "thai": "รับ",
+    "count": 38329,
+    "sourceRank": 110
+  },
+  {
+    "thai": "หลาย",
+    "count": 38325,
+    "sourceRank": 111
+  },
+  {
+    "thai": "พูด",
+    "count": 38322,
+    "sourceRank": 112
+  },
+  {
+    "thai": "บ้าน",
+    "count": 38126,
+    "sourceRank": 113
+  },
+  {
+    "thai": "ใหม่",
+    "count": 37980,
+    "sourceRank": 114
+  },
+  {
+    "thai": "เคย",
+    "count": 37709,
+    "sourceRank": 115
+  },
+  {
+    "thai": "นี่",
+    "count": 37578,
+    "sourceRank": 116
+  },
+  {
+    "thai": "กลุ่ม",
+    "count": 37535,
+    "sourceRank": 117
+  },
+  {
+    "thai": "ปัญหา",
+    "count": 37404,
+    "sourceRank": 118
+  },
+  {
+    "thai": "สังคม",
+    "count": 37140,
+    "sourceRank": 119
+  },
+  {
+    "thai": "ใคร",
+    "count": 36549,
+    "sourceRank": 120
+  },
+  {
+    "thai": "หา",
+    "count": 36043,
+    "sourceRank": 121
+  },
+  {
+    "thai": "คำ",
+    "count": 35694,
+    "sourceRank": 122
+  },
+  {
+    "thai": "อยาก",
+    "count": 35088,
+    "sourceRank": 123
+  },
+  {
+    "thai": "ใด",
+    "count": 35060,
+    "sourceRank": 124
+  },
+  {
+    "thai": "เสียง",
+    "count": 34721,
+    "sourceRank": 125
+  },
+  {
+    "thai": "คง",
+    "count": 34378,
+    "sourceRank": 126
+  },
+  {
+    "thai": "มอง",
+    "count": 34326,
+    "sourceRank": 127
+  },
+  {
+    "thai": "ระหว่าง",
+    "count": 34266,
+    "sourceRank": 128
+  },
+  {
+    "thai": "สำหรับ",
+    "count": 34250,
+    "sourceRank": 129
+  },
+  {
+    "thai": "น้ำ",
+    "count": 34129,
+    "sourceRank": 130
+  },
+  {
+    "thai": "ผล",
+    "count": 34026,
+    "sourceRank": 131
+  },
+  {
+    "thai": "ใช่",
+    "count": 33721,
+    "sourceRank": 133
+  },
+  {
+    "thai": "แสดง",
+    "count": 33661,
+    "sourceRank": 134
+  },
+  {
+    "thai": "กำลัง",
+    "count": 32943,
+    "sourceRank": 135
+  },
+  {
+    "thai": "สร้าง",
+    "count": 32877,
+    "sourceRank": 136
+  },
+  {
+    "thai": "ท่าน",
+    "count": 32851,
+    "sourceRank": 137
+  },
+  {
+    "thai": "เงิน",
+    "count": 32438,
+    "sourceRank": 138
+  },
+  {
+    "thai": "โลก",
+    "count": 32385,
+    "sourceRank": 139
+  },
+  {
+    "thai": "ช่วย",
+    "count": 32370,
+    "sourceRank": 140
+  },
+  {
+    "thai": "กำหนด",
+    "count": 31902,
+    "sourceRank": 141
+  },
+  {
+    "thai": "จริง",
+    "count": 31865,
+    "sourceRank": 142
+  },
+  {
+    "thai": "ขอ",
+    "count": 31715,
+    "sourceRank": 143
+  },
+  {
+    "thai": "ทำงาน",
+    "count": 31461,
+    "sourceRank": 144
+  },
+  {
+    "thai": "ระบบ",
+    "count": 31180,
+    "sourceRank": 145
+  },
+  {
+    "thai": "ใหญ่",
+    "count": 31026,
+    "sourceRank": 146
+  },
+  {
+    "thai": "ลูก",
+    "count": 30980,
+    "sourceRank": 147
+  },
+  {
+    "thai": "เอง",
+    "count": 30943,
+    "sourceRank": 148
+  },
+  {
+    "thai": "อัน",
+    "count": 30824,
+    "sourceRank": 149
+  },
+  {
+    "thai": "พอ",
+    "count": 30664,
+    "sourceRank": 150
+  },
+  {
+    "thai": "ที่สุด",
+    "count": 30312,
+    "sourceRank": 151
+  },
+  {
+    "thai": "แม่",
+    "count": 30062,
+    "sourceRank": 152
+  },
+  {
+    "thai": "พบ",
+    "count": 30055,
+    "sourceRank": 153
+  },
+  {
+    "thai": "บน",
+    "count": 30031,
+    "sourceRank": 154
+  },
+  {
+    "thai": "เสีย",
+    "count": 30006,
+    "sourceRank": 155
+  },
+  {
+    "thai": "แก่",
+    "count": 29859,
+    "sourceRank": 156
+  },
+  {
+    "thai": "ควร",
+    "count": 29643,
+    "sourceRank": 157
+  },
+  {
+    "thai": "เมือง",
+    "count": 29481,
+    "sourceRank": 158
+  },
+  {
+    "thai": "น้อย",
+    "count": 29415,
+    "sourceRank": 159
+  },
+  {
+    "thai": "เดิน",
+    "count": 29370,
+    "sourceRank": 160
+  },
+  {
+    "thai": "สี",
+    "count": 29279,
+    "sourceRank": 161
+  },
+  {
+    "thai": "น่า",
+    "count": 29140,
+    "sourceRank": 162
+  },
+  {
+    "thai": "พี่",
+    "count": 28934,
+    "sourceRank": 163
+  },
+  {
+    "thai": "ร่วม",
+    "count": 28905,
+    "sourceRank": 164
+  },
+  {
+    "thai": "พัฒนา",
+    "count": 28839,
+    "sourceRank": 165
+  },
+  {
+    "thai": "ใจ",
+    "count": 28660,
+    "sourceRank": 166
+  },
+  {
+    "thai": "หาก",
+    "count": 28582,
+    "sourceRank": 167
+  },
+  {
+    "thai": "มาตรา",
+    "count": 28423,
+    "sourceRank": 168
+  },
+  {
+    "thai": "สูง",
+    "count": 27939,
+    "sourceRank": 169
+  },
+  {
+    "thai": "กิน",
+    "count": 26786,
+    "sourceRank": 170
+  },
+  {
+    "thai": "ส่ง",
+    "count": 26207,
+    "sourceRank": 171
+  },
+  {
+    "thai": "เดียว",
+    "count": 26169,
+    "sourceRank": 172
+  },
+  {
+    "thai": "แรก",
+    "count": 26139,
+    "sourceRank": 173
+  },
+  {
+    "thai": "กรณี",
+    "count": 25991,
+    "sourceRank": 174
+  },
+  {
+    "thai": "ระดับ",
+    "count": 25966,
+    "sourceRank": 175
+  },
+  {
+    "thai": "ตัวเอง",
+    "count": 25730,
+    "sourceRank": 176
+  },
+  {
+    "thai": "กฎหมาย",
+    "count": 25724,
+    "sourceRank": 177
+  },
+  {
+    "thai": "กล่าว",
+    "count": 25566,
+    "sourceRank": 178
+  },
+  {
+    "thai": "อาหาร",
+    "count": 25526,
+    "sourceRank": 179
+  },
+  {
+    "thai": "เกี่ยวกับ",
+    "count": 25218,
+    "sourceRank": 180
+  },
+  {
+    "thai": "ดังกล่าว",
+    "count": 25009,
+    "sourceRank": 181
+  },
+  {
+    "thai": "นัก",
+    "count": 24924,
+    "sourceRank": 182
+  },
+  {
+    "thai": "จัด",
+    "count": 24889,
+    "sourceRank": 183
+  },
+  {
+    "thai": "ช่วง",
+    "count": 24816,
+    "sourceRank": 184
+  },
+  {
+    "thai": "ฝ่าย",
+    "count": 24780,
+    "sourceRank": 185
+  },
+  {
+    "thai": "เพียง",
+    "count": 24673,
+    "sourceRank": 186
+  },
+  {
+    "thai": "ลักษณะ",
+    "count": 24666,
+    "sourceRank": 187
+  },
+  {
+    "thai": "หลัง",
+    "count": 24472,
+    "sourceRank": 188
+  },
+  {
+    "thai": "จำนวน",
+    "count": 24359,
+    "sourceRank": 189
+  },
+  {
+    "thai": "ข้อ",
+    "count": 24350,
+    "sourceRank": 190
+  },
+  {
+    "thai": "พวก",
+    "count": 24251,
+    "sourceRank": 191
+  },
+  {
+    "thai": "ตน",
+    "count": 24219,
+    "sourceRank": 192
+  },
+  {
+    "thai": "รวม",
+    "count": 23925,
+    "sourceRank": 193
+  },
+  {
+    "thai": "เริ่ม",
+    "count": 23889,
+    "sourceRank": 194
+  },
+  {
+    "thai": "สาว",
+    "count": 23795,
+    "sourceRank": 195
+  },
+  {
+    "thai": "เพื่อน",
+    "count": 23727,
+    "sourceRank": 196
+  },
+  {
+    "thai": "บุคคล",
+    "count": 23533,
+    "sourceRank": 197
+  },
+  {
+    "thai": "ถาม",
+    "count": 23386,
+    "sourceRank": 198
+  },
+  {
+    "thai": "ครับ",
+    "count": 23351,
+    "sourceRank": 199
+  },
+  {
+    "thai": "บ้าง",
+    "count": 23267,
+    "sourceRank": 200
+  },
+  {
+    "thai": "พิจารณา",
+    "count": 23191,
+    "sourceRank": 201
+  },
+  {
+    "thai": "อำนาจ",
+    "count": 23177,
+    "sourceRank": 202
+  },
+  {
+    "thai": "รัก",
+    "count": 22854,
+    "sourceRank": 203
+  },
+  {
+    "thai": "วันที่",
+    "count": 22821,
+    "sourceRank": 204
+  },
+  {
+    "thai": "ภาพ",
+    "count": 22607,
+    "sourceRank": 205
+  },
+  {
+    "thai": "ตา",
+    "count": 22530,
+    "sourceRank": 206
+  },
+  {
+    "thai": "ค่า",
+    "count": 22325,
+    "sourceRank": 207
+  },
+  {
+    "thai": "ผ่าน",
+    "count": 22201,
+    "sourceRank": 208
+  },
+  {
+    "thai": "ห้อง",
+    "count": 22187,
+    "sourceRank": 209
+  },
+  {
+    "thai": "หนังสือ",
+    "count": 21735,
+    "sourceRank": 210
+  },
+  {
+    "thai": "ข้อมูล",
+    "count": 21726,
+    "sourceRank": 211
+  },
+  {
+    "thai": "ยิ่ง",
+    "count": 21588,
+    "sourceRank": 212
+  },
+  {
+    "thai": "ดัง",
+    "count": 21568,
+    "sourceRank": 213
+  },
+  {
+    "thai": "เพิ่ม",
+    "count": 21550,
+    "sourceRank": 214
+  },
+  {
+    "thai": "ทรง",
+    "count": 21521,
+    "sourceRank": 215
+  },
+  {
+    "thai": "ตั้งแต่",
+    "count": 21505,
+    "sourceRank": 216
+  },
+  {
+    "thai": "พ่อ",
+    "count": 21391,
+    "sourceRank": 217
+  },
+  {
+    "thai": "ต่อไป",
+    "count": 21364,
+    "sourceRank": 218
+  },
+  {
+    "thai": "สำคัญ",
+    "count": 21361,
+    "sourceRank": 219
+  },
+  {
+    "thai": "เปิด",
+    "count": 21350,
+    "sourceRank": 220
+  },
+  {
+    "thai": "เศรษฐกิจ",
+    "count": 21347,
+    "sourceRank": 221
+  },
+  {
+    "thai": "ไหน",
+    "count": 21329,
+    "sourceRank": 222
+  },
+  {
+    "thai": "กระทำ",
+    "count": 21296,
+    "sourceRank": 223
+  },
+  {
+    "thai": "ตั้ง",
+    "count": 21261,
+    "sourceRank": 224
+  },
+  {
+    "thai": "เข้าใจ",
+    "count": 21188,
+    "sourceRank": 225
+  },
+  {
+    "thai": "ชอบ",
+    "count": 21121,
+    "sourceRank": 226
+  },
+  {
+    "thai": "ภาษา",
+    "count": 21080,
+    "sourceRank": 227
+  },
+  {
+    "thai": "ตรง",
+    "count": 20990,
+    "sourceRank": 228
+  },
+  {
+    "thai": "เรียน",
+    "count": 20963,
+    "sourceRank": 229
+  },
+  {
+    "thai": "ตอน",
+    "count": 20882,
+    "sourceRank": 230
+  },
+  {
+    "thai": "รัฐ",
+    "count": 20512,
+    "sourceRank": 232
+  },
+  {
+    "thai": "การศึกษา",
+    "count": 20331,
+    "sourceRank": 233
+  },
+  {
+    "thai": "ก็ได้",
+    "count": 20128,
+    "sourceRank": 234
+  },
+  {
+    "thai": "รู้สึก",
+    "count": 20126,
+    "sourceRank": 235
+  },
+  {
+    "thai": "ขนาด",
+    "count": 20067,
+    "sourceRank": 236
+  },
+  {
+    "thai": "เท่านั้น",
+    "count": 19901,
+    "sourceRank": 237
+  },
+  {
+    "thai": "นั่ง",
+    "count": 19663,
+    "sourceRank": 238
+  },
+  {
+    "thai": "ชื่อ",
+    "count": 19574,
+    "sourceRank": 239
+  },
+  {
+    "thai": "เดือน",
+    "count": 19571,
+    "sourceRank": 240
+  },
+  {
+    "thai": "ชาติ",
+    "count": 19470,
+    "sourceRank": 241
+  },
+  {
+    "thai": "ผิด",
+    "count": 19425,
+    "sourceRank": 242
+  },
+  {
+    "thai": "รัฐบาล",
+    "count": 19379,
+    "sourceRank": 243
+  },
+  {
+    "thai": "หลัก",
+    "count": 19347,
+    "sourceRank": 244
+  },
+  {
+    "thai": "นาน",
+    "count": 19330,
+    "sourceRank": 245
+  },
+  {
+    "thai": "รถ",
+    "count": 19269,
+    "sourceRank": 246
+  },
+  {
+    "thai": "จีน",
+    "count": 19026,
+    "sourceRank": 248
+  },
+  {
+    "thai": "ฟัง",
+    "count": 19020,
+    "sourceRank": 249
+  },
+  {
+    "thai": "เล็ก",
+    "count": 18991,
+    "sourceRank": 250
+  },
+  {
+    "thai": "ภายใน",
+    "count": 18864,
+    "sourceRank": 251
+  },
+  {
+    "thai": "แต่ละ",
+    "count": 18765,
+    "sourceRank": 252
+  },
+  {
+    "thai": "ละ",
+    "count": 18725,
+    "sourceRank": 253
+  },
+  {
+    "thai": "ต้องการ",
+    "count": 18721,
+    "sourceRank": 254
+  },
+  {
+    "thai": "ตาย",
+    "count": 18700,
+    "sourceRank": 255
+  },
+  {
+    "thai": "มือ",
+    "count": 18625,
+    "sourceRank": 256
+  },
+  {
+    "thai": "หญิง",
+    "count": 18486,
+    "sourceRank": 257
+  },
+  {
+    "thai": "เรียก",
+    "count": 18333,
+    "sourceRank": 258
+  },
+  {
+    "thai": "รูป",
+    "count": 18206,
+    "sourceRank": 259
+  },
+  {
+    "thai": "บาท",
+    "count": 18156,
+    "sourceRank": 260
+  },
+  {
+    "thai": "ประชาชน",
+    "count": 18121,
+    "sourceRank": 261
+  },
+  {
+    "thai": "ยา",
+    "count": 18095,
+    "sourceRank": 262
+  },
+  {
+    "thai": "มนุษย์",
+    "count": 18063,
+    "sourceRank": 263
+  },
+  {
+    "thai": "สาม",
+    "count": 17959,
+    "sourceRank": 264
+  },
+  {
+    "thai": "ลด",
+    "count": 17726,
+    "sourceRank": 265
+  },
+  {
+    "thai": "ผลิต",
+    "count": 17685,
+    "sourceRank": 266
+  },
+  {
+    "thai": "เล่น",
+    "count": 17632,
+    "sourceRank": 267
+  },
+  {
+    "thai": "ซื้อ",
+    "count": 17629,
+    "sourceRank": 268
+  },
+  {
+    "thai": "หมด",
+    "count": 17548,
+    "sourceRank": 269
+  },
+  {
+    "thai": "การเมือง",
+    "count": 17462,
+    "sourceRank": 270
+  },
+  {
+    "thai": "ขาย",
+    "count": 17421,
+    "sourceRank": 271
+  },
+  {
+    "thai": "เสนอ",
+    "count": 17295,
+    "sourceRank": 272
+  },
+  {
+    "thai": "ปฏิบัติ",
+    "count": 17284,
+    "sourceRank": 273
+  },
+  {
+    "thai": "ชาว",
+    "count": 17261,
+    "sourceRank": 274
+  },
+  {
+    "thai": "พร้อม",
+    "count": 17244,
+    "sourceRank": 275
+  },
+  {
+    "thai": "มัก",
+    "count": 17232,
+    "sourceRank": 276
+  },
+  {
+    "thai": "รักษา",
+    "count": 17219,
+    "sourceRank": 277
+  },
+  {
+    "thai": "เลือก",
+    "count": 17199,
+    "sourceRank": 278
+  },
+  {
+    "thai": "อ่าน",
+    "count": 17163,
+    "sourceRank": 279
+  },
+  {
+    "thai": "อย่างไร",
+    "count": 17163,
+    "sourceRank": 280
+  },
+  {
+    "thai": "เขียน",
+    "count": 17143,
+    "sourceRank": 281
+  },
+  {
+    "thai": "ก็คือ",
+    "count": 16925,
+    "sourceRank": 282
+  },
+  {
+    "thai": "ล่ะ",
+    "count": 16889,
+    "sourceRank": 283
+  },
+  {
+    "thai": "ระยะ",
+    "count": 16818,
+    "sourceRank": 284
+  },
+  {
+    "thai": "ค่ะ",
+    "count": 16710,
+    "sourceRank": 285
+  },
+  {
+    "thai": "ตลอด",
+    "count": 16585,
+    "sourceRank": 286
+  },
+  {
+    "thai": "สู่",
+    "count": 16404,
+    "sourceRank": 287
+  },
+  {
+    "thai": "ความคิด",
+    "count": 16339,
+    "sourceRank": 288
+  },
+  {
+    "thai": "หรือไม่",
+    "count": 16311,
+    "sourceRank": 289
+  },
+  {
+    "thai": "หน้าที่",
+    "count": 16274,
+    "sourceRank": 290
+  },
+  {
+    "thai": "ราคา",
+    "count": 16242,
+    "sourceRank": 291
+  },
+  {
+    "thai": "ประชุม",
+    "count": 16224,
+    "sourceRank": 292
+  },
+  {
+    "thai": "ผู้หญิง",
+    "count": 16122,
+    "sourceRank": 293
+  },
+  {
+    "thai": "ติด",
+    "count": 16121,
+    "sourceRank": 294
+  },
+  {
+    "thai": "ใส่",
+    "count": 16092,
+    "sourceRank": 295
+  },
+  {
+    "thai": "ศึกษา",
+    "count": 16072,
+    "sourceRank": 296
+  },
+  {
+    "thai": "เก็บ",
+    "count": 16071,
+    "sourceRank": 297
+  },
+  {
+    "thai": "ชั้น",
+    "count": 15993,
+    "sourceRank": 298
+  },
+  {
+    "thai": "เดียวกัน",
+    "count": 15958,
+    "sourceRank": 299
+  },
+  {
+    "thai": "สิทธิ",
+    "count": 15809,
+    "sourceRank": 300
+  },
+  {
+    "thai": "ประโยชน์",
+    "count": 15787,
+    "sourceRank": 301
+  },
+  {
+    "thai": "คณะกรรมการ",
+    "count": 15783,
+    "sourceRank": 302
+  },
+  {
+    "thai": "แค่",
+    "count": 15717,
+    "sourceRank": 303
+  },
+  {
+    "thai": "เปลี่ยน",
+    "count": 15673,
+    "sourceRank": 304
+  },
+  {
+    "thai": "ปัจจุบัน",
+    "count": 15594,
+    "sourceRank": 305
+  },
+  {
+    "thai": "เจ้า",
+    "count": 15577,
+    "sourceRank": 306
+  },
+  {
+    "thai": "พื้นที่",
+    "count": 15513,
+    "sourceRank": 307
+  },
+  {
+    "thai": "คะ",
+    "count": 15511,
+    "sourceRank": 308
+  },
+  {
+    "thai": "วิธี",
+    "count": 15311,
+    "sourceRank": 309
+  },
+  {
+    "thai": "ตำแหน่ง",
+    "count": 15224,
+    "sourceRank": 310
+  },
+  {
+    "thai": "ทำไม",
+    "count": 15187,
+    "sourceRank": 311
+  },
+  {
+    "thai": "ประจำ",
+    "count": 15150,
+    "sourceRank": 312
+  },
+  {
+    "thai": "พยายาม",
+    "count": 15124,
+    "sourceRank": 313
+  },
+  {
+    "thai": "เนื่องจาก",
+    "count": 15013,
+    "sourceRank": 314
+  },
+  {
+    "thai": "โอกาส",
+    "count": 14902,
+    "sourceRank": 315
+  },
+  {
+    "thai": "แม้",
+    "count": 14863,
+    "sourceRank": 316
+  },
+  {
+    "thai": "สมัย",
+    "count": 14837,
+    "sourceRank": 317
+  },
+  {
+    "thai": "อย่า",
+    "count": 14825,
+    "sourceRank": 318
+  },
+  {
+    "thai": "สัมพันธ์",
+    "count": 14815,
+    "sourceRank": 319
+  },
+  {
+    "thai": "ประเภท",
+    "count": 14812,
+    "sourceRank": 320
+  },
+  {
+    "thai": "เหตุ",
+    "count": 14775,
+    "sourceRank": 321
+  },
+  {
+    "thai": "ตอบ",
+    "count": 14773,
+    "sourceRank": 322
+  },
+  {
+    "thai": "วัฒนธรรม",
+    "count": 14670,
+    "sourceRank": 323
+  },
+  {
+    "thai": "ตนเอง",
+    "count": 14652,
+    "sourceRank": 324
+  },
+  {
+    "thai": "นั่น",
+    "count": 14636,
+    "sourceRank": 325
+  },
+  {
+    "thai": "สัก",
+    "count": 14530,
+    "sourceRank": 326
+  },
+  {
+    "thai": "สินค้า",
+    "count": 14520,
+    "sourceRank": 327
+  },
+  {
+    "thai": "เดิม",
+    "count": 14506,
+    "sourceRank": 328
+  },
+  {
+    "thai": "จำเป็น",
+    "count": 14435,
+    "sourceRank": 329
+  },
+  {
+    "thai": "เปลี่ยนแปลง",
+    "count": 14296,
+    "sourceRank": 330
+  },
+  {
+    "thai": "ถือ",
+    "count": 14273,
+    "sourceRank": 331
+  },
+  {
+    "thai": "เล่า",
+    "count": 14223,
+    "sourceRank": 332
+  },
+  {
+    "thai": "ประกอบ",
+    "count": 14205,
+    "sourceRank": 333
+  },
+  {
+    "thai": "ชนิด",
+    "count": 14155,
+    "sourceRank": 334
+  },
+  {
+    "thai": "กระทรวง",
+    "count": 14151,
+    "sourceRank": 335
+  },
+  {
+    "thai": "ปรากฏ",
+    "count": 13998,
+    "sourceRank": 336
+  },
+  {
+    "thai": "แล้วก็",
+    "count": 13995,
+    "sourceRank": 337
+  },
+  {
+    "thai": "ชาย",
+    "count": 13932,
+    "sourceRank": 338
+  },
+  {
+    "thai": "ดำเนินการ",
+    "count": 13917,
+    "sourceRank": 339
+  },
+  {
+    "thai": "รอบ",
+    "count": 13878,
+    "sourceRank": 340
+  },
+  {
+    "thai": "บริษัท",
+    "count": 13868,
+    "sourceRank": 341
+  },
+  {
+    "thai": "จังหวัด",
+    "count": 13845,
+    "sourceRank": 342
+  },
+  {
+    "thai": "ใบ",
+    "count": 13826,
+    "sourceRank": 343
+  },
+  {
+    "thai": "นอน",
+    "count": 13809,
+    "sourceRank": 344
+  },
+  {
+    "thai": "ทั้งหมด",
+    "count": 13772,
+    "sourceRank": 345
+  },
+  {
+    "thai": "เกิน",
+    "count": 13755,
+    "sourceRank": 346
+  },
+  {
+    "thai": "สุข",
+    "count": 13753,
+    "sourceRank": 347
+  },
+  {
+    "thai": "รู้จัก",
+    "count": 13708,
+    "sourceRank": 348
+  },
+  {
+    "thai": "ครู",
+    "count": 13706,
+    "sourceRank": 349
+  },
+  {
+    "thai": "โดยเฉพาะ",
+    "count": 13614,
+    "sourceRank": 350
+  },
+  {
+    "thai": "ดังนั้น",
+    "count": 13600,
+    "sourceRank": 351
+  },
+  {
+    "thai": "ร้าน",
+    "count": 13560,
+    "sourceRank": 352
+  },
+  {
+    "thai": "บริการ",
+    "count": 13556,
+    "sourceRank": 353
+  },
+  {
+    "thai": "ทราบ",
+    "count": 13507,
+    "sourceRank": 354
+  },
+  {
+    "thai": "ประมาณ",
+    "count": 13487,
+    "sourceRank": 355
+  },
+  {
+    "thai": "จุด",
+    "count": 13469,
+    "sourceRank": 356
+  },
+  {
+    "thai": "ง่าย",
+    "count": 13459,
+    "sourceRank": 357
+  },
+  {
+    "thai": "โครงการ",
+    "count": 13284,
+    "sourceRank": 358
+  },
+  {
+    "thai": "ตัวอย่าง",
+    "count": 13205,
+    "sourceRank": 359
+  },
+  {
+    "thai": "ข้าง",
+    "count": 13173,
+    "sourceRank": 360
+  },
+  {
+    "thai": "ภาค",
+    "count": 13088,
+    "sourceRank": 361
+  },
+  {
+    "thai": "เรียกว่า",
+    "count": 13084,
+    "sourceRank": 362
+  },
+  {
+    "thai": "คืน",
+    "count": 13081,
+    "sourceRank": 363
+  },
+  {
+    "thai": "หรอก",
+    "count": 13078,
+    "sourceRank": 364
+  },
+  {
+    "thai": "โรค",
+    "count": 13057,
+    "sourceRank": 365
+  },
+  {
+    "thai": "อาการ",
+    "count": 13022,
+    "sourceRank": 366
+  },
+  {
+    "thai": "อายุ",
+    "count": 13003,
+    "sourceRank": 367
+  },
+  {
+    "thai": "เหล่านี้",
+    "count": 12999,
+    "sourceRank": 368
+  },
+  {
+    "thai": "พา",
+    "count": 12980,
+    "sourceRank": 369
+  },
+  {
+    "thai": "แก",
+    "count": 12844,
+    "sourceRank": 370
+  },
+  {
+    "thai": "แตกต่าง",
+    "count": 12820,
+    "sourceRank": 371
+  },
+  {
+    "thai": "วิธีการ",
+    "count": 12796,
+    "sourceRank": 372
+  },
+  {
+    "thai": "น้อง",
+    "count": 12783,
+    "sourceRank": 373
+  },
+  {
+    "thai": "หมอ",
+    "count": 12777,
+    "sourceRank": 374
+  },
+  {
+    "thai": "ความรู้สึก",
+    "count": 12738,
+    "sourceRank": 375
+  },
+  {
+    "thai": "แทน",
+    "count": 12718,
+    "sourceRank": 376
+  },
+  {
+    "thai": "ที่อยู่",
+    "count": 12711,
+    "sourceRank": 377
+  },
+  {
+    "thai": "เชื่อ",
+    "count": 12671,
+    "sourceRank": 378
+  },
+  {
+    "thai": "ล้าน",
+    "count": 12606,
+    "sourceRank": 379
+  },
+  {
+    "thai": "ยาว",
+    "count": 12571,
+    "sourceRank": 380
+  },
+  {
+    "thai": "ราชการ",
+    "count": 12538,
+    "sourceRank": 381
+  },
+  {
+    "thai": "ครอบครัว",
+    "count": 12531,
+    "sourceRank": 382
+  },
+  {
+    "thai": "ไหม",
+    "count": 12461,
+    "sourceRank": 383
+  },
+  {
+    "thai": "เดินทาง",
+    "count": 12408,
+    "sourceRank": 384
+  },
+  {
+    "thai": "นา",
+    "count": 12406,
+    "sourceRank": 385
+  },
+  {
+    "thai": "โรงเรียน",
+    "count": 12356,
+    "sourceRank": 386
+  },
+  {
+    "thai": "คณะ",
+    "count": 12241,
+    "sourceRank": 387
+  },
+  {
+    "thai": "สภา",
+    "count": 12177,
+    "sourceRank": 388
+  },
+  {
+    "thai": "สภาพ",
+    "count": 12160,
+    "sourceRank": 389
+  },
+  {
+    "thai": "ที",
+    "count": 12135,
+    "sourceRank": 390
+  },
+  {
+    "thai": "พรรค",
+    "count": 12120,
+    "sourceRank": 391
+  },
+  {
+    "thai": "วัด",
+    "count": 12102,
+    "sourceRank": 392
+  },
+  {
+    "thai": "ประกาศ",
+    "count": 12096,
+    "sourceRank": 393
+  },
+  {
+    "thai": "นาง",
+    "count": 12075,
+    "sourceRank": 394
+  },
+  {
+    "thai": "หัว",
+    "count": 12059,
+    "sourceRank": 395
+  },
+  {
+    "thai": "กลาง",
+    "count": 11997,
+    "sourceRank": 396
+  },
+  {
+    "thai": "แรง",
+    "count": 11963,
+    "sourceRank": 397
+  },
+  {
+    "thai": "คู่",
+    "count": 11877,
+    "sourceRank": 398
+  },
+  {
+    "thai": "ตลาด",
+    "count": 11845,
+    "sourceRank": 399
+  },
+  {
+    "thai": "กลายเป็น",
+    "count": 11814,
+    "sourceRank": 400
+  },
+  {
+    "thai": "จับ",
+    "count": 11784,
+    "sourceRank": 401
+  },
+  {
+    "thai": "วิจัย",
+    "count": 11755,
+    "sourceRank": 402
+  },
+  {
+    "thai": "แนว",
+    "count": 11697,
+    "sourceRank": 403
+  },
+  {
+    "thai": "ข้าว",
+    "count": 11658,
+    "sourceRank": 404
+  },
+  {
+    "thai": "หัน",
+    "count": 11655,
+    "sourceRank": 405
+  },
+  {
+    "thai": "ไม่ว่า",
+    "count": 11643,
+    "sourceRank": 406
+  },
+  {
+    "thai": "เฉพาะ",
+    "count": 11640,
+    "sourceRank": 407
+  },
+  {
+    "thai": "ยก",
+    "count": 11605,
+    "sourceRank": 408
+  },
+  {
+    "thai": "อาศัย",
+    "count": 11590,
+    "sourceRank": 409
+  },
+  {
+    "thai": "ย่อม",
+    "count": 11587,
+    "sourceRank": 410
+  },
+  {
+    "thai": "ชุด",
+    "count": 11552,
+    "sourceRank": 411
+  },
+  {
+    "thai": "หนู",
+    "count": 11516,
+    "sourceRank": 412
+  },
+  {
+    "thai": "นโยบาย",
+    "count": 11409,
+    "sourceRank": 413
+  },
+  {
+    "thai": "น่ะ",
+    "count": 11407,
+    "sourceRank": 414
+  },
+  {
+    "thai": "เท่า",
+    "count": 11393,
+    "sourceRank": 415
+  },
+  {
+    "thai": "ความรู้",
+    "count": 11389,
+    "sourceRank": 416
+  },
+  {
+    "thai": "ยอม",
+    "count": 11352,
+    "sourceRank": 417
+  },
+  {
+    "thai": "ราย",
+    "count": 11320,
+    "sourceRank": 418
+  },
+  {
+    "thai": "ควบคุม",
+    "count": 11310,
+    "sourceRank": 419
+  },
+  {
+    "thai": "ธรรมชาติ",
+    "count": 11274,
+    "sourceRank": 420
+  },
+  {
+    "thai": "วาง",
+    "count": 11262,
+    "sourceRank": 421
+  },
+  {
+    "thai": "ส่วนใหญ่",
+    "count": 11259,
+    "sourceRank": 422
+  },
+  {
+    "thai": "ปกติ",
+    "count": 11235,
+    "sourceRank": 423
+  },
+  {
+    "thai": "ยืน",
+    "count": 11209,
+    "sourceRank": 424
+  },
+  {
+    "thai": "ประการ",
+    "count": 11194,
+    "sourceRank": 425
+  },
+  {
+    "thai": "บริหาร",
+    "count": 11184,
+    "sourceRank": 426
+  },
+  {
+    "thai": "สัญญา",
+    "count": 11140,
+    "sourceRank": 427
+  },
+  {
+    "thai": "สมาชิก",
+    "count": 11135,
+    "sourceRank": 428
+  },
+  {
+    "thai": "นิยม",
+    "count": 11131,
+    "sourceRank": 429
+  },
+  {
+    "thai": "รอ",
+    "count": 11067,
+    "sourceRank": 430
+  },
+  {
+    "thai": "หลังจาก",
+    "count": 11058,
+    "sourceRank": 431
+  },
+  {
+    "thai": "ต้น",
+    "count": 11007,
+    "sourceRank": 432
+  },
+  {
+    "thai": "สิ",
+    "count": 10962,
+    "sourceRank": 433
+  },
+  {
+    "thai": "อนุญาต",
+    "count": 10947,
+    "sourceRank": 434
+  },
+  {
+    "thai": "ร่าง",
+    "count": 10945,
+    "sourceRank": 435
+  },
+  {
+    "thai": "สอน",
+    "count": 10941,
+    "sourceRank": 436
+  },
+  {
+    "thai": "ญี่ปุ่น",
+    "count": 10913,
+    "sourceRank": 437
+  },
+  {
+    "thai": "ทางการ",
+    "count": 10887,
+    "sourceRank": 438
+  },
+  {
+    "thai": "เปล่า",
+    "count": 10827,
+    "sourceRank": 439
+  },
+  {
+    "thai": "ใกล้",
+    "count": 10822,
+    "sourceRank": 440
+  },
+  {
+    "thai": "สิบ",
+    "count": 10800,
+    "sourceRank": 441
+  },
+  {
+    "thai": "แก้ไข",
+    "count": 10764,
+    "sourceRank": 442
+  },
+  {
+    "thai": "เพลง",
+    "count": 10739,
+    "sourceRank": 443
+  },
+  {
+    "thai": "พิเศษ",
+    "count": 10722,
+    "sourceRank": 444
+  },
+  {
+    "thai": "จัดการ",
+    "count": 10679,
+    "sourceRank": 445
+  },
+  {
+    "thai": "ปาก",
+    "count": 10678,
+    "sourceRank": 446
+  },
+  {
+    "thai": "เป็นต้น",
+    "count": 10667,
+    "sourceRank": 447
+  },
+  {
+    "thai": "ความหมาย",
+    "count": 10629,
+    "sourceRank": 448
+  },
+  {
+    "thai": "บริเวณ",
+    "count": 10561,
+    "sourceRank": 449
+  },
+  {
+    "thai": "ยิ้ม",
+    "count": 10545,
+    "sourceRank": 450
+  },
+  {
+    "thai": "ทั้งนี้",
+    "count": 10536,
+    "sourceRank": 451
+  },
+  {
+    "thai": "ยุค",
+    "count": 10486,
+    "sourceRank": 452
+  },
+  {
+    "thai": "สัตว์",
+    "count": 10479,
+    "sourceRank": 453
+  },
+  {
+    "thai": "บท",
+    "count": 10466,
+    "sourceRank": 454
+  },
+  {
+    "thai": "รวมทั้ง",
+    "count": 10464,
+    "sourceRank": 455
+  },
+  {
+    "thai": "เขต",
+    "count": 10450,
+    "sourceRank": 456
+  },
+  {
+    "thai": "ดูแล",
+    "count": 10448,
+    "sourceRank": 457
+  },
+  {
+    "thai": "หาย",
+    "count": 10445,
+    "sourceRank": 458
+  },
+  {
+    "thai": "นอก",
+    "count": 10444,
+    "sourceRank": 459
+  },
+  {
+    "thai": "ไม้",
+    "count": 10420,
+    "sourceRank": 460
+  },
+  {
+    "thai": "บังคับ",
+    "count": 10399,
+    "sourceRank": 461
+  },
+  {
+    "thai": "ยาก",
+    "count": 10366,
+    "sourceRank": 462
+  },
+  {
+    "thai": "สาย",
+    "count": 10304,
+    "sourceRank": 463
+  },
+  {
+    "thai": "อัตรา",
+    "count": 10297,
+    "sourceRank": 464
+  },
+  {
+    "thai": "ได้แก่",
+    "count": 10260,
+    "sourceRank": 465
+  },
+  {
+    "thai": "เชิง",
+    "count": 10243,
+    "sourceRank": 466
+  },
+  {
+    "thai": "ตรวจ",
+    "count": 10239,
+    "sourceRank": 467
+  },
+  {
+    "thai": "วันนี้",
+    "count": 10190,
+    "sourceRank": 468
+  },
+  {
+    "thai": "สำนักงาน",
+    "count": 10181,
+    "sourceRank": 469
+  },
+  {
+    "thai": "จบ",
+    "count": 10163,
+    "sourceRank": 470
+  },
+  {
+    "thai": "สัมภาษณ์",
+    "count": 10159,
+    "sourceRank": 471
+  },
+  {
+    "thai": "ทันที",
+    "count": 10139,
+    "sourceRank": 472
+  },
+  {
+    "thai": "เจอ",
+    "count": 10119,
+    "sourceRank": 473
+  },
+  {
+    "thai": "ยอมรับ",
+    "count": 10089,
+    "sourceRank": 474
+  },
+  {
+    "thai": "เจ้าของ",
+    "count": 10069,
+    "sourceRank": 475
+  },
+  {
+    "thai": "ผู้ชาย",
+    "count": 10066,
+    "sourceRank": 476
+  },
+  {
+    "thai": "นอกจาก",
+    "count": 10064,
+    "sourceRank": 477
+  },
+  {
+    "thai": "ชุมชน",
+    "count": 9995,
+    "sourceRank": 478
+  },
+  {
+    "thai": "ทั่ว",
+    "count": 9977,
+    "sourceRank": 479
+  },
+  {
+    "thai": "ขาด",
+    "count": 9975,
+    "sourceRank": 480
+  },
+  {
+    "thai": "ยังไง",
+    "count": 9943,
+    "sourceRank": 481
+  },
+  {
+    "thai": "อา",
+    "count": 9925,
+    "sourceRank": 482
+  },
+  {
+    "thai": "ไง",
+    "count": 9919,
+    "sourceRank": 483
+  },
+  {
+    "thai": "สวย",
+    "count": 9882,
+    "sourceRank": 484
+  },
+  {
+    "thai": "เจ้าหน้าที่",
+    "count": 9881,
+    "sourceRank": 485
+  },
+  {
+    "thai": "รายงาน",
+    "count": 9856,
+    "sourceRank": 486
+  },
+  {
+    "thai": "ข่าว",
+    "count": 9855,
+    "sourceRank": 487
+  },
+  {
+    "thai": "ฉบับ",
+    "count": 9844,
+    "sourceRank": 488
+  },
+  {
+    "thai": "ฐานะ",
+    "count": 9843,
+    "sourceRank": 489
+  },
+  {
+    "thai": "มิ",
+    "count": 9842,
+    "sourceRank": 490
+  },
+  {
+    "thai": "สถาบัน",
+    "count": 9827,
+    "sourceRank": 491
+  },
+  {
+    "thai": "ประธาน",
+    "count": 9779,
+    "sourceRank": 492
+  },
+  {
+    "thai": "ปรับ",
+    "count": 9756,
+    "sourceRank": 493
+  },
+  {
+    "thai": "สนับสนุน",
+    "count": 9738,
+    "sourceRank": 494
+  },
+  {
+    "thai": "โต",
+    "count": 9736,
+    "sourceRank": 495
+  },
+  {
+    "thai": "เกี่ยวข้อง",
+    "count": 9693,
+    "sourceRank": 496
+  },
+  {
+    "thai": "แพทย์",
+    "count": 9679,
+    "sourceRank": 497
+  },
+  {
+    "thai": "ดังนี้",
+    "count": 9663,
+    "sourceRank": 498
+  },
+  {
+    "thai": "เสมอ",
+    "count": 9639,
+    "sourceRank": 499
+  },
+  {
+    "thai": "หล่อน",
+    "count": 9615,
+    "sourceRank": 500
+  },
+  {
+    "thai": "ตอนนี้",
+    "count": 9591,
+    "sourceRank": 501
+  },
+  {
+    "thai": "เครื่อง",
+    "count": 9581,
+    "sourceRank": 502
+  },
+  {
+    "thai": "แก้",
+    "count": 9576,
+    "sourceRank": 503
+  },
+  {
+    "thai": "ทหาร",
+    "count": 9560,
+    "sourceRank": 504
+  },
+  {
+    "thai": "เหลือ",
+    "count": 9547,
+    "sourceRank": 505
+  },
+  {
+    "thai": "ระเบียบ",
+    "count": 9512,
+    "sourceRank": 506
+  },
+  {
+    "thai": "วิเคราะห์",
+    "count": 9497,
+    "sourceRank": 507
+  },
+  {
+    "thai": "แดง",
+    "count": 9491,
+    "sourceRank": 508
+  },
+  {
+    "thai": "อารมณ์",
+    "count": 9488,
+    "sourceRank": 509
+  },
+  {
+    "thai": "จิต",
+    "count": 9471,
+    "sourceRank": 510
+  },
+  {
+    "thai": "ช่วยเหลือ",
+    "count": 9465,
+    "sourceRank": 511
+  },
+  {
+    "thai": "ยังคง",
+    "count": 9461,
+    "sourceRank": 512
+  },
+  {
+    "thai": "รีบ",
+    "count": 9440,
+    "sourceRank": 513
+  },
+  {
+    "thai": "ปล่อย",
+    "count": 9428,
+    "sourceRank": 514
+  },
+  {
+    "thai": "ขาว",
+    "count": 9423,
+    "sourceRank": 515
+  },
+  {
+    "thai": "เหตุผล",
+    "count": 9415,
+    "sourceRank": 516
+  },
+  {
+    "thai": "ปลา",
+    "count": 9407,
+    "sourceRank": 517
+  },
+  {
+    "thai": "ต่างประเทศ",
+    "count": 9396,
+    "sourceRank": 518
+  },
+  {
+    "thai": "สั่ง",
+    "count": 9372,
+    "sourceRank": 519
+  },
+  {
+    "thai": "มิได้",
+    "count": 9315,
+    "sourceRank": 520
+  },
+  {
+    "thai": "ร้อน",
+    "count": 9310,
+    "sourceRank": 521
+  },
+  {
+    "thai": "ณ",
+    "count": 9288,
+    "sourceRank": 522
+  },
+  {
+    "thai": "แบ่ง",
+    "count": 9268,
+    "sourceRank": 523
+  },
+  {
+    "thai": "ปกครอง",
+    "count": 9255,
+    "sourceRank": 524
+  },
+  {
+    "thai": "เน้น",
+    "count": 9246,
+    "sourceRank": 525
+  },
+  {
+    "thai": "ถือว่า",
+    "count": 9239,
+    "sourceRank": 526
+  },
+  {
+    "thai": "ประตู",
+    "count": 9239,
+    "sourceRank": 527
+  },
+  {
+    "thai": "รูปแบบ",
+    "count": 9230,
+    "sourceRank": 528
+  },
+  {
+    "thai": "ความสำคัญ",
+    "count": 9209,
+    "sourceRank": 529
+  },
+  {
+    "thai": "เรือ",
+    "count": 9190,
+    "sourceRank": 530
+  },
+  {
+    "thai": "หมายถึง",
+    "count": 9165,
+    "sourceRank": 531
+  },
+  {
+    "thai": "เต็ม",
+    "count": 9147,
+    "sourceRank": 532
+  },
+  {
+    "thai": "ธุรกิจ",
+    "count": 9092,
+    "sourceRank": 533
+  },
+  {
+    "thai": "ชัดเจน",
+    "count": 9062,
+    "sourceRank": 534
+  },
+  {
+    "thai": "หยุด",
+    "count": 9059,
+    "sourceRank": 535
+  },
+  {
+    "thai": "นับ",
+    "count": 9052,
+    "sourceRank": 536
+  },
+  {
+    "thai": "อังกฤษ",
+    "count": 9048,
+    "sourceRank": 537
+  },
+  {
+    "thai": "โอ",
+    "count": 9047,
+    "sourceRank": 538
+  },
+  {
+    "thai": "แยก",
+    "count": 9039,
+    "sourceRank": 539
+  },
+  {
+    "thai": "ร่างกาย",
+    "count": 9037,
+    "sourceRank": 540
+  },
+  {
+    "thai": "หัวใจ",
+    "count": 9034,
+    "sourceRank": 541
+  },
+  {
+    "thai": "สนใจ",
+    "count": 9031,
+    "sourceRank": 542
+  },
+  {
+    "thai": "อาจารย์",
+    "count": 9023,
+    "sourceRank": 543
+  },
+  {
+    "thai": "ทั่วไป",
+    "count": 8978,
+    "sourceRank": 544
+  },
+  {
+    "thai": "คุย",
+    "count": 8969,
+    "sourceRank": 545
+  },
+  {
+    "thai": "ศาล",
+    "count": 8950,
+    "sourceRank": 546
+  },
+  {
+    "thai": "ต่ำ",
+    "count": 8930,
+    "sourceRank": 547
+  },
+  {
+    "thai": "ความผิด",
+    "count": 8917,
+    "sourceRank": 548
+  },
+  {
+    "thai": "มหาวิทยาลัย",
+    "count": 8903,
+    "sourceRank": 549
+  },
+  {
+    "thai": "พัก",
+    "count": 8886,
+    "sourceRank": 550
+  },
+  {
+    "thai": "ดิฉัน",
+    "count": 8835,
+    "sourceRank": 551
+  },
+  {
+    "thai": "ปิด",
+    "count": 8835,
+    "sourceRank": 552
+  },
+  {
+    "thai": "สุดท้าย",
+    "count": 8829,
+    "sourceRank": 553
+  },
+  {
+    "thai": "ต่อมา",
+    "count": 8809,
+    "sourceRank": 554
+  },
+  {
+    "thai": "จำ",
+    "count": 8801,
+    "sourceRank": 555
+  },
+  {
+    "thai": "มากมาย",
+    "count": 8757,
+    "sourceRank": 556
+  },
+  {
+    "thai": "สาร",
+    "count": 8735,
+    "sourceRank": 557
+  },
+  {
+    "thai": "แรงงาน",
+    "count": 8728,
+    "sourceRank": 558
+  },
+  {
+    "thai": "กลัว",
+    "count": 8716,
+    "sourceRank": 559
+  },
+  {
+    "thai": "ดำ",
+    "count": 8712,
+    "sourceRank": 560
+  },
+  {
+    "thai": "เหนือ",
+    "count": 8681,
+    "sourceRank": 561
+  },
+  {
+    "thai": "ใต้",
+    "count": 8676,
+    "sourceRank": 562
+  },
+  {
+    "thai": "เหตุการณ์",
+    "count": 8671,
+    "sourceRank": 563
+  },
+  {
+    "thai": "สี่",
+    "count": 8667,
+    "sourceRank": 564
+  },
+  {
+    "thai": "รายได้",
+    "count": 8645,
+    "sourceRank": 565
+  },
+  {
+    "thai": "ถนน",
+    "count": 8632,
+    "sourceRank": 566
+  },
+  {
+    "thai": "วิ่ง",
+    "count": 8622,
+    "sourceRank": 567
+  },
+  {
+    "thai": "ไอ้",
+    "count": 8588,
+    "sourceRank": 568
+  },
+  {
+    "thai": "กระบวนการ",
+    "count": 8585,
+    "sourceRank": 569
+  },
+  {
+    "thai": "ได้ยิน",
+    "count": 8582,
+    "sourceRank": 570
+  },
+  {
+    "thai": "อธิบาย",
+    "count": 8574,
+    "sourceRank": 571
+  },
+  {
+    "thai": "ตก",
+    "count": 8551,
+    "sourceRank": 572
+  },
+  {
+    "thai": "วัย",
+    "count": 8534,
+    "sourceRank": 573
+  },
+  {
+    "thai": "ทอง",
+    "count": 8507,
+    "sourceRank": 574
+  },
+  {
+    "thai": "นึก",
+    "count": 8475,
+    "sourceRank": 575
+  },
+  {
+    "thai": "กรุงเทพ",
+    "count": 8464,
+    "sourceRank": 576
+  },
+  {
+    "thai": "แจ้ง",
+    "count": 8452,
+    "sourceRank": 577
+  },
+  {
+    "thai": "เหมาะสม",
+    "count": 8433,
+    "sourceRank": 578
+  },
+  {
+    "thai": "ดาว",
+    "count": 8418,
+    "sourceRank": 579
+  },
+  {
+    "thai": "ที่สำคัญ",
+    "count": 8397,
+    "sourceRank": 580
+  },
+  {
+    "thai": "เส้น",
+    "count": 8387,
+    "sourceRank": 581
+  },
+  {
+    "thai": "ธรรม",
+    "count": 8387,
+    "sourceRank": 582
+  },
+  {
+    "thai": "จ่าย",
+    "count": 8344,
+    "sourceRank": 583
+  },
+  {
+    "thai": "ป่า",
+    "count": 8327,
+    "sourceRank": 584
+  },
+  {
+    "thai": "แน่",
+    "count": 8314,
+    "sourceRank": 585
+  },
+  {
+    "thai": "ร้อง",
+    "count": 8294,
+    "sourceRank": 586
+  },
+  {
+    "thai": "ป้องกัน",
+    "count": 8260,
+    "sourceRank": 587
+  },
+  {
+    "thai": "เหรอ",
+    "count": 8222,
+    "sourceRank": 588
+  },
+  {
+    "thai": "สุด",
+    "count": 8217,
+    "sourceRank": 589
+  },
+  {
+    "thai": "กรรมการ",
+    "count": 8205,
+    "sourceRank": 590
+  },
+  {
+    "thai": "ปัจจัย",
+    "count": 8187,
+    "sourceRank": 591
+  },
+  {
+    "thai": "ทำการ",
+    "count": 8172,
+    "sourceRank": 592
+  },
+  {
+    "thai": "เย็น",
+    "count": 8151,
+    "sourceRank": 593
+  },
+  {
+    "thai": "ตัดสินใจ",
+    "count": 8148,
+    "sourceRank": 594
+  },
+  {
+    "thai": "อุตสาหกรรม",
+    "count": 8136,
+    "sourceRank": 595
+  },
+  {
+    "thai": "คดี",
+    "count": 8124,
+    "sourceRank": 596
+  },
+  {
+    "thai": "สายตา",
+    "count": 8122,
+    "sourceRank": 597
+  },
+  {
+    "thai": "เร็ว",
+    "count": 8114,
+    "sourceRank": 598
+  },
+  {
+    "thai": "คำถาม",
+    "count": 8091,
+    "sourceRank": 599
+  },
+  {
+    "thai": "ชน",
+    "count": 8052,
+    "sourceRank": 600
+  },
+  {
+    "thai": "ค้า",
+    "count": 8026,
+    "sourceRank": 601
+  },
+  {
+    "thai": "หัวเราะ",
+    "count": 8021,
+    "sourceRank": 602
+  },
+  {
+    "thai": "นอกจากนี้",
+    "count": 8021,
+    "sourceRank": 603
+  },
+  {
+    "thai": "ทะเล",
+    "count": 8012,
+    "sourceRank": 604
+  },
+  {
+    "thai": "ห้า",
+    "count": 7995,
+    "sourceRank": 605
+  },
+  {
+    "thai": "พระราชบัญญัติ",
+    "count": 7987,
+    "sourceRank": 606
+  },
+  {
+    "thai": "ศรี",
+    "count": 7956,
+    "sourceRank": 607
+  },
+  {
+    "thai": "ที่ดิน",
+    "count": 7947,
+    "sourceRank": 608
+  },
+  {
+    "thai": "รุ่น",
+    "count": 7904,
+    "sourceRank": 609
+  },
+  {
+    "thai": "ตำรวจ",
+    "count": 7894,
+    "sourceRank": 610
+  },
+  {
+    "thai": "ซี",
+    "count": 7869,
+    "sourceRank": 611
+  },
+  {
+    "thai": "จนถึง",
+    "count": 7861,
+    "sourceRank": 612
+  },
+  {
+    "thai": "ที่ผ่านมา",
+    "count": 7860,
+    "sourceRank": 613
+  },
+  {
+    "thai": "พฤติกรรม",
+    "count": 7846,
+    "sourceRank": 614
+  },
+  {
+    "thai": "กรม",
+    "count": 7828,
+    "sourceRank": 615
+  },
+  {
+    "thai": "ทิ้ง",
+    "count": 7817,
+    "sourceRank": 616
+  },
+  {
+    "thai": "โครงสร้าง",
+    "count": 7807,
+    "sourceRank": 617
+  },
+  {
+    "thai": "แหล่ง",
+    "count": 7796,
+    "sourceRank": 618
+  },
+  {
+    "thai": "ขณะที่",
+    "count": 7794,
+    "sourceRank": 619
+  },
+  {
+    "thai": "เสร็จ",
+    "count": 7793,
+    "sourceRank": 620
+  },
+  {
+    "thai": "เลี้ยง",
+    "count": 7788,
+    "sourceRank": 621
+  },
+  {
+    "thai": "เก่า",
+    "count": 7756,
+    "sourceRank": 622
+  },
+  {
+    "thai": "เพิ่ง",
+    "count": 7750,
+    "sourceRank": 623
+  },
+  {
+    "thai": "ที่มา",
+    "count": 7740,
+    "sourceRank": 624
+  },
+  {
+    "thai": "ตรวจสอบ",
+    "count": 7736,
+    "sourceRank": 625
+  },
+  {
+    "thai": "ไม่ค่อย",
+    "count": 7733,
+    "sourceRank": 626
+  },
+  {
+    "thai": "ร้อย",
+    "count": 7733,
+    "sourceRank": 627
+  },
+  {
+    "thai": "ราช",
+    "count": 7714,
+    "sourceRank": 628
+  },
+  {
+    "thai": "ค่อย",
+    "count": 7711,
+    "sourceRank": 629
+  },
+  {
+    "thai": "ระบุ",
+    "count": 7711,
+    "sourceRank": 630
+  },
+  {
+    "thai": "แก้ว",
+    "count": 7701,
+    "sourceRank": 631
+  },
+  {
+    "thai": "เลิก",
+    "count": 7683,
+    "sourceRank": 632
+  },
+  {
+    "thai": "รายการ",
+    "count": 7677,
+    "sourceRank": 633
+  },
+  {
+    "thai": "ผู้นำ",
+    "count": 7666,
+    "sourceRank": 634
+  },
+  {
+    "thai": "คุณภาพ",
+    "count": 7649,
+    "sourceRank": 635
+  },
+  {
+    "thai": "ความจริง",
+    "count": 7648,
+    "sourceRank": 636
+  },
+  {
+    "thai": "ศาสนา",
+    "count": 7638,
+    "sourceRank": 637
+  },
+  {
+    "thai": "กิจกรรม",
+    "count": 7624,
+    "sourceRank": 638
+  },
+  {
+    "thai": "ร้อยละ",
+    "count": 7623,
+    "sourceRank": 639
+  },
+  {
+    "thai": "อดีต",
+    "count": 7610,
+    "sourceRank": 640
+  },
+  {
+    "thai": "เช่นนี้",
+    "count": 7600,
+    "sourceRank": 641
+  },
+  {
+    "thai": "หนุ่ม",
+    "count": 7591,
+    "sourceRank": 642
+  },
+  {
+    "thai": "ส่งเสริม",
+    "count": 7583,
+    "sourceRank": 643
+  },
+  {
+    "thai": "กิจการ",
+    "count": 7568,
+    "sourceRank": 644
+  },
+  {
+    "thai": "แน่นอน",
+    "count": 7550,
+    "sourceRank": 645
+  },
+  {
+    "thai": "ขั้น",
+    "count": 7472,
+    "sourceRank": 646
+  },
+  {
+    "thai": "อาชีพ",
+    "count": 7464,
+    "sourceRank": 647
+  },
+  {
+    "thai": "ข้าพเจ้า",
+    "count": 7462,
+    "sourceRank": 648
+  },
+  {
+    "thai": "ตัด",
+    "count": 7443,
+    "sourceRank": 649
+  },
+  {
+    "thai": "หน่วยงาน",
+    "count": 7424,
+    "sourceRank": 650
+  },
+  {
+    "thai": "ผ้า",
+    "count": 7413,
+    "sourceRank": 651
+  },
+  {
+    "thai": "เกือบ",
+    "count": 7363,
+    "sourceRank": 653
+  },
+  {
+    "thai": "ก็ตาม",
+    "count": 7360,
+    "sourceRank": 654
+  },
+  {
+    "thai": "บทบาท",
+    "count": 7349,
+    "sourceRank": 655
+  },
+  {
+    "thai": "สถานที่",
+    "count": 7337,
+    "sourceRank": 656
+  },
+  {
+    "thai": "ชาวบ้าน",
+    "count": 7331,
+    "sourceRank": 657
+  },
+  {
+    "thai": "หนัง",
+    "count": 7265,
+    "sourceRank": 658
+  },
+  {
+    "thai": "หน่อย",
+    "count": 7260,
+    "sourceRank": 659
+  },
+  {
+    "thai": "เพศ",
+    "count": 7212,
+    "sourceRank": 660
+  },
+  {
+    "thai": "พระองค์",
+    "count": 7207,
+    "sourceRank": 661
+  },
+  {
+    "thai": "ความสามารถ",
+    "count": 7202,
+    "sourceRank": 662
+  },
+  {
+    "thai": "ทฤษฎี",
+    "count": 7191,
+    "sourceRank": 663
+  },
+  {
+    "thai": "สหรัฐ",
+    "count": 7190,
+    "sourceRank": 664
+  },
+  {
+    "thai": "พวกเขา",
+    "count": 7187,
+    "sourceRank": 665
+  },
+  {
+    "thai": "เกษตร",
+    "count": 7180,
+    "sourceRank": 666
+  },
+  {
+    "thai": "ภาษี",
+    "count": 7177,
+    "sourceRank": 667
+  },
+  {
+    "thai": "นักเรียน",
+    "count": 7152,
+    "sourceRank": 668
+  },
+  {
+    "thai": "โทษ",
+    "count": 7147,
+    "sourceRank": 669
+  },
+  {
+    "thai": "ไกล",
+    "count": 7146,
+    "sourceRank": 670
+  },
+  {
+    "thai": "ตกลง",
+    "count": 7113,
+    "sourceRank": 671
+  },
+  {
+    "thai": "ถูกต้อง",
+    "count": 7104,
+    "sourceRank": 672
+  },
+  {
+    "thai": "รอง",
+    "count": 7095,
+    "sourceRank": 673
+  },
+  {
+    "thai": "แทบ",
+    "count": 7087,
+    "sourceRank": 674
+  },
+  {
+    "thai": "หมู่บ้าน",
+    "count": 7083,
+    "sourceRank": 675
+  },
+  {
+    "thai": "ปลาย",
+    "count": 7071,
+    "sourceRank": 676
+  },
+  {
+    "thai": "หน่วย",
+    "count": 7060,
+    "sourceRank": 677
+  },
+  {
+    "thai": "ไฟ",
+    "count": 7048,
+    "sourceRank": 678
+  },
+  {
+    "thai": "ยื่น",
+    "count": 7024,
+    "sourceRank": 679
+  },
+  {
+    "thai": "เตรียม",
+    "count": 7010,
+    "sourceRank": 680
+  },
+  {
+    "thai": "ประเด็น",
+    "count": 7003,
+    "sourceRank": 681
+  },
+  {
+    "thai": "คำสั่ง",
+    "count": 7002,
+    "sourceRank": 682
+  },
+  {
+    "thai": "หนี",
+    "count": 6990,
+    "sourceRank": 683
+  },
+  {
+    "thai": "มาตรฐาน",
+    "count": 6964,
+    "sourceRank": 684
+  },
+  {
+    "thai": "ติดต่อ",
+    "count": 6935,
+    "sourceRank": 685
+  },
+  {
+    "thai": "เจริญ",
+    "count": 6927,
+    "sourceRank": 686
+  },
+  {
+    "thai": "สังเกต",
+    "count": 6907,
+    "sourceRank": 687
+  },
+  {
+    "thai": "วิชา",
+    "count": 6863,
+    "sourceRank": 688
+  },
+  {
+    "thai": "หนัก",
+    "count": 6859,
+    "sourceRank": 689
+  },
+  {
+    "thai": "จิตใจ",
+    "count": 6848,
+    "sourceRank": 690
+  },
+  {
+    "thai": "สำนัก",
+    "count": 6833,
+    "sourceRank": 691
+  },
+  {
+    "thai": "อย่างไรก็ตาม",
+    "count": 6818,
+    "sourceRank": 692
+  },
+  {
+    "thai": "อากาศ",
+    "count": 6814,
+    "sourceRank": 693
+  },
+  {
+    "thai": "ประสบ",
+    "count": 6810,
+    "sourceRank": 694
+  },
+  {
+    "thai": "เจตนา",
+    "count": 6796,
+    "sourceRank": 695
+  },
+  {
+    "thai": "เรื่อย",
+    "count": 6793,
+    "sourceRank": 696
+  },
+  {
+    "thai": "เลือด",
+    "count": 6788,
+    "sourceRank": 697
+  },
+  {
+    "thai": "องค์กร",
+    "count": 6782,
+    "sourceRank": 698
+  },
+  {
+    "thai": "ชา",
+    "count": 6771,
+    "sourceRank": 699
+  },
+  {
+    "thai": "ดำเนิน",
+    "count": 6766,
+    "sourceRank": 700
+  },
+  {
+    "thai": "แสน",
+    "count": 6722,
+    "sourceRank": 701
+  },
+  {
+    "thai": "คอย",
+    "count": 6718,
+    "sourceRank": 702
+  },
+  {
+    "thai": "คนใน",
+    "count": 6672,
+    "sourceRank": 703
+  },
+  {
+    "thai": "ข้าราชการ",
+    "count": 6667,
+    "sourceRank": 704
+  },
+  {
+    "thai": "ขยาย",
+    "count": 6645,
+    "sourceRank": 705
+  },
+  {
+    "thai": "สรุป",
+    "count": 6629,
+    "sourceRank": 706
+  },
+  {
+    "thai": "ลอง",
+    "count": 6606,
+    "sourceRank": 707
+  },
+  {
+    "thai": "เสื้อ",
+    "count": 6603,
+    "sourceRank": 708
+  },
+  {
+    "thai": "น้ำมัน",
+    "count": 6600,
+    "sourceRank": 709
+  },
+  {
+    "thai": "แข่งขัน",
+    "count": 6593,
+    "sourceRank": 710
+  },
+  {
+    "thai": "หมายความ",
+    "count": 6587,
+    "sourceRank": 711
+  },
+  {
+    "thai": "ห้าม",
+    "count": 6586,
+    "sourceRank": 712
+  },
+  {
+    "thai": "มั้ย",
+    "count": 6559,
+    "sourceRank": 713
+  },
+  {
+    "thai": "สบาย",
+    "count": 6544,
+    "sourceRank": 714
+  },
+  {
+    "thai": "งบประมาณ",
+    "count": 6543,
+    "sourceRank": 715
+  },
+  {
+    "thai": "สื่อสาร",
+    "count": 6528,
+    "sourceRank": 716
+  },
+  {
+    "thai": "ช่าง",
+    "count": 6514,
+    "sourceRank": 717
+  },
+  {
+    "thai": "เนื้อ",
+    "count": 6506,
+    "sourceRank": 718
+  },
+  {
+    "thai": "ในขณะที่",
+    "count": 6498,
+    "sourceRank": 719
+  },
+  {
+    "thai": "สา",
+    "count": 6496,
+    "sourceRank": 720
+  },
+  {
+    "thai": "ทีม",
+    "count": 6485,
+    "sourceRank": 721
+  },
+  {
+    "thai": "คล้าย",
+    "count": 6480,
+    "sourceRank": 722
+  },
+  {
+    "thai": "ขา",
+    "count": 6467,
+    "sourceRank": 723
+  },
+  {
+    "thai": "ทรัพย์สิน",
+    "count": 6464,
+    "sourceRank": 724
+  },
+  {
+    "thai": "ภาวะ",
+    "count": 6455,
+    "sourceRank": 725
+  },
+  {
+    "thai": "วรรค",
+    "count": 6429,
+    "sourceRank": 726
+  },
+  {
+    "thai": "เอ",
+    "count": 6369,
+    "sourceRank": 727
+  },
+  {
+    "thai": "ดิน",
+    "count": 6366,
+    "sourceRank": 728
+  },
+  {
+    "thai": "สวน",
+    "count": 6348,
+    "sourceRank": 729
+  },
+  {
+    "thai": "ยาย",
+    "count": 6337,
+    "sourceRank": 730
+  },
+  {
+    "thai": "มุม",
+    "count": 6333,
+    "sourceRank": 731
+  },
+  {
+    "thai": "ฟ้า",
+    "count": 6325,
+    "sourceRank": 732
+  },
+  {
+    "thai": "สงสัย",
+    "count": 6314,
+    "sourceRank": 733
+  },
+  {
+    "thai": "ลา",
+    "count": 6300,
+    "sourceRank": 734
+  },
+  {
+    "thai": "ผิว",
+    "count": 6298,
+    "sourceRank": 735
+  },
+  {
+    "thai": "กว้าง",
+    "count": 6283,
+    "sourceRank": 736
+  },
+  {
+    "thai": "เบา",
+    "count": 6279,
+    "sourceRank": 737
+  },
+  {
+    "thai": "สงบ",
+    "count": 6270,
+    "sourceRank": 738
+  },
+  {
+    "thai": "สั้น",
+    "count": 6260,
+    "sourceRank": 739
+  },
+  {
+    "thai": "สื่อ",
+    "count": 6246,
+    "sourceRank": 740
+  },
+  {
+    "thai": "บ้า",
+    "count": 6240,
+    "sourceRank": 741
+  },
+  {
+    "thai": "เล่ม",
+    "count": 6236,
+    "sourceRank": 742
+  },
+  {
+    "thai": "หลักฐาน",
+    "count": 6226,
+    "sourceRank": 743
+  },
+  {
+    "thai": "ชม",
+    "count": 6215,
+    "sourceRank": 744
+  },
+  {
+    "thai": "แปลก",
+    "count": 6205,
+    "sourceRank": 745
+  },
+  {
+    "thai": "ทุกข์",
+    "count": 6203,
+    "sourceRank": 746
+  },
+  {
+    "thai": "พัน",
+    "count": 6197,
+    "sourceRank": 747
+  },
+  {
+    "thai": "จำกัด",
+    "count": 6196,
+    "sourceRank": 748
+  },
+  {
+    "thai": "สาเหตุ",
+    "count": 6196,
+    "sourceRank": 749
+  },
+  {
+    "thai": "รา",
+    "count": 6184,
+    "sourceRank": 750
+  },
+  {
+    "thai": "นิติกรรม",
+    "count": 6177,
+    "sourceRank": 751
+  },
+  {
+    "thai": "กล้า",
+    "count": 6174,
+    "sourceRank": 752
+  },
+  {
+    "thai": "ลำดับ",
+    "count": 6166,
+    "sourceRank": 753
+  },
+  {
+    "thai": "แนวทาง",
+    "count": 6165,
+    "sourceRank": 754
+  },
+  {
+    "thai": "ชวน",
+    "count": 6145,
+    "sourceRank": 755
+  },
+  {
+    "thai": "ศพ",
+    "count": 6144,
+    "sourceRank": 756
+  },
+  {
+    "thai": "อันเป็น",
+    "count": 6130,
+    "sourceRank": 757
+  },
+  {
+    "thai": "บ่อย",
+    "count": 6117,
+    "sourceRank": 758
+  },
+  {
+    "thai": "พลัง",
+    "count": 6112,
+    "sourceRank": 759
+  },
+  {
+    "thai": "ลืม",
+    "count": 6084,
+    "sourceRank": 760
+  },
+  {
+    "thai": "บัญชี",
+    "count": 6082,
+    "sourceRank": 761
+  },
+  {
+    "thai": "ธรรมดา",
+    "count": 6073,
+    "sourceRank": 762
+  },
+  {
+    "thai": "แม้แต่",
+    "count": 6051,
+    "sourceRank": 763
+  },
+  {
+    "thai": "ยอด",
+    "count": 6051,
+    "sourceRank": 764
+  },
+  {
+    "thai": "ทั้งหลาย",
+    "count": 6041,
+    "sourceRank": 765
+  },
+  {
+    "thai": "นายกรัฐมนตรี",
+    "count": 6036,
+    "sourceRank": 766
+  },
+  {
+    "thai": "เมืองไทย",
+    "count": 6035,
+    "sourceRank": 767
+  },
+  {
+    "thai": "เกินไป",
+    "count": 6032,
+    "sourceRank": 768
+  },
+  {
+    "thai": "ย้าย",
+    "count": 6030,
+    "sourceRank": 769
+  },
+  {
+    "thai": "เอกสาร",
+    "count": 6024,
+    "sourceRank": 770
+  },
+  {
+    "thai": "ทำหน้าที่",
+    "count": 6014,
+    "sourceRank": 771
+  },
+  {
+    "thai": "บันทึก",
+    "count": 6007,
+    "sourceRank": 772
+  },
+  {
+    "thai": "คราว",
+    "count": 6005,
+    "sourceRank": 773
+  },
+  {
+    "thai": "พื้น",
+    "count": 5979,
+    "sourceRank": 774
+  },
+  {
+    "thai": "เอกชน",
+    "count": 5978,
+    "sourceRank": 775
+  },
+  {
+    "thai": "ดำรง",
+    "count": 5977,
+    "sourceRank": 776
+  },
+  {
+    "thai": "ปริมาณ",
+    "count": 5942,
+    "sourceRank": 778
+  },
+  {
+    "thai": "เที่ยว",
+    "count": 5935,
+    "sourceRank": 779
+  },
+  {
+    "thai": "แนวคิด",
+    "count": 5923,
+    "sourceRank": 780
+  },
+  {
+    "thai": "กรรม",
+    "count": 5921,
+    "sourceRank": 781
+  },
+  {
+    "thai": "ไหล",
+    "count": 5918,
+    "sourceRank": 782
+  },
+  {
+    "thai": "เช้า",
+    "count": 5917,
+    "sourceRank": 783
+  },
+  {
+    "thai": "โดน",
+    "count": 5913,
+    "sourceRank": 784
+  },
+  {
+    "thai": "นก",
+    "count": 5904,
+    "sourceRank": 785
+  },
+  {
+    "thai": "หนี้",
+    "count": 5894,
+    "sourceRank": 786
+  },
+  {
+    "thai": "โต๊ะ",
+    "count": 5885,
+    "sourceRank": 787
+  },
+  {
+    "thai": "ทุน",
+    "count": 5872,
+    "sourceRank": 788
+  },
+  {
+    "thai": "พ่อแม่",
+    "count": 5859,
+    "sourceRank": 789
+  },
+  {
+    "thai": "ศูนย์",
+    "count": 5856,
+    "sourceRank": 790
+  },
+  {
+    "thai": "กา",
+    "count": 5854,
+    "sourceRank": 791
+  },
+  {
+    "thai": "ช้า",
+    "count": 5847,
+    "sourceRank": 792
+  },
+  {
+    "thai": "กี่",
+    "count": 5843,
+    "sourceRank": 793
+  },
+  {
+    "thai": "หวัง",
+    "count": 5838,
+    "sourceRank": 794
+  },
+  {
+    "thai": "เรียบร้อย",
+    "count": 5837,
+    "sourceRank": 795
+  },
+  {
+    "thai": "ไร้",
+    "count": 5836,
+    "sourceRank": 796
+  },
+  {
+    "thai": "ลุก",
+    "count": 5819,
+    "sourceRank": 797
+  },
+  {
+    "thai": "กล่าวถึง",
+    "count": 5801,
+    "sourceRank": 798
+  },
+  {
+    "thai": "สถาน",
+    "count": 5799,
+    "sourceRank": 799
+  },
+  {
+    "thai": "องค์",
+    "count": 5784,
+    "sourceRank": 800
+  },
+  {
+    "thai": "รายละเอียด",
+    "count": 5779,
+    "sourceRank": 801
+  },
+  {
+    "thai": "เดี๋ยว",
+    "count": 5770,
+    "sourceRank": 802
+  },
+  {
+    "thai": "เรียนรู้",
+    "count": 5770,
+    "sourceRank": 803
+  },
+  {
+    "thai": "ชิ้น",
+    "count": 5762,
+    "sourceRank": 804
+  },
+  {
+    "thai": "สถานการณ์",
+    "count": 5761,
+    "sourceRank": 805
+  },
+  {
+    "thai": "รัฐธรรมนูญ",
+    "count": 5761,
+    "sourceRank": 806
+  },
+  {
+    "thai": "คำตอบ",
+    "count": 5760,
+    "sourceRank": 807
+  },
+  {
+    "thai": "ค่อนข้าง",
+    "count": 5755,
+    "sourceRank": 808
+  },
+  {
+    "thai": "งาม",
+    "count": 5752,
+    "sourceRank": 809
+  },
+  {
+    "thai": "อันตราย",
+    "count": 5742,
+    "sourceRank": 810
+  },
+  {
+    "thai": "ประกอบด้วย",
+    "count": 5731,
+    "sourceRank": 811
+  },
+  {
+    "thai": "โน้ต",
+    "count": 5728,
+    "sourceRank": 812
+  },
+  {
+    "thai": "วง",
+    "count": 5723,
+    "sourceRank": 813
+  },
+  {
+    "thai": "พิมพ์",
+    "count": 5718,
+    "sourceRank": 814
+  },
+  {
+    "thai": "พื้นฐาน",
+    "count": 5710,
+    "sourceRank": 815
+  },
+  {
+    "thai": "อ่อน",
+    "count": 5703,
+    "sourceRank": 816
+  },
+  {
+    "thai": "สุ",
+    "count": 5697,
+    "sourceRank": 817
+  },
+  {
+    "thai": "เทคโนโลยี",
+    "count": 5696,
+    "sourceRank": 818
+  },
+  {
+    "thai": "สม",
+    "count": 5682,
+    "sourceRank": 819
+  },
+  {
+    "thai": "กอง",
+    "count": 5677,
+    "sourceRank": 820
+  },
+  {
+    "thai": "ป้า",
+    "count": 5669,
+    "sourceRank": 821
+  },
+  {
+    "thai": "ดวง",
+    "count": 5669,
+    "sourceRank": 822
+  },
+  {
+    "thai": "มั่นคง",
+    "count": 5660,
+    "sourceRank": 823
+  },
+  {
+    "thai": "เท่ากับ",
+    "count": 5656,
+    "sourceRank": 824
+  },
+  {
+    "thai": "ฝน",
+    "count": 5651,
+    "sourceRank": 825
+  },
+  {
+    "thai": "ตะวันตก",
+    "count": 5642,
+    "sourceRank": 826
+  },
+  {
+    "thai": "ความต้องการ",
+    "count": 5641,
+    "sourceRank": 827
+  },
+  {
+    "thai": "นคร",
+    "count": 5639,
+    "sourceRank": 828
+  },
+  {
+    "thai": "ซ้ำ",
+    "count": 5636,
+    "sourceRank": 829
+  },
+  {
+    "thai": "หลวง",
+    "count": 5632,
+    "sourceRank": 830
+  },
+  {
+    "thai": "ชั่วโมง",
+    "count": 5632,
+    "sourceRank": 831
+  },
+  {
+    "thai": "ฆ่า",
+    "count": 5630,
+    "sourceRank": 832
+  },
+  {
+    "thai": "สามี",
+    "count": 5621,
+    "sourceRank": 833
+  },
+  {
+    "thai": "อิทธิพล",
+    "count": 5611,
+    "sourceRank": 834
+  },
+  {
+    "thai": "พร้อมกับ",
+    "count": 5600,
+    "sourceRank": 835
+  },
+  {
+    "thai": "ประสบการณ์",
+    "count": 5596,
+    "sourceRank": 836
+  },
+  {
+    "thai": "ภายใต้",
+    "count": 5594,
+    "sourceRank": 837
+  },
+  {
+    "thai": "ลึก",
+    "count": 5587,
+    "sourceRank": 838
+  },
+  {
+    "thai": "ยาม",
+    "count": 5580,
+    "sourceRank": 839
+  },
+  {
+    "thai": "ครึ่ง",
+    "count": 5576,
+    "sourceRank": 840
+  },
+  {
+    "thai": "ศิลปะ",
+    "count": 5565,
+    "sourceRank": 841
+  },
+  {
+    "thai": "สิ่งแวดล้อม",
+    "count": 5562,
+    "sourceRank": 842
+  },
+  {
+    "thai": "งั้น",
+    "count": 5559,
+    "sourceRank": 843
+  },
+  {
+    "thai": "เป้าหมาย",
+    "count": 5544,
+    "sourceRank": 844
+  },
+  {
+    "thai": "กาย",
+    "count": 5530,
+    "sourceRank": 845
+  },
+  {
+    "thai": "สุขภาพ",
+    "count": 5508,
+    "sourceRank": 846
+  },
+  {
+    "thai": "นิ่ง",
+    "count": 5507,
+    "sourceRank": 847
+  },
+  {
+    "thai": "แฟน",
+    "count": 5503,
+    "sourceRank": 848
+  },
+  {
+    "thai": "ส่งผล",
+    "count": 5477,
+    "sourceRank": 849
+  },
+  {
+    "thai": "อี",
+    "count": 5469,
+    "sourceRank": 850
+  },
+  {
+    "thai": "ชี้",
+    "count": 5461,
+    "sourceRank": 851
+  },
+  {
+    "thai": "ครบ",
+    "count": 5454,
+    "sourceRank": 852
+  },
+  {
+    "thai": "ชายหนุ่ม",
+    "count": 5448,
+    "sourceRank": 853
+  },
+  {
+    "thai": "พระเจ้า",
+    "count": 5438,
+    "sourceRank": 854
+  },
+  {
+    "thai": "ผู้ใหญ่",
+    "count": 5435,
+    "sourceRank": 855
+  },
+  {
+    "thai": "ตั้งใจ",
+    "count": 5430,
+    "sourceRank": 857
+  },
+  {
+    "thai": "แผน",
+    "count": 5426,
+    "sourceRank": 858
+  },
+  {
+    "thai": "แต่ง",
+    "count": 5424,
+    "sourceRank": 859
+  },
+  {
+    "thai": "อย่างยิ่ง",
+    "count": 5419,
+    "sourceRank": 860
+  },
+  {
+    "thai": "เกาะ",
+    "count": 5404,
+    "sourceRank": 861
+  },
+  {
+    "thai": "เงื่อนไข",
+    "count": 5401,
+    "sourceRank": 862
+  },
+  {
+    "thai": "ปลอดภัย",
+    "count": 5386,
+    "sourceRank": 863
+  },
+  {
+    "thai": "มหา",
+    "count": 5378,
+    "sourceRank": 864
+  },
+  {
+    "thai": "แท้จริง",
+    "count": 5377,
+    "sourceRank": 865
+  },
+  {
+    "thai": "อนาคต",
+    "count": 5371,
+    "sourceRank": 866
+  },
+  {
+    "thai": "แต่งตั้ง",
+    "count": 5371,
+    "sourceRank": 867
+  },
+  {
+    "thai": "ประสิทธิภาพ",
+    "count": 5366,
+    "sourceRank": 868
+  },
+  {
+    "thai": "เปิดเผย",
+    "count": 5363,
+    "sourceRank": 869
+  },
+  {
+    "thai": "สมบูรณ์",
+    "count": 5340,
+    "sourceRank": 870
+  },
+  {
+    "thai": "ประวัติศาสตร์",
+    "count": 5340,
+    "sourceRank": 871
+  },
+  {
+    "thai": "เปรียบเทียบ",
+    "count": 5328,
+    "sourceRank": 872
+  },
+  {
+    "thai": "สาขา",
+    "count": 5325,
+    "sourceRank": 873
+  },
+  {
+    "thai": "ชัย",
+    "count": 5312,
+    "sourceRank": 874
+  },
+  {
+    "thai": "พ้น",
+    "count": 5304,
+    "sourceRank": 875
+  },
+  {
+    "thai": "เงียบ",
+    "count": 5302,
+    "sourceRank": 876
+  },
+  {
+    "thai": "ผู้คน",
+    "count": 5291,
+    "sourceRank": 877
+  },
+  {
+    "thai": "แต่งงาน",
+    "count": 5289,
+    "sourceRank": 878
+  },
+  {
+    "thai": "เยอะ",
+    "count": 5287,
+    "sourceRank": 879
+  },
+  {
+    "thai": "อะ",
+    "count": 5287,
+    "sourceRank": 880
+  },
+  {
+    "thai": "ฝัน",
+    "count": 5268,
+    "sourceRank": 881
+  },
+  {
+    "thai": "กรุง",
+    "count": 5257,
+    "sourceRank": 882
+  },
+  {
+    "thai": "ปลูก",
+    "count": 5251,
+    "sourceRank": 883
+  },
+  {
+    "thai": "ลม",
+    "count": 5246,
+    "sourceRank": 884
+  },
+  {
+    "thai": "ฐาน",
+    "count": 5245,
+    "sourceRank": 885
+  },
+  {
+    "thai": "ซะ",
+    "count": 5232,
+    "sourceRank": 886
+  },
+  {
+    "thai": "มติ",
+    "count": 5230,
+    "sourceRank": 887
+  },
+  {
+    "thai": "โทรศัพท์",
+    "count": 5228,
+    "sourceRank": 888
+  },
+  {
+    "thai": "ฝึก",
+    "count": 5219,
+    "sourceRank": 889
+  },
+  {
+    "thai": "ละคร",
+    "count": 5202,
+    "sourceRank": 890
+  },
+  {
+    "thai": "ก้าว",
+    "count": 5197,
+    "sourceRank": 891
+  },
+  {
+    "thai": "ภายนอก",
+    "count": 5186,
+    "sourceRank": 892
+  },
+  {
+    "thai": "ภาพยนตร์",
+    "count": 5179,
+    "sourceRank": 893
+  },
+  {
+    "thai": "แม้ว่า",
+    "count": 5168,
+    "sourceRank": 894
+  },
+  {
+    "thai": "แปล",
+    "count": 5167,
+    "sourceRank": 895
+  },
+  {
+    "thai": "พลังงาน",
+    "count": 5164,
+    "sourceRank": 896
+  },
+  {
+    "thai": "นั่นเอง",
+    "count": 5156,
+    "sourceRank": 897
+  },
+  {
+    "thai": "ผลงาน",
+    "count": 5150,
+    "sourceRank": 898
+  },
+  {
+    "thai": "สูงสุด",
+    "count": 5149,
+    "sourceRank": 899
+  },
+  {
+    "thai": "ผลกระทบ",
+    "count": 5131,
+    "sourceRank": 900
+  },
+  {
+    "thai": "ท้องถิ่น",
+    "count": 5121,
+    "sourceRank": 901
+  },
+  {
+    "thai": "ต่อเนื่อง",
+    "count": 5119,
+    "sourceRank": 902
+  },
+  {
+    "thai": "ขณะ",
+    "count": 5118,
+    "sourceRank": 903
+  },
+  {
+    "thai": "อาคาร",
+    "count": 5111,
+    "sourceRank": 904
+  },
+  {
+    "thai": "ชัด",
+    "count": 5099,
+    "sourceRank": 905
+  },
+  {
+    "thai": "พอใจ",
+    "count": 5091,
+    "sourceRank": 906
+  },
+  {
+    "thai": "ญาติ",
+    "count": 5071,
+    "sourceRank": 908
+  },
+  {
+    "thai": "ส่วนตัว",
+    "count": 5060,
+    "sourceRank": 909
+  },
+  {
+    "thai": "ข้าม",
+    "count": 5049,
+    "sourceRank": 910
+  },
+  {
+    "thai": "ตี",
+    "count": 5040,
+    "sourceRank": 911
+  },
+  {
+    "thai": "รวดเร็ว",
+    "count": 5030,
+    "sourceRank": 912
+  },
+  {
+    "thai": "ท่า",
+    "count": 5017,
+    "sourceRank": 913
+  },
+  {
+    "thai": "เหล่านั้น",
+    "count": 5016,
+    "sourceRank": 914
+  },
+  {
+    "thai": "สมเด็จ",
+    "count": 5015,
+    "sourceRank": 915
+  },
+  {
+    "thai": "สอบ",
+    "count": 5015,
+    "sourceRank": 916
+  },
+  {
+    "thai": "นาที",
+    "count": 5010,
+    "sourceRank": 917
+  },
+  {
+    "thai": "ให้การ",
+    "count": 4998,
+    "sourceRank": 918
+  },
+  {
+    "thai": "อ้าง",
+    "count": 4993,
+    "sourceRank": 919
+  },
+  {
+    "thai": "รับรู้",
+    "count": 4978,
+    "sourceRank": 920
+  },
+  {
+    "thai": "ข้า",
+    "count": 4971,
+    "sourceRank": 921
+  },
+  {
+    "thai": "บุญ",
+    "count": 4969,
+    "sourceRank": 922
+  },
+  {
+    "thai": "ปรับปรุง",
+    "count": 4966,
+    "sourceRank": 923
+  },
+  {
+    "thai": "ซา",
+    "count": 4966,
+    "sourceRank": 924
+  },
+  {
+    "thai": "โรง",
+    "count": 4950,
+    "sourceRank": 925
+  },
+  {
+    "thai": "ข้อความ",
+    "count": 4941,
+    "sourceRank": 926
+  },
+  {
+    "thai": "ทำลาย",
+    "count": 4928,
+    "sourceRank": 927
+  },
+  {
+    "thai": "สนิท",
+    "count": 4923,
+    "sourceRank": 928
+  },
+  {
+    "thai": "แถว",
+    "count": 4909,
+    "sourceRank": 929
+  },
+  {
+    "thai": "เรื่องราว",
+    "count": 4907,
+    "sourceRank": 930
+  },
+  {
+    "thai": "เข้าสู่",
+    "count": 4905,
+    "sourceRank": 931
+  },
+  {
+    "thai": "กระจาย",
+    "count": 4905,
+    "sourceRank": 932
+  },
+  {
+    "thai": "เถอะ",
+    "count": 4903,
+    "sourceRank": 933
+  },
+  {
+    "thai": "พวกเรา",
+    "count": 4902,
+    "sourceRank": 934
+  },
+  {
+    "thai": "เพชร",
+    "count": 4901,
+    "sourceRank": 935
+  },
+  {
+    "thai": "ดอก",
+    "count": 4894,
+    "sourceRank": 936
+  },
+  {
+    "thai": "โรงพยาบาล",
+    "count": 4887,
+    "sourceRank": 937
+  },
+  {
+    "thai": "ความสำเร็จ",
+    "count": 4878,
+    "sourceRank": 938
+  },
+  {
+    "thai": "ประโยค",
+    "count": 4873,
+    "sourceRank": 939
+  },
+  {
+    "thai": "ความเชื่อ",
+    "count": 4871,
+    "sourceRank": 940
+  },
+  {
+    "thai": "กลิ่น",
+    "count": 4859,
+    "sourceRank": 941
+  },
+  {
+    "thai": "พืช",
+    "count": 4857,
+    "sourceRank": 942
+  },
+  {
+    "thai": "ก่อให้เกิด",
+    "count": 4855,
+    "sourceRank": 943
+  },
+  {
+    "thai": "นักศึกษา",
+    "count": 4851,
+    "sourceRank": 944
+  },
+  {
+    "thai": "ห่าง",
+    "count": 4835,
+    "sourceRank": 945
+  },
+  {
+    "thai": "ดา",
+    "count": 4813,
+    "sourceRank": 946
+  },
+  {
+    "thai": "แนะนำ",
+    "count": 4809,
+    "sourceRank": 947
+  },
+  {
+    "thai": "ต่อไปนี้",
+    "count": 4808,
+    "sourceRank": 948
+  },
+  {
+    "thai": "เพิ่มเติม",
+    "count": 4803,
+    "sourceRank": 949
+  },
+  {
+    "thai": "ระ",
+    "count": 4789,
+    "sourceRank": 950
+  },
+  {
+    "thai": "บัญญัติ",
+    "count": 4766,
+    "sourceRank": 951
+  },
+  {
+    "thai": "แถม",
+    "count": 4765,
+    "sourceRank": 952
+  },
+  {
+    "thai": "หลักการ",
+    "count": 4758,
+    "sourceRank": 953
+  },
+  {
+    "thai": "เท้า",
+    "count": 4746,
+    "sourceRank": 954
+  },
+  {
+    "thai": "ล้วน",
+    "count": 4738,
+    "sourceRank": 955
+  },
+  {
+    "thai": "แผ่นดิน",
+    "count": 4717,
+    "sourceRank": 956
+  },
+  {
+    "thai": "ประ",
+    "count": 4715,
+    "sourceRank": 957
+  },
+  {
+    "thai": "ตลอดจน",
+    "count": 4714,
+    "sourceRank": 958
+  },
+  {
+    "thai": "ภัย",
+    "count": 4712,
+    "sourceRank": 959
+  },
+  {
+    "thai": "สัมผัส",
+    "count": 4711,
+    "sourceRank": 960
+  },
+  {
+    "thai": "วิชาชีพ",
+    "count": 4704,
+    "sourceRank": 961
+  },
+  {
+    "thai": "ที่ไหน",
+    "count": 4689,
+    "sourceRank": 962
+  },
+  {
+    "thai": "วัตถุ",
+    "count": 4688,
+    "sourceRank": 963
+  },
+  {
+    "thai": "แง่",
+    "count": 4684,
+    "sourceRank": 964
+  },
+  {
+    "thai": "ยัย",
+    "count": 4679,
+    "sourceRank": 965
+  },
+  {
+    "thai": "หู",
+    "count": 4676,
+    "sourceRank": 966
+  },
+  {
+    "thai": "สมอง",
+    "count": 4672,
+    "sourceRank": 967
+  },
+  {
+    "thai": "แขน",
+    "count": 4652,
+    "sourceRank": 968
+  },
+  {
+    "thai": "เติบโต",
+    "count": 4647,
+    "sourceRank": 969
+  },
+  {
+    "thai": "ธนาคาร",
+    "count": 4643,
+    "sourceRank": 970
+  },
+  {
+    "thai": "หัวหน้า",
+    "count": 4641,
+    "sourceRank": 971
+  },
+  {
+    "thai": "เพียงแต่",
+    "count": 4640,
+    "sourceRank": 972
+  },
+  {
+    "thai": "ดนตรี",
+    "count": 4639,
+    "sourceRank": 973
+  },
+  {
+    "thai": "เก่ง",
+    "count": 4635,
+    "sourceRank": 974
+  },
+  {
+    "thai": "โบราณ",
+    "count": 4634,
+    "sourceRank": 975
+  },
+  {
+    "thai": "ลูกค้า",
+    "count": 4625,
+    "sourceRank": 976
+  },
+  {
+    "thai": "ทำนอง",
+    "count": 4617,
+    "sourceRank": 977
+  },
+  {
+    "thai": "หิน",
+    "count": 4609,
+    "sourceRank": 978
+  },
+  {
+    "thai": "ไอ",
+    "count": 4609,
+    "sourceRank": 979
+  },
+  {
+    "thai": "หลับ",
+    "count": 4608,
+    "sourceRank": 980
+  },
+  {
+    "thai": "ต่อสู้",
+    "count": 4604,
+    "sourceRank": 981
+  },
+  {
+    "thai": "หมู่",
+    "count": 4603,
+    "sourceRank": 982
+  },
+  {
+    "thai": "สะดวก",
+    "count": 4591,
+    "sourceRank": 984
+  },
+  {
+    "thai": "พนักงาน",
+    "count": 4582,
+    "sourceRank": 985
+  },
+  {
+    "thai": "แสง",
+    "count": 4579,
+    "sourceRank": 986
+  },
+  {
+    "thai": "เอ่ย",
+    "count": 4577,
+    "sourceRank": 987
+  },
+  {
+    "thai": "กระแส",
+    "count": 4570,
+    "sourceRank": 988
+  },
+  {
+    "thai": "ยืนยัน",
+    "count": 4564,
+    "sourceRank": 989
+  },
+  {
+    "thai": "ออกแบบ",
+    "count": 4560,
+    "sourceRank": 990
+  },
+  {
+    "thai": "สำเร็จ",
+    "count": 4560,
+    "sourceRank": 991
+  },
+  {
+    "thai": "ลูกจ้าง",
+    "count": 4546,
+    "sourceRank": 992
+  },
+  {
+    "thai": "เนี่ย",
+    "count": 4541,
+    "sourceRank": 993
+  },
+  {
+    "thai": "บางที",
+    "count": 4534,
+    "sourceRank": 994
+  },
+  {
+    "thai": "บรรดา",
+    "count": 4532,
+    "sourceRank": 995
+  },
+  {
+    "thai": "รุนแรง",
+    "count": 4530,
+    "sourceRank": 996
+  },
+  {
+    "thai": "ก่อ",
+    "count": 4530,
+    "sourceRank": 997
+  },
+  {
+    "thai": "หลักเกณฑ์",
+    "count": 4529,
+    "sourceRank": 998
+  },
+  {
+    "thai": "คาด",
+    "count": 4528,
+    "sourceRank": 999
+  },
+  {
+    "thai": "จากนั้น",
+    "count": 4523,
+    "sourceRank": 1000
+  },
+  {
+    "thai": "ติดตาม",
+    "count": 4507,
+    "sourceRank": 1001
+  },
+  {
+    "thai": "หายใจ",
+    "count": 4505,
+    "sourceRank": 1002
+  },
+  {
+    "thai": "คุณสมบัติ",
+    "count": 4498,
+    "sourceRank": 1003
+  },
+  {
+    "thai": "นำเข้า",
+    "count": 4493,
+    "sourceRank": 1004
+  },
+  {
+    "thai": "หวาน",
+    "count": 4490,
+    "sourceRank": 1005
+  },
+  {
+    "thai": "ก",
+    "count": 4485,
+    "sourceRank": 1006
+  },
+  {
+    "thai": "สมควร",
+    "count": 4483,
+    "sourceRank": 1007
+  },
+  {
+    "thai": "ดูเหมือน",
+    "count": 4481,
+    "sourceRank": 1008
+  },
+  {
+    "thai": "อาทิตย์",
+    "count": 4479,
+    "sourceRank": 1009
+  }
+]

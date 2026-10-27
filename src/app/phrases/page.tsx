@@ -8,7 +8,8 @@ export default function PhrasesPage() {
         <h1 className="text-3xl font-bold tracking-tight">Thai Phrases</h1>
         <p className="mt-2 text-muted-foreground">
           The main course: real Thai for real situations, in Thai script,
-          tone by tone. Words and phrases first, full sentences from unit 11.
+          tone by tone. From unit 11, turn familiar words into sentences and
+          short conversations, then gradually expand what you can say.
         </p>
       </div>
       <ReadingFirstTip />

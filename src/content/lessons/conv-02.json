@@ -1,0 +1,335 @@
+{
+  "id": "conv-02",
+  "unitId": "words-short-conversations",
+  "order": 2,
+  "title": "Keep lunch moving",
+  "xpReward": 25,
+  "teaches": [],
+  "reviews": [
+    "mi",
+    "nam",
+    "mai_question",
+    "kha_question",
+    "kho",
+    "noi",
+    "kha_statement",
+    "an",
+    "ni_this",
+    "phet",
+    "mai_not",
+    "khrap",
+    "thao_rai",
+    "khop_khun"
+  ],
+  "pedagogy": "No new vocabulary. One lunch encounter: check availability, order water, check spice, request non-spicy food, understand the price. Sentence practice uses earlier food and response frames, not isolated word recognition. Spoken tones and particle distinctions are inherited from the existing vocab entries. Distractors change the requested item, intent, or stage of the encounter.",
+  "exercises": [
+    {
+      "type": "concept",
+      "title": "One lunch, several turns",
+      "body": [
+        "You are a woman ordering lunch. Check what is available, ask about the food, and respond when the vendor gives a price.",
+        "Keep the same scene in mind as you move between listening, filling a gap, building a sentence, and choosing a reply."
+      ]
+    },
+    {
+      "type": "sentence_build",
+      "meaning": "Do you have water? (female speaker)",
+      "gloss": "have + water + question particle + female question particle",
+      "promptMode": "meaning",
+      "audioKey": "phrases/mi_nam_mai_kha_question",
+      "tokens": [
+        {
+          "thai": "มี",
+          "rtgs": "mi",
+          "wordId": "mi"
+        },
+        {
+          "thai": "น้ำ",
+          "rtgs": "nam",
+          "wordId": "nam"
+        },
+        {
+          "thai": "ไหม",
+          "rtgs": "mai",
+          "wordId": "mai_question"
+        },
+        {
+          "thai": "คะ",
+          "rtgs": "kha",
+          "wordId": "kha_question"
+        }
+      ],
+      "explanation": "มี + น้ำ + ไหม + คะ checks availability with words from earlier units."
+    },
+    {
+      "type": "sentence_listening",
+      "audioKey": "phrases/kho_nam_noi_kha",
+      "thai": "ขอน้ำหน่อยค่ะ",
+      "rtgs": "kho nam noi kha",
+      "mode": "meaning",
+      "choices": [
+        {
+          "thai": "ขอน้ำหน่อยค่ะ",
+          "rtgs": "kho nam noi kha",
+          "meaning": "Could I get some water, please? (female speaker)"
+        },
+        {
+          "thai": "มีน้ำไหมคะ",
+          "rtgs": "mi nam mai kha",
+          "meaning": "Do you have water? (female speaker)"
+        },
+        {
+          "thai": "ไม่เอาค่ะ",
+          "rtgs": "mai ao kha",
+          "meaning": "No thanks. (female speaker)"
+        }
+      ],
+      "correctIndex": 0,
+      "explanation": "ขอ makes a request; มี…ไหม checks availability. They move the conversation forward in different ways.",
+      "attributeTo": [
+        "kho",
+        "nam",
+        "noi",
+        "kha_statement"
+      ]
+    },
+    {
+      "type": "sentence_cloze",
+      "tokens": [
+        {
+          "thai": "ขอ",
+          "rtgs": "kho",
+          "wordId": "kho"
+        },
+        {
+          "thai": "น้ำ",
+          "rtgs": "nam",
+          "wordId": "nam"
+        },
+        {
+          "thai": "หน่อย",
+          "rtgs": "noi",
+          "wordId": "noi"
+        },
+        {
+          "thai": "ค่ะ",
+          "rtgs": "kha",
+          "wordId": "kha_statement"
+        }
+      ],
+      "blankIndex": 1,
+      "meaning": "Could I get some water, please? (female speaker)",
+      "audioKey": "phrases/kho_nam_noi_kha",
+      "distractors": [
+        {
+          "thai": "ข้าว",
+          "rtgs": "khao"
+        },
+        {
+          "thai": "เผ็ด",
+          "rtgs": "phet"
+        }
+      ],
+      "explanation": "Keep the request frame and put the drink in its object slot."
+    },
+    {
+      "type": "sentence_build",
+      "meaning": "Is this one spicy? (female speaker)",
+      "gloss": "this-one + spicy + question particle + polite(f, question)",
+      "promptMode": "meaning",
+      "audioKey": "phrases/an_ni_phet_mai_kha_question",
+      "tokens": [
+        {
+          "thai": "อัน",
+          "rtgs": "an",
+          "wordId": "an"
+        },
+        {
+          "thai": "นี้",
+          "rtgs": "ni",
+          "wordId": "ni_this"
+        },
+        {
+          "thai": "เผ็ด",
+          "rtgs": "phet",
+          "wordId": "phet"
+        },
+        {
+          "thai": "ไหม",
+          "rtgs": "mai",
+          "wordId": "mai_question"
+        },
+        {
+          "thai": "คะ",
+          "rtgs": "kha",
+          "wordId": "kha_question"
+        }
+      ],
+      "explanation": "Point to the dish with อันนี้, then ask เผ็ดไหมคะ."
+    },
+    {
+      "type": "dialogue_choice",
+      "context": "At lunch, the vendor offers you water. You are a woman and would like some.",
+      "speaker": {
+        "thai": "เอาน้ำไหมคะ",
+        "rtgs": "ao nam mai kha",
+        "meaning": "Would you like water?",
+        "audioKey": "phrases/ao_nam_mai_kha_question"
+      },
+      "question": "What do you say next?",
+      "choices": [
+        {
+          "thai": "ขอน้ำหน่อยค่ะ",
+          "rtgs": "kho nam noi kha",
+          "audioKey": "phrases/kho_nam_noi_kha",
+          "quality": "best",
+          "note": "Requesting the offered water accepts the offer and says what you want."
+        },
+        {
+          "thai": "ไม่เอาค่ะ",
+          "rtgs": "mai ao kha",
+          "quality": "meaning",
+          "note": "This declines the water, but you want some."
+        },
+        {
+          "thai": "อร่อยค่ะ",
+          "rtgs": "aroi kha",
+          "quality": "situation",
+          "note": "This says it is delicious; you have not received it yet."
+        }
+      ],
+      "attributeTo": [
+        "kho",
+        "nam",
+        "noi",
+        "kha_statement"
+      ]
+    },
+    {
+      "type": "sentence_listening",
+      "audioKey": "phrases/mai_phet_khrap",
+      "thai": "ไม่เผ็ดครับ",
+      "rtgs": "mai phet khrap",
+      "mode": "meaning",
+      "choices": [
+        {
+          "thai": "ไม่เผ็ดครับ",
+          "rtgs": "mai phet khrap",
+          "meaning": "Not spicy, please. (male speaker)"
+        },
+        {
+          "thai": "อร่อยค่ะ",
+          "rtgs": "aroi kha",
+          "meaning": "Delicious! (female speaker)"
+        },
+        {
+          "thai": "ขอข้าวครับ",
+          "rtgs": "kho khao khrap",
+          "meaning": "Rice, please. (male speaker)"
+        }
+      ],
+      "correctIndex": 0,
+      "explanation": "ไม่ changes the spice request. Listen to the whole phrase, not just its polite ending.",
+      "attributeTo": [
+        "mai_not",
+        "phet",
+        "khrap"
+      ]
+    },
+    {
+      "type": "sentence_build",
+      "meaning": "Could I get some water, please? (female speaker)",
+      "gloss": "ask-for + water + softener + female polite particle",
+      "promptMode": "audio",
+      "audioKey": "phrases/kho_nam_noi_kha",
+      "tokens": [
+        {
+          "thai": "ขอ",
+          "rtgs": "kho",
+          "wordId": "kho"
+        },
+        {
+          "thai": "น้ำ",
+          "rtgs": "nam",
+          "wordId": "nam"
+        },
+        {
+          "thai": "หน่อย",
+          "rtgs": "noi",
+          "wordId": "noi"
+        },
+        {
+          "thai": "ค่ะ",
+          "rtgs": "kha",
+          "wordId": "kha_statement"
+        }
+      ],
+      "explanation": "Build the same request from sound this time."
+    },
+    {
+      "type": "sentence_build",
+      "meaning": "How much is this one? (female speaker)",
+      "gloss": "thing + this + how-much + female question particle",
+      "promptMode": "meaning",
+      "audioKey": "phrases/an_ni_thao_rai_kha_question",
+      "tokens": [
+        {
+          "thai": "อัน",
+          "rtgs": "an",
+          "wordId": "an"
+        },
+        {
+          "thai": "นี้",
+          "rtgs": "ni",
+          "wordId": "ni_this"
+        },
+        {
+          "thai": "เท่าไหร่",
+          "rtgs": "thao rai",
+          "wordId": "thao_rai"
+        },
+        {
+          "thai": "คะ",
+          "rtgs": "kha",
+          "wordId": "kha_question"
+        }
+      ],
+      "explanation": "Replace the spice question with a price question while keeping อันนี้."
+    },
+    {
+      "type": "dialogue_choice",
+      "context": "You have asked the price of your lunch. The vendor says 35 baht. You want to thank her.",
+      "speaker": {
+        "thai": "สามสิบห้าบาท",
+        "rtgs": "sam sip ha bat",
+        "meaning": "35 baht.",
+        "audioKey": "phrases/sam_sip_ha_bat"
+      },
+      "question": "What do you say next?",
+      "choices": [
+        {
+          "thai": "ขอบคุณ",
+          "rtgs": "khop khun",
+          "audioKey": "words/khop_khun",
+          "quality": "best",
+          "note": "ขอบคุณ thanks the vendor after she answers."
+        },
+        {
+          "thai": "อันนี้เผ็ดไหมคะ",
+          "rtgs": "an ni phet mai kha",
+          "quality": "situation",
+          "note": "That returns to asking about spice; you want to thank her now."
+        },
+        {
+          "thai": "ไม่เอาค่ะ",
+          "rtgs": "mai ao kha",
+          "quality": "meaning",
+          "note": "That declines the order rather than thanking her."
+        }
+      ],
+      "attributeTo": [
+        "khop_khun"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,377 @@
+{
+  "id": "conv-03",
+  "unitId": "words-short-conversations",
+  "order": 3,
+  "title": "Ask, clarify, decide",
+  "xpReward": 25,
+  "teaches": [],
+  "reviews": [
+    "hong_nam",
+    "yu",
+    "thi",
+    "nai",
+    "khrap",
+    "trong",
+    "pai",
+    "laeo",
+    "liao",
+    "sai",
+    "khop_khun",
+    "an",
+    "ni_this",
+    "thao_rai",
+    "lot",
+    "noi",
+    "dai",
+    "mai_question",
+    "ao"
+  ],
+  "pedagogy": "No new vocabulary. Connect a location question to a direction answer, then a market price question to a bargaining request. Reuse units 1–10 words plus the two direction words introduced in out-01. Contrast left/right and ordering/asking-price intentions. Preserve all original wordId tone derivations. Sentence building moves from meaning to audio before contextual reply choices.",
+  "exercises": [
+    {
+      "type": "concept",
+      "title": "Carry the meaning into the next turn",
+      "body": [
+        "A conversation is more than recognizing each sentence. Use the answer you just heard to decide what to say next.",
+        "First ask for directions. Then visit the market, check a price, and ask for a reduction. These are familiar words doing several jobs together."
+      ]
+    },
+    {
+      "type": "sentence_build",
+      "meaning": "Where's the bathroom? (male speaker)",
+      "gloss": "bathroom + is-at + at + where + polite(m)",
+      "promptMode": "meaning",
+      "audioKey": "phrases/hong_nam_yu_thi_nai_khrap",
+      "tokens": [
+        {
+          "thai": "ห้องน้ำ",
+          "rtgs": "hong nam",
+          "wordId": "hong_nam"
+        },
+        {
+          "thai": "อยู่",
+          "rtgs": "yu",
+          "wordId": "yu"
+        },
+        {
+          "thai": "ที่",
+          "rtgs": "thi",
+          "wordId": "thi"
+        },
+        {
+          "thai": "ไหน",
+          "rtgs": "nai",
+          "wordId": "nai"
+        },
+        {
+          "thai": "ครับ",
+          "rtgs": "khrap",
+          "wordId": "khrap"
+        }
+      ],
+      "explanation": "The destination comes first, followed by อยู่ที่ไหน and the polite ending."
+    },
+    {
+      "type": "sentence_listening",
+      "audioKey": "phrases/trong_pai_laeo_liao_sai_khrap",
+      "thai": "ตรงไปแล้วเลี้ยวซ้ายครับ",
+      "rtgs": "trong pai laeo liao sai khrap",
+      "mode": "meaning",
+      "choices": [
+        {
+          "thai": "ตรงไปแล้วเลี้ยวซ้ายครับ",
+          "rtgs": "trong pai laeo liao sai khrap",
+          "meaning": "Go straight, then turn left. (male speaker)"
+        },
+        {
+          "thai": "เลี้ยวซ้ายครับ",
+          "rtgs": "liao sai khrap",
+          "meaning": "Turn left. (male speaker)"
+        },
+        {
+          "thai": "ตรงไป",
+          "rtgs": "trong pai",
+          "meaning": "Go straight."
+        }
+      ],
+      "correctIndex": 0,
+      "explanation": "แล้ว connects two instructions. Keep both steps, rather than stopping after ตรงไป.",
+      "attributeTo": [
+        "trong",
+        "pai",
+        "laeo",
+        "liao",
+        "sai"
+      ]
+    },
+    {
+      "type": "sentence_cloze",
+      "tokens": [
+        {
+          "thai": "ตรง",
+          "rtgs": "trong",
+          "wordId": "trong"
+        },
+        {
+          "thai": "ไป",
+          "rtgs": "pai",
+          "wordId": "pai"
+        },
+        {
+          "thai": "แล้ว",
+          "rtgs": "laeo",
+          "wordId": "laeo"
+        },
+        {
+          "thai": "เลี้ยว",
+          "rtgs": "liao",
+          "wordId": "liao"
+        },
+        {
+          "thai": "ซ้าย",
+          "rtgs": "sai",
+          "wordId": "sai"
+        },
+        {
+          "thai": "ครับ",
+          "rtgs": "khrap",
+          "wordId": "khrap"
+        }
+      ],
+      "blankIndex": 4,
+      "meaning": "Go straight, then turn left. (male speaker)",
+      "audioKey": "phrases/trong_pai_laeo_liao_sai_khrap",
+      "distractors": [
+        {
+          "thai": "ขวา",
+          "rtgs": "khwa"
+        },
+        {
+          "thai": "น้ำ",
+          "rtgs": "nam"
+        }
+      ],
+      "explanation": "ซ้าย is left. ขวา would send the person in the other direction."
+    },
+    {
+      "type": "dialogue_choice",
+      "context": "A passer-by has just explained the route to the bathroom. You are a man and want to thank him before following it.",
+      "speaker": {
+        "thai": "ตรงไปแล้วเลี้ยวซ้ายครับ",
+        "rtgs": "trong pai laeo liao sai khrap",
+        "meaning": "Go straight, then turn left.",
+        "audioKey": "phrases/trong_pai_laeo_liao_sai_khrap"
+      },
+      "question": "What do you say next?",
+      "choices": [
+        {
+          "thai": "ขอบคุณครับ",
+          "rtgs": "khop khun khrap",
+          "audioKey": "phrases/khop_khun_khrap",
+          "quality": "best",
+          "note": "Thank him for the directions, then follow the two steps."
+        },
+        {
+          "thai": "เท่าไหร่ครับ",
+          "rtgs": "thao rai khrap",
+          "quality": "situation",
+          "note": "This asks a price; the passer-by has given directions."
+        },
+        {
+          "thai": "ขอข้าวครับ",
+          "rtgs": "kho khao khrap",
+          "quality": "situation",
+          "note": "This orders rice, which belongs in a different scene."
+        }
+      ],
+      "attributeTo": [
+        "khop_khun",
+        "khrap"
+      ]
+    },
+    {
+      "type": "sentence_build",
+      "meaning": "How much is this one? (male speaker)",
+      "gloss": "thing + this + how-much + male polite particle",
+      "promptMode": "meaning",
+      "audioKey": "phrases/an_ni_thao_rai_khrap",
+      "tokens": [
+        {
+          "thai": "อัน",
+          "rtgs": "an",
+          "wordId": "an"
+        },
+        {
+          "thai": "นี้",
+          "rtgs": "ni",
+          "wordId": "ni_this"
+        },
+        {
+          "thai": "เท่าไหร่",
+          "rtgs": "thao rai",
+          "wordId": "thao_rai"
+        },
+        {
+          "thai": "ครับ",
+          "rtgs": "khrap",
+          "wordId": "khrap"
+        }
+      ],
+      "explanation": "At the market, อันนี้ points to the item and เท่าไหร่ asks its price."
+    },
+    {
+      "type": "sentence_cloze",
+      "tokens": [
+        {
+          "thai": "ลด",
+          "rtgs": "lot",
+          "wordId": "lot"
+        },
+        {
+          "thai": "หน่อย",
+          "rtgs": "noi",
+          "wordId": "noi"
+        },
+        {
+          "thai": "ได้",
+          "rtgs": "dai",
+          "wordId": "dai"
+        },
+        {
+          "thai": "ไหม",
+          "rtgs": "mai",
+          "wordId": "mai_question"
+        },
+        {
+          "thai": "ครับ",
+          "rtgs": "khrap",
+          "wordId": "khrap"
+        }
+      ],
+      "blankIndex": 0,
+      "meaning": "Can you lower it a bit? (male speaker)",
+      "audioKey": "phrases/lot_noi_dai_mai_khrap",
+      "distractors": [
+        {
+          "thai": "กิน",
+          "rtgs": "kin"
+        },
+        {
+          "thai": "ไป",
+          "rtgs": "pai"
+        }
+      ],
+      "explanation": "ลด asks to lower the price. Keep หน่อยได้ไหมครับ as the request ending."
+    },
+    {
+      "type": "dialogue_choice",
+      "context": "At a market stall, you ask the price. You are a man who wants to ask for a reduction, not accept or decline yet.",
+      "speaker": {
+        "thai": "สามสิบห้าบาท",
+        "rtgs": "sam sip ha bat",
+        "meaning": "35 baht.",
+        "audioKey": "phrases/sam_sip_ha_bat"
+      },
+      "question": "What do you say next?",
+      "choices": [
+        {
+          "thai": "ลดหน่อยได้ไหมครับ",
+          "rtgs": "lot noi dai mai khrap",
+          "audioKey": "phrases/lot_noi_dai_mai_khrap",
+          "quality": "best",
+          "note": "ลดหน่อยได้ไหมครับ asks whether the vendor can lower the price."
+        },
+        {
+          "thai": "เอาครับ",
+          "rtgs": "ao khrap",
+          "quality": "meaning",
+          "note": "This accepts the item at this stage, without asking for a reduction."
+        },
+        {
+          "thai": "ไม่เอาค่ะ",
+          "rtgs": "mai ao kha",
+          "quality": "meaning",
+          "note": "This declines the item and uses a female ending; you want to negotiate."
+        }
+      ],
+      "attributeTo": [
+        "lot",
+        "noi",
+        "dai",
+        "mai_question",
+        "khrap"
+      ]
+    },
+    {
+      "type": "sentence_build",
+      "meaning": "Can you lower it a bit? (male speaker)",
+      "gloss": "lower + softener + can + question particle + male polite particle",
+      "promptMode": "audio",
+      "audioKey": "phrases/lot_noi_dai_mai_khrap",
+      "tokens": [
+        {
+          "thai": "ลด",
+          "rtgs": "lot",
+          "wordId": "lot"
+        },
+        {
+          "thai": "หน่อย",
+          "rtgs": "noi",
+          "wordId": "noi"
+        },
+        {
+          "thai": "ได้",
+          "rtgs": "dai",
+          "wordId": "dai"
+        },
+        {
+          "thai": "ไหม",
+          "rtgs": "mai",
+          "wordId": "mai_question"
+        },
+        {
+          "thai": "ครับ",
+          "rtgs": "khrap",
+          "wordId": "khrap"
+        }
+      ],
+      "explanation": "Listen and rebuild the complete request."
+    },
+    {
+      "type": "dialogue_choice",
+      "context": "The vendor agrees to your requested price. You are a man and now want to accept the item.",
+      "speaker": {
+        "thai": "ได้ค่ะ",
+        "rtgs": "dai kha",
+        "meaning": "Yes, that works.",
+        "audioKey": "phrases/dai_kha"
+      },
+      "question": "What do you say next?",
+      "choices": [
+        {
+          "thai": "เอาครับ",
+          "rtgs": "ao khrap",
+          "audioKey": "phrases/ao_khrap",
+          "quality": "best",
+          "note": "เอาครับ accepts the item after the vendor agrees."
+        },
+        {
+          "thai": "ไม่เอาค่ะ",
+          "rtgs": "mai ao kha",
+          "quality": "meaning",
+          "note": "This declines instead of accepting."
+        },
+        {
+          "thai": "ห้องน้ำอยู่ที่ไหนครับ",
+          "rtgs": "hong nam yu thi nai khrap",
+          "quality": "situation",
+          "note": "This asks for the bathroom, leaving the purchase unfinished."
+        }
+      ],
+      "attributeTo": [
+        "ao",
+        "khrap"
+      ]
+    }
+  ]
+}

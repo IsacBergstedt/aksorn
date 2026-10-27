@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
-import { getItem, lessonById, phrasesUnitById } from "@/content";
+import { coreUnitById, getItem, lessonById, phrasesUnitById } from "@/content";
 import {
   buildCheckpointExtras,
   buildLessonExercises,
@@ -25,7 +25,8 @@ export function LessonClient({ lessonId }: { lessonId: string }) {
   const isCheckpoint = lesson.kind === "checkpoint";
 
   // Phrases lessons exit back to the Phrases path, script lessons to Reading.
-  const exitHref = phrasesUnitById.has(lesson.unitId) ? "/phrases" : "/reading";
+  const isCore = coreUnitById.has(lesson.unitId);
+  const exitHref = isCore ? "/core" : phrasesUnitById.has(lesson.unitId) ? "/phrases" : "/reading";
 
   // Exercises are randomized (distractors, shuffles), so they're built
   // after mount to keep server and client HTML identical.
@@ -38,12 +39,12 @@ export function LessonClient({ lessonId }: { lessonId: string }) {
 
   const build = useCallback(() => {
     const base = buildLessonExercises(lesson);
-    if (!isCheckpoint) return base;
+    if (!isCheckpoint || isCore) return base;
     // Checkpoints append personalized callbacks from the learner's SRS
     // state — read imperatively; the snapshot at build time is what runs.
     const { srsCards, toneStats } = useProgressStore.getState();
     return [...base, ...buildCheckpointExtras(lesson, srsCards, toneStats)];
-  }, [lesson, isCheckpoint]);
+  }, [lesson, isCheckpoint, isCore]);
 
   useEffect(() => {
     setExercises(build());

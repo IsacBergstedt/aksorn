@@ -34,6 +34,54 @@ learners.
 - Word-choice and listening feedback show the spoken-tone guide only after
   answering. Never reveal the target through tone guides before an answer.
 
+## Sentence curriculum (updated 2026-10-27)
+
+- Preserve the vocabulary foundations in Phrases units 1–10. From unit 11,
+  focus on complete sentences and practical communication goals.
+- The first three sentence units form a familiar-vocabulary bridge:
+  Sentences You Already Know (`words-first-sentences`, existing `sent-*`
+  lessons), Getting Things Done (`words-afternoon-out`, existing `out-*`
+  lessons, three new connecting/customizing words), and Short Conversations
+  (`words-short-conversations`, `conv-01..03` plus `conv-cp`, no new words).
+  Keep existing unit/lesson IDs stable for saved progress.
+- Favor sentence listening, gap completion, sentence building, and contextual
+  replies. At least 75% of scored exercises in the bridge are sentence based.
+  Reuse earlier vocabulary before increasing the vocabulary load.
+- Units 14–18 are explicitly Coming-soon placeholders, in this order:
+  Wants & Requests, Everyday Life, Plans & Invitations, Past Experiences,
+  Reasons & Preferences. Author future lessons around reusable sentence
+  patterns, introduce vocabulary gradually, and revisit earlier patterns.
+- This supersedes older roadmap/status descriptions below that describe
+  First Sentences as a stub. All bridge lessons use the existing engine,
+  audio keys, vocabulary SRS, and 80% closing checkpoints.
+
+## Core 1,000 (added 2026-10-27)
+
+- `/core` is a separate tab for sentence practice with common vocabulary.
+  The ranked bank contains 1,000 filtered Thai National Corpus entries from
+  PyThaiNLP, with original ranks/counts and immutable-source attribution in
+  `core-source.json` and `CORE-SOURCES.md`.
+- The playable pilot selects 100 words from this bank (not the first 100
+  consecutive ranks), in approximate teaching order by corpus frequency:
+  20 five-word lessons plus four 80% checkpoints. Existing Phrases words
+  support the examples. New words live in `vocab/core.ts`; original example
+  sentences and the course factory live in `core-pilot.ts`.
+- Reuse the shared lesson engine, stable vocabulary IDs, completion storage,
+  and SRS. Core lessons return to `/core` and activate its navigation tab.
+  Core checkpoints omit unrelated character/tone callbacks. `/core/review`
+  practices introduced, due target words through sentences only.
+- Word introductions show the target's corpus rank and a voiced sentence.
+  Progress distinguishes introduced words from repeated successful practice;
+  do not label completion as mastery. Remaining 900 words are browseable
+  frequency entries, not playable lessons or fully annotated vocabulary yet.
+- Core audio is bundled in `public/audio`, indexed by
+  `src/lib/bundled-audio.json` and preferred before remote audio URLs. See
+  `scripts/export-core-audio.ts`. This makes the pilot usable even when the
+  configured storage endpoint is unreachable.
+- Validate changes with `node scripts/run-local-typescript.cjs scripts/validate-core.ts`
+  plus the normal type/lint/build checks. Keep the user's temporary
+  `COURSE_FREE_ACCESS` setting across new courses.
+
 ## Branding (decided 2026-07-02)
 
 - Name: **Aksorn** (อักษร = "letter/script"). Wordmark: Thai อักษร in

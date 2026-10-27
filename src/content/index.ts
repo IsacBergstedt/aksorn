@@ -25,6 +25,8 @@ import { rawTimeWords } from "./vocab/time";
 import { rawFeelingsWords } from "./vocab/feelings";
 import { rawQuestionsWords } from "./vocab/questions";
 import { rawAfternoonOutWords } from "./vocab/afternoon-out";
+import { rawCoreWords } from "./vocab/core";
+import { createCoreCourse } from "./core-pilot";
 import { rawTonePairSets } from "./tone-pairs";
 import unitsJson from "./units.json";
 import phrasesUnitsJson from "./phrases-units.json";
@@ -91,6 +93,10 @@ import out01 from "./lessons/out-01.json";
 import out02 from "./lessons/out-02.json";
 import out03 from "./lessons/out-03.json";
 import outCp from "./lessons/out-cp.json";
+import conv01 from "./lessons/conv-01.json";
+import conv02 from "./lessons/conv-02.json";
+import conv03 from "./lessons/conv-03.json";
+import convCp from "./lessons/conv-cp.json";
 
 // Parsing happens at module load, so invalid content fails the build the
 // first time any page imports from src/content.
@@ -120,6 +126,7 @@ export const vocabWords: VocabWord[] = z
     ...rawFeelingsWords,
     ...rawQuestionsWords,
     ...rawAfternoonOutWords,
+    ...rawCoreWords,
   ]);
 
 export const wordById: ReadonlyMap<string, VocabWord> = new Map(
@@ -135,7 +142,15 @@ export const tonePairSetById: ReadonlyMap<string, TonePairSet> = new Map(
   tonePairSets.map((s) => [s.id, s]),
 );
 
+const coreCourse = createCoreCourse(vocabWords);
+export const corePilot = coreCourse.pilot;
+export const coreUnits: Unit[] = z.array(unitSchema).parse(coreCourse.units);
+export const coreUnitById: ReadonlyMap<string, Unit> = new Map(coreUnits.map(u => [u.id, u]));
+export const coreSentenceBuild = coreCourse.build;
+export const coreSentenceListening = coreCourse.listen;
+
 export const lessons: Lesson[] = z.array(lessonSchema).parse([
+  ...coreCourse.lessons,
   mid01,
   mid02,
   mid03,
@@ -199,6 +214,10 @@ export const lessons: Lesson[] = z.array(lessonSchema).parse([
   out02,
   out03,
   outCp,
+  conv01,
+  conv02,
+  conv03,
+  convCp,
 ]);
 
 export const lessonById: ReadonlyMap<string, Lesson> = new Map(
@@ -214,7 +233,7 @@ export const unitById: ReadonlyMap<string, Unit> = new Map(
   units.map((u) => [u.id, u]),
 );
 
-/** Thai Phrases course units (units 1–3 live, the rest Coming-soon stubs). */
+/** Thai Phrases course: vocabulary foundations, sentence bridge, then expansion. */
 export const phrasesUnits: Unit[] = z
   .array(unitSchema)
   .parse(phrasesUnitsJson)
@@ -243,7 +262,7 @@ export const phrasesOrderedLessons: Lesson[] = phrasesUnits.flatMap((u) =>
 );
 
 // A checkpoint gates the next unit, so it must close its own unit's path.
-for (const u of [...units, ...phrasesUnits]) {
+for (const u of [...units, ...phrasesUnits, ...coreUnits]) {
   u.lessonIds.forEach((id, i) => {
     if (
       lessonById.get(id)?.kind === "checkpoint" &&
@@ -310,7 +329,7 @@ for (const w of vocabWords) {
   }
 }
 
-const allUnitIds = new Set([...unitById.keys(), ...phrasesUnitById.keys()]);
+const allUnitIds = new Set([...unitById.keys(), ...phrasesUnitById.keys(), ...coreUnitById.keys()]);
 
 for (const lesson of lessons) {
   if (!allUnitIds.has(lesson.unitId)) {
